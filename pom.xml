@@ -349,5 +349,17 @@
 		</license>
 	</licenses>
 
+	<developers>
+		<developer>
+			<id>1</id>
+			<name>Jorge Muñoz Rodríguez</name>
+			<email>jormunrod@alum.us.es</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Madrid</timezone>
+		</developer>
+	</developers>
+
 
 </project>
