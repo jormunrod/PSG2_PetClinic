@@ -348,6 +348,17 @@
 			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
 		</license>
 	</licenses>
+	<developers>
+		<developer>
+			<id>3</id>
+			<name>Jorge Muñoz Rodríguez</name>
+			<email>jormunrod@alum.us.es</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Madrid</timezone>
+		</developer>
+	</developers>
 
 
 </project>
