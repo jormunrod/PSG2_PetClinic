@@ -348,17 +348,37 @@
 			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
 		</license>
 	</licenses>
-
 	<developers>
-		<developer>
-			<id>1</id>
-			<name>Jorge Muñoz Rodríguez</name>
-			<email>jormunrod@alum.us.es</email>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>Europe/Madrid</timezone>
-		</developer>
+        <developer>
+            <id>1</id>
+            <name>Jorge Muñoz Rodríguez</name>
+            <email>jormunrod@alum.us.es</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Madrid</timezone>
+        </developer>
+        <developer>
+            <id>2</id>
+            <name>Rubén Pérez</name>
+            <email>rubpergar@alum.us.es</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Madrid</timezone>
+        </developer>
+        <developer>
+            <id>5</id>
+            <name>Rafael Molina García</name>
+            <email>rafmolgar2@alum.us.es</email>
+            <url>https://github.com/rafmolgar2</url>
+            <organization>gii-is-psg2</organization>
+            <organizationUrl>https://github.com/gii-is-psg2</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Spain</timezone>
+        </developer>
 	</developers>
 
 
