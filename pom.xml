@@ -360,5 +360,16 @@
 		</developer>
 	</developers>
 
+	<developers>
+		<developer>
+			<id>2</id>
+			<name>Rubén Pérez</name>
+			<email>rubpergar@alum.us.es</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Madrid</timezone>
+		</developer>
+	</developers>
 
 </project>
