@@ -381,5 +381,17 @@
         </developer>
 	</developers>
 
+	<developers>
+		<developer>
+			<id>1</id>
+			<name>Alvaro Chico</name>
+			<email>alvchicas@alum.us.es</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Europe/Madrid</timezone>
+		</developer>
+	</developers>
+
 
 </project>
