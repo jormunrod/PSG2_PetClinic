@@ -1,5 +1,5 @@
 import "../../../static/css/owner/petList.css";
-import "../../../static/css/auth/authButton.css";
+import "../../../static/css/owner/ownerButton.css";
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from "reactstrap";
 import { Link } from "react-router-dom";
 import tokenService from "../../../services/token.service";
@@ -113,7 +113,7 @@ export default function OwnerPetList() {
           <h1 className="pet-list-title">Pets</h1>
           <Link
             to="/myPets/new"
-            className="auth-button"
+            className="owner-button brown1"
             style={{ textDecoration: "none", marginBottom: "2rem" }}
           >
             Add Pet
@@ -135,14 +135,14 @@ export default function OwnerPetList() {
                 <div className="pet-options">
                   <Link
                     to={"/myPets/" + pet.id}
-                    className="auth-button blue"
+                    className="owner-button brown2"
                     style={{ textDecoration: "none" }}
                   >
                     Edit
                   </Link>
                   <button
                     onClick={() => removePet(pet.id)}
-                    className="auth-button danger"
+                    className="owner-button brown3"
                   >
                     Delete
                   </button>
@@ -192,7 +192,7 @@ export default function OwnerPetList() {
                   )}
                   <Link
                     to={`/myPets/${pet.id}/visits/new`}
-                    className="auth-button blue"
+                    className="owner-button brown4"
                     style={{ textDecoration: "none", marginTop: "20px" }}
                   >
                     Add Visit
