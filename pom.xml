@@ -351,17 +351,20 @@
 
 	<developers>
 		<developer>
-			<id>1</id>
+			<id>jormunrod</id>
 			<name>Jorge Muñoz</name>
 			<email>jormunrod@alum.us.es</email>
-			<timezone>+1</timezone>
+			<url>https://github.com/jormunrod</url>
 			<organization>University of Seville</organization>
-			<organizationUrl>https://www.us.es</organizationUrl>
+			<organizationUrl>http://www.us.es</organizationUrl>
 			<roles>
 				<role>developer</role>
 			</roles>
+			<timezone>Madrid/Spain</timezone>
+			<properties>
+				<picUrl>https://avatars.githubusercontent.com/u/91954520?v=4</picUrl>
+			</properties>
 		</developer>
-	
 	</developers>
 
 
