@@ -1,15 +1,15 @@
 project:
-  name: 'PSG2-2324-GX-XY Petclinic'
-  owner: 'LX'
-  teamId: 'XY'
+  name: 'PSG2-2324-G4-44 Petclinic'
+  owner: 'L4'
+  teamId: '44'
   identities:
     github:
-      url: 'https://github.com/gii-is-psg2/react-petclinic'
+      url: 'https://github.com/gii-is-psg2/psg2-2324-g4-44'
   members:
     member1:
-      name: 'José María'
-      surname: 'García' 
-      githubUsername: 'josemgarcia'
+      name: 'Jorge'
+      surname: 'Muñoz' 
+      githubUsername: 'jormunrod'
     member2:
       name: 'Jose Antonio'
       surname: 'Parejo'
