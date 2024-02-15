@@ -10,23 +10,3 @@ project:
       name: 'Jorge'
       surname: 'Muñoz' 
       githubUsername: 'jormunrod'
-    member2:
-      name: 'Jose Antonio'
-      surname: 'Parejo'
-      githubUsername: 'japarejo'
-    member3:
-      name: 'Amador'
-      surname: 'Durán'
-      githubUsername: 'amador-duran-toro'
-    member4:
-      name: 'Carlos'
-      surname: 'Müller'
-      githubUsername: 'cmullercejas'
-    member5:
-      name: 'Lola'
-      surname: 'De Acuña'
-      githubUsername: 'loladacuna'
-    member6:
-      name: 'Alfonso'
-      surname: 'Márquez'
-      githubUsername: 'alfedu'
