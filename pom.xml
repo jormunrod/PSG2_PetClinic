@@ -349,5 +349,20 @@
 		</license>
 	</licenses>
 
+	<developers>
+		<developer>
+			<id>1</id>
+			<name>Jorge Muñoz</name>
+			<email>jormunrod@alum.us.es</email>
+			<timezone>+1</timezone>
+			<organization>University of Seville</organization>
+			<organizationUrl>https://www.us.es</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	
+	</developers>
+
 
 </project>
