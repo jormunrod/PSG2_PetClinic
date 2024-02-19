@@ -65,9 +65,9 @@
     max-width: 350px;
   }
   
-  .pricing-container .pricing-card:nth-child(2) .icon {
+  /* .pricing-container .pricing-card:nth-child(2) .icon {
     transform: rotate(90deg);
-  }
+  } */
   
   .pricing-container .pricing-card:nth-child(3),
   .pricing-container .pricing-card:nth-child(3) .title .icon {
