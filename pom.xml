@@ -365,6 +365,21 @@
 				<picUrl>https://avatars.githubusercontent.com/u/91954520?v=4</picUrl>
 			</properties>
 		</developer>
+		<developer>
+			<id>rubpergar</id>
+			<name>Rubén Pérez</name>
+			<email>rubpergar@alum.us.es</email>
+			<url>https://github.com/rubpergar</url>
+			<organization>University of Seville</organization>
+			<organizationUrl>http://www.us.es</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Madrid/Spain</timezone>
+			<properties>
+				<picUrl>https://avatars.githubusercontent.com/u/92794845?s=96</picUrl>
+			</properties>
+		</developer>
 	</developers>
 
 
