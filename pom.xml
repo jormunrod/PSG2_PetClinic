@@ -380,6 +380,18 @@
 				<picUrl>https://avatars.githubusercontent.com/u/92794845?s=96</picUrl>
 			</properties>
 		</developer>
+        <developer>
+            <id>rafmolgar2</id>
+            <name>Rafael Molina</name>
+            <email>rafmolgsr2@alum.us.es</email>
+            <url>https://github.com/rafmolgar2</url>
+            <organization>University of Seville</organization>
+            <organizationUrl>http://www.us.es</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Madrid/Spain</timezone>
+        </developer>
 	</developers>
 
 
