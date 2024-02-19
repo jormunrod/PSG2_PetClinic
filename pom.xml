@@ -392,6 +392,18 @@
             </roles>
             <timezone>Madrid/Spain</timezone>
         </developer>
+		<developer>
+            <id>alvchicas</id>
+            <name>Alvaro Chico</name>
+            <email>alvchicas@alum.us.es</email>
+            <url>https://github.com/rafmolgar2</url>
+            <organization>University of Seville</organization>
+            <organizationUrl>http://www.us.es</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>Madrid/Spain</timezone>
+        </developer>
 	</developers>
 
 
