@@ -99,21 +99,22 @@
 }
 
 .edit-visit-button{
-    border: 1px solid var(--main-blue-color);
-    color: var(--main-blue-color);
+    border: 1px solid #7B3F00;
+    color: #7B3F00;
 }
 
 .edit-visit-button:hover{
     color: white;
-    background-color: var(--blue-shadow-color);
+    background-color: #7B3F00;
 }
 
 .cancel-visit-button{
-    border: 1px solid var(--main-red-color);
-    color: var(--main-red-color);
+    border: 1px solid #5C4033;
+    color: #5C4033;
 }
 
 .cancel-visit-button:hover{
     color: white;
-    background-color: var(--red-shadow-color);
+    background-color: #5C4033;
 }
+

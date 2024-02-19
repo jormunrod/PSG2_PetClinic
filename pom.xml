@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.springframework.samples</groupId>
-	<artifactId>spring-petclinic-psg2</artifactId>
-	<version>2.2.0.2324</version>
+	<groupId>es.us.psg2</groupId>
+	<artifactId>spring-petclinic.psg2.2324-G4-44</artifactId>
+	<version>1.0.0</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.1</version>
 	</parent>
-	<name>PetClinic React</name>
+	<name>PSG2-2324-G4-44 Petclinic</name>
 
 	<properties>
 
@@ -348,45 +348,39 @@
 			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
 		</license>
 	</licenses>
+
 	<developers>
-        <developer>
-            <id>1</id>
-            <name>Alvaro Chico</name>
-            <email>alvchicas@alum.us.es</email>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>Europe/Madrid</timezone>
-        </developer>
-        <developer>
-            <id>2</id>
-            <name>Rubén Pérez</name>
-            <email>rubpergar@alum.us.es</email>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>Europe/Madrid</timezone>
-        </developer>
-        <developer>
-            <id>3</id>
-            <name>Jorge Muñoz Rodríguez</name>
-            <email>jormunrod@alum.us.es</email>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>Europe/Madrid</timezone>
-        </developer>
-        <developer>
-            <id>5</id>
-            <name>Rafael Molina García</name>
-            <email>rafmolgar2@alum.us.es</email>
-            <url>https://github.com/rafmolgar2</url>
-            <organization>gii-is-psg2</organization>
-            <organizationUrl>https://github.com/gii-is-psg2</organizationUrl>
-            <roles>
-                <role>developer</role>
-            </roles>
-            <timezone>Europe/Spain</timezone>
-        </developer>
+		<developer>
+			<id>jormunrod</id>
+			<name>Jorge Muñoz</name>
+			<email>jormunrod@alum.us.es</email>
+			<url>https://github.com/jormunrod</url>
+			<organization>University of Seville</organization>
+			<organizationUrl>http://www.us.es</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Madrid/Spain</timezone>
+			<properties>
+				<picUrl>https://avatars.githubusercontent.com/u/91954520?v=4</picUrl>
+			</properties>
+		</developer>
+		<developer>
+			<id>rubpergar</id>
+			<name>Rubén Pérez</name>
+			<email>rubpergar@alum.us.es</email>
+			<url>https://github.com/rubpergar</url>
+			<organization>University of Seville</organization>
+			<organizationUrl>http://www.us.es</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>Madrid/Spain</timezone>
+			<properties>
+				<picUrl>https://avatars.githubusercontent.com/u/92794845?s=96</picUrl>
+			</properties>
+		</developer>
 	</developers>
+
+
 </project>
