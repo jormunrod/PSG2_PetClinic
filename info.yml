@@ -10,3 +10,7 @@ project:
       name: 'Jorge'
       surname: 'Muñoz' 
       githubUsername: 'jormunrod'
+    member2:
+      name: 'María José'
+      surname: 'Ruiz' 
+      githubUsername: 'marruivaz1'
