@@ -53,11 +53,13 @@
   }
   .pricing-container .pricing-card:nth-child(1),
   .pricing-container .pricing-card:nth-child(1) .title .icon {
-    background: linear-gradient(-45deg, #f403d1, #64b5f6);
+    /* background: linear-gradient(-45deg, #f403d1, #64b5f6); */
+    background: linear-gradient(-45deg, #f45b03, #fa8f5a);
   }
   .pricing-container .pricing-card:nth-child(2),
   .pricing-container .pricing-card:nth-child(2) .title .icon {
-    background: linear-gradient(-45deg, #ffec61, #f321d7);
+    /* background: linear-gradient(-45deg, #ffec61, #f321d7); */
+    background: linear-gradient(-45deg, #ffbc14, #f37c21);
   }
   
   .pricing-container .pricing-card:nth-child(2) {
@@ -71,7 +73,8 @@
   
   .pricing-container .pricing-card:nth-child(3),
   .pricing-container .pricing-card:nth-child(3) .title .icon {
-    background: linear-gradient(-45deg, #24ff72, #9a4eff);
+    /* background: linear-gradient(-45deg, #24ff72, #9a4eff); */
+    background: linear-gradient(-45deg, #7e3900, #956600);
   }
   .pricing-card::before {
     content: "";
