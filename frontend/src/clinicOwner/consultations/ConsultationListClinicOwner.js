@@ -96,14 +96,14 @@ export default function ConsultationListClinicOwner() {
                 <Table aria-label='consultations' className="mt-4">
                     <thead>
                         <tr>
-                            <th>Title</th>
-                            <th>Status</th>
-                            <th>Owner</th>
-                            <th>Pet</th>
-                            <th>Clinic</th>
-                            <th>Sent To</th>
-                            <th>Creation Date</th>
-                            <th>Actions</th>
+                            <th className="tables">Title</th>
+                            <th className="tables">Status</th>
+                            <th className="tables">Owner</th>
+                            <th className="tables">Pet</th>
+                            <th className="tables">Clinic</th>
+                            <th className="tables">Sent To</th>
+                            <th className="tables">Creation Date</th>
+                            <th className="tables">Actions</th>
                         </tr>
                     </thead>
                     <tbody>{consultationList}</tbody>

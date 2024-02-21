@@ -6,6 +6,7 @@ import deleteFromList from "../../util/deleteFromList";
 import getErrorModal from "../../util/getErrorModal";
 import getIdFromUrl from "../../util/getIdFromUrl";
 import useFetchState from "../../util/useFetchState";
+import "../../static/css/tables.css";
 
 const jwt = tokenService.getLocalAccessToken();
 
@@ -84,10 +85,10 @@ export default function VisitListAdmin() {
         <Table aria-label="visits" className="mt-4">
           <thead>
             <tr>
-              <th>Date and Time</th>
-              <th>Description</th>
-              <th>Vet</th>
-              <th>Actions</th>
+              <th className="tables">Date and Time</th>
+              <th className="tables">Description</th>
+              <th className="tables">Vet</th>
+              <th className="tables">Actions</th>
             </tr>
           </thead>
           <tbody>{visitList}</tbody>

@@ -73,11 +73,11 @@ class VetList extends Component {
                     <Table className="mt-4">
                         <thead>
                             <tr>
-                                <th width="20%">Name</th>
-                                <th width="20%">City</th>
-                                <th width="20%">Specialties</th>
-                                <th width="20%">User</th>
-                                <th width="20%">Actions</th>
+                                <th className= "tables" width="20%">Name</th>
+                                <th className= "tables" width="20%">City</th>
+                                <th className= "tables" width="20%">Specialties</th>
+                                <th className= "tables" width="20%">User</th>
+                                <th className= "tables" width="20%">Actions</th>
                             </tr>
                         </thead>
                         <tbody>

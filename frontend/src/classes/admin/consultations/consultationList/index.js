@@ -142,11 +142,11 @@ class ConsultationList extends Component {
                     <Table className="mt-4">
                         <thead>
                             <tr>
-                                <th>Title</th>
-                                <th>Status</th>
-                                <th>Owner</th>
-                                <th>Creation Date</th>
-                                <th>Actions</th>
+                                <th className="tables">Title</th>
+                                <th className="tables">Status</th>
+                                <th className="tables">Owner</th>
+                                <th className="tables">Creation Date</th>
+                                <th className="tables">Actions</th>
                             </tr>
                         </thead>
                         <tbody>{consultationList}</tbody>

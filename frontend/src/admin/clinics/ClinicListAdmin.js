@@ -80,12 +80,12 @@ export default function ClinicListAdmin() {
           <Table aria-label="owners" className="mt-4">
             <thead>
               <tr>
-                <th width="15%">Name</th>
-                <th width="20%">Address</th>
-                <th width="15%">Telephone</th>
-                <th width="15%">Clinic Owner</th>
-                <th width="15%">Plan</th>
-                <th width="20%">Actions</th>
+                <th className= "tables" width="15%">Name</th>
+                <th className= "tables" width="20%">Address</th>
+                <th className= "tables" width="15%">Telephone</th>
+                <th className= "tables" width="15%">Clinic Owner</th>
+                <th className= "tables" width="15%">Plan</th>
+                <th className= "tables" width="20%">Actions</th>
               </tr>
             </thead>
             <tbody>{clinicList}</tbody>

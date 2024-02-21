@@ -75,8 +75,8 @@ export default function SpecialtyListAdmin() {
         <Table aria-label="specialties" className="mt-4">
           <thead>
             <tr>
-              <th width="20%">Name</th>
-              <th width="20%">Actions</th>
+              <th className= "tables" width="20%">Name</th>
+              <th className= "tables" width="20%">Actions</th>
             </tr>
           </thead>
           <tbody>{specialtiesList}</tbody>

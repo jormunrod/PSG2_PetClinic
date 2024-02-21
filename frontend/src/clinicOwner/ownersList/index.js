@@ -48,12 +48,12 @@ export default function OwnerListClinicOwner(){
           <Table aria-label="owners" className="mt-4">
             <thead>
               <tr>
-                <th width="15%">Name</th>
-                <th width="20%">Address</th>
-                <th width="15%">City</th>
-                <th width="15%">Telephone</th>
-                <th width="15%">User</th>
-                <th width="20%">Clinic</th>
+                <th className= "tables" width="15%">Name</th>
+                <th className= "tables" width="20%">Address</th>
+                <th className= "tables" width="15%">City</th>
+                <th className= "tables" width="15%">Telephone</th>
+                <th className= "tables" width="15%">User</th>
+                <th className= "tables" width="20%">Clinic</th>
               </tr>
             </thead>
             <tbody>{ownerList}</tbody>
