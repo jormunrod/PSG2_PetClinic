@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button, ButtonGroup, Table } from "reactstrap";
 import tokenService from "../../services/token.service";
 import "../../static/css/admin/adminPage.css";
+import "../../static/css/tables.css";
 import deleteFromList from "../../util/deleteFromList";
 import getErrorModal from "../../util/getErrorModal";
 import useFetchState from "../../util/useFetchState";
@@ -79,9 +80,9 @@ export default function ClinicOwnerListAdmin() {
           <Table aria-label="owners" className="mt-4">
             <thead>
               <tr>
-                <th width="30%">Name</th>
-                <th width="30%">User</th>
-                <th width="40%">Actions</th>
+                <th className= "tables">Name</th>
+                <th className= "tables">User</th>
+                <th className= "tables">Actions</th>
               </tr>
             </thead>
             <tbody>{clinicOwnerList}</tbody>

@@ -83,13 +83,13 @@ export default function OwnerListAdmin() {
           <Table aria-label="owners" className="mt-4">
             <thead>
               <tr>
-                <th width="10%">Name</th>
-                <th width="10%">Address</th>
-                <th width="10%">City</th>
-                <th width="10%">Telephone</th>
-                <th width="10%">User</th>
-                <th width="10%">Clinic</th>
-                <th width="40%">Actions</th>
+                <th className= "tables" width="10%">Name</th>
+                <th className= "tables" width="10%">Address</th>
+                <th className= "tables" width="10%">City</th>
+                <th className= "tables" width="10%">Telephone</th>
+                <th className= "tables" width="10%">User</th>
+                <th className= "tables" width="10%">Clinic</th>
+                <th className= "tables" width="40%">Actions</th>
               </tr>
             </thead>
             <tbody>{ownerList}</tbody>

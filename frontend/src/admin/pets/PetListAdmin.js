@@ -5,6 +5,7 @@ import tokenService from "../../services/token.service";
 import useFetchState from "../../util/useFetchState";
 import getErrorModal from "../../util/getErrorModal";
 import deleteFromList from "../../util/deleteFromList";
+import "../../static/css/tables.css";
 
 const jwt = tokenService.getLocalAccessToken();
 
@@ -85,12 +86,12 @@ export default function PetListAdmin() {
           <Table aria-label="pets" className="mt-4">
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Birth Date</th>
-                <th>Type</th>
-                <th>Owner</th>
-                <th>Visits</th>
-                <th>Actions</th>
+                <th className="tables">Name</th>
+                <th className="tables">Birth Date</th>
+                <th className="tables">Type</th>
+                <th className="tables">Owner</th>
+                <th className="tables">Visits</th>
+                <th className="tables">Actions</th>
               </tr>
             </thead>
             <tbody>{petList}</tbody>

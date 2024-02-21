@@ -87,9 +87,9 @@ class UserList extends Component {
                     <Table className="mt-4">
                         <thead>
                             <tr>
-                                <th>Username</th>
-                                <th>Authority</th>
-                                <th>Actions</th>
+                                <th className="tables">Username</th>
+                                <th className="tables">Authority</th>
+                                <th className="tables">Actions</th>
                             </tr>
                         </thead>
                         <tbody>{userList}</tbody>

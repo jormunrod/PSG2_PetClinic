@@ -85,10 +85,10 @@ class VisitList extends Component {
                     <Table className="mt-4">
                         <thead>
                             <tr>
-                                <th>Date and Time</th>
-                                <th>Description</th>
-                                <th>Vet</th>
-                                <th>Actions</th>
+                                <th className="tables">Date and Time</th>
+                                <th className="tables">Description</th>
+                                <th className="tables">Vet</th>
+                                <th className="tables">Actions</th>
                             </tr>
                         </thead>
                         <tbody>{visitList}</tbody>

@@ -6,6 +6,7 @@ import "../../static/css/admin/adminPage.css";
 import deleteFromList from "../../util/deleteFromList";
 import getErrorModal from "../../util/getErrorModal";
 import useFetchState from "../../util/useFetchState";
+import "../../static/css/tables.css";
 
 const jwt = tokenService.getLocalAccessToken();
 
@@ -73,9 +74,9 @@ export default function UserListAdmin() {
         <Table aria-label="users" className="mt-4">
           <thead>
             <tr>
-              <th>Username</th>
-              <th>Authority</th>
-              <th>Actions</th>
+              <th className="tables">Username</th>
+              <th className="tables">Authority</th>
+              <th className="tables">Actions</th>
             </tr>
           </thead>
           <tbody>{userList}</tbody>
