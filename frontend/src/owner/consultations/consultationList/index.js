@@ -186,12 +186,12 @@ export default function OwnerConsultationList() {
         <Table className="mt-4">
           <thead>
             <tr>
-              <th style= {{backgroundColor : "green"}}>Title</th>
-              <th style= {{backgroundColor : "green"}}>Status</th>
-              <th style= {{backgroundColor : "green"}}>Pet</th>
-              <th style= {{backgroundColor : "green"}}>Sent To</th>
-              <th style= {{backgroundColor : "green"}}>Creation Date</th>
-              <th style= {{backgroundColor : "green"}}>Actions</th>
+              <th style= {{backgroundColor : "lightgreen"}}>Title</th>
+              <th style= {{backgroundColor : "lightgreen"}}>Status</th>
+              <th style= {{backgroundColor : "lightgreen"}}>Pet</th>
+              <th style= {{backgroundColor : "lightgreen"}}>Sent To</th>
+              <th style= {{backgroundColor : "lightgreen"}}>Creation Date</th>
+              <th style= {{backgroundColor : "lightgreen"}}>Actions</th>
             </tr>
           </thead>
           <tbody>
