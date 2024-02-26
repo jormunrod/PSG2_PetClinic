@@ -9,7 +9,7 @@
 **7. Longitud de línea** : Se recomienda que las líneas de código no superen los 80 caracteres de longitud para mejorar la legibilidad.  
 **8. Importaciones** : Se deben evitar las importaciones de paquetes completos y solo importar las clases específicas necesarias. Además, las importaciones deben agruparse y ordenarse de manera lógica.  
 **9. Formato de archivos** : Los archivos Java deben tener una estructura clara y consistente, con una declaración de paquete, seguida de importaciones y luego la definición de clases y métodos.  
-**10. Nombre documentos** : Deben comenzar con una letra mayúscula y usar camelCase con extensión .md. _**Ejemplo: MiDocumento.md **_  
+**10. Nombre documentos** : Deben comenzar con una letra mayúscula y usar camelCase con extensión .md. _**Ejemplo: MiDocumento.md**_  
 ## **2. Commits Message Policies.**  
 Serán estructurados de la siguiente manera:  
  
