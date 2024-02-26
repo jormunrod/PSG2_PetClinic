@@ -70,6 +70,7 @@ El objetivo de nuestra primera reunión es conocernos, asignar tareas y establec
      - Investiga y comparte los primeros pasos con la nueva tecnología.
 
 5. **Identificación de Obstáculos:**
+
 Intencionalmente blanco
   
 ## Conclusiones
