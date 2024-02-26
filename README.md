@@ -9,6 +9,7 @@
 **7. Longitud de línea** : Se recomienda que las líneas de código no superen los 80 caracteres de longitud para mejorar la legibilidad.  
 **8. Importaciones** : Se deben evitar las importaciones de paquetes completos y solo importar las clases específicas necesarias. Además, las importaciones deben agruparse y ordenarse de manera lógica.  
 **9. Formato de archivos** : Los archivos Java deben tener una estructura clara y consistente, con una declaración de paquete, seguida de importaciones y luego la definición de clases y métodos.  
+**10. Nombre documentos : Deben comenzar con una letra mayúscula y usar camelCase con extensión .md. _**Ejemplo: MiDocumento.md **_  
 ## **2. Commits Message Policies.**  
 Serán estructurados de la siguiente manera:  
  
@@ -54,10 +55,10 @@ Seguiremos el formato x.y.z de versiones, la versión inicial será la 1.00. Cua
 ## **6. Definition Of “Done”.**
 Los criterios que vamos a seguir para que una historia de usuario o una tarea se considere completada y lista para entregar son los siguientes:
 - El código correspondiente o documentación ha sido escrito y revisado por al menos un miembro del equipo.
-- El código o documento cumple con los estándares de codificación establecidos y ha sido revisado.
+- El código o documento cumple con los estándares de codificación establecidos.
 - La tarea ha sido revisada y aprobada por el Product Owner o el cliente para asegurarse de que cumple con sus expectativas y requisitos.
-- Se han corregido todos los defectos identificados durante las pruebas y se haverificado que las correciones sean efectivas.
-- El equipo esta de acuerda en que la tarea cumple con todos los criterios definidos y se considera completa y lista para se entregada.
+- Se han corregido todos los defectos identificados durante las pruebas y se ha verificado que las correciones sean efectivas.
+- El equipo está de acuerdo en que la tarea cumple con todos los criterios definidos y se considera completa y lista para se entregada.
 
 ## **7. How The Documents Generated During The Project Will Be Managed.** 
-Los documentos grupales generados están almacenados en una carpeta de dropbox a la cual todos los integrantes del equipo tienen acceso y pueden modificar cualquier documento en cualquier momento.  Una vez los documentos son revisados,se añadirán a una carpeta dentro del repositorio llamada docs en la cual se almacenaran todos los documentos.
+Los documentos se relizarán directamente en el editor de textos de gitHub en la rama docs, y se guardaran en la carpeta /docs del proyecto.
