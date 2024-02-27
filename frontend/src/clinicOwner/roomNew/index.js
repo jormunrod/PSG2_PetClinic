@@ -25,6 +25,29 @@ export default function NewRoom() {
   };
   const [message, setMessage] = useState(null);
   const [visible, setVisible] = useState(false);
+  const [clinicOptions, setClinicOptions] = useState([]);
+  const [clinics, setClinics] = useState([]);
+
+  useEffect(() => {
+    fetch(`/api/v1/clinics/user/${user.id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${jwt}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setClinics(data);
+        setClinicOptions(data.map(clinic => clinic.id));
+      })
+      .catch((err) => {
+        setMessage(err.message);
+        setVisible(true);
+      });
+  }
+  , []);
+  
 
 
   const newRoomFormRef = useRef(null);
@@ -51,6 +74,16 @@ export default function NewRoom() {
 
   const modal = getErrorModal(setVisible, visible, message);
 
+  const updatedRoomNewInputs = roomNewInputs.map(input => {
+    if (input.name === "clinicId") {
+      return {
+        ...input,
+        values: clinicOptions // Usar los IDs de las clínicas como opciones
+      };
+    }
+    return input;
+  });
+
   return (
     <div className="auth-page-container">
       {<h2>{"Add room"}</h2>}
@@ -58,7 +91,7 @@ export default function NewRoom() {
       <div className="auth-form-container">
           <FormGenerator
             ref={newRoomFormRef}
-            inputs={roomNewInputs}
+            inputs={updatedRoomNewInputs}
             onSubmit={handleSubmit}
             buttonText="Add"
             buttonClassName="auth-button"

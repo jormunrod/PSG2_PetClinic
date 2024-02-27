@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button, ButtonGroup, Table } from "reactstrap";
 import tokenService from "../../services/token.service";
@@ -15,13 +15,36 @@ export default function RoomsList() {
   const [visible, setVisible] = useState(false);
   const [rooms, setRooms] = useFetchState(
     [],
-    `/api/v1/rooms/user/${user.id}`, // TODO: Hacer que el backend filtre por el id del usuario
+    `/api/v1/rooms/user/${user.id}`,
     jwt,
     setMessage,
     setVisible
   );
   const [alerts, setAlerts] = useState([]);
 
+  const [clinics, setClinics] = useState([]);
+
+  useEffect(() => {
+    fetch(`/api/v1/clinics/user/${user.id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${jwt}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setClinics(data);
+        console.log(data);
+      })
+      .catch((err) => {
+        setMessage(err.message);
+        setVisible(true);
+      });
+  }
+  , [clinics]);
+
+  
   const navigator = useNavigate();
 
   const roomsList =

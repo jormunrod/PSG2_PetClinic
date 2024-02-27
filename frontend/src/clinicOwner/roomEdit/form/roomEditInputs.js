@@ -21,7 +21,8 @@ export const roomEditInputs = [
     {
         tag: "Clinic Id",
         name: "clinicId",
-        type: "number",
+        type: "select",
+        values: [],
         defaultValue: "",
         isRequired: true,
     },
