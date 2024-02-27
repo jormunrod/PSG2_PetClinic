@@ -40,6 +40,7 @@
 ## **2. Políticas de Mensajes de Commits.**  
 Los mensajes de commits seguirán la siguiente estructura:
 
+
  >_**[Tipo]: Descripción en inglés**_  
  
 **Tipos** :  
@@ -78,6 +79,7 @@ La rama main se actualizará cada vez que se haga una release.
 Para arreglar los bugs inesperados en medio de la producción, existirá una rama llamada hotfix. Hotfix es similar a la rama releases solo que será utilizada para resolver bugs críticos en una versión o errores no planeados en la producción.
 
 ---
+
 
 ## **5. Revisiones.**
 Antes de fusionar cualquier cambio de cualquier rama en la rama `develop`, es necesario crear un pull request. Este pull request debe ser revisado y aceptado por una persona distinta a quien lo ha propuesto, lo que garantiza una revisión imparcial. Durante esta revisión, cualquier fallo detectado será señalado mediante comentarios, y el autor del pull request deberá corregirlos lo antes posible. Todo el equipo de desarrollo está comprometido a priorizar la revisión de pull requests para evitar retrasos en su aceptación o acumulación de cambios pendientes.
@@ -118,3 +120,4 @@ Los criterios que seguiremos para considerar completada y lista para entregar un
 Los documentos se crearán directamente en el editor de texto de GitHub en la rama `doc`, y se almacenarán en la carpeta del proyecto `/docs/sprintX`, donde "X" representa el número del sprint actual.
 
 ---
+
