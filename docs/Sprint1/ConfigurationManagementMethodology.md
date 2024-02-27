@@ -1,4 +1,4 @@
-# **Informe técnico que describe la metodología de gestión de configuración.**
+# **Metodología de gestión de configuración.**
 
 <div style="text-align:center;">
     <img src="https://www.ucm.es/al-acmes/file/logo-universidad-sevilla/?ver" alt="Logo Universidad Sevilla" style="width: 50%;">
@@ -15,10 +15,10 @@
     - [4.1 Cómo Desarrollar Ramas de Funcionalidades](#41-cómo-desarrollar-ramas-de-funcionalidades)
     - [4.2 Cómo Preparar Versiones](#42-cómo-preparar-versiones)
     - [4.3 Cómo Corregir Errores en Producción](#43-cómo-corregir-errores-en-producción)
-5. [Políticas de Versionamiento](#5-políticas-de-versionamiento)
-6. [Definición de "Hecho"](#6-definición-de-hecho)
-7. [Gestión de Documentos Generados Durante el Proyecto](#7-gestión-de-documentos-generados-durante-el-proyecto)
-
+5. [Revisiones](#5-revisiones)
+6. [Políticas de Versionamiento](#6-políticas-de-versionamiento)
+7. [Definición de "Hecho"](#7-definición-de-hecho)
+8. [Gestión de Documentos Generados Durante el Proyecto](#8-gestión-de-documentos-generados-durante-el-proyecto)
 ---
 
 ## **1. Normas de Codificación.**  
@@ -79,16 +79,19 @@ Para arreglar los bugs inesperados en medio de la producción, existirá una ram
 
 ---
 
-## **5. Políticas de Versionamiento.**
+## **5. Revisiones.**
+Antes de fusionar cualquier cambio de cualquier rama en la rama `develop`, es necesario crear un pull request. Este pull request debe ser revisado y aceptado por una persona distinta a quien lo ha propuesto, lo que garantiza una revisión imparcial. Durante esta revisión, cualquier fallo detectado será señalado mediante comentarios, y el autor del pull request deberá corregirlos lo antes posible. Todo el equipo de desarrollo está comprometido a priorizar la revisión de pull requests para evitar retrasos en su aceptación o acumulación de cambios pendientes.
+
+---
+
+## **6. Políticas de Versionamiento.**
 Vamos a seguir el formato de versiones X.Y.Z. La primera versión será la 1.00.  
 Cuando se lanza una versión mayor (major release), incrementaremos el número `X` de la versión y, si existen, pondremos a cero los números `Y` y `Z`.  
 
 >_Release/2.0.0_
 >
 
-Para las versiones menores (minor release), mantendremos el número `
-
-X`, aumentaremos `Y` y resetearemos `Z`, que es la versión de parche (patch). 
+Para las versiones menores (minor release), mantendremos el número `X`, aumentaremos `Y` y resetearemos `Z`, que es la versión de parche (patch). 
 
 >_Release/2.1.0_
 >
@@ -100,7 +103,7 @@ Finalmente, cuando lanzamos una versión de parche (patch release), incrementamo
 
 ---
 
-## **6. Definición de "Hecho".**
+## **7. Definición de "Hecho".**
 Los criterios que seguiremos para considerar completada y lista para entregar una historia de usuario o una tarea son los siguientes:
 
 - Se ha escrito y revisado el código correspondiente o la documentación por al menos un miembro del equipo.
@@ -111,7 +114,8 @@ Los criterios que seguiremos para considerar completada y lista para entregar un
 
 ---
 
-## **7. Gestión de Documentos Generados Durante el Proyecto.** 
+## **8. Gestión de Documentos Generados Durante el Proyecto.** 
 Los documentos se crearán directamente en el editor de texto de GitHub en la rama `doc`, y se almacenarán en la carpeta del proyecto `/docs/sprintX`, donde "X" representa el número del sprint actual.
 
 ---
+
