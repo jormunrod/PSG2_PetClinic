@@ -1,4 +1,4 @@
-# **Informe técnico que describe la metodología de gestión de configuración.**
+# **Readme**
 
 <div style="text-align:center;">
     <img src="https://www.ucm.es/al-acmes/file/logo-universidad-sevilla/?ver" alt="Logo Universidad Sevilla" style="width: 50%;">
