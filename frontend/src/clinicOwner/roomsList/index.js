@@ -13,16 +13,13 @@ const jwt = tokenService.getLocalAccessToken();
 export default function RoomsList() {
   const [message, setMessage] = useState(null);
   const [visible, setVisible] = useState(false);
-  const [rooms, setRooms] = useState([]); // TODO: Eliminar esta línea y descomentar la siguiente
-  /*
   const [rooms, setRooms] = useFetchState(
     [],
-    `/api/v1/rooms/userId/${user.id}`, // TODO: Hacer que el backend filtre por el id del usuario
+    `/api/v1/rooms/user/${user.id}`, // TODO: Hacer que el backend filtre por el id del usuario
     jwt,
     setMessage,
     setVisible
   );
-  */
   const [alerts, setAlerts] = useState([]);
 
   const navigator = useNavigate();
@@ -33,7 +30,7 @@ export default function RoomsList() {
           <tr key={room.id}>
             <td className="text-center">{room.name}</td>
             <td className="text-center">{room.allowedPetType}</td>
-            <td className="text-center">{room.clinicId}</td>
+            <td className="text-center">{room.clinic.name}</td>
             <td className="text-center">{room.size}</td>
             <td className="text-center">
               <ButtonGroup>
@@ -66,6 +63,11 @@ export default function RoomsList() {
                         if (res.status === 200) {
                           setMessage("Room deleted successfully");
                           setVisible(true);
+                          setRooms(
+                            rooms.filter((r) => {
+                              return r.id !== room.id;
+                            })
+                          );
                           navigator(0);
                         }
                       })
@@ -103,7 +105,7 @@ export default function RoomsList() {
               <tr>
                 <th width="15%" className="text-center">Name</th>
                 <th width="15%" className="text-center">Allowed Pet Type</th>
-                <th width="15%" className="text-center">Clinic Id</th>
+                <th width="15%" className="text-center">Clinic</th>
                 <th width="15%" className="text-center">Size</th>
               </tr>
             </thead>

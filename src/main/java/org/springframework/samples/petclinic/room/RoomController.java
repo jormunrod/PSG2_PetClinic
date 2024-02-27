@@ -50,7 +50,7 @@ public class RoomController {
     }
 
     @PutMapping("/{roomId}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.OK)
     public Room update(@PathVariable Integer roomId, @Valid @RequestBody RoomDTO roomDTO) {
         return roomService.update(roomId, roomDTO);
     }
