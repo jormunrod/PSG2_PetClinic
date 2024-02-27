@@ -13,7 +13,7 @@ export const roomNewInputs = [
         tag: "Allowed Pet Type",
         name: "allowedPetType",
         type: "select",
-        values: ["DOG", "BASIC", "GOLD", "PLATINUM"],
+        values: ["DOG", "CAT", "PARROT", "TURTLE", "HAMSTER", "FISH", "OTHER"],
         defaultValue: "DOG",
         isRequired: true,
         validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
@@ -28,7 +28,7 @@ export const roomNewInputs = [
     {
         tag: "Size",
         name: "size",
-        type: "integer",
+        type: "number",
         defaultValue: "1",
         isRequired: true,
     },

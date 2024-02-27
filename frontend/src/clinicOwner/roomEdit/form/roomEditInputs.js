@@ -13,7 +13,7 @@ export const roomEditInputs = [
         tag: "Allowed Pet Type",
         name: "allowedPetType",
         type: "select",
-        values: ["DOG", "BASIC", "GOLD", "PLATINUM"],
+        values: ["DOG", "CAT", "PARROT", "TURTLE", "HAMSTER", "FISH", "OTHER"],
         defaultValue: "DOG",
         isRequired: true,
         validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
