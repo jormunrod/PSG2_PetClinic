@@ -1,5 +1,7 @@
 package org.springframework.samples.petclinic.room;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -33,6 +35,12 @@ public class RoomController {
     @ResponseStatus(HttpStatus.OK)
     public Room findById(@PathVariable Integer roomId) {
         return roomService.findById(roomId);
+    }
+
+    @GetMapping("/user/{userId}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Room> findByUserId(@PathVariable Integer userId) {
+        return roomService.findByUserId(userId);
     }
 
     @PostMapping()

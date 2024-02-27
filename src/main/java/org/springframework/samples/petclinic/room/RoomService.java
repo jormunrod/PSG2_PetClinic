@@ -1,5 +1,7 @@
 package org.springframework.samples.petclinic.room;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.clinic.Clinic;
@@ -59,6 +61,11 @@ public class RoomService {
         roomRepository.save(roomToUpdate);
 
         return roomToUpdate;
+    }
+
+    @Transactional(readOnly = true)
+    public List<Room> findByUserId(Integer userId) {
+        return roomRepository.findByUserId(userId);
     }
     
 }
