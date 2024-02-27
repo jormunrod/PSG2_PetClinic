@@ -35,6 +35,8 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
   - Cambió el color de fondo de los encabezados de todas las tablas que se utilizan para enumerar elementos.
     
   - Cambió el comportamiento de la página consultas, para que solo enumere las consultas que son comentarios de la clínica para los usuarios propietarios de la clínica, y solo aquellas consultas que no son comentarios de la clínica para los usuarios veterinarios.
+ 
+  - Redactó el documento Spring Planning.
     
 - **Jorge Muñoz Rodríguez:**
   
@@ -50,7 +52,9 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
     
   - Cambió el fondo de la página principal.
     
-  - Redacción del documento de Análisis Técnico.
+  - Redactó del documento de Análisis Técnico.
+ 
+  - Redactó los documentos Daily Stand-ups
     
 - **María José Ruíz Vázquez:**
   
