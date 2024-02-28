@@ -1,25 +1,25 @@
 # **Readme**
 
-<div style="text-align:center;">
-    <img src="https://www.ucm.es/al-acmes/file/logo-universidad-sevilla/?ver" alt="Logo Universidad Sevilla" style="width: 50%;">
-</div>
+<p align="center">
+    <img src="https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/91954520/d134ec08-7993-4b37-b967-21cf4b8bca74" alt="Logo Universidad Sevilla" style="width: 50%; margin: auto;">
+</p>
+
 
 ---
-
-## Índice
 
 1. [Normas de Codificación](#1-normas-de-codificación)
 2. [Políticas de Mensajes de Commits](#2-políticas-de-mensajes-de-commits)
-3. [Estructura de Repositorios y Ramas Predeterminadas](#3-estructura-de-repositorios-y-ramas-predeterminadas)
-4. [Estrategia de Ramificación](#4-estrategia-de-ramificación)
-    - [4.1 Cómo Desarrollar Ramas de Funcionalidades](#41-cómo-desarrollar-ramas-de-funcionalidades)
-    - [4.2 Cómo Preparar Versiones](#42-cómo-preparar-versiones)
-    - [4.3 Cómo Corregir Errores en Producción](#43-cómo-corregir-errores-en-producción)
-5. [Revisiones](#5-revisiones)
-6. [Políticas de Versionamiento](#6-políticas-de-versionamiento)
-7. [Definición de "Hecho"](#7-definición-de-hecho)
-8. [Gestión de Documentos Generados Durante el Proyecto](#8-gestión-de-documentos-generados-durante-el-proyecto)
+3. [Estrategia de Ramificación](#3-estrategia-de-ramificación)
+    - [3.1 Cómo Desarrollar Ramas de Funcionalidades](#31-cómo-desarrollar-ramas-de-funcionalidades)
+    - [3.2 Cómo Preparar Versiones](#32-cómo-preparar-versiones)
+    - [3.3 Cómo Corregir Errores en Producción](#33-cómo-corregir-errores-en-producción)
+4. [Políticas de Versionamiento](#4-políticas-de-versionamiento)
+5. [Clockify](#5-clockify)
+6. [Despliegue](#6-despliegue)
+
 ---
+
+Este índice refleja las secciones y subsecciones del contenido proporcionado en el documento. Cada enlace te llevará directamente a la sección correspondiente para una navegación rápida y conveniente. Si necesitas más ayuda, no dudes en preguntar.
 
 ## **1. Normas de Codificación.**  
 
@@ -33,7 +33,6 @@
 8. **Comentarios:** Se deben incluir comentarios descriptivos en el código para explicar su funcionamiento, especialmente en partes complejas o críticas. Los comentarios deben estar en inglés y seguir un estilo claro y conciso.
 9. **Importaciones:** Se deben evitar las importaciones de paquetes completos y solo importar las clases específicas necesarias. Además, las importaciones deben agruparse y ordenarse de manera lógica.
 10. **Formato de Archivos:** Los archivos Java deben tener una estructura clara y consistente, con una declaración de paquete, seguida de importaciones y luego la definición de clases y métodos.
-
 
 ---
 
@@ -53,40 +52,27 @@ Los mensajes de commits seguirán la siguiente estructura:
 
 ---
 
-## **3. Estructura de Repositorios y Ramas Predeterminadas.**    
-Al crear un repositorio en GitHub.com, se establece automáticamente una rama predeterminada. Esta rama es la primera que se muestra cuando alguien visita el repositorio y es la rama inicial que Git verifica localmente al clonar el repositorio. 
-Por defecto, GitHub nombra esta rama predeterminada como "main" en cualquier repositorio recién creado.  
-Además, creamos una rama llamada "develop", que actuará como la rama principal para cada sprint. Esta rama se actualizará a medida que se completen y revisen los issues. La rama "main" permanecerá sin modificaciones hasta que se complete el sprint, momento en el que todo el contenido de la rama "develop" se fusionará en ella.
-
----
-
-## **4. Estrategia de Ramificación**
-### **4.1 Cómo Desarrollar Ramas de Funcionalidades**
+## **3. Estrategia de Ramificación**
+### **3.1 Cómo Desarrollar Ramas de Funcionalidades**
 Para cada issue tendrá una rama propia y será implementada en su propia rama, así es fácil saber qué código implementa qué issue, con solo buscar el número de issue en las ramas. Las ramas seguirán el siguiente formato :  
   
 >_Feature/<descripción del issue>/<número de issue>_  
   
 Una vez que se haya implementado y revisado correctamente el issue definido, se realizará un pull-request a la rama develop.
 
-### **4.2 Cómo Preparar Versiones**
+### **3.2 Cómo Preparar Versiones**
 Para cada release crearemos una rama propia. Las ramas seguirán el siguiente formato :  
   
 >_Release/<versión del proyecto>_
   
 La rama main se actualizará cada vez que se haga una release.
 
-### **4.3 Cómo Corregir Errores en Producción**
+### **3.3 Cómo Corregir Errores en Producción**
 Para arreglar los bugs inesperados en medio de la producción, existirá una rama llamada hotfix. Hotfix es similar a la rama releases solo que será utilizada para resolver bugs críticos en una versión o errores no planeados en la producción.
 
 ---
 
-
-## **5. Revisiones.**
-Antes de fusionar cualquier cambio de cualquier rama en la rama `develop`, es necesario crear un pull request. Este pull request debe ser revisado y aceptado por una persona distinta a quien lo ha propuesto, lo que garantiza una revisión imparcial. Durante esta revisión, cualquier fallo detectado será señalado mediante comentarios, y el autor del pull request deberá corregirlos lo antes posible. Todo el equipo de desarrollo está comprometido a priorizar la revisión de pull requests para evitar retrasos en su aceptación o acumulación de cambios pendientes.
-
----
-
-## **6. Políticas de Versionamiento.**
+## **4. Políticas de Versionamiento.**
 Vamos a seguir el formato de versiones X.Y.Z. La primera versión será la 1.00.  
 Cuando se lanza una versión mayor (major release), incrementaremos el número `X` de la versión y, si existen, pondremos a cero los números `Y` y `Z`.  
 
@@ -105,19 +91,23 @@ Finalmente, cuando lanzamos una versión de parche (patch release), incrementamo
 
 ---
 
-## **7. Definición de "Hecho".**
-Los criterios que seguiremos para considerar completada y lista para entregar una historia de usuario o una tarea son los siguientes:
+## **5. Clockify.**  
+Los mensajes de clockify seguirán la siguiente estructura:
 
-- Se ha escrito y revisado el código correspondiente o la documentación por al menos un miembro del equipo.
-- El código o documento cumple con los estándares de codificación establecidos.
-- La tarea ha sido revisada y aprobada por el Product Owner o el cliente para asegurarse de que cumple con sus expectativas y requisitos.
-- Se han corregido todos los defectos identificados durante las pruebas, y se ha verificado que las correcciones sean efectivas.
-- El equipo está de acuerdo en que la tarea cumple con todos los criterios definidos y se considera completa y lista para ser entregada.
 
----
-
-## **8. Gestión de Documentos Generados Durante el Proyecto.** 
-Los documentos se crearán directamente en el editor de texto de GitHub en la rama `doc`, y se almacenarán en la carpeta del proyecto `/docs/sprintX`, donde "X" representa el número del sprint actual.
+ >_**[Tipo]: Descripción en inglés**_  
+ 
+**Tipos** :  
+- **[meet]** : Indica que ese tiempo se ha dedicado en una reunión.
+- **[conflics]** : Indica que ese tiempo se ha dedicado arreglando conflictos.
+- **[work]** : Indica que ese tiempo se ha dedicado trabajando en alguna tarea
 
 ---
 
+## **6. Despliegue.**  
+El despliegue de la aplicación se encuentra en la siguiente URL:
+
+>_**https://psg2-2324-g4-44-415722.ew.r.appspot.com**_
+>
+
+---

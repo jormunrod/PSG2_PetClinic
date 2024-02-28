@@ -1,8 +1,8 @@
 # **Metodología de gestión de configuración.**
 
-<div style="text-align:center;">
-    <img src="https://www.ucm.es/al-acmes/file/logo-universidad-sevilla/?ver" alt="Logo Universidad Sevilla" style="width: 50%;">
-</div>
+<p align="center">
+    <img src="https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/91954520/d134ec08-7993-4b37-b967-21cf4b8bca74" alt="Logo Universidad Sevilla" style="width: 50%; margin: auto;">
+</p>
 
 ---
 
@@ -19,9 +19,13 @@
 6. [Políticas de Versionamiento](#6-políticas-de-versionamiento)
 7. [Definición de "Hecho"](#7-definición-de-hecho)
 8. [Gestión de Documentos Generados Durante el Proyecto](#8-gestión-de-documentos-generados-durante-el-proyecto)
+9. [Funcionalidad de iTop (CMDB)](#9-funcionalidad-de-itop-cmdb)
+    - [9.1 Objetivo y alcance de la CMDB](#91-objetivo-y-alcance-de-la-cmdb)
+    - [9.2 Estructura de la CMDB](#92-estructura-de-la-cmdb)
+
 ---
 
-## **1. Normas de Codificación.**  
+## **1. Normas de Codificación**
 
 1. **Nomenclatura de Clases:** Deben comenzar con una letra mayúscula y usar camelCase. _**Ejemplo: MiClase**_
 2. **Nomenclatura de Variables:** Deben comenzar con una letra minúscula y usar camelCase. _**Ejemplo: miVariable**_
@@ -34,14 +38,14 @@
 9. **Importaciones:** Se deben evitar las importaciones de paquetes completos y solo importar las clases específicas necesarias. Además, las importaciones deben agruparse y ordenarse de manera lógica.
 10. **Formato de Archivos:** Los archivos Java deben tener una estructura clara y consistente, con una declaración de paquete, seguida de importaciones y luego la definición de clases y métodos.
 
-
 ---
 
-## **2. Políticas de Mensajes de Commits.**  
+## **2. Políticas de Mensajes de Commits**
+
 Los mensajes de commits seguirán la siguiente estructura:
 
  >_**[Tipo]: Descripción en inglés**_  
- 
+
 **Tipos** :  
 - **[feat]** : Indica que el commit está introduciendo una nueva característica o funcionalidad al proyecto. (Código)
 - **[edit]** : Indica que se han realizado modificaciones o ediciones sin introducir nuevas características o funcionalidades. (Código)
@@ -52,7 +56,8 @@ Los mensajes de commits seguirán la siguiente estructura:
 
 ---
 
-## **3. Estructura de Repositorios y Ramas Predeterminadas.**    
+## **3. Estructura de Repositorios y Ramas Predeterminadas**
+
 Al crear un repositorio en GitHub.com, se establece automáticamente una rama predeterminada. Esta rama es la primera que se muestra cuando alguien visita el repositorio y es la rama inicial que Git verifica localmente al clonar el repositorio. 
 Por defecto, GitHub nombra esta rama predeterminada como "main" en cualquier repositorio recién creado.  
 Además, creamos una rama llamada "develop", que actuará como la rama principal para cada sprint. Esta rama se actualizará a medida que se completen y revisen los issues. La rama "main" permanecerá sin modificaciones hasta que se complete el sprint, momento en el que todo el contenido de la rama "develop" se fusionará en ella.
@@ -80,7 +85,9 @@ Para arreglar los bugs inesperados en medio de la producción, existirá una ram
 ---
 
 ## **5. Revisiones.**
-Antes de fusionar cualquier cambio de cualquier rama en la rama `develop`, es necesario crear un pull request. Este pull request debe ser revisado y aceptado por una persona distinta a quien lo ha propuesto, lo que garantiza una revisión imparcial. Durante esta revisión, cualquier fallo detectado será señalado mediante comentarios, y el autor del pull request deberá corregirlos lo antes posible. Todo el equipo de desarrollo está comprometido a priorizar la revisión de pull requests para evitar retrasos en su aceptación o acumulación de cambios pendientes.
+Antes de fusionar cualquier cambio de cualquier rama en la rama `develop`, es necesario crear un pull request. Este pull request debe ser revisado y aceptado por una persona distinta a quien lo ha propuesto, lo que garantiza una revisión imparcial. Durante esta revisión, cualquier fal
+
+lo detectado será señalado mediante comentarios, y el autor del pull request deberá corregirlos lo antes posible. Todo el equipo de desarrollo está comprometido a priorizar la revisión de pull requests para evitar retrasos en su aceptación o acumulación de cambios pendientes.
 
 ---
 
@@ -116,6 +123,25 @@ Los criterios que seguiremos para considerar completada y lista para entregar un
 
 ## **8. Gestión de Documentos Generados Durante el Proyecto.** 
 Los documentos se crearán directamente en el editor de texto de GitHub en la rama `doc`, y se almacenarán en la carpeta del proyecto `/docs/sprintX`, donde "X" representa el número del sprint actual.
+
+---
+
+## **9. Funcionalidad de iTop (CMDB)** 
+### **9.1 Objetivo y alcance de la CMDB**
+La principal funcionalidad de una CMDB (Configuration Management Database) para una organización es proporcionar un repositorio centralizado y estructurado sobre los elementos de configuración (CI). Estos pueden incluir Hardware, Software, documentación, y cualquier otro elementos necesario.
+
+La CMDB ayuda a mantener un inventario actualizado de todos los activos de TI de la organización, incluyendo servidores, equipos de red, dispositivos de almacenamiento, software, licencias y otros recursos.
+También facilita la gestión de cambios al proporcionar información detallada sobre los elementos de configuración afectados por un cambio propuesto, permitiendo una evaluación de impacto más precisa y una mejor planificación de cambios.
+Ayuda a identificar rápidamente los elementos de configuración afectados por incidentes o problemas, lo que facilita la resolución de problemas y la restauración del servicio.
+Además, proporciona datos precisos y actualizados, lo que ayuda a los equipos de gestión a tomar decisiones informadas sobre la inversión en tecnología, la optimización de recursos y la planificación estratégica.
+
+### **9.2 Estructura de la CMDB**
+Nuestra organización esta compuesta por cinco miembros, los usuarios esta asociado a la unidad organizativa correspondiente, definiendo quien tiene acceso a que recursos y funciones dentro de iTop.
+A continuación, se dejara un enlace a la lista de configuración de elementos por cada miembro de la organización. Se ha establecido una nomenclatura a la hora de introducir los elementos para que faciliten la comprensión y búsqueda de los elementos por todos los miembros.
+
+>_nombredellemento_uvusdelmiembro_ 
+
+[Listado de elementos de configuración](./docs/Sprint1/FunctionalCI.pdf/ "Functional CI")
 
 ---
 
