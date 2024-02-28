@@ -131,7 +131,7 @@ export default function EditRoom() {
           ref={editRoomFormRef}
           inputs={roomInputs}
           onSubmit={handleSubmit}
-          buttonText="Add"
+          buttonText="Edit"
           buttonClassName="auth-button"
         />
       </div>

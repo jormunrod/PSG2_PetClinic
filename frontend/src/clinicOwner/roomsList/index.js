@@ -86,12 +86,7 @@ export default function RoomsList() {
                         if (res.status === 200) {
                           setMessage("Room deleted successfully");
                           setVisible(true);
-                          setRooms(
-                            rooms.filter((r) => {
-                              return r.id !== room.id;
-                            })
-                          );
-                          navigator(0);
+                          navigator("/rooms");
                         }
                       })
                       .catch((err) => {
