@@ -56,9 +56,11 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
     
   - Cambió el fondo de la página principal.
     
-  - Redactó del documento de Análisis Técnico.
+  - Redactó del documento Project History.
  
-  - Redactó los documentos Daily Stand-ups
+  - Redactó los documentos Daily Stand-ups.
+ 
+  - Agregó una nueva funcionalidad para propietarios de clínicas que permite a este tipo de usuario crear habitaciones de hotel para mascotas que se utilizarán para brindarles a los propietarios de mascotas un servicio de hotel para mascotas.
     
 - **María José Ruíz Vázquez:**
   
@@ -71,6 +73,8 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
   - Cambió el color de fondo del encabezado de la tabla que se muestra en la página de lista de Consultas mientras está conectado como propietario.
     
   - Agregó una sección al informe técnico que resume el trabajo realizado al utilizar la funcionalidad iTop CMDB.
+ 
+  - Creó el documento del Sprint Review
     
 - **Rafael Molina García:**
   

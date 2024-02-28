@@ -7,8 +7,6 @@
 
 ---
 
-## Índice
-
 1. [Normas de Codificación](#1-normas-de-codificación)
 2. [Políticas de Mensajes de Commits](#2-políticas-de-mensajes-de-commits)
 3. [Estrategia de Ramificación](#3-estrategia-de-ramificación)
@@ -17,8 +15,11 @@
     - [3.3 Cómo Corregir Errores en Producción](#33-cómo-corregir-errores-en-producción)
 4. [Políticas de Versionamiento](#4-políticas-de-versionamiento)
 5. [Clockify](#5-clockify)
-       
+6. [Despliegue](#6-despliegue)
+
 ---
+
+Este índice refleja las secciones y subsecciones del contenido proporcionado en el documento. Cada enlace te llevará directamente a la sección correspondiente para una navegación rápida y conveniente. Si necesitas más ayuda, no dudes en preguntar.
 
 ## **1. Normas de Codificación.**  
 
@@ -32,7 +33,6 @@
 8. **Comentarios:** Se deben incluir comentarios descriptivos en el código para explicar su funcionamiento, especialmente en partes complejas o críticas. Los comentarios deben estar en inglés y seguir un estilo claro y conciso.
 9. **Importaciones:** Se deben evitar las importaciones de paquetes completos y solo importar las clases específicas necesarias. Además, las importaciones deben agruparse y ordenarse de manera lógica.
 10. **Formato de Archivos:** Los archivos Java deben tener una estructura clara y consistente, con una declaración de paquete, seguida de importaciones y luego la definición de clases y métodos.
-
 
 ---
 
@@ -101,5 +101,13 @@ Los mensajes de clockify seguirán la siguiente estructura:
 - **[meet]** : Indica que ese tiempo se ha dedicado en una reunión.
 - **[conflics]** : Indica que ese tiempo se ha dedicado arreglando conflictos.
 - **[work]** : Indica que ese tiempo se ha dedicado trabajando en alguna tarea
+
+---
+
+## **6. Despliegue.**  
+El despliegue de la aplicación se encuentra en la siguiente URL:
+
+>_**https://psg2-2324-g4-44-415722.ew.r.appspot.com**_
+>
 
 ---
