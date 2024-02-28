@@ -1,10 +1,26 @@
-# Sprint 1 - Technical Report
+# **Sprint 1 - Project History.**
 
-## Introducción
+<p align="center">
+    <img src="https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/91954520/d134ec08-7993-4b37-b967-21cf4b8bca74" alt="Logo Universidad Sevilla" style="width: 50%; margin: auto;">
+</p>
+
+---
+
+## Índice
+
+1. [Introducción](#1-introducción)
+2. [Historia del proyecto](#2-historia-del-proyecto)
+3. [Diagrama temporal de commits](#3-diagrama-temporal-de-commits)
+4. [Conflictos durante el desarrollo](#4-conflictos-durante-el-desarrollo)
+---
+
+## **1. Introducción**
 
 Este informe técnico documenta el historial del proyecto Petclinic desarrollado por el grupo G4-44 durante el Sprint 1, con énfasis en las modificaciones realizadas, los conflictos de fusión encontrados y las soluciones implementadas.
 
-## Historia del proyecto
+---
+
+## **2. Historia del proyecto.**
 
 Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al proyecto. Cada miembro trabajó en tareas específicas, logrando lo siguiente:
 
@@ -19,6 +35,8 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
   - Cambió el color de fondo de los encabezados de todas las tablas que se utilizan para enumerar elementos.
     
   - Cambió el comportamiento de la página consultas, para que solo enumere las consultas que son comentarios de la clínica para los usuarios propietarios de la clínica, y solo aquellas consultas que no son comentarios de la clínica para los usuarios veterinarios.
+ 
+  - Redactó el documento Spring Planning.
     
 - **Jorge Muñoz Rodríguez:**
   
@@ -34,7 +52,9 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
     
   - Cambió el fondo de la página principal.
     
-  - Redacción del documento de Análisis Técnico.
+  - Redactó del documento de Análisis Técnico.
+ 
+  - Redactó los documentos Daily Stand-ups
     
 - **María José Ruíz Vázquez:**
   
@@ -69,7 +89,7 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
   - Redactaron el informe técnico que describe la metodología de gestión de la configuración.
     
 
-### Diagrama temporal de commits
+### **3. Diagrama temporal de commits.**
 
 ![image](https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/91954520/11364dfd-ed8d-40cf-a895-8ad60c71f863)
 
@@ -77,6 +97,6 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
 
 
 
-### Conflictos durante el desarrollo
+### **4. Conflictos durante el desarrollo.**
 
 No se reportaron conflictos durante el desarrollo del Sprint 1. El equipo trabajó de manera cohesionada, garantizando una integración sin contratiempos de las diversas contribuciones.
