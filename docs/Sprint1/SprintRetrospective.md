@@ -33,18 +33,18 @@ El siguiente documento detalla la planificación y organización del trabajo par
 
 ## **3. Evaluación De Los Métodos Del Equipo Y Posibles Mejoras**
 En este apartado se abordarán las mejoras propuestas por el equipo para potenciar su rendimiento, tras realizar una evaluación de la situación al finalizar el primer sprint.
-- **Implementar reuniones más frecuentes:**Incrementar la frecuencia de las reuniones para así mejorar la comunicación entre los miembros del equipo.
-- **Establecer roles y responsabilidades más claros dentro del equipo:**Definir roles específicos más rápidamente para evitar confusiones y garantizar que cada miembro contribuya de manera efectiva.
-- **Establecer objetivos claros y medibles para cada sprint:**Definir metas claras facilitando la dirección y la evaluación del progreso durante cada sprint.
-- **Mejorar la gestión del tiempo durante las reuniones y actividades grupales:**Optimizar el tiempo de trabajo conjunto mediante una mejor organización y enfoque durante las reuniones y actividades grupales.
-- **Mejorar la repartición de tareas:**Distribuir equitativamente las tareas (tras haberlas evaluado) entre los miembros del equipo maximiza la productividad y evita la sobrecarga de trabajo.
+- **Implementar reuniones más frecuentes:** Incrementar la frecuencia de las reuniones para así mejorar la comunicación entre los miembros del equipo.
+- **Establecer roles y responsabilidades más claros dentro del equipo:** Definir roles específicos más rápidamente para evitar confusiones y garantizar que cada miembro contribuya de manera efectiva.
+- **Establecer objetivos claros y medibles para cada sprint:** Definir metas claras facilitando la dirección y la evaluación del progreso durante cada sprint.
+- **Mejorar la gestión del tiempo durante las reuniones y actividades grupales:** Optimizar el tiempo de trabajo conjunto mediante una mejor organización y enfoque durante las reuniones y actividades grupales.
+- **Mejorar la repartición de tareas:** Distribuir equitativamente las tareas (tras haberlas evaluado) entre los miembros del equipo maximiza la productividad y evita la sobrecarga de trabajo.
 
 ---
 
 ## **4. Evaluación De Las Capacidades Y Posibles Mejoras De Los Miembos**
 En este apartado se abordarán las mejoras propuestas por cada miembro del equipo, con el objetivo de que otros integrantes puedan mejorar su rendimiento. Estas propuestas surgen tras una evaluación de la situación al concluir el primer sprint.
-- **Mejorar la gestión del tiempo para cumplir con los plazos establecidos:**Optimizar la gestión del tiempo garantizando el cumplimiento de los plazos establecidos para las tareas y proyectos.
-- **Mejorar la capacidad para recibir y aplicar la retroalimentación de manera constructiva:**Reforzar la habilidad para recibir y aplicar retroalimentación de manera constructiva contribuye a un ambiente de trabajo colaborativo y a un constante aprendizaje y mejora del equipo.
+- **Mejorar la gestión del tiempo para cumplir con los plazos establecidos:** Optimizar la gestión del tiempo garantizando el cumplimiento de los plazos establecidos para las tareas y proyectos.
+- **Mejorar la capacidad para recibir y aplicar la retroalimentación de manera constructiva:** Reforzar la habilidad para recibir y aplicar retroalimentación de manera constructiva contribuye a un ambiente de trabajo colaborativo y a un constante aprendizaje y mejora del equipo.
 
 ---
 
