@@ -37,6 +37,10 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
   - Cambió el comportamiento de la página consultas, para que solo enumere las consultas que son comentarios de la clínica para los usuarios propietarios de la clínica, y solo aquellas consultas que no son comentarios de la clínica para los usuarios veterinarios.
  
   - Redactó el documento Spring Planning.
+ 
+  - Redactó la metodología de gestión de configuración.
+ 
+  - Realizó el despliegue de la aplicación.
     
 - **Jorge Muñoz Rodríguez:**
   
