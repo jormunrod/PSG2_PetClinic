@@ -159,8 +159,8 @@ uida en el archivo info.yml ubicado en el repositorio para reflejar la informaci
   
 ### Tarea A1.7
 - **Descripción:** Despliegue de la aplicación.
-- **Estimación:**
-- **Miembro Asignado:** 
+- **Estimación:** 3 P.H.
+- **Miembro Asignado:** Álvaro y Rubén.
   
 ### Tarea A1.8
 - ##### Tarea A1.8.A
@@ -186,7 +186,7 @@ uida en el archivo info.yml ubicado en el repositorio para reflejar la informaci
   
 - #### Tarea A1.9.C
    - **Descripción:** Demostraciones de revisión del sprint y acciones tomadas.
-   - **Estimación:** 1 P.H.
+   - **Estimación:** 2 P.H.
    - **Miembro Asignado:** Todos.
   
 - #### Tarea A1.9.D
