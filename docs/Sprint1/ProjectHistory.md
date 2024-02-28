@@ -71,6 +71,7 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
   - Cambió el color de fondo del encabezado de la tabla que se muestra en la página de lista de Consultas mientras está conectado como propietario.
     
   - Agregó una sección al informe técnico que resume el trabajo realizado al utilizar la funcionalidad iTop CMDB.
+  - Creo el documento del Sprint Review
     
 - **Rafael Molina García:**
   
