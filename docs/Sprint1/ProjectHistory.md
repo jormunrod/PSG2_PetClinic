@@ -88,6 +88,10 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
     
   - Agregó una nueva funcionalidad para propietarios de clínicas que permite a este tipo de usuario crear habitaciones de hotel para mascotas que se utilizarán para brindarles a los propietarios de mascotas un servicio de hotel para mascotas.
     
+  - Realizó el despliegue de la aplicación.
+    
+  - Redactó el documento Spring Retrospective.
+    
 - **Álvaro Chico Castellano y Rafael Molina García:**
   
   - Redactaron el informe técnico que describe la metodología de gestión de la configuración.
