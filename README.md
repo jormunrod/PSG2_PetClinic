@@ -19,6 +19,10 @@
 6. [Políticas de Versionamiento](#6-políticas-de-versionamiento)
 7. [Definición de "Hecho"](#7-definición-de-hecho)
 8. [Gestión de Documentos Generados Durante el Proyecto](#8-gestión-de-documentos-generados-durante-el-proyecto)
+9. [Funcionalidad de iTop (CMDB)] 
+    - [9.1 Objetivo y alcance de la CMDB]
+    - [9.2 Estructura de la CMDB]
+       
 ---
 
 ## **1. Normas de Codificación.**  
@@ -120,4 +124,20 @@ Los criterios que seguiremos para considerar completada y lista para entregar un
 Los documentos se crearán directamente en el editor de texto de GitHub en la rama `doc`, y se almacenarán en la carpeta del proyecto `/docs/sprintX`, donde "X" representa el número del sprint actual.
 
 ---
+## **9. Funcionalidad de iTop (CMDB).** 
+### **9.1 Objetivo y alcance de la CMDB.**
+La principal funcionalidad de una CMDB (Configuration Management Database) para una organización es proporcionar un repositorio centralizado y estructurado sobre los elementos de configuración (CI). Estos pueden incluir Hardware, Software, documentación, y cualquier otro elementos necesario.
+
+La CMDB ayuda a mantener un inventario actualizado de todos los activos de TI de la organización, incluyendo servidores, equipos de red, dispositivos de almacenamiento, software, licencias y otros recursos.
+También facilita la gestión de cambios al proporcionar información detallada sobre los elementos de configuración afectados por un cambio propuesto, permitiendo una evaluación de impacto más precisa y una mejor planificación de cambios.
+Ayuda a identificar rápidamente los elementos de configuración afectados por incidentes o problemas, lo que facilita la resolución de problemas y la restauración del servicio.
+Además, proporciona datos precisos y actualizados, lo que ayuda a los equipos de gestión a tomar decisiones informadas sobre la inversión en tecnología, la optimización de recursos y la planificación estratégica.
+
+### **9.2 Estructura de la CMDB.**
+Nuestra organización esta compuesta por cinco miembros, los usuarios esta asociado a la unidad organizativa correspondiente, definiendo quien tiene acceso a que recursos y funciones dentro de iTop.
+A continuación, se dejara un enlace a la lista de configuración de elementos por cada miembro de la organización. Se ha establecido una nomenclatura a la hora de introducir los elementos para que faciliten la comprensión y búsqueda de los elementos por todos los miembros.
+
+>_nombredellemento_uvusdelmiembro_ 
+
+[Listado de elementos de configuración](./docs/Sprint1/FunctionalCI.pdf/ "Functional CI")
 
