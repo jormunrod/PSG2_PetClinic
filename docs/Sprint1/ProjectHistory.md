@@ -1,7 +1,7 @@
 # **Sprint 1 - Project History.**
 
 <p align="center">
-    <img src="https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/91954520/d134ec08-7993-4b37-b967-21cf4b8bca74" alt="Logo Universidad Sevilla" style="width: 50%; margin: auto;">
+    <img src="../images/logoUs.png" alt="Logo Universidad Sevilla" style="width: 50%; margin: auto;">
 </p>
 
 ---
@@ -103,10 +103,9 @@ Durante el desarrollo del Sprint 1, el grupo realizó varias modificaciones al p
 
 ### **3. Diagrama temporal de commits.**
 
-![image](https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/91954520/11364dfd-ed8d-40cf-a895-8ad60c71f863)
+![image](../images/diagramaCommits1.png)
 
-![image](https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/91954520/6baaa172-dca3-4e27-aa2e-2eee05800692)
-
+![image](../images/diagramaCommits2.png)
 
 
 ### **4. Conflictos durante el desarrollo.**
