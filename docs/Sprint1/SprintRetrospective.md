@@ -1,7 +1,7 @@
 # **Sprint Retrospective**
 
 <p align="center">
-    <img src="https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/91954520/d134ec08-7993-4b37-b967-21cf4b8bca74" alt="Logo Universidad Sevilla" style="width: 50%; margin: auto;">
+    <img src="../images/logoUs.png" alt="Logo Universidad Sevilla" style="width: 50%; margin: auto;">
 </p>
 
 ---
@@ -74,5 +74,5 @@ El siguiente plan de acción tiene como objetivo identificar acciones concretas 
 En este punto se aborda la evaluación del desempeño individual en tres pasos: calificación individual, recopilación de puntuaciones y discusión para consensuar las calificaciones finales. Tras una revisión justa del desempeño durante este sprint, se ha decidido asignar a todos los miembros del equipo la misma puntuación final debido a su contribución equitativa al proyecto. Esta es la tabla de rendimiento final para este primer sprint.
 
 <p align="center">
-    <img src="https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/92794845/69939afd-29a2-4350-a3f7-f76988ff926c" alt="Logo Universidad Sevilla" style="width: 75%; margin: auto;">
+    <img src="../images/retroTable.png" alt="Tabla de rendimiento" style="width: 75%; margin: auto;">
 </p>
