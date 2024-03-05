@@ -134,23 +134,51 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
  
 ### Tarea A2.5 (25%)
 - #### Tarea A2.5 A
-  - **Descripción:** 
+  - **Descripción:** Como grupo, creen un informe técnico (en español) titulado “Análisis del Código Fuente y Métricas Asociadas” que     incluya los resultados del análisis de su proyecto con SonarQube (según las versiones generadas en S1 y S2, analizando el código en     la rama principal para los commits correspondientes). Dicho informe debe describir los valores de las métricas del código fuente        calculadas, los tipos de problemas encontrados en el análisis y sus causas. El documento debe almacenarse en una carpeta docs dentro    del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el grupo trabaja con él          siguiendo la estrategia definida en S1. Este documento debe contener al menos los siguientes elementos:
+      - Una captura de pantalla del panel de SonarQube para el análisis de tu proyecto y una descripción de las métricas proporcionadas         en el panel y sus valores.
+      - Descripción y análisis de los posibles errores encontrados en el repositorio (en la sección Fiabilidad dentro de la pestaña             Medidas).
+      - Descripción y análisis de los diferentes tipos de códigos de olores encontrados en los análisis (en el apartado Mantenibilidad          dentro de la pestaña de medidas). Para cada tipo de olor a código, el informe debe describir:
+      - El nombre y la descripción del código huelen.
+      - Las diferentes causas del olor en tu código base
+      - Una evaluación justificada de la gravedad del olor a código.
+      - Una breve descripción de cómo solucionarlo dependiendo de las causas.
+      - Conclusiones sobre los resultados de los análisis. 
   - **Estimación:** 
   - **Miembro Asignado:**
     
 - #### Tarea A2.5 B
-  - **Descripción:** 
+  - **Descripción:** Como grupo, creen un informe técnico (en español) titulado “Análisis del Código Fuente y Métricas Asociadas” que     incluya los resultados del análisis de su proyecto con SonarQube (según las versiones generadas en S1 y S2, analizando el código en     la rama principal para los commits correspondientes). Dicho informe debe describir los valores de las métricas del código fuente        calculadas, los tipos de problemas encontrados en el análisis y sus causas. El documento debe almacenarse en una carpeta docs dentro    del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el grupo trabaja con él          siguiendo la estrategia definida en S1. Este documento debe contener al menos los siguientes elementos:
+      - Una captura de pantalla del panel de SonarQube para el análisis de tu proyecto y una descripción de las métricas proporcionadas         en el panel y sus valores.
+      - Descripción y análisis de los posibles errores encontrados en el repositorio (en la sección Fiabilidad dentro de la pestaña             Medidas).
+      - Descripción y análisis de los diferentes tipos de códigos de olores encontrados en los análisis (en el apartado Mantenibilidad          dentro de la pestaña de medidas). Para cada tipo de olor a código, el informe debe describir:
+      - El nombre y la descripción del código huelen.
+      - Las diferentes causas del olor en tu código base
+      - Una evaluación justificada de la gravedad del olor a código.
+      - Una breve descripción de cómo solucionarlo dependiendo de las causas.
+      - Conclusiones sobre los resultados de los análisis. 
   - **Estimación:** 
   - **Miembro Asignado:**
  
 ### Tarea A2.6 (25%)
 - #### Tarea A2.6 A
-  - **Descripción:** 
+  - **Descripción:** Se envían todos los informes relacionados con las actas de las reuniones (planificación del Sprint, stand-ups        diarios, revisión y retrospectiva), así como los informes de Clockify, y contienen la información necesaria para comprender el          trabajo del Equipo durante el Sprint S2 demostrando su cumplimiento de los Metodología del curso. Estas actas deben almacenarse en 
+  una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el 
+  grupo trabaja con ellas siguiendo la estrategia definida en S1. En particular, se evaluarán los siguientes aspectos:
+      - Trabajo en equipo durante todo el sprint, reuniones diarias y cumplimiento de su definición de "Listo", posiblemente                    actualizada para este Sprint (reflejada en una nueva versión del informe correspondiente).
+      - Planificación de sprints, gestión de tareas y cumplimiento de sus estimaciones iniciales y metodología interna.
+      - Demostraciones de revisión de Sprint y acciones tomadas.
+      - Retrospectiva del Sprint realizada, análisis del Sprint 2 incluyendo la aplicación del plan de acción definido en la                    retrospectiva del Sprint 1, y un nuevo plan de acción para mejorar el trabajo en equipo para el Sprint 3.
   - **Estimación:** 
   - **Miembro Asignado:**
     
 - #### Tarea A2.6 B
-  - **Descripción:** 
+  - **Descripción:** Se envían todos los informes relacionados con las actas de las reuniones (planificación del Sprint, stand-ups        diarios, revisión y retrospectiva), así como los informes de Clockify, y contienen la información necesaria para comprender el          trabajo del Equipo durante el Sprint S2 demostrando su cumplimiento de los Metodología del curso. Estas actas deben almacenarse en 
+  una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el 
+  grupo trabaja con ellas siguiendo la estrategia definida en S1. En particular, se evaluarán los siguientes aspectos:
+      - Trabajo en equipo durante todo el sprint, reuniones diarias y cumplimiento de su definición de "Listo", posiblemente                    actualizada para este Sprint (reflejada en una nueva versión del informe correspondiente).
+      - Planificación de sprints, gestión de tareas y cumplimiento de sus estimaciones iniciales y metodología interna.
+      - Demostraciones de revisión de Sprint y acciones tomadas.
+      - Retrospectiva del Sprint realizada, análisis del Sprint 2 incluyendo la aplicación del plan de acción definido en la                    retrospectiva del Sprint 1, y un nuevo plan de acción para mejorar el trabajo en equipo para el Sprint 3.
   - **Estimación:** 
   - **Miembro Asignado:**
  
