@@ -88,8 +88,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
   momento en que se inicia el lanzamiento. Como resultado final de ese lanzamiento, la nueva versión de la aplicación
   Petclinic debe implementarse en App Engine, accesible en la URL _https://psg2-2324-gx-xy.ew.r.appspot.com/_, donde X -XY
   corresponde a la identificación del grupo.
-  - **Estimación:** 
-  - **Miembro Asignado:**
+  - **Estimación:** 3 P.H.
+  - **Miembro Asignado:** Álvaro Chico.
     
 - #### Tarea A2.3 B
   - **Descripción:** Una vez realizado el lanzamiento para S2 a nivel de código fuente, crear un lanzamiento en el repositorio
@@ -97,8 +97,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
   de la fusión de la rama de lanzamiento. La versión de GitHub debe incluir en su descripción los cambios realizados en base
   a los mensajes de las solicitudes de extracción fusionadas. Utilice la opción "Generar notas de la versión" proporcionada por
   GitHub para automatizar la inclusión de dicho contenido.
-  - **Estimación:** 
-  - **Miembro Asignado:** 
+  - **Estimación:** 1 P.H.
+  - **Miembro Asignado:** Álvaro Chico.
 
 ### Tarea A2.4 (25%)
 - #### Tarea A2.4 A
@@ -143,8 +143,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
       - Una evaluación justificada de la gravedad del olor a código.
       - Una breve descripción de cómo solucionarlo dependiendo de las causas.
       - Conclusiones sobre los resultados de los análisis. 
-  - **Estimación:** 
-  - **Miembro Asignado:**
+  - **Estimación:** 12 P.H.
+  - **Miembro Asignado:** María José Ruíz.
     
 - #### Tarea A2.5 B
   - **Descripción:** Como grupo, creen un informe técnico (en español) titulado “Análisis del Código Fuente y Métricas Asociadas” que     incluya los resultados del análisis de su proyecto con SonarQube (según las versiones generadas en S1 y S2, analizando el código en     la rama principal para los commits correspondientes). Dicho informe debe describir los valores de las métricas del código fuente        calculadas, los tipos de problemas encontrados en el análisis y sus causas. El documento debe almacenarse en una carpeta docs dentro    del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el grupo trabaja con él          siguiendo la estrategia definida en S1. Este documento debe contener al menos los siguientes elementos:
@@ -156,8 +156,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
       - Una evaluación justificada de la gravedad del olor a código.
       - Una breve descripción de cómo solucionarlo dependiendo de las causas.
       - Conclusiones sobre los resultados de los análisis. 
-  - **Estimación:** 
-  - **Miembro Asignado:**
+  - **Estimación:** 12 P.H.
+  - **Miembro Asignado:** Rubén Pérez.
  
 ### Tarea A2.6 (25%)
 Se envían todos los informes relacionados con las actas de las reuniones (Sprint Planning, Daily Standups, Review y Retrospective), así como los informes de Clockify, y contienen la información necesaria para comprender el trabajo del Equipo durante el Sprint S2 demostrando su cumplimiento de los Metodología del curso. Estas actas deben almacenarse en una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el grupo trabaja con ellas siguiendo la estrategia definida en S1.
@@ -190,7 +190,7 @@ Se envían todos los informes relacionados con las actas de las reuniones (Sprin
   analizar también las diferencias entre los resultados de las métricas y el análisis en S1 y S2. El documento
   también debe incluir una discusión sobre las causas de tales diferencias. Varios miembros del equipo pueden
   colaborar en este criterio adicional, centrándose en un conjunto diferente de métricas.
-  - **Estimación:**  
+  - **Estimación:**  6 P.H.
   - **Miembro Asignado:** Rubén Pérez.
  
 - #### Extra E2.1 B
@@ -198,7 +198,7 @@ Se envían todos los informes relacionados con las actas de las reuniones (Sprin
     analizar también las diferencias entre los resultados de las métricas y el análisis en S1 y S2. El documento
     también debe incluir una discusión sobre las causas de tales diferencias. Varios miembros del equipo pueden
     colaborar en este criterio adicional, centrándose en un conjunto diferente de métricas.
-  - **Estimación:** 
+  - **Estimación:** 6 P.H.
   - **Miembro Asignado:** María José Ruíz.
 
 ### Tarea E2.2 (0.1 Puntos)
@@ -208,8 +208,8 @@ Se envían todos los informes relacionados con las actas de las reuniones (Sprin
   y realice análisis adicionales con SonarQube, incluido el informe resultante en la discusión del informe
   técnico A2.5. Cada miembro del equipo que trabaje en este criterio adicional debe centrarse en diferentes
   bichos, malos olores y clases con alta complejidad ciclomática.
-- **Estimación:** 
-- **Miembro Asignado:** Todos (Individualmente).
+- **Estimación:** 9 P.H.
+- **Miembro Asignado:** Álvaro Chico.
 
 ### Tarea E2.3 (0.1 Puntos)
 - **Descripción:** Individualmente, configura tu proyecto para usar GitHub Actions para automatizar el análisis
@@ -220,32 +220,3 @@ Se envían todos los informes relacionados con las actas de las reuniones (Sprin
   investigando automatizaciones adicionales con GitHub Actions.
 - **Estimación:** 18 P.H.
 - **Miembro Asignado:** Álvaro Chico.
-
-
-
-
- 
-  
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
