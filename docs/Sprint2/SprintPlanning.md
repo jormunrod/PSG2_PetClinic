@@ -63,22 +63,22 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
   - **Descripción:** Agregue la funcionalidad de _Booking_ para las habitaciones de hotel para mascotas. Como propietario
     podemos crear una reserva, y debe tener una fecha de inicio, una fecha de finalización y una mascota y habitación asociadas.
     Esta funcionalidad debería validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
-  - **Estimación:** 
-  - **Miembro Asignado:**
+  - **Estimación:** 48 P.H.
+  - **Miembro Asignado:** Rafa Molina.
     
 - #### Tarea A2.2 B
-  - **Descripción:** Cree una funcionalidad de Adopciones. Como propietario, podemos crear una solicitud de adopción cuando
+  - **Descripción:** Cree una funcionalidad de _Adoptions_. Como propietario, podemos crear una solicitud de adopción cuando
     no podamos cuidar de nuestra mascota. Otros propietarios podrían enumerar las mascotas disponibles para adopción y
     solicitarlas (las solicitudes de adopción deben tener una descripción de cómo el solicitante cuidará a la mascota).
     Si el dueño original aprueba la solicitud, la mascota será transferida al solicitante y éste será el nuevo dueño de la mascota.
-  - **Estimación:** 
+  - **Estimación:** 48 P.H.
   - **Miembro Asignado:** Jorge Muñoz.
 
 - #### Tarea A2.2 C
   - **Descripción:** Desarrolle un conjunto integral de pruebas unitarias para garantizar al menos una cobertura de condiciones
     del 90 % para el servicio responsable de gestionar la lógica empresarial relacionada con las reservas.
-  - **Estimación:** 
-  - **Miembro Asignado:**
+  - **Estimación:** 30 P.H.
+  - **Miembro Asignado:** Álvaro Chico.
 
 ### Tarea A2.3 (10%)
 - #### Tarea A2.3 A
@@ -175,22 +175,31 @@ Se envían todos los informes relacionados con las actas de las reuniones (Sprin
 
 - #### Tarea A2.6 C
   - **Descripción:** Review. Demostraciones de revisión de Sprint y acciones tomadas.
-  - **Estimación:** 
-  - **Miembro Asignado:**
+  - **Estimación:** 5 P.H.
+  - **Miembro Asignado:** María José Ruíz.
  
 - #### Tarea A2.6 D
   - **Descripción:** Retrospective. Retrospectiva del Sprint realizada, análisis del Sprint 2 incluyendo la aplicación del plan de 
   acción definido en la retrospectiva del Sprint 1, y un nuevo plan de acción para mejorar el trabajo en equipo para el Sprint 3.
-  - **Estimación:** 
-  - **Miembro Asignado:**
+  - **Estimación:** 5 P.H.
+  - **Miembro Asignado:** Rubén Pérez.
  
-### Tarea E2.1 (0.1 Puntos)
-- **Descripción:** Individualmente, ampliar los informes técnicos creados como resultado de A2.4 y A2.5 para
+### Extra E2.1 (0.1 Puntos)
+- #### Extra E2.1 A
+  - **Descripción:** Individualmente, ampliar los informes técnicos creados como resultado de _A2.4_ para
   analizar también las diferencias entre los resultados de las métricas y el análisis en S1 y S2. El documento
   también debe incluir una discusión sobre las causas de tales diferencias. Varios miembros del equipo pueden
   colaborar en este criterio adicional, centrándose en un conjunto diferente de métricas.
-- **Estimación:** 
-- **Miembro Asignado:** Todos (Individualmente).
+  - **Estimación:**  
+  - **Miembro Asignado:** Rubén Pérez.
+ 
+- #### Extra E2.1 B
+  - **Descripción:** Individualmente, ampliar los informes técnicos creados como resultado de _A2.5_ para
+    analizar también las diferencias entre los resultados de las métricas y el análisis en S1 y S2. El documento
+    también debe incluir una discusión sobre las causas de tales diferencias. Varios miembros del equipo pueden
+    colaborar en este criterio adicional, centrándose en un conjunto diferente de métricas.
+  - **Estimación:** 
+  - **Miembro Asignado:** María José Ruíz.
 
 ### Tarea E2.2 (0.1 Puntos)
 - **Descripción:** Individualmente, amplía el informe técnico creado como resultado de A2.5, incluyendo qué
@@ -209,8 +218,8 @@ Se envían todos los informes relacionados con las actas de las reuniones (Sprin
   para automatizar esas tareas (cómo funciona el archivo de script de GitHub Actions generado). Varios miembros del
   equipo pueden colaborar en este criterio adicional, centrándose en diferentes partes de la aplicación Petclinic o
   investigando automatizaciones adicionales con GitHub Actions.
-- **Estimación:** 
-- **Miembro Asignado:** Todos (Individualmente).
+- **Estimación:** 18 P.H.
+- **Miembro Asignado:** Álvaro Chico.
 
 
 
