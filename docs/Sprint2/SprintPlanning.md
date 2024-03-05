@@ -113,8 +113,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
       - Control Chart showing Cycle Time
       - Total history points delivered
       - Percentage of history points delivered.
-  - **Estimación:** 
-  - **Miembro Asignado:**
+  - **Estimación:** 12 P.H.
+  - **Miembro Asignado:** Rubén Pérez.
     
 - #### Tarea A2.4 B
   - **Descripción:** Como grupo, creen un informe técnico (en español) titulado “Métricas de Proceso Ágil y Recursos”.
@@ -129,8 +129,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
       - Total history points delivered
       - Percentage of history points delivered.
       - Niko-Niko calendar with a qualitative analysis of its content (conclusions and possible actions to improve team morale)
-  - **Estimación:** 
-  - **Miembro Asignado:**
+  - **Estimación:** 15 P.H.
+  - **Miembro Asignado:** María José Ruíz.
  
 ### Tarea A2.5 (25%)
 - #### Tarea A2.5 A
