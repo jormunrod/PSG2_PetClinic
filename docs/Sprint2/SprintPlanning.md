@@ -160,25 +160,31 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
   - **Miembro Asignado:**
  
 ### Tarea A2.6 (25%)
+Se envían todos los informes relacionados con las actas de las reuniones (Sprint Planning, Daily Standups, Review y Retrospective), así como los informes de Clockify, y contienen la información necesaria para comprender el trabajo del Equipo durante el Sprint S2 demostrando su cumplimiento de los Metodología del curso. Estas actas deben almacenarse en una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el grupo trabaja con ellas siguiendo la estrategia definida en S1. En particular, se evaluarán los siguientes aspectos:
+    - Trabajo en equipo durante todo el sprint, reuniones diarias y cumplimiento de su definición de "Listo", posiblemente                    actualizada para este Sprint (reflejada en una nueva versión del informe correspondiente).
+    - Planificación de sprints, gestión de tareas y cumplimiento de sus estimaciones iniciales y metodología interna.
+    - Demostraciones de revisión de Sprint y acciones tomadas.
+    - Retrospectiva del Sprint realizada, análisis del Sprint 2 incluyendo la aplicación del plan de acción definido en la                    retrospectiva del Sprint 1, y un nuevo plan de acción para mejorar el trabajo en equipo para el Sprint 3.
 - #### Tarea A2.6 A
-  - **Descripción:** Se envían todos los informes relacionados con las actas de las reuniones (planificación del Sprint, stand-ups        diarios, revisión y retrospectiva), así como los informes de Clockify, y contienen la información necesaria para comprender el          trabajo del Equipo durante el Sprint S2 demostrando su cumplimiento de los Metodología del curso. Estas actas deben almacenarse en 
-  una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el 
-  grupo trabaja con ellas siguiendo la estrategia definida en S1. En particular, se evaluarán los siguientes aspectos:
-      - Trabajo en equipo durante todo el sprint, reuniones diarias y cumplimiento de su definición de "Listo", posiblemente                    actualizada para este Sprint (reflejada en una nueva versión del informe correspondiente).
-      - Planificación de sprints, gestión de tareas y cumplimiento de sus estimaciones iniciales y metodología interna.
-      - Demostraciones de revisión de Sprint y acciones tomadas.
-      - Retrospectiva del Sprint realizada, análisis del Sprint 2 incluyendo la aplicación del plan de acción definido en la                    retrospectiva del Sprint 1, y un nuevo plan de acción para mejorar el trabajo en equipo para el Sprint 3.
+  - **Descripción:** Sprint Planning. Trabajo en equipo durante todo el sprint, reuniones diarias y cumplimiento de su definición de 
+  "Listo", posiblemente actualizada para este Sprint (reflejada en una nueva versión del informe correspondiente).
+  - **Estimación:** 11 P.H.
+  - **Miembro Asignado:** Todos (Grupal).
+ 
+- #### Tarea A2.6 B
+  - **Descripción:** Daily Standups. Planificación de sprints, gestión de tareas y cumplimiento de sus estimaciones iniciales y 
+  metodología interna.
+  - **Estimación:** 4 P.H.
+  - **Miembro Asignado:** Jorge Muñoz.
+
+- #### Tarea A2.6 C
+  - **Descripción:** Review. Demostraciones de revisión de Sprint y acciones tomadas.
   - **Estimación:** 
   - **Miembro Asignado:**
-    
-- #### Tarea A2.6 B
-  - **Descripción:** Se envían todos los informes relacionados con las actas de las reuniones (planificación del Sprint, stand-ups        diarios, revisión y retrospectiva), así como los informes de Clockify, y contienen la información necesaria para comprender el          trabajo del Equipo durante el Sprint S2 demostrando su cumplimiento de los Metodología del curso. Estas actas deben almacenarse en 
-  una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el 
-  grupo trabaja con ellas siguiendo la estrategia definida en S1. En particular, se evaluarán los siguientes aspectos:
-      - Trabajo en equipo durante todo el sprint, reuniones diarias y cumplimiento de su definición de "Listo", posiblemente                    actualizada para este Sprint (reflejada en una nueva versión del informe correspondiente).
-      - Planificación de sprints, gestión de tareas y cumplimiento de sus estimaciones iniciales y metodología interna.
-      - Demostraciones de revisión de Sprint y acciones tomadas.
-      - Retrospectiva del Sprint realizada, análisis del Sprint 2 incluyendo la aplicación del plan de acción definido en la                    retrospectiva del Sprint 1, y un nuevo plan de acción para mejorar el trabajo en equipo para el Sprint 3.
+ 
+- #### Tarea A2.6 D
+  - **Descripción:** Retrospective. Retrospectiva del Sprint realizada, análisis del Sprint 2 incluyendo la aplicación del plan de 
+  acción definido en la retrospectiva del Sprint 1, y un nuevo plan de acción para mejorar el trabajo en equipo para el Sprint 3.
   - **Estimación:** 
   - **Miembro Asignado:**
  
