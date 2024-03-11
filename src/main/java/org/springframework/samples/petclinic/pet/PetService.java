@@ -154,4 +154,9 @@ public class PetService {
 		});
 		return unsortedPetsByType;
 	}
+
+	@Transactional(readOnly = true)
+	public List<Pet> findAllPetsAvailableForAdoption(int ownerId) {
+		return petRepository.findAllPetsAvailableForAdoption(ownerId);
+	}
 }

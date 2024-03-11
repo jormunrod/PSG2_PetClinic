@@ -175,4 +175,10 @@ public class PetRestController {
 		return new ResponseEntity<>(this.petService.getPetsStats(), HttpStatus.OK);
 	}
 
+	@GetMapping("/adoptions/available")
+	public ResponseEntity<List<Pet>> getAvailablePetsForAdoption() {
+		Integer ownerId = userService.findCurrentUser().getId();
+		return new ResponseEntity<>(this.petService.findAllPetsAvailableForAdoption(ownerId), HttpStatus.OK);
+	}
+
 }

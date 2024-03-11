@@ -73,19 +73,20 @@ INSERT INTO owners(id, first_name, last_name, address, city, telephone, user_id,
 INSERT INTO owners(id, first_name, last_name, address, city, telephone, user_id, clinic) VALUES (9, 'David', 'Schroeder', '2749 Blackhawk Trail','Cádiz', '685559435', 12, 3);
 INSERT INTO owners(id, first_name, last_name, address, city, telephone, user_id, clinic) VALUES (10, 'Carlos', 'Estaban', '2335 Independence La.', 'Cádiz', '685555487', 13, 1);
 
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (1, 'Leo', '2010-09-07', 1, 1);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (2, 'Basil', '2012-08-06', 6, 2);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (3, 'Rosy', '2011-04-17', 2, 3);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (4, 'Jewel', '2010-03-07', 2, 3);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (5, 'Iggy', '2010-11-30', 3, 4);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (6, 'George', '2010-01-20', 4, 5);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (7, 'Samantha', '2012-09-04', 1, 6);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (8, 'Max', '2012-09-04', 1, 6);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (9, 'Lucky', '2011-08-06', 5, 7);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (10, 'Mulligan', '2007-02-24', 2, 8);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (11, 'Freddy', '2010-03-09', 5, 9);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (12, 'Lucky', '2010-06-24', 2, 10);
-INSERT INTO pets(id,name,birth_date,type_id,owner_id) VALUES (13, 'Sly', '2012-06-08', 1, 10);
+INSERT INTO pets(id,name,birth_date,type_id,owner_id, is_available_for_adoption, is_adopted, adoption_info) VALUES 
+    (1, 'Leo', '2010-09-07', 1, 1, true, false, null),
+    (2, 'Basil', '2012-08-06', 6, 2, true, false, null),
+    (3, 'Rosy', '2011-04-17', 2, 3, false, false, null),
+    (4, 'Jewel', '2010-03-07', 2, 3, false, false, null),
+    (5, 'Iggy', '2010-11-30', 3, 4, false, false, null),
+    (6, 'George', '2010-01-20', 4, 5, false, false, null),
+    (7, 'Samantha', '2012-09-04', 1, 6, false, false, null),
+    (8, 'Max', '2012-09-04', 1, 6, false, false, null),
+    (9, 'Lucky', '2011-08-06', 5, 7, false, false, null),
+    (10, 'Mulligan', '2007-02-24', 2, 8, false, false, null),
+    (11, 'Freddy', '2010-03-09', 5, 9, false, false, null),
+    (12, 'Lucky', '2010-06-24', 2, 10, false, false, null),
+    (13, 'Sly', '2012-06-08', 1, 10, false, false, null);
 
 INSERT INTO visits(id,pet_id,visit_date_time,description,vet_id) VALUES (1, 7, '2013-01-01 13:00', 'rabies shot', 4);
 INSERT INTO visits(id,pet_id,visit_date_time,description,vet_id) VALUES (2, 8, '2013-01-02 15:30', 'rabies shot', 5);
