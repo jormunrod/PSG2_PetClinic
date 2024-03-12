@@ -1,0 +1,105 @@
+# **Metricas de Proceso Ágil y Recursos del Sprint 1.**
+
+<p align="center">
+    <img src="../images/logoUs.png" alt="Logo Universidad Sevilla" style="width: 50%; margin: auto;">
+</p>
+
+---
+
+## Índice
+
+1. [Introducción](#1-introducción)
+2. [Miembros Del Equipo De Trabajo](#2-miembros-del-equipo-de-trabajo)
+3. [Gráfico Burn Down](#3-grafico-burn-down)
+4. [Gráfico De Control Del Lead Time](#4-grafico-de-control-del-lead-time)
+5. [Gráfico De Control Del Cycle Time](#5-grafico-de-control-del-cycle-time)
+6. [Total De Puntos De Historia Entregados](#6-total-de-puntos-de-historia-entregados)
+7. [Porcentaje De Puntos De Historia Entregados](#7-porcentaje-de-puntos-de-historia-entregados)
+
+---
+
+## **1. Introducción**
+En el presente informe técnico se presentarán gráficos relacionados con el desarrollo del primer sprint. Dichas gráficas mostrarán 
+el progreso del equipo con respecto a las tareas planificadas para esta etapa. Además, se expondrán los resultados del sprint en 
+términos de los puntos de historia completados.
+
+Este informe proporciona al equipo una visión clara de su desempeño durante el sprint anterior, lo que les permite autoorganizarse 
+de manera más efectiva para optimizar el trabajo planificado para la segunda entrega.
+
+---
+
+## **2. Miembros Del Equipo De Trabajo**
+- Álvaro Chico Castellano.
+- Jorge Muñoz Rodríguez.
+- María José Ruíz Vázquez.
+- Rafael Molina García.
+- Rubén Pérez Garrido.
+
+---
+
+## **3. Gráfico Burn Down**
+Un "burn down chart" es una herramienta visual utilizada en la gestión ágil de proyectos. La gráfica muestra el progreso del 
+equipo hacia la finalización de las tareas planificadas en un período de tiempo específico, en este caso, el sprint 1. 
+
+En el eje horizontal se encuentra el tiempo, generalmente en días o semanas, mientras que en el eje vertical se muestra la 
+cantidad de trabajo restante, a menudo en términos de historias de usuario o puntos de historia. 
+
+El objetivo es que la línea de "burn down" (descenso) alcance cero hacia el final del período, lo que indica que se ha completado 
+todo el trabajo planificado. Esto proporciona una visión rápida y clara del progreso del proyecto y permite que el equipo identifique 
+rápidamente cualquier desviación en el ritmo planificado.
+
+---
+
+## **4. Gráfico De Control Del Lead Time**
+
+
+
+### Tarea A2.2 (15%)
+- #### Tarea A2.2 A
+  - **Descripción:** Agregue la funcionalidad de _Booking_ para las habitaciones de hotel para mascotas. Como propietario
+    podemos crear una reserva, y debe tener una fecha de inicio, una fecha de finalización y una mascota y habitación asociadas.
+    Esta funcionalidad debería validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
+  - **Estimación:** 48 P.H.
+  - **Miembro Asignado:** Rafa Molina.
+
+---
+
+## **5. Gráfico De Control Del Cycle Time**
+
+
+
+### Tarea A2.2 (15%)
+- #### Tarea A2.2 A
+  - **Descripción:** Agregue la funcionalidad de _Booking_ para las habitaciones de hotel para mascotas. Como propietario
+    podemos crear una reserva, y debe tener una fecha de inicio, una fecha de finalización y una mascota y habitación asociadas.
+    Esta funcionalidad debería validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
+  - **Estimación:** 48 P.H.
+  - **Miembro Asignado:** Rafa Molina.
+
+---
+
+## **6. Total De Puntos De Historia Entregados**
+
+
+
+### Tarea A2.2 (15%)
+- #### Tarea A2.2 A
+  - **Descripción:** Agregue la funcionalidad de _Booking_ para las habitaciones de hotel para mascotas. Como propietario
+    podemos crear una reserva, y debe tener una fecha de inicio, una fecha de finalización y una mascota y habitación asociadas.
+    Esta funcionalidad debería validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
+  - **Estimación:** 48 P.H.
+  - **Miembro Asignado:** Rafa Molina.
+
+---
+
+## **7. Porcentaje De Puntos De Historia Entregados**
+
+
+
+### Tarea A2.2 (15%)
+- #### Tarea A2.2 A
+  - **Descripción:** Agregue la funcionalidad de _Booking_ para las habitaciones de hotel para mascotas. Como propietario
+    podemos crear una reserva, y debe tener una fecha de inicio, una fecha de finalización y una mascota y habitación asociadas.
+    Esta funcionalidad debería validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
+  - **Estimación:** 48 P.H.
+  - **Miembro Asignado:** Rafa Molina.
