@@ -3,6 +3,7 @@ package org.springframework.samples.petclinic.adoption;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.adoption.exceptions.IsYourPetException;
 import org.springframework.samples.petclinic.adoption.exceptions.NotInAdoptionException;
+import org.springframework.samples.petclinic.adoption.exceptions.NotYourPetException;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerRepository;
@@ -80,6 +81,21 @@ public class AdoptionService {
         adoption.setPet(pet);
         saveAdoption(adoption);
         return adoption;
+    }
+
+    @Transactional
+    public void adoptPet(int adoptionId, int ownerId) {
+        Adoption adoption = findAdoptionById(adoptionId);
+        Pet pet = adoption.getPet();
+
+        if(pet.getOwner().getId() != ownerId){
+            throw new NotYourPetException();
+        }
+
+        pet.setOwner(adoption.getApplicant());
+        pet.setIsAvailableForAdoption(false);
+        petRepository.save(pet);
+        deleteAdoption(adoption);
     }
     
 }
