@@ -65,12 +65,4 @@ public class Pet extends NamedEntity {
 	@NotNull
 	private Boolean isAvailableForAdoption;
 
-	@Column(name = "is_adopted")
-	@NotNull
-	private Boolean isAdopted;
-
-	@Column(name = "adoption_info")
-	@Length(max = 255)
-	private String adoptionInfo;
-
 }

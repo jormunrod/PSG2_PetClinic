@@ -43,6 +43,7 @@ public class SecurityConfiguration {
 
 	private static final String ADMIN = "ADMIN";
 	private static final String CLINIC_OWNER = "CLINIC_OWNER";
+	private static final String OWNER = "OWNER";
 	
 
 	@Bean
@@ -78,7 +79,10 @@ public class SecurityConfiguration {
 			// Pet Hotel Rooms
 			.requestMatchers("/api/v1/rooms").hasAnyAuthority(ADMIN, CLINIC_OWNER)
 			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/rooms/**")).hasAnyAuthority(ADMIN, CLINIC_OWNER)
-			
+
+			// Adoptions
+			.requestMatchers("/api/v1/adoptions").hasAnyAuthority(ADMIN, OWNER)
+			.requestMatchers(AntPathRequestMatcher.antMatcher("/api/v1/adoptions/**")).hasAnyAuthority(ADMIN, OWNER)
 			
 			.anyRequest().authenticated())					
 			.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);		

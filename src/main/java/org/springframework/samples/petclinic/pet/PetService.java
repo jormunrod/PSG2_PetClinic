@@ -26,6 +26,8 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
+import org.springframework.samples.petclinic.owner.OwnerRepository;
+import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,10 +40,12 @@ public class PetService {
 	private final Integer PLATINUM_LIMIT = 7;
 
 	private PetRepository petRepository;
+	private OwnerRepository ownerRepository;
 
 	@Autowired
-	public PetService(PetRepository petRepository) {
+	public PetService(PetRepository petRepository, OwnerRepository ownerRepository) {
 		this.petRepository = petRepository;
+		this.ownerRepository = ownerRepository;
 	}
 
 	@Transactional(readOnly = true)
@@ -159,4 +163,5 @@ public class PetService {
 	public List<Pet> findAllPetsAvailableForAdoption(int ownerId) {
 		return petRepository.findAllPetsAvailableForAdoption(ownerId);
 	}
+
 }
