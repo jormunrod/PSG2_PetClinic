@@ -18,7 +18,7 @@ import lombok.Setter;
  * Simple business object representing an adoption.
  * 
  * 
- * @Author Jorge Muñoz
+ * @Author: jormunrod
  */
 @Entity
 @Table(name = "adoptions")

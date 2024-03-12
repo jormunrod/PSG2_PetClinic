@@ -1,6 +1,7 @@
 package org.springframework.samples.petclinic.adoption;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.samples.petclinic.adoption.exceptions.NotInAdoptionException;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerRepository;
@@ -9,7 +10,10 @@ import org.springframework.samples.petclinic.pet.PetRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-
+/*
+ * Service for Adoptions.
+ * @Author jormunrod
+ */
 @Service
 public class AdoptionService {
 
@@ -60,6 +64,10 @@ public class AdoptionService {
         .orElseThrow(() -> new ResourceNotFoundException("Owner", "ID", applicantId));
         Pet pet = petRepository.findById(petId)
         .orElseThrow(() -> new ResourceNotFoundException("Pet", "ID", petId));
+
+        if(pet.getIsAvailableForAdoption() == false){
+            throw new NotInAdoptionException();
+        }
         
         Adoption adoption = new Adoption();
         adoption.setDescription(description);
