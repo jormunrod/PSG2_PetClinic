@@ -1,6 +1,7 @@
 package org.springframework.samples.petclinic.adoption;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.samples.petclinic.adoption.exceptions.IsYourPetException;
 import org.springframework.samples.petclinic.adoption.exceptions.NotInAdoptionException;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
@@ -67,6 +68,10 @@ public class AdoptionService {
 
         if(pet.getIsAvailableForAdoption() == false){
             throw new NotInAdoptionException();
+        }
+
+        if(pet.getOwner().getId() == applicantId){
+            throw new IsYourPetException();
         }
         
         Adoption adoption = new Adoption();
