@@ -41,65 +41,35 @@ de manera más efectiva para optimizar el trabajo planificado para la segunda en
 Un "burn down chart" es una herramienta visual utilizada en la gestión ágil de proyectos. La gráfica muestra el progreso del 
 equipo hacia la finalización de las tareas planificadas en un período de tiempo específico, en este caso, el sprint 1. 
 
-En el eje horizontal se encuentra el tiempo, generalmente en días o semanas, mientras que en el eje vertical se muestra la 
-cantidad de trabajo restante, a menudo en términos de historias de usuario o puntos de historia. 
+En el eje horizontal se encuentra el tiempo, representado en este caso en días, mientras que en el eje vertical se muestra la 
+cantidad de trabajo restante, representado en este caso por puntos de historia estimados para cada tarea. 
 
 El objetivo es que la línea de "burn down" (descenso) alcance cero hacia el final del período, lo que indica que se ha completado 
 todo el trabajo planificado. Esto proporciona una visión rápida y clara del progreso del proyecto y permite que el equipo identifique 
 rápidamente cualquier desviación en el ritmo planificado.
 
+<p align="center">
+    <img src="../images/burnDownChartS1.png" alt="Burn Down Chart from Sprint 1" style="width: 50%; margin: auto;">
+</p>
+
+Al observar detenidamente el gráfico, se nota que el equipo logró finalizar todas las tareas planificadas antes de la conclusión del sprint. 
+Sin embargo, es notorio que la mayoría de estas finalizaciones se concentraron en los últimos días del período. Este patrón sugiere que el 
+equipo enfrentó ciertas dificultades para completar las tareas de manera constante a lo largo del sprint. Tal situación genera ciertas 
+preocupaciones acerca de la calidad de la entrega, dado que casi la mitad de los puntos de historia fueron completados en el último día del 
+sprint, lo que podría afectar la integridad y eficiencia del producto final.
+
 ---
 
 ## **4. Gráfico De Control Del Lead Time**
-
-
-
-### Tarea A2.2 (15%)
-- #### Tarea A2.2 A
-  - **Descripción:** Agregue la funcionalidad de _Booking_ para las habitaciones de hotel para mascotas. Como propietario
-    podemos crear una reserva, y debe tener una fecha de inicio, una fecha de finalización y una mascota y habitación asociadas.
-    Esta funcionalidad debería validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
-  - **Estimación:** 48 P.H.
-  - **Miembro Asignado:** Rafa Molina.
 
 ---
 
 ## **5. Gráfico De Control Del Cycle Time**
 
-
-
-### Tarea A2.2 (15%)
-- #### Tarea A2.2 A
-  - **Descripción:** Agregue la funcionalidad de _Booking_ para las habitaciones de hotel para mascotas. Como propietario
-    podemos crear una reserva, y debe tener una fecha de inicio, una fecha de finalización y una mascota y habitación asociadas.
-    Esta funcionalidad debería validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
-  - **Estimación:** 48 P.H.
-  - **Miembro Asignado:** Rafa Molina.
-
 ---
 
 ## **6. Total De Puntos De Historia Entregados**
 
-
-
-### Tarea A2.2 (15%)
-- #### Tarea A2.2 A
-  - **Descripción:** Agregue la funcionalidad de _Booking_ para las habitaciones de hotel para mascotas. Como propietario
-    podemos crear una reserva, y debe tener una fecha de inicio, una fecha de finalización y una mascota y habitación asociadas.
-    Esta funcionalidad debería validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
-  - **Estimación:** 48 P.H.
-  - **Miembro Asignado:** Rafa Molina.
-
 ---
 
 ## **7. Porcentaje De Puntos De Historia Entregados**
-
-
-
-### Tarea A2.2 (15%)
-- #### Tarea A2.2 A
-  - **Descripción:** Agregue la funcionalidad de _Booking_ para las habitaciones de hotel para mascotas. Como propietario
-    podemos crear una reserva, y debe tener una fecha de inicio, una fecha de finalización y una mascota y habitación asociadas.
-    Esta funcionalidad debería validar que no haya reservas simultáneas en el hotel para la misma mascota o la misma habitación.
-  - **Estimación:** 48 P.H.
-  - **Miembro Asignado:** Rafa Molina.
