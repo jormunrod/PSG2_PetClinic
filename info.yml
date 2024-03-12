@@ -18,3 +18,11 @@ project:
       name: 'Rubén'
       surname: 'Pérez' 
       githubUsername: 'rubpergar'
+    member4:
+      name: 'Rafael'
+      surname: 'Molina'
+      githubUsername: 'rafmolgar2'
+    member5:
+      name: 'Álvaro'
+      surname: 'Chico'
+      githubUsername: 'alvchicas'
