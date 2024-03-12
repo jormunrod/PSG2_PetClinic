@@ -10,9 +10,9 @@
 
 1. [Introducción](#1-introducción)
 2. [Miembros Del Equipo De Trabajo](#2-miembros-del-equipo-de-trabajo)
-3. [Gráfico Burn Down](#3-grafico-burn-down)
-4. [Gráfico De Control Del Lead Time](#4-grafico-de-control-del-lead-time)
-5. [Gráfico De Control Del Cycle Time](#5-grafico-de-control-del-cycle-time)
+3. [Gráfico Burn Down](#3-gráfico-burn-down)
+4. [Gráfico De Control Del Lead Time](#4-gráfico-de-control-del-lead-time)
+5. [Gráfico De Control Del Cycle Time](#5-gráfico-de-control-del-cycle-time)
 6. [Total De Puntos De Historia Entregados](#6-total-de-puntos-de-historia-entregados)
 7. [Porcentaje De Puntos De Historia Entregados](#7-porcentaje-de-puntos-de-historia-entregados)
 
@@ -49,7 +49,7 @@ todo el trabajo planificado. Esto proporciona una visión rápida y clara del pr
 rápidamente cualquier desviación en el ritmo planificado.
 
 <p align="center">
-    <img src="../images/burnDownChartS1.png" alt="Burn Down Chart from Sprint 1" style="width: 50%; margin: auto;">
+    <img src="../images/burnDownChartS1.png" alt="Burn Down Chart from Sprint 1" style="width: 75%; margin: auto;">
 </p>
 
 Al observar detenidamente el gráfico, se nota que el equipo logró finalizar todas las tareas planificadas antes de la conclusión del sprint. 
