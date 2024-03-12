@@ -14,3 +14,7 @@ project:
       name: 'María José'
       surname: 'Ruiz' 
       githubUsername: 'marruivaz1'
+    member3:
+      name: 'Rubén'
+      surname: 'Pérez' 
+      githubUsername: 'rubpergar'
