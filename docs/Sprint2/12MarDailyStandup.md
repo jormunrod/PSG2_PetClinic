@@ -5,7 +5,7 @@
 - María José Ruíz Vázquez
 - Rafael Molina García
 - Rubén Pérez Garrido
-- Álvaro Chico Castellano
+- Álvaro Chico Castellano 
 
 ## Objetivo
 El objetivo de nuestra segunda reunión es continuar con las tareas asignadas en la sesión anterior.
