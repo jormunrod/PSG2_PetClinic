@@ -164,4 +164,15 @@ public class PetService {
 		return petRepository.findAllPetsAvailableForAdoption(ownerId);
 	}
 
+	@Transactional
+	public void setPetAvailableForAdoption(int petId, boolean available) {
+		Pet pet = findPetById(petId);
+		if (available == false) {
+			// TODO: Delete all adoption requests for this pet
+			
+		}
+		pet.setIsAvailableForAdoption(available);
+		savePet(pet);
+	}
+
 }
