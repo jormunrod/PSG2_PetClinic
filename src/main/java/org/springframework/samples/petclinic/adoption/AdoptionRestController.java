@@ -16,9 +16,9 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
-/*
+/**
  * Controller for Adoptions.
- * @Author jormunrod
+ * @author jormunrod
  */
 @RestController
 @RequestMapping("/api/v1/adoptions")

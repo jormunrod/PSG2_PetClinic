@@ -12,9 +12,9 @@ import org.springframework.samples.petclinic.pet.PetRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/*
+/**
  * Service for Adoptions.
- * @Author jormunrod
+ * @author jormunrod
  */
 @Service
 public class AdoptionService {
