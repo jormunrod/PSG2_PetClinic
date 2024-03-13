@@ -5,13 +5,13 @@ const scanner = require('sonarqube-scanner');
 scanner(
     {
         serverUrl: 'https://oitilo.us.es/sonar',
-        token: "<your token>",
+        token: "<0e637d857de37b5e3497234501c4efaed373406e>",
         options: {
-            'sonar.projectName': 'petclinic-react-frontend',
+            'sonar.projectName': 'PSG2-2324-G4-44',
             'sonar.projectDescription': 'Here I can add a description of my project',
-            'sonar.projectKey': 'petclinic-react-frontend',
+            'sonar.projectKey': 'PSG2-2324-G4-44',
             'sonar.projectVersion': '0.0.1',
-            'sonar.login': '<your token>',
+            'sonar.login': '<0e637d857de37b5e3497234501c4efaed373406e>',
             'sonar.exclusions': '',
             'sonar.sourceEncoding': 'UTF-8',
         }
