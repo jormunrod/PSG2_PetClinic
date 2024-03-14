@@ -134,11 +134,11 @@ export default function OwnerPetEdit(){
       ];
     }
 
-    if (pet && petEditFormInputs[3].values.length >= 3) {
+    if (pet && petEditFormInputs[2].values.length >= 2) {
       petEditFormInputs[0].defaultValue = pet.name || "";
       petEditFormInputs[1].defaultValue = pet.birthDate || "";
       petEditFormInputs[2].defaultValue = pet.type.name || "None";
-      petEditFormInputs[3].defaultValue = pet.isAvailableForAdoption || "";
+      petEditFormInputs[3].defaultValue = pet.isAvailableForAdoption===true ? "Yes" : "No";
     }
 
     function handleShow() {
