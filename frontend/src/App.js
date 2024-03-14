@@ -51,6 +51,7 @@ import RoomList from "./clinicOwner/roomsList";
 import NewRoom from "./clinicOwner/roomNew";
 import EditRoom from "./clinicOwner/roomEdit";
 import OwnerAdoptionList from "./owner/adoptions/adoptionList";
+import OwnerAdoptionEdit from "./owner/adoptions/adoptionEdit";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -116,6 +117,7 @@ function App() {
           <Route path="/consultations/:consultationId" exact={true} element={<PrivateRoute><OwnerConsultationEdit /></PrivateRoute>} />
           <Route path="/consultations/:consultationId/tickets" exact={true} element={<PrivateRoute><OwnerConsultationTickets /></PrivateRoute>} />
           <Route path="/adoptions" exact={true} element={<PrivateRoute><OwnerAdoptionList /></PrivateRoute>} />
+          <Route path="/adoptions/:id" exact={true} element={<PrivateRoute><OwnerAdoptionEdit /></PrivateRoute>} />
         </>)
     }
     if (role === "VET") {

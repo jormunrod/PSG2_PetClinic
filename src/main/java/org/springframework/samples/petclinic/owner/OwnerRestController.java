@@ -65,6 +65,11 @@ public class OwnerRestController {
 		return new ResponseEntity<>(ownerService.findOwnerById(id), HttpStatus.OK);
 	}
 
+	@GetMapping(value = "user/{userId}")
+	public ResponseEntity<Owner> findByUserId(@PathVariable("userId") int userId) {
+		return new ResponseEntity<>(ownerService.optFindOwnerByUser(userId).get(), HttpStatus.OK);
+	}
+
 	@PostMapping()
 	@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<Owner> create(@RequestBody @Valid Owner owner) throws URISyntaxException {
