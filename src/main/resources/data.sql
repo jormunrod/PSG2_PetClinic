@@ -80,7 +80,7 @@ INSERT INTO pets(id,name,birth_date,type_id,owner_id, is_available_for_adoption)
     (4, 'Jewel', '2010-03-07', 2, 3,false),
     (5, 'Iggy', '2010-11-30', 3, 4,false),
     (6, 'George', '2010-01-20', 4, 5,false),
-    (7, 'Samantha', '2012-09-04', 1, 6,false),
+    (7, 'Samantha', '2012-09-04', 1, 6,true),
     (8, 'Max', '2012-09-04', 1, 6,false),
     (9, 'Lucky', '2011-08-06', 5, 7,false),
     (10, 'Mulligan', '2007-02-24', 2, 8,false),
