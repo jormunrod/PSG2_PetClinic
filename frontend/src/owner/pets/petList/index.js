@@ -131,6 +131,10 @@ export default function OwnerPetList() {
                   <span>
                     <strong>Type:</strong> {pet.type.name}
                   </span>
+                  <span>
+                    <strong>Available for adoption:</strong>{" "}
+                    {pet.isAvailableForAdoption ? "Yes" : "No"}
+                  </span>
                 </div>
                 <div className="pet-options">
                   <Link

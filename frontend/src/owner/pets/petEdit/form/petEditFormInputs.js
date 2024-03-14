@@ -27,4 +27,13 @@ export const petEditFormInputs = [
     isRequired: true,
     validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
   },
+  {
+    tag: "Is available for adoption?",
+    name: "isAvailableForAdoption",
+    type: "select",
+    values: ["No", "Yes"],
+    defaultValue: "",
+    isRequired: true,
+    validators: [formValidators.notEmptyValidator, formValidators.notNoneTypeValidator],
+  }
 ];

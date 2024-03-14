@@ -14,4 +14,7 @@ public interface AdoptionRepository extends CrudRepository<Adoption, Integer> {
     @Query("SELECT a FROM Adoption a WHERE a.pet.id = :petId")
     List<Adoption> findAllAdoptionsByPetId(int petId);
     
+    // Delete all adoptions by petId
+    @Query("DELETE FROM Adoption a WHERE a.pet.id = :petId")
+    void deleteAllAdoptionsByPetId(int petId);
 }

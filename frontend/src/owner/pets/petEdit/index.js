@@ -22,6 +22,7 @@ export default function OwnerPetEdit(){
     birthDate: "",
     type: {},
     owner: {},
+    isAvailableForAdoption: null,
   };  
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
   const [message,setMessage] = useState(null);
@@ -96,6 +97,7 @@ export default function OwnerPetEdit(){
       birthDate: values["birthDate"],
       type: types.filter((type) => type.name === values["type"])[0],
       owner: pet.owner,
+      isAvailableForAdoption: values["isAvailableForAdoption"] === "Yes" ? true : false,
     };
 
     const submit = await (await fetch("/api/v1/pets" + (pet.id ? "/" + petId : ""), 
@@ -109,6 +111,7 @@ export default function OwnerPetEdit(){
         body: JSON.stringify(mypet),
       }
     )).json();
+    console.log(JSON.stringify(mypet));
 
     if (submit.message){
       setMessage(submit.message);
@@ -131,10 +134,11 @@ export default function OwnerPetEdit(){
       ];
     }
 
-    if (pet && petEditFormInputs[2].values.length >= 2) {
+    if (pet && petEditFormInputs[3].values.length >= 3) {
       petEditFormInputs[0].defaultValue = pet.name || "";
       petEditFormInputs[1].defaultValue = pet.birthDate || "";
       petEditFormInputs[2].defaultValue = pet.type.name || "None";
+      petEditFormInputs[3].defaultValue = pet.isAvailableForAdoption || "";
     }
 
     function handleShow() {
