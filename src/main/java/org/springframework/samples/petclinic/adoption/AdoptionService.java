@@ -62,8 +62,7 @@ public class AdoptionService {
         Integer applicantId = newAdoptionRequest.getApplicantId();
         String description = newAdoptionRequest.getDescription();
 
-        Owner applicant = ownerRepository.findById(applicantId)
-        .orElseThrow(() -> new ResourceNotFoundException("Owner", "ID", applicantId));
+        Owner applicant = ownerRepository.findByUser(applicantId).get();
         Pet pet = petRepository.findById(petId)
         .orElseThrow(() -> new ResourceNotFoundException("Pet", "ID", petId));
 
