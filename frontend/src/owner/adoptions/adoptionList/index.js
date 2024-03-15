@@ -6,10 +6,16 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import tokenService from "../../../services/token.service";
 
 export default function OwnerAdoptionList() {
   let [adoptions, setAdoptions] = useState([]);
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
+  const userId = tokenService.getUser().id;
+
+  function triedToAdoptEarlier(petId) {
+    // TODO: implement this function
+  }
 
   function getAdoptionsList(adoptions) {
     return adoptions.map((p) => {
@@ -19,16 +25,37 @@ export default function OwnerAdoptionList() {
           <td>{p.type.name}</td>
           <td>{p.birthDate}</td>
           <td>
+            {triedToAdoptEarlier(p.id) ? (
+              <ButtonGroup>
+                <Button
+                  size="sm"
+                  color="info"
+                  tag={Link}
+                  to={`/adoptions/${p.id}`}
+                >
+                  Edit
+                </Button>
+                <Button
+                  size="sm"
+                  color="danger"
+                  tag={Link}
+                  to={`/adoptions/${p.id}/delete`}
+                >
+                  Delete
+                </Button>
+              </ButtonGroup>
+            ) : 
             <ButtonGroup>
               <Button
                 size="sm"
                 color="info"
                 tag={Link}
-                to={`/adoptions/${p.id}`}
+                to={`/adoptions/${p.id}/new`}
               >
                 Adopt!
               </Button>
             </ButtonGroup>
+            }
           </td>
         </tr>
       );
