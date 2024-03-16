@@ -70,8 +70,8 @@ public class AdoptionRestController {
     @PutMapping("/{id}/accept")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void adoptPet(@PathVariable int id) {
-        Integer ownerId = userService.findCurrentUser().getId();
-        adoptionService.adoptPet(id, ownerId);
+        Integer userId = userService.findCurrentUser().getId();
+        adoptionService.adoptPet(id, userId);
     }
 
     

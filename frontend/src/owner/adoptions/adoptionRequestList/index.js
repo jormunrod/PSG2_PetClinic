@@ -77,8 +77,7 @@ export default function OwnerAdoptionRequestList() {
         "Content-Type": "application/json",
       },
     });
-    console.log("Adoption request accepted");
-    setUp();
+    window.location.href = "/myPets";
   }
 
   useEffect(() => {

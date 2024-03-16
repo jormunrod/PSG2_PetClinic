@@ -83,18 +83,26 @@ public class AdoptionService {
     }
 
     @Transactional
-    public void adoptPet(int adoptionId, int ownerId) {
+    public void adoptPet(int adoptionId, int userId) {
         Adoption adoption = findAdoptionById(adoptionId);
         Pet pet = adoption.getPet();
 
-        if(pet.getOwner().getId() != ownerId){
+        if(pet.getOwner().getUser().getId() != userId){
             throw new NotYourPetException();
         }
 
         pet.setOwner(adoption.getApplicant());
         pet.setIsAvailableForAdoption(false);
         petRepository.save(pet);
-        deleteAdoption(adoption);
+        deleteAllAdoptionsByPetId(pet.getId());
+    }
+
+    @Transactional
+    public void deleteAllAdoptionsByPetId(int petId) {
+        Iterable<Adoption> adoptions = findAllAdoptionsByPetId(petId);
+        for(Adoption adoption : adoptions){
+            deleteAdoption(adoption);
+        }
     }
     
 }
