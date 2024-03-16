@@ -119,7 +119,7 @@ INSERT INTO consultation_tickets(id,description,creation_date, user_id, consulta
 INSERT INTO consultation_tickets(id,description,creation_date, user_id, consultation_id) VALUES (8, 'Lovebirds do not sing.', '2023-02-24 18:30', 16, 4);
 
 INSERT INTO adoptions(id, description, applicant_id, pet_id) VALUES 
-    (1, 'I want to adopt this hamster', 1, 2),
-    (2, 'I want to adopt this dog', 2, 2),
-    (3, 'I want to adopt this pet',1, 3);
+    (1, 'I want to adopt this pet', 7, 1),
+    (2, 'I will be the best owner for your pet', 8, 1),
+    (3, 'This will be my son xmas present',9, 1);
 

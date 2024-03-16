@@ -123,7 +123,7 @@ export default function OwnerPetList() {
           pets.map((pet) => {
             return (
               <div key={pet.id} className="pet-row">
-                <div className="pet-data">
+                <div className="pet-data" style={{ marginBottom: "1rem" }}>
                   <h4 className="pet-name">{pet.name}</h4>
                   <span>
                     <strong>Date of birth:</strong> {pet.birthDate}
@@ -137,6 +137,15 @@ export default function OwnerPetList() {
                   </span>
                 </div>
                 <div className="pet-options">
+                  {pet.isAvailableForAdoption && (
+                    <Link
+                      to={"/adoptions/" + pet.id + "/requests"}
+                      className="owner-button brown5"
+                      style={{ textDecoration: "none" }}
+                    >
+                      Adoption Requests
+                    </Link>
+                  )}
                   <Link
                     to={"/myPets/" + pet.id}
                     className="owner-button brown2"
