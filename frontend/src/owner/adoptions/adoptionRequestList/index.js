@@ -61,6 +61,9 @@ export default function OwnerAdoptionRequestList() {
   }
 
   async function deleteAdoptionRequest(id) {
+    if (!window.confirm("Are you sure you want to reject this request?")) {
+      return;
+    }
     await fetch(`/api/v1/adoptions/${id}`, {
       method: "DELETE",
       headers: {
@@ -72,6 +75,9 @@ export default function OwnerAdoptionRequestList() {
   }
 
   async function acceptAdoptionRequest(id) {
+    if (!window.confirm("Are you sure you want to accept this request?")) {
+      return;
+    }
     await fetch(`/api/v1/adoptions/${id}/accept`, {
       method: "PUT",
       headers: {
