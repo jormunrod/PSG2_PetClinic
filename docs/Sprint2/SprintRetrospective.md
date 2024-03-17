@@ -18,7 +18,7 @@
 ---
 
 ## **1. Introducción**
-El siguiente documento detalla la planificación y organización del trabajo para el primer sprint, estableciendo las tareas a realizar, los responsables de cada tarea y su respectivo tiempo estimado. En él, se presenta una visión clara y estructurada de las actividades que se abordarán durante el período del sprint, lo que facilita la coordinación y el seguimiento del progreso del equipo de desarrollo.
+El siguiente documento detalla la planificación y organización del trabajo para el segundo sprint, estableciendo las tareas a realizar, los responsables de cada tarea y su respectivo tiempo estimado. En él, se presenta una visión clara y estructurada de las actividades que se abordarán durante el período del sprint, lo que facilita la coordinación y el seguimiento del progreso del equipo de desarrollo.
 
 ---
 
@@ -32,47 +32,38 @@ El siguiente documento detalla la planificación y organización del trabajo par
 ---
 
 ## **3. Evaluación De Los Métodos Del Equipo Y Posibles Mejoras**
-En este apartado se abordarán las mejoras propuestas por el equipo para potenciar su rendimiento, tras realizar una evaluación de la situación al finalizar el primer sprint.
-- **Implementar reuniones más frecuentes:** Incrementar la frecuencia de las reuniones para así mejorar la comunicación entre los miembros del equipo.
-- **Establecer roles y responsabilidades más claros dentro del equipo:** Definir roles específicos más rápidamente para evitar confusiones y garantizar que cada miembro contribuya de manera efectiva.
-- **Establecer objetivos claros y medibles para cada sprint:** Definir metas claras facilitando la dirección y la evaluación del progreso durante cada sprint.
-- **Mejorar la gestión del tiempo durante las reuniones y actividades grupales:** Optimizar el tiempo de trabajo conjunto mediante una mejor organización y enfoque durante las reuniones y actividades grupales.
-- **Mejorar la repartición de tareas:** Distribuir equitativamente las tareas (tras haberlas evaluado) entre los miembros del equipo maximiza la productividad y evita la sobrecarga de trabajo.
+En este apartado se analizarán las mejoras que fueron propuestas por el equipo tras la finalización del primer sprint, con el objetivo de verificar que se esté avanzando y se tengan en cuenta las ideas que se quisieron imponer. Estos son los resultados:
+- **Implementar reuniones más frecuentes:**
+- **Establecer roles y responsabilidades más claros dentro del equipo:**
+- **Establecer objetivos claros y medibles para cada sprint:**
+- **Mejorar la gestión del tiempo durante las reuniones y actividades grupales:**
+- **Mejorar la repartición de tareas:**
 
 ---
 
 ## **4. Evaluación De Las Capacidades Y Posibles Mejoras De Los Miembos**
-En este apartado se abordarán las mejoras propuestas por cada miembro del equipo, con el objetivo de que otros integrantes puedan mejorar su rendimiento. Estas propuestas surgen tras una evaluación de la situación al concluir el primer sprint.
-- **Mejorar la gestión del tiempo para cumplir con los plazos establecidos:** Optimizar la gestión del tiempo garantizando el cumplimiento de los plazos establecidos para las tareas y proyectos.
-- **Mejorar la capacidad para recibir y aplicar la retroalimentación de manera constructiva:** Reforzar la habilidad para recibir y aplicar retroalimentación de manera constructiva contribuye a un ambiente de trabajo colaborativo y a un constante aprendizaje y mejora del equipo.
+En este apartado se analizarán las mejoras que fueron propuestas por algunos miembros del equipo tras la finalización del primer sprint, con el objetivo de que otros integrantes puedan mejorar su rendimiento. Se verificará que se esté avanzando y se hayan tenido en cuenta las ideas que se quisieron imponer. Estos son los resultados:
+- **Mejorar la gestión del tiempo para cumplir con los plazos establecidos:** 
+- **Mejorar la capacidad para recibir y aplicar la retroalimentación de manera constructiva:** 
 
 ---
 
 ## **5. Plan de Acción**
-El siguiente plan de acción tiene como objetivo identificar acciones concretas para mejorar el desempeño y la eficiencia del equipo. Se estructura en tres columnas: Start, Stop y Continue Doing. En cada columna, se detallarán las actividades que el equipo debe iniciar, dejar de realizar y mantener, respectivamente. Este plan permitirá al equipo enfocarse en las áreas clave para maximizar su rendimiento y lograr los objetivos establecidos. Algunas de las actividades ya han sido expuestas anteriormente.
-
+El siguiente plan de acción tiene como objetivo identificar acciones concretas para mejorar el desempeño y la eficiencia del equipo. Se estructura en tres columnas: Start, Stop y Continue Doing. En cada columna, se detallarán las actividades que el equipo debe iniciar, dejar de realizar y mantener, respectivamente. Este plan permitirá al equipo enfocarse en las áreas clave para maximizar su rendimiento y lograr los objetivos establecidos. Todo ello se basará en las propuestas del equipo tras la conclusión del sprint 2, teniendo en cuenta además los resultados de los análisis de los puntos anteriores.
 ### Start:
-- Implementar reuniones más frecuentes.
-- Establecer roles y responsabilidades más claros y de forma más rápida.
-- Optimizar la asignación de tareas considerando la carga de trabajo total mediante la evaluación de la complejidad de cada tarea.
-- Mejorar la retrospectiva y la retroalimentación de manera constructiva.
+- 
 
 ### Stop:
-- Dejar de depender exclusivamente del Whatsapp como medio de comunicación y comenzar a utilizar herramientas colaborativas más eficientes.
-- Detener la procrastinación y abordar de inmediato los problemas y desafíos que surjan durante el desarrollo del proyecto.
-- Detener la asignación de tareas sin una comunicación clara sobre las expectativas y los plazos, lo que puede generar confusión y retrasos.
+- 
 
 ### Continue Doing:
-- Mantener los daily meetings para evaluar el progreso del equipo y hacer ajustes según sea necesario.
-- Continuar empleando ZenHub para llevar una correcta organización de las tareas.
-- Mantener la obligación de que otro miembro del equipo tenga que evaluar el commit antes de poder ser subido.
-- Mantener un ambiente de trabajo positivo para promover el crecimiento y el éxito del equipo.
+- 
 
 ---
 
 ## **6. Tabla De Rendimiento**
-En este punto se aborda la evaluación del desempeño individual en tres pasos: calificación individual, recopilación de puntuaciones y discusión para consensuar las calificaciones finales. Tras una revisión justa del desempeño durante este sprint, se ha decidido asignar a todos los miembros del equipo la misma puntuación final debido a su contribución equitativa al proyecto. Esta es la tabla de rendimiento final para este primer sprint.
+En este punto se aborda la evaluación del desempeño individual en tres pasos: calificación individual, recopilación de puntuaciones y discusión para consensuar las calificaciones finales. Tras una revisión justa del desempeño durante este sprint, se ha decidido asignar a todos los miembros del equipo la misma puntuación final debido a su contribución equitativa al proyecto. Esta es la tabla de rendimiento final para este segundo sprint.
 
 <p align="center">
-    <img src="../images/retroTable.png" alt="Tabla de rendimiento" style="width: 75%; margin: auto;">
+    <img src="../images/retroTableS2.png" alt="Tabla de rendimiento" style="width: 75%; margin: auto;">
 </p>
