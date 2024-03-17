@@ -2,6 +2,7 @@ package org.springframework.samples.petclinic.adoption;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.samples.petclinic.exceptions.AccessDeniedException;
 import org.springframework.samples.petclinic.user.UserService;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -72,6 +73,16 @@ public class AdoptionRestController {
     public void adoptPet(@PathVariable int id) {
         Integer userId = userService.findCurrentUser().getId();
         adoptionService.adoptPet(id, userId);
+    }
+
+    @DeleteMapping("/pet/{petId}/user/{userId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteAdoptionByPetId(@PathVariable int petId, @PathVariable int userId) {
+        Integer tokenUserId = userService.findCurrentUser().getId();
+        if (tokenUserId != userId) {
+            throw new AccessDeniedException();
+        }
+        adoptionService.deleteAdoptionByPetIdAndUserId(petId, userId);
     }
 
     

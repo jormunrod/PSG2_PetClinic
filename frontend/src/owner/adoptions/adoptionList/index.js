@@ -1,11 +1,6 @@
-import {
-  Button,
-  ButtonGroup,
-  Container,
-  Table,
-} from "reactstrap";
+import React, { useState, useEffect } from "react";
+import { Button, ButtonGroup, Container, Table } from "reactstrap";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import tokenService from "../../../services/token.service";
 
 export default function OwnerAdoptionList() {
@@ -13,6 +8,35 @@ export default function OwnerAdoptionList() {
   const [adoptionRequests, setAdoptionRequests] = useState([]);
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
   const userId = tokenService.getUser().id;
+
+  async function fetchData() {
+    const petsInAdoptionResponse = await fetch("/api/v1/pets/adoptions/available", {
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+        "Content-Type": "application/json",
+      },
+    });
+    const petsInAdoptionData = await petsInAdoptionResponse.json();
+    setPetInAdoption(petsInAdoptionData);
+
+    const adoptionRequestsPromises = petsInAdoptionData.map(pet => fetchAdoptionRequestsByPetId(pet.id));
+    const adoptionRequestsData = await Promise.all(adoptionRequestsPromises);
+    setAdoptionRequests(adoptionRequestsData);
+  }
+
+  async function deleteAdoptionRequest(petId) {
+    if (!window.confirm("Are you sure you want to delete this adoption request?")) {
+      return;
+    }
+    await fetch(`/api/v1/adoptions/pet/${petId}/user/${userId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+        "Content-Type": "application/json",
+      },
+    });
+    fetchData();
+  }
 
   async function fetchAdoptionRequestsByPetId(petId) {
     const response = await fetch(`/api/v1/adoptions/pet/${petId}`, {
@@ -25,22 +49,7 @@ export default function OwnerAdoptionList() {
   }
 
   useEffect(() => {
-    async function setUp() {
-      const petsInAdoptionResponse = await fetch("/api/v1/pets/adoptions/available", {
-        headers: {
-          Authorization: `Bearer ${jwt}`,
-          "Content-Type": "application/json",
-        },
-      });
-      const petsInAdoptionData = await petsInAdoptionResponse.json();
-      setPetInAdoption(petsInAdoptionData);
-
-      const adoptionRequestsPromises = petsInAdoptionData.map(pet => fetchAdoptionRequestsByPetId(pet.id));
-      const adoptionRequestsData = await Promise.all(adoptionRequestsPromises);
-      setAdoptionRequests(adoptionRequestsData);
-    }
-
-    setUp();
+    fetchData();
   }, [jwt]);
 
   function triedToAdoptEarlier(petId) {
@@ -68,8 +77,7 @@ export default function OwnerAdoptionList() {
               <Button
                 size="sm"
                 color="danger"
-                tag={Link}
-                to={`/adoptions/${p.id}/delete`}
+                onClick={() => deleteAdoptionRequest(p.id)}
               >
                 Delete
               </Button>

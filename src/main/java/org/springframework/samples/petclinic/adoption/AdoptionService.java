@@ -104,5 +104,15 @@ public class AdoptionService {
             deleteAdoption(adoption);
         }
     }
+
+    @Transactional
+    public void deleteAdoptionByPetIdAndUserId(int petId, int userId) {
+        Iterable<Adoption> adoptions = findAllAdoptionsByPetId(petId);
+        for(Adoption adoption : adoptions){
+            if(adoption.getApplicant().getUser().getId() == userId){
+                deleteAdoption(adoption);
+            }
+        }
+    }
     
 }
