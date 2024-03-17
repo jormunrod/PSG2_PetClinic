@@ -9,78 +9,87 @@ import { useEffect, useState } from "react";
 import tokenService from "../../../services/token.service";
 
 export default function OwnerAdoptionList() {
-  let [adoptions, setAdoptions] = useState([]);
+  const [petsInAdoption, setPetInAdoption] = useState([]);
+  const [adoptionRequests, setAdoptionRequests] = useState([]);
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
   const userId = tokenService.getUser().id;
 
-  function triedToAdoptEarlier(petId) {
-    // TODO: implement this function
+  async function fetchAdoptionRequestsByPetId(petId) {
+    const response = await fetch(`/api/v1/adoptions/pet/${petId}`, {
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+        "Content-Type": "application/json",
+      },
+    });
+    return await response.json();
   }
 
-  function getAdoptionsList(adoptions) {
-    return adoptions.map((p) => {
-      return (
-        <tr key={p.id}>
-          <td>{p.name}</td>
-          <td>{p.type.name}</td>
-          <td>{p.birthDate}</td>
-          <td>
-            {triedToAdoptEarlier(p.id) ? (
-              <ButtonGroup>
-                <Button
-                  size="sm"
-                  color="info"
-                  tag={Link}
-                  to={`/adoptions/${p.id}`}
-                >
-                  Edit
-                </Button>
-                <Button
-                  size="sm"
-                  color="danger"
-                  tag={Link}
-                  to={`/adoptions/${p.id}/delete`}
-                >
-                  Delete
-                </Button>
-              </ButtonGroup>
-            ) : 
+  useEffect(() => {
+    async function setUp() {
+      const petsInAdoptionResponse = await fetch("/api/v1/pets/adoptions/available", {
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+          "Content-Type": "application/json",
+        },
+      });
+      const petsInAdoptionData = await petsInAdoptionResponse.json();
+      setPetInAdoption(petsInAdoptionData);
+
+      const adoptionRequestsPromises = petsInAdoptionData.map(pet => fetchAdoptionRequestsByPetId(pet.id));
+      const adoptionRequestsData = await Promise.all(adoptionRequestsPromises);
+      setAdoptionRequests(adoptionRequestsData);
+    }
+
+    setUp();
+  }, [jwt]);
+
+  function triedToAdoptEarlier(petId) {
+    const adoptionRequestsForPet = adoptionRequests.find(requests => requests.some(request => request.pet.id === petId));
+    return !!adoptionRequestsForPet && adoptionRequestsForPet.some(request => request.applicant.user.id === userId);
+  }
+
+  function getPetsInAdoptionList() {
+    return petsInAdoption.map((p) => (
+      <tr key={p.id}>
+        <td>{p.name}</td>
+        <td>{p.type.name}</td>
+        <td>{p.birthDate}</td>
+        <td>
+          {triedToAdoptEarlier(p.id) ? (
             <ButtonGroup>
               <Button
                 size="sm"
                 color="info"
                 tag={Link}
-                to={`/adoptions/${p.id}/new`}
+                to={`/adoptions/${p.id}`}
               >
-                Adopt!
+                Edit
+              </Button>
+              <Button
+                size="sm"
+                color="danger"
+                tag={Link}
+                to={`/adoptions/${p.id}/delete`}
+              >
+                Delete
               </Button>
             </ButtonGroup>
-            }
-          </td>
-        </tr>
-      );
-    });
+          ) : 
+          <ButtonGroup>
+            <Button
+              size="sm"
+              color="info"
+              tag={Link}
+              to={`/adoptions/${p.id}/new`}
+            >
+              Adopt!
+            </Button>
+          </ButtonGroup>
+          }
+        </td>
+      </tr>
+    ));
   }
-
-  async function setUp() {
-    const adoptions = await (
-      await fetch("/api/v1/pets/adoptions/available", {
-        headers: {
-          Authorization: `Bearer ${jwt}`,
-          "Content-Type": "application/json",
-        },
-      })
-    ).json();
-
-    setAdoptions(adoptions);
-    console.log(adoptions);
-  }
-
-  useEffect(() => {
-    setUp();
-  }, []);
-
-  useEffect(() => {}, [adoptions]);
 
   return (
     <div>
@@ -96,7 +105,7 @@ export default function OwnerAdoptionList() {
             </tr>
           </thead>
           <tbody>
-            {getAdoptionsList(adoptions)}
+            {getPetsInAdoptionList()}
           </tbody>
         </Table>
       </Container>

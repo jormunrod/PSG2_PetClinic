@@ -75,8 +75,8 @@ INSERT INTO owners(id, first_name, last_name, address, city, telephone, user_id,
 
 INSERT INTO pets(id,name,birth_date,type_id,owner_id, is_available_for_adoption) VALUES 
     (1, 'Leo', '2010-09-07', 1, 1, true),
-    (2, 'Basil', '2012-08-06', 6, 2,false),
-    (3, 'Rosy', '2011-04-17', 2, 3,false),
+    (2, 'Basil', '2012-08-06', 6, 2,true),
+    (3, 'Rosy', '2011-04-17', 2, 3,true),
     (4, 'Jewel', '2010-03-07', 2, 3,false),
     (5, 'Iggy', '2010-11-30', 3, 4,false),
     (6, 'George', '2010-01-20', 4, 5,false),
