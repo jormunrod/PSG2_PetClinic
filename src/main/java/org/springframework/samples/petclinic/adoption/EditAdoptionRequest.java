@@ -7,21 +7,15 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Represents the data transfer object for a new adoption request.
+ * Represents the data transfer object for edit an adoption request.
  * @author jormunrod
  */
 @Getter
 @Setter
-public class NewAdoptionRequest {
-
-    @NotNull
-    private Integer applicantId;
+public class EditAdoptionRequest {
 
     @NotNull
     @Length(min = 1, max = 255)
     private String description;
-
-    @NotNull
-    private Integer petId;
     
 }

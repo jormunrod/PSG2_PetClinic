@@ -4,15 +4,17 @@ import {
   Container,
   Table,
 } from "reactstrap";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import tokenService from "../../../services/token.service";
 import getIdFromUrl from "../../../util/getIdFromUrl";
 
+/**
+ * Component for listing the adoption requests
+ * 
+ * @author jormunrod
+*/
 export default function OwnerAdoptionRequestList() {
   let [adoptionRequests, setadoptionRequests] = useState([]);
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
-  const userId = tokenService.getUser().id;
   const petId = getIdFromUrl(2);
 
   function getAdoptionRequestsList(adoptionRequests) {

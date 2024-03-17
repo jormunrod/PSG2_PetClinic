@@ -1,9 +1,11 @@
 package org.springframework.samples.petclinic.adoption;
 
+import org.springdoc.api.ErrorMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.adoption.exceptions.IsYourPetException;
 import org.springframework.samples.petclinic.adoption.exceptions.NotInAdoptionException;
 import org.springframework.samples.petclinic.adoption.exceptions.NotYourPetException;
+import org.springframework.samples.petclinic.exceptions.AccessDeniedException;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerRepository;
@@ -113,6 +115,17 @@ public class AdoptionService {
                 deleteAdoption(adoption);
             }
         }
+    }
+
+    @Transactional
+    public Adoption updateAdoption(int id, EditAdoptionRequest editAdoptionRequest, int userId){
+        Adoption adoption = findAdoptionById(id);
+        if(adoption.getApplicant().getUser().getId() != userId){
+            throw new AccessDeniedException("You are not the owner of this adoption");
+        }
+        adoption.setDescription(editAdoptionRequest.getDescription());
+        saveAdoption(adoption);
+        return adoption;
     }
     
 }

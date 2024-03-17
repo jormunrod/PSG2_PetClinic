@@ -2,14 +2,36 @@ import { useState, useEffect } from "react";
 import "../../../static/css/auth/authButton.css";
 import "../../../static/css/auth/authPage.css";
 import "../../../static/css/owner/consultations.css";
-import tokenService from "../../../services/token.service";
 import getIdFromUrl from "../../../util/getIdFromUrl";
 
+/**
+ * Component for editing an adoption request
+ * 
+ * @author jormunrod
+*/
 export default function OwnerAdoptionEdit() {
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
-  const applicantId = tokenService.getUser().id;
   const [description, setDescription] = useState("");
-  const petId = getIdFromUrl(2);
+  const adoptionRequestId = getIdFromUrl(2);
+
+  useEffect(() => {
+    const fetchAdoptionRequest = async () => {
+      const response = await fetch(
+        `/api/v1/adoptions/${adoptionRequestId}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${jwt}`,
+          },
+        }
+      );
+      const data = await response.json();
+      setDescription(data.description);
+    }
+    fetchAdoptionRequest();
+  }
+  , [adoptionRequestId, jwt]);
 
   const handleDescriptionChange = (e) => {
     setDescription(e.target.value);
@@ -17,21 +39,19 @@ export default function OwnerAdoptionEdit() {
 
   const handleSubmit = async () => {
     const response = await fetch(
-      `/api/v1/adoptions`,
+      `/api/v1/adoptions/${adoptionRequestId}`,
       {
-        method: "POST",
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${jwt}`,
         },
         body: JSON.stringify({
           description,
-          applicantId,
-          petId
         }),
       }
     );
-    if (response.status === 201) {
+    if (response.status === 200) {
       window.location.href = `/adoptions`;
     }
   }
@@ -39,7 +59,7 @@ export default function OwnerAdoptionEdit() {
   return (
     <div className="auth-page-container">
       <h2 className="text-center">
-        Choose to adopt the pet
+        Edit your adoption request
       </h2>
       <textarea
         value={description}

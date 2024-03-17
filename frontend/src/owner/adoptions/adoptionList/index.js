@@ -3,6 +3,12 @@ import { Button, ButtonGroup, Container, Table } from "reactstrap";
 import { Link } from "react-router-dom";
 import tokenService from "../../../services/token.service";
 
+
+/**
+ * Component for listing the adoptions
+ * 
+ * @author jormunrod
+*/
 export default function OwnerAdoptionList() {
   const [petsInAdoption, setPetInAdoption] = useState([]);
   const [adoptionRequests, setAdoptionRequests] = useState([]);
@@ -54,7 +60,12 @@ export default function OwnerAdoptionList() {
 
   function triedToAdoptEarlier(petId) {
     const adoptionRequestsForPet = adoptionRequests.find(requests => requests.some(request => request.pet.id === petId));
-    return !!adoptionRequestsForPet && adoptionRequestsForPet.some(request => request.applicant.user.id === userId);
+    if(!!adoptionRequestsForPet){
+      const adoptionRequestId = adoptionRequestsForPet.find(request => request.applicant.user.id === userId).id;
+      if(adoptionRequestId>=0){
+        return adoptionRequestId;
+      }
+    }
   }
 
   function getPetsInAdoptionList() {
@@ -64,13 +75,13 @@ export default function OwnerAdoptionList() {
         <td>{p.type.name}</td>
         <td>{p.birthDate}</td>
         <td>
-          {triedToAdoptEarlier(p.id) ? (
+          {triedToAdoptEarlier(p.id) >= 0 ? (
             <ButtonGroup>
               <Button
                 size="sm"
                 color="info"
                 tag={Link}
-                to={`/adoptions/${p.id}`}
+                to={`/adoptions/${triedToAdoptEarlier(p.id)}/edit`}
               >
                 Edit
               </Button>

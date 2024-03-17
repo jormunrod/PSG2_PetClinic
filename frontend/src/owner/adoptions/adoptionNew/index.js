@@ -5,6 +5,11 @@ import "../../../static/css/owner/consultations.css";
 import tokenService from "../../../services/token.service";
 import getIdFromUrl from "../../../util/getIdFromUrl";
 
+/**
+ * Component for creating a new adoption
+ * 
+ * @author jormunrod
+*/
 export default function OwnerAdoptionNew() {
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
   const applicantId = tokenService.getUser().id;
@@ -16,6 +21,14 @@ export default function OwnerAdoptionNew() {
   };
 
   const handleSubmit = async () => {
+    if (!description.trim()) {
+      alert("Description is required");
+      return;
+    }
+    if(description.length > 255) {
+      alert("Description must be less than 255 characters");
+      return;
+    }
     const response = await fetch(
       `/api/v1/adoptions`,
       {

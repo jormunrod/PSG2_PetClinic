@@ -75,6 +75,14 @@ public class AdoptionRestController {
         adoptionService.adoptPet(id, userId);
     }
 
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Adoption updateAdoption(@PathVariable int id, @RequestBody @Valid EditAdoptionRequest editAdoptionRequest) {
+        Integer userId = userService.findCurrentUser().getId();
+        return adoptionService.updateAdoption(id, editAdoptionRequest, userId);
+    }
+
+
     @DeleteMapping("/pet/{petId}/user/{userId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteAdoptionByPetId(@PathVariable int petId, @PathVariable int userId) {
