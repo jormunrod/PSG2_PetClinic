@@ -74,5 +74,5 @@ El siguiente plan de acción tiene como objetivo identificar acciones concretas 
 En este punto se aborda la evaluación del desempeño individual en tres pasos: calificación individual, recopilación de puntuaciones y discusión para consensuar las calificaciones finales. Tras una revisión justa del desempeño durante este sprint, se ha decidido asignar a todos los miembros del equipo la misma puntuación final debido a su contribución equitativa al proyecto. Esta es la tabla de rendimiento final para este primer sprint.
 
 <p align="center">
-    <img src="../images/retroTable.png" alt="Tabla de rendimiento" style="width: 75%; margin: auto;">
+    <img src="../images/retroTableS1.png" alt="Tabla de rendimiento" style="width: 75%; margin: auto;">
 </p>
