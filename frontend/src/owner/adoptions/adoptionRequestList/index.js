@@ -95,7 +95,7 @@ export default function OwnerAdoptionRequestList() {
   useEffect(() => {}, [adoptionRequests]);
 
   return (
-    <div>
+    <div style={{marginLeft: "20%", marginRight: "20%", marginTop: "5%"}}>
       <Container style={{ marginTop: "15px" }} fluid>
         <h1 className="text-center">Adoption Requests</h1>
         <Table className="mt-4">

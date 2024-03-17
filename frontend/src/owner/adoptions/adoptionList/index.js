@@ -59,12 +59,18 @@ export default function OwnerAdoptionList() {
   }, [jwt]);
 
   function triedToAdoptEarlier(petId) {
-    const adoptionRequestsForPet = adoptionRequests.find(requests => requests.some(request => request.pet.id === petId));
-    if(!!adoptionRequestsForPet){
-      const adoptionRequestId = adoptionRequestsForPet.find(request => request.applicant.user.id === userId).id;
+    let adoptionRequestId = 0;
+    let adoptionRequestsForPet = null;
+    try{
+      adoptionRequestsForPet = adoptionRequests.find(requests => requests.some(request => request.pet.id === petId));
+      if(!!adoptionRequestsForPet){
+        adoptionRequestId = adoptionRequestsForPet.find(request => request.applicant.user.id === userId).id;
       if(adoptionRequestId>=0){
         return adoptionRequestId;
       }
+    }
+    }catch(e){
+      console.log(e);
     }
   }
 
@@ -98,7 +104,7 @@ export default function OwnerAdoptionList() {
             <Button
               size="sm"
               color="info"
-              tag={Link}
+              tag={Link} 
               to={`/adoptions/${p.id}/new`}
             >
               Adopt!
@@ -111,7 +117,7 @@ export default function OwnerAdoptionList() {
   }
 
   return (
-    <div>
+    <div style={{marginLeft: "20%", marginRight: "20%", marginTop: "5%"}}>
       <Container style={{ marginTop: "15px" }} fluid>
         <h1 className="text-center">Adoptions</h1>
         <Table className="mt-4">
