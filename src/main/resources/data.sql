@@ -118,6 +118,13 @@ INSERT INTO consultation_tickets(id,description,creation_date, user_id, consulta
 INSERT INTO consultation_tickets(id,description,creation_date, user_id, consultation_id) VALUES (7, 'My lovebird doesn''t sing as my neighbour''s one.', '2023-02-24 12:30', 5, 4);
 INSERT INTO consultation_tickets(id,description,creation_date, user_id, consultation_id) VALUES (8, 'Lovebirds do not sing.', '2023-02-24 18:30', 16, 4);
 
+INSERT INTO rooms(id,name,allowed_pet_type,clinic,size) VALUES (1, 'Room 1', 'CAT',1,20),
+                                                               (2, 'Room 1', 'CAT',2,20);
+
+INSERT INTO bookings(id,start_date,end_date,owner_id,pet_id,room_id) VALUES (1, '2024-05-28 15:40','2024-05-29 16:00',1,1,1),
+                                                                            (2, '2024-05-28 15:40','2024-05-29 16:00',1,6,2);
+
+
 INSERT INTO adoptions(id, description, applicant_id, pet_id) VALUES 
     (1, 'I want to adopt this pet', 7, 1),
     (2, 'I will be the best owner for your pet', 8, 1),
