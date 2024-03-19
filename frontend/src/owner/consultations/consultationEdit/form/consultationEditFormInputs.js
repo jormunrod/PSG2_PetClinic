@@ -2,8 +2,8 @@ import {formValidators} from "../../../../validators/formValidators";
 
 export const consultationEditFormInputs = [
     {
-        tag: "Title",
-        name: "title",
+        tag: "Tittle",
+        name: "tittle",
         type: "text",
         defaultValue: "",
         isRequired: true,

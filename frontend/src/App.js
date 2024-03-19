@@ -50,6 +50,10 @@ import VetEditClinicOwner from "./clinicOwner/vets/VetEditClinicOwner";
 import RoomList from "./clinicOwner/roomsList";
 import NewRoom from "./clinicOwner/roomNew";
 import EditRoom from "./clinicOwner/roomEdit";
+import OwnerAdoptionList from "./owner/adoptions/adoptionList";
+import OwnerAdoptionEdit from "./owner/adoptions/adoptionEdit";
+import OwnerAdoptionNew from "./owner/adoptions/adoptionNew";
+import OwnerAdoptionRequestList from "./owner/adoptions/adoptionRequestList";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -114,6 +118,10 @@ function App() {
           <Route path="/consultations" exact={true} element={<PrivateRoute><OwnerConsultationList /></PrivateRoute>} />
           <Route path="/consultations/:consultationId" exact={true} element={<PrivateRoute><OwnerConsultationEdit /></PrivateRoute>} />
           <Route path="/consultations/:consultationId/tickets" exact={true} element={<PrivateRoute><OwnerConsultationTickets /></PrivateRoute>} />
+          <Route path="/adoptions" exact={true} element={<PrivateRoute><OwnerAdoptionList /></PrivateRoute>} />
+          <Route path="/adoptions/:id/new" exact={true} element={<PrivateRoute><OwnerAdoptionNew /></PrivateRoute>} />
+          <Route path="/adoptions/:id/edit" exact={true} element={<PrivateRoute><OwnerAdoptionEdit /></PrivateRoute>} />
+          <Route path="/adoptions/:id/requests" exact={true} element={<PrivateRoute><OwnerAdoptionRequestList /></PrivateRoute>} />
         </>)
     }
     if (role === "VET") {

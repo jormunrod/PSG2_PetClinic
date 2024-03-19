@@ -23,9 +23,13 @@ import java.util.Map;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.samples.petclinic.adoption.Adoption;
+import org.springframework.samples.petclinic.adoption.AdoptionRepository;
 import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
+import org.springframework.samples.petclinic.owner.OwnerRepository;
+import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,10 +42,14 @@ public class PetService {
 	private final Integer PLATINUM_LIMIT = 7;
 
 	private PetRepository petRepository;
+	private OwnerRepository ownerRepository;
+	private AdoptionRepository adoptionRepository;
 
 	@Autowired
-	public PetService(PetRepository petRepository) {
+	public PetService(PetRepository petRepository, OwnerRepository ownerRepository, AdoptionRepository adoptionRepository) {
 		this.petRepository = petRepository;
+		this.ownerRepository = ownerRepository;
+		this.adoptionRepository = adoptionRepository;
 	}
 
 	@Transactional(readOnly = true)
@@ -154,4 +162,20 @@ public class PetService {
 		});
 		return unsortedPetsByType;
 	}
+
+	@Transactional(readOnly = true)
+	public List<Pet> findAllPetsAvailableForAdoption(int ownerId) {
+		return petRepository.findAllPetsAvailableForAdoption(ownerId);
+	}
+
+	@Transactional
+	public void setPetAvailableForAdoption(int petId, boolean available) {
+		Pet pet = findPetById(petId);
+		if (available == false) {
+			adoptionRepository.deleteAllAdoptionsByPetId(petId);
+		}
+		pet.setIsAvailableForAdoption(available);
+		savePet(pet);
+	}
+
 }
