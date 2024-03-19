@@ -23,9 +23,11 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.samples.petclinic.model.NamedEntity;
 import org.springframework.samples.petclinic.owner.Owner;
@@ -58,5 +60,9 @@ public class Pet extends NamedEntity {
 	@ManyToOne(optional = true)
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	protected Owner owner;
+
+	@Column(name = "is_available_for_adoption")
+	@NotNull
+	private Boolean isAvailableForAdoption;
 
 }
