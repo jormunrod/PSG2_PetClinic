@@ -6,10 +6,9 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.xml.crypto.Data;
-import java.awt.print.Book;
 import java.time.LocalDate;
-import java.util.Collection;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -56,7 +55,9 @@ public class BookingService {
 
     @Transactional(readOnly = true)
     public List<Booking> findByBookingsByStartDate(LocalDate startDate) {
-        return bookingRepository.findBookingByStartDate(startDate);
+        LocalDateTime startOfDay = startDate.atStartOfDay();
+        LocalDateTime endOfDay = startDate.atTime(LocalTime.MAX);
+        return bookingRepository.findBookingByStartDate(startOfDay,endOfDay);
     }
 
     @Transactional
