@@ -56,6 +56,9 @@ import OwnerAdoptionNew from "./owner/adoptions/adoptionNew";
 import OwnerAdoptionRequestList from "./owner/adoptions/adoptionRequestList";
 import BookingListAdmin from "./admin/booking/BookingListAdmin";
 import BookingEditAdmin from "./admin/booking/BookingEditAdmin";
+import OwnerBookingList from "./owner/bookings/bookinList";
+import OwnerBookingEdit from "./owner/bookings/bookingEdit";
+import BookingEditOwner from "./owner/bookings/bookingEdit";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -126,6 +129,7 @@ function App() {
           <Route path="/adoptions/:id/new" exact={true} element={<PrivateRoute><OwnerAdoptionNew /></PrivateRoute>} />
           <Route path="/adoptions/:id/edit" exact={true} element={<PrivateRoute><OwnerAdoptionEdit /></PrivateRoute>} />
           <Route path="/adoptions/:id/requests" exact={true} element={<PrivateRoute><OwnerAdoptionRequestList /></PrivateRoute>} />
+            <Route path="/bookings" exact={true} element={<PrivateRoute><OwnerBookingList /></PrivateRoute>} />
         </>)
     }
     if (role === "VET") {
@@ -156,7 +160,7 @@ function App() {
   })
   if (!jwt) {
     publicRoutes = (
-      <>        
+      <>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
       </>
@@ -164,7 +168,7 @@ function App() {
   } else {
     userRoutes = (
       <>
-        {/* <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} /> */}        
+        {/* <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} /> */}
         <Route path="/logout" element={<Logout />} />
         <Route path="/login" element={<Login />} />
       </>
