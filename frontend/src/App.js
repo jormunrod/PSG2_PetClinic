@@ -56,7 +56,7 @@ import OwnerAdoptionNew from "./owner/adoptions/adoptionNew";
 import OwnerAdoptionRequestList from "./owner/adoptions/adoptionRequestList";
 import BookingListAdmin from "./admin/booking/BookingListAdmin";
 import BookingEditAdmin from "./admin/booking/BookingEditAdmin";
-import OwnerBookingList from "./owner/bookings/bookinList";
+import OwnerBookingList from "./owner/bookings/bookingList";
 import OwnerBookingEdit from "./owner/bookings/bookingEdit";
 import BookingEditOwner from "./owner/bookings/bookingEdit";
 
