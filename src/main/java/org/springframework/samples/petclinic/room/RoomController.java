@@ -31,6 +31,12 @@ public class RoomController {
         this.roomService = roomService;
     }
 
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<Room> findAll(){
+        return roomService.findAll();
+    }
+
     @GetMapping("/{roomId}")
     @ResponseStatus(HttpStatus.OK)
     public Room findById(@PathVariable Integer roomId) {
@@ -60,5 +66,5 @@ public class RoomController {
     public void delete(@PathVariable Integer roomId) {
         roomService.delete(roomId);
     }
-    
+
 }

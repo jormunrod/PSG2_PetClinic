@@ -23,6 +23,11 @@ public class RoomService {
         this.clinicService = clinicService;
     }
 
+    @Transactional(readOnly = true)
+    public List<Room> findAll() throws DataAccessException{
+        return (List<Room>) roomRepository.findAll();
+    }
+
     @Transactional
     public Room save(RoomDTO roomDTO) throws DataAccessException {
         Room room = new Room();
@@ -67,5 +72,5 @@ public class RoomService {
     public List<Room> findByUserId(Integer userId) {
         return roomRepository.findByUserId(userId);
     }
-    
+
 }

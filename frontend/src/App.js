@@ -54,6 +54,8 @@ import OwnerAdoptionList from "./owner/adoptions/adoptionList";
 import OwnerAdoptionEdit from "./owner/adoptions/adoptionEdit";
 import OwnerAdoptionNew from "./owner/adoptions/adoptionNew";
 import OwnerAdoptionRequestList from "./owner/adoptions/adoptionRequestList";
+import BookingListAdmin from "./admin/booking/BookingListAdmin";
+import BookingEditAdmin from "./admin/booking/BookingEditAdmin";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -105,6 +107,8 @@ function App() {
           <Route path="/consultations" exact={true} element={<PrivateRoute><ConsultationListAdmin /></PrivateRoute>} />
           <Route path="/consultations/:consultationId" exact={true} element={<PrivateRoute><ConsultationEditAdmin /></PrivateRoute>} />
           <Route path="/consultations/:consultationId/tickets" exact={true} element={<PrivateRoute><TicketListAdmin /></PrivateRoute>} />
+            <Route path="/bookings" exact={true} element={<PrivateRoute><BookingListAdmin /></PrivateRoute>} />
+            <Route path="/bookings/:bookingId" exact={true} element={<PrivateRoute><BookingEditAdmin /></PrivateRoute>} />
         </>)
     }
     if (role === "OWNER") {
