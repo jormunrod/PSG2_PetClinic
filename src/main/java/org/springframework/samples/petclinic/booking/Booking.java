@@ -11,7 +11,6 @@ import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.pet.Pet;
 import org.springframework.samples.petclinic.room.Room;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity

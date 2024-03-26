@@ -89,7 +89,7 @@ public class BookingRestController {
         return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
-    @PutMapping(value = "bookingId")
+    @PutMapping(value = "{bookingId}")
     public ResponseEntity<Booking> updateBooking(@PathVariable("bookingId") int bookingId, @RequestBody @Valid Booking booking){
         int petBookingId= booking.getPet().getId();
         int roomBookingId= booking.getRoom().getId();
@@ -103,7 +103,7 @@ public class BookingRestController {
         return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
-    @DeleteMapping(value = "bookingId")
+    @DeleteMapping(value = "{bookingId}")
     public ResponseEntity<MessageResponse> deleteBooking(@PathVariable("bookingId") int bookingId){
         RestPreconditions.checkNotNull(bookingService.findBookingById(bookingId),"Booking","ID",bookingId);
 
