@@ -2,7 +2,6 @@ package org.springframework.samples.petclinic.adoption;
 
 import org.hibernate.validator.constraints.Length;
 import org.springframework.samples.petclinic.model.BaseEntity;
-import org.springframework.samples.petclinic.model.NamedEntity;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.pet.Pet;
 

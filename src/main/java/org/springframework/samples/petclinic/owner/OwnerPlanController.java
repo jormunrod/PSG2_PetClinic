@@ -33,12 +33,10 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @SecurityRequirement(name = "bearerAuth")
 public class OwnerPlanController {
 
-	private final OwnerService ownerService;
 	private final UserService userService;
 
 	@Autowired
-	public OwnerPlanController(OwnerService ownerService, UserService userService) {
-		this.ownerService = ownerService;
+	public OwnerPlanController(UserService userService) {
 		this.userService = userService;
 	}
 
