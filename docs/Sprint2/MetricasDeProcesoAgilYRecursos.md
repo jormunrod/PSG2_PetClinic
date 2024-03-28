@@ -26,6 +26,8 @@
 8. [Porcentaje De Puntos De Historia Entregados](#8-porcentaje-de-puntos-de-historia-entregados)
     - [8.1 Sprint 1](#81-sprint-1)
     - [8.2 Sprint 2](#82-sprint-2)
+9. [Calendario Niko-Niko](#9-calendario-niko-niko)
+    - [9.1 Sprint 2](#91-sprint-2)
 
 ---
 
@@ -179,3 +181,10 @@ REVISAR
 Como hemos constatado anteriormente con el logro satisfactorio de los 224 puntos de historia en el Sprint 2, el equipo ha alcanzado un porcentaje de entrega del 100%. Este hito confirma que todas las historias planificadas para el sprint han sido completadas dentro del período previsto, reflejando la eficacia y el compromiso del equipo en la ejecución de las tareas asignadas.
 
 Como hemos observado previamente con la finalización satisfactoria de una parte de los puntos de historia en el Sprint 2, el equipo ha alcanzado un porcentaje de entrega del ______%. Aunque se ha progresado en la ejecución de las historias planificadas para el sprint, no se han completado todos los puntos de historia dentro del período previsto. Esto resalta la necesidad de que el equipo se esfuerce un poco más para alcanzar sus objetivos en los próximos sprints.
+
+---
+
+## **9. Calendario Niko-Niko**
+
+### **9.1 Sprint 2**
+
