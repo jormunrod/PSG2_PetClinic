@@ -29,7 +29,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
-import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -37,12 +36,10 @@ import org.springframework.transaction.annotation.Transactional;
 public class OwnerService {
 
 	private OwnerRepository ownerRepository;
-	private PetService petService;
 
 	@Autowired
-	public OwnerService(OwnerRepository ownerRepository, PetService petService) {
+	public OwnerService(OwnerRepository ownerRepository) {
 		this.ownerRepository = ownerRepository;
-		this.petService = petService;
 	}
 
 	@Transactional(readOnly = true)
