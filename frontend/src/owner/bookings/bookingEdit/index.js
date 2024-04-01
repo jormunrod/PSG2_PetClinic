@@ -63,7 +63,6 @@ export default function BookingEditOwner() {
         event.preventDefault();
         booking.pet = pets.filter((pet) => pet.id === parseInt(booking.pet))[0];
         booking.room = rooms.filter((room) => room.id === parseInt(booking.room))[0];
-        console.log(booking);
 
         fetch("/api/v1/bookings" + (booking.id ? "/" + booking.id : ""), {
             method: booking.id ? "PUT" : "POST",

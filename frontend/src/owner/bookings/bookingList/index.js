@@ -75,7 +75,6 @@ export default function OwnerBookingList() {
         fetchData();
     }, [jwt]);
 
-    console.log(userId)
 
     function getBookingList() {
         return bookings.map((booking) => (
