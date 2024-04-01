@@ -6,7 +6,7 @@ import deleteFromList from "../../../util/deleteFromList";
 import useFetchState from "../../../util/useFetchState";
 
 const jwt = tokenService.getLocalAccessToken();
-const userId = tokenService.getUser().id;
+const userId = tokenService.getUser() !== null? tokenService.getUser().id : null;
 export default function OwnerBookingList() {
 
     const [message, setMessage] = useState(null);
@@ -20,12 +20,11 @@ export default function OwnerBookingList() {
         setMessage,
         setVisible
     )[0]
-    console.log(owner)
 
     const [bookings, setBookings] = useState([]);
 
     async function fetchData() {
-        const userId = tokenService.getUser().id;
+        const userId = tokenService.getUser() !== null? tokenService.getUser().id : null;
         const owner = await  fetch(
             `/api/v1/owners/user/userId`, {
                 headers: {
@@ -75,6 +74,7 @@ export default function OwnerBookingList() {
     useEffect(() => {
         fetchData();
     }, [jwt]);
+
 
     function getBookingList() {
         return bookings.map((booking) => (
