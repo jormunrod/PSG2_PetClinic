@@ -50,7 +50,7 @@ En cada uno de los análisis de los sprints, se presentará un detallado examen 
 ## **3. Ánalisis Código fuente y Métricas Asociadas al Sprint 1**
 ### **3.1 SonarQube Dashboard**
 <p align="center">
-    <img src="../images/dashboardS1.png" alt="Dashboard Sprint 1" style="width: 75%; margin: auto;">
+    <img src="../Sprint2/dashboardS1.png" alt="Dashboard Sprint 1" style="width: 75%; margin: auto;">
 </p>
 El dashboard proporciona una visión general del estado del código fuente del sprint 1 de nuestro proyecto desde el punto de vista de la calidad y seguridad del software. Este dashboard muestra métricas y estadísticas clave sobre el código, como el número de problemas de calidad, la cobertura del código, la duplicación de código, la complejidad ciclomática, entre otros.
 
@@ -260,7 +260,7 @@ Se han encontrado estos 3 code smell similares sobre parámetros diferentes por 
 ### **4.1 SonarQube Dashboard**
 
 <p align="center">
-    <img src="../images/dashboardS2.png" alt="Dashboard Sprint 2" style="width: 75%; margin: auto;">
+    <img src="../Sprint2/dashboardS2.png" alt="Dashboard Sprint 2" style="width: 75%; margin: auto;">
 </p>
 
 El dashboard proporciona una visión general del estado del código fuente del sprint 2 de nuestro proyecto desde el punto de vista de la calidad y seguridad del software. Este dashboard muestra métricas y estadísticas clave sobre el código, como el número de problemas de calidad, la cobertura del código, la duplicación de código, la complejidad ciclomática, entre otros.
@@ -485,6 +485,6 @@ Cada descripción de error proporciona una comprensión clara del problema, sus 
 ### **6.2 SonarQube DashBoard modificado**
 
 <p align="center">
-    <img src="../images/dashboardS1.png" alt="Dashboard Sprint 1" style="width: 75%; margin: auto;">
+    <img src="../images/dashboardModificado.png" alt="Dashboard modificado" style="width: 75%; margin: auto;">
 </p>
 
