@@ -7,7 +7,7 @@ import getIdFromUrl from "../../../util/getIdFromUrl";
 import useFetchState from "../../../util/useFetchState";
 
 const jwt = tokenService.getLocalAccessToken();
-const userId = tokenService.getUser().id;
+const userId = tokenService.getUser() !== null? tokenService.getUser().id : null;
 export default function BookingEditOwner() {
     const emptyItem = {
         id: "",
