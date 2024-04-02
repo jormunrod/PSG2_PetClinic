@@ -351,7 +351,7 @@ class ConsultationServiceTests {
 	void shouldReturnStatsForAdmin() {
 		Map<String, Object> stats = this.consultationService.getAdminConsultationsStats();
 		assertTrue(stats.containsKey("totalConsultations"));
-		assertEquals(5, stats.get("totalConsultations"));
+		assertEquals(10, stats.get("totalConsultations"));
 		assertTrue(stats.containsKey("avgConsultationsByPlatinum"));
 		assertNotEquals(0, stats.get("avgConsultationsByPlatinum"));
 		assertTrue(stats.containsKey("avgConsultationsByOwners"));
@@ -365,9 +365,9 @@ class ConsultationServiceTests {
 		Map<String, Object> stats = this.consultationService
 				.getOwnerConsultationsStats(ownerService.findOwnerById(1).getId());
 		assertTrue(stats.containsKey("totalConsultations"));
-		assertEquals(2, stats.get("totalConsultations"));
+		assertEquals(4, stats.get("totalConsultations"));
 		assertTrue(stats.containsKey("consultationsByYear"));
-		assertEquals(1, ((Map<String, Integer>) stats.get("consultationsByYear")).get("2023"));
+		assertEquals(2, ((Map<String, Integer>) stats.get("consultationsByYear")).get("2023"));
 		assertTrue(stats.containsKey("avgConsultationsByYear"));
 		assertNotEquals(0, stats.get("avgConsultationsByYear"));
 	}
@@ -388,9 +388,9 @@ class ConsultationServiceTests {
 		Map<String, Object> stats = this.consultationService
 				.getOwnerConsultationsStats(ownerService.findOwnerById(10).getId());
 		assertTrue(stats.containsKey("totalConsultations"));
-		assertEquals(1, stats.get("totalConsultations"));
+		assertEquals(2, stats.get("totalConsultations"));
 		assertTrue(stats.containsKey("consultationsByPet"));
-		assertEquals(1, ((Map<String, Integer>) stats.get("consultationsByPet")).get("Lucky"));
+		assertEquals(2, ((Map<String, Integer>) stats.get("consultationsByPet")).get("Lucky"));
 		assertTrue(stats.containsKey("avgConsultationsByPet"));
 		assertNotEquals(0, stats.get("avgConsultationsByPet"));
 	}

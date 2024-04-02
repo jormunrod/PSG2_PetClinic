@@ -1,6 +1,6 @@
 package org.springframework.samples.petclinic.adoption;
 
-import org.springdoc.api.ErrorMessage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.adoption.exceptions.IsYourPetException;
 import org.springframework.samples.petclinic.adoption.exceptions.NotInAdoptionException;

@@ -47,7 +47,7 @@ export default function BookingListAdmin() {
                             aria-label={"delete-" + booking.id}
                             onClick={() =>
                                 deleteFromList(
-                                    `/api/bookings/${booking.id}`,
+                                    `/api/v1/bookings/${booking.id}`,
                                     booking.id,
                                     [bookings, setBookings],
                                     [alerts, setAlerts],

@@ -39,8 +39,6 @@ import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.samples.petclinic.util.EntityUtils;
-import org.springframework.samples.petclinic.vet.VetRestController;
-import org.springframework.samples.petclinic.vet.Vet;
 import org.springframework.samples.petclinic.vet.VetService;
 import org.springframework.samples.petclinic.visit.Visit;
 import org.springframework.samples.petclinic.visit.VisitService;
@@ -132,6 +130,7 @@ class PetServiceTests {
 		pet.setType(EntityUtils.getById(types, PetType.class, 2));
 		pet.setBirthDate(LocalDate.now());
 		pet.setOwner(owner6);
+		pet.setIsAvailableForAdoption(true);
 		this.petService.savePet(pet);
 
 		int finalCount = petService.findAllPetsByOwnerId(owner6.getId()).size();
@@ -150,6 +149,7 @@ class PetServiceTests {
 		pet.setType(EntityUtils.getById(types, PetType.class, 2));
 		pet.setBirthDate(LocalDate.now());
 		pet.setOwner(owner6);
+		pet.setIsAvailableForAdoption(true);
 		petService.savePet(pet);
 
 		Pet anotherPetWithTheSameName = new Pet();
@@ -186,6 +186,7 @@ class PetServiceTests {
 		pet.setType(EntityUtils.getById(types, PetType.class, 2));
 		pet.setBirthDate(LocalDate.now());
 		pet.setOwner(owner6);
+		pet.setIsAvailableForAdoption(true);
 		petService.savePet(pet);
 		Visit visit = new Visit();
 		visit.setDatetime(LocalDateTime.now());
@@ -244,6 +245,7 @@ class PetServiceTests {
 		pet.setName(name);
 		pet.setType(type);
 		pet.setBirthDate(LocalDate.now());
+		pet.setIsAvailableForAdoption(true);
 		pet.setOwner(owner);
 		petService.savePet(pet);
 	}
