@@ -7,3 +7,20 @@
 ---
 
 ## Índice
+
+## **1. Introducción**
+Este documento recopila toda la información pertinente sobre las preguntas adicionales del sprint 2, así como el contenido necesario para llevarlas a cabo.
+
+---
+
+### **2.Tareas** 
+- #### Tarea E2.1
+  - **Descripción:** Contenido
+    
+- #### Tarea E2.2
+  - **Descripción:** Contenido
+
+- #### Tarea E2.3
+  - **Descripción:** Contenido
+
+---
