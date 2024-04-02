@@ -130,6 +130,7 @@ function App() {
           <Route path="/adoptions/:id/edit" exact={true} element={<PrivateRoute><OwnerAdoptionEdit /></PrivateRoute>} />
           <Route path="/adoptions/:id/requests" exact={true} element={<PrivateRoute><OwnerAdoptionRequestList /></PrivateRoute>} />
             <Route path="/bookings" exact={true} element={<PrivateRoute><OwnerBookingList /></PrivateRoute>} />
+            <Route path="/bookings/:bookingId" exact={true} element={<PrivateRoute><BookingEditOwner/></PrivateRoute>} />
         </>)
     }
     if (role === "VET") {
@@ -155,6 +156,8 @@ function App() {
           <Route path="/rooms" exact={true} element={<PrivateRoute><RoomList /></PrivateRoute>} />
           <Route path="/rooms/new" exact={true} element={<PrivateRoute><NewRoom /></PrivateRoute>} />
           <Route path="/rooms/:id" exact={true} element={<PrivateRoute><EditRoom /></PrivateRoute>} />
+            <Route path="/bookings" exact={true} element={<PrivateRoute><OwnerBookingList /></PrivateRoute>} />
+            <Route path="/bookings/:bookingId" exact={true} element={<PrivateRoute><BookingEditOwner/></PrivateRoute>} />
         </>)
     }
   })

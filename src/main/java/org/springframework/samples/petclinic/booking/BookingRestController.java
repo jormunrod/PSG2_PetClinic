@@ -59,33 +59,33 @@ public class BookingRestController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Booking> createRoom(@RequestBody @Valid Booking booking) {
+    public ResponseEntity<MessageResponse> createRoom(@RequestBody @Valid Booking booking) {
         int petBookingId= booking.getPet().getId();
         int roomBookingId= booking.getRoom().getId();
-        if(!(bookingService.findBookingsByPetId(petBookingId).isEmpty() || bookingService.findBookingsByRoomId(roomBookingId).isEmpty())){
+        if((bookingService.findBookingsByPetId(petBookingId).isEmpty() || bookingService.findBookingsByRoomId(roomBookingId).isEmpty())){
 
             Booking newBooking = new Booking();
             BeanUtils.copyProperties(booking, newBooking, "id");
             if (booking.getOwner() == null) {
                 ownerService.optFindOwnerByUser(userService.findCurrentUser().getId()).ifPresent(booking::setOwner);
             }
-            Booking savedBooking= this.bookingService.saveBooking(newBooking);
+            bookingService.saveBooking(newBooking);
 
-            return new ResponseEntity<>(savedBooking,HttpStatus.CREATED);
+            return new ResponseEntity<>(new MessageResponse("Booking saved"),HttpStatus.CREATED);
         }
-        return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
+        return new ResponseEntity<>(new MessageResponse("Booking for pet or room is already in database"),HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     @PutMapping(value = "{bookingId}")
-    public ResponseEntity<Booking> updateBooking(@PathVariable("bookingId") int bookingId, @RequestBody @Valid Booking booking){
+    public ResponseEntity<MessageResponse> updateBooking(@PathVariable("bookingId") int bookingId, @RequestBody @Valid Booking booking){
         int petBookingId= booking.getPet().getId();
         int roomBookingId= booking.getRoom().getId();
-        if(!(bookingService.findBookingsByPetId(petBookingId).isEmpty() || bookingService.findBookingsByRoomId(roomBookingId).isEmpty())){
+        if((bookingService.findBookingsByPetId(petBookingId).isEmpty() || bookingService.findBookingsByRoomId(roomBookingId).isEmpty())){
             RestPreconditions.checkNotNull(bookingService.findBookingById(bookingId),"Booking","ID",bookingId);
-
-            return new ResponseEntity<>(bookingService.updateBooking(booking,bookingId),HttpStatus.OK);
+            bookingService.updateBooking(booking,bookingId);
+            return new ResponseEntity<>(new MessageResponse("Booking updated"),HttpStatus.OK);
         }
-        return new ResponseEntity<>(HttpStatus.UNPROCESSABLE_ENTITY);
+        return new ResponseEntity<>(new MessageResponse("Booking for pet or room is already in database"),HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
     @DeleteMapping(value = "{bookingId}")

@@ -59,7 +59,11 @@ export default function BookingEditAdmin() {
         if (name === 'owner') {
             const selectedOwner = owners.find(owner => owner.id === parseInt(value));
             setBooking({...booking, owner: selectedOwner});
-        } else {
+        }
+        else if(name === 'room') {
+            const selectedRoom = rooms.find(room => room.id === parseInt(value));
+            setBooking({...booking, room: selectedRoom});
+        }else {
             setBooking({...booking, [name]: value});
         }
     }
@@ -67,7 +71,6 @@ export default function BookingEditAdmin() {
     function handleSubmit(event) {
         event.preventDefault();
         booking.pet =pets.filter((pet)=> pet.id===parseInt(booking.pet))[0];
-        booking.room=rooms.filter((room)=>room.id===parseInt(booking.room))[0];
         console.log(booking);
 
         fetch("/api/v1/bookings" + (booking.id ? "/" + booking.id : ""), {
@@ -184,7 +187,8 @@ export default function BookingEditAdmin() {
                         >
                             <option value="">None</option>
                             {pets.map((pet) => {
-                                if (booking.owner && (pet.owner.id === booking.owner.id)) {
+                                const allowedPet= booking.room==null? null:booking.room.allowedPetType;
+                                if (booking.owner && (pet.owner.id === booking.owner.id) && allowedPet === pet.type.name.toUpperCase())  {
                                     return (
                                         <option value={pet.id}>{pet.name} {pet.type.name}</option>
                                     );

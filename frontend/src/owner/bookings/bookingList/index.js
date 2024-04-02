@@ -6,34 +6,25 @@ import deleteFromList from "../../../util/deleteFromList";
 import useFetchState from "../../../util/useFetchState";
 
 const jwt = tokenService.getLocalAccessToken();
-const userId = tokenService.getUser() !== null? tokenService.getUser().id : null;
 export default function OwnerBookingList() {
 
     const [message, setMessage] = useState(null);
     const [visible, setVisible] = useState(false);
     const [modalShow, setModalShow] = useState(false);
 
-    const owner = useFetchState(
-        [],
-        `api/v1/owners/user/${userId}`,
-        jwt,
-        setMessage,
-        setVisible
-    )[0]
-
     const [bookings, setBookings] = useState([]);
-
     async function fetchData() {
-        const userId = tokenService.getUser() !== null? tokenService.getUser().id : null;
-        const owner = await  fetch(
-            `/api/v1/owners/user/userId`, {
+        const userId = tokenService.getUser()==null?null:tokenService.getUser().id;
+        const ownerResponse = await fetch(
+            `/api/v1/owners/user/${userId}`, {
                 headers: {
                     Authorization: `Bearer ${jwt}`,
                     "Content-Type": "application/json",
                 },
             });
+        const ownerData= await ownerResponse.json()
         const bookingResponse = await fetch(
-            `/api/v1/bookings/owners?ownerId=1`, {
+            `/api/v1/bookings/owners?ownerId=${ownerData.id}`, {
                 headers: {
                     Authorization: `Bearer ${jwt}`,
                     "Content-Type": "application/json",
@@ -73,8 +64,7 @@ export default function OwnerBookingList() {
 
     useEffect(() => {
         fetchData();
-    }, [jwt]);
-
+    }, [jwt,bookings]);
 
     function getBookingList() {
         return bookings.map((booking) => (
@@ -82,10 +72,19 @@ export default function OwnerBookingList() {
                 <td>{booking.startDate}</td>
                 <td>{booking.endDate}</td>
                 <td>{booking.owner.user.username}</td>
-                <td>{booking.pet.type.name}</td>
-                <td>{booking.room.name}</td>
+                <td>{booking.pet.name} {booking.pet.type.name}</td>
+                <td>{booking.room.name} {booking.room.clinic.name}</td>
                 <td>
                     <ButtonGroup>
+                        <Button
+                            size="sm"
+                            color="primary"
+                            aria-label={"edit-" + booking.id}
+                            tag={Link}
+                            to={"/bookings/" + booking.id}
+                        >
+                            Edit
+                        </Button>
                         <Button
                             size="sm"
                             color="danger"
@@ -107,6 +106,9 @@ export default function OwnerBookingList() {
             <Container style={{marginTop: "15px"}} fluid>
                 <h1 className="text-center">Bookings</h1>
                 <div className="float-right">
+                    <Button color="success" tag={Link} to="/bookings/new">
+                        Add Booking
+                    </Button>
                 </div>
                 <div>
                     <Table aria-label="owners" className="mt-4">

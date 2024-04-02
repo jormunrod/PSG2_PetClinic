@@ -78,10 +78,10 @@ public class PetRestController {
 	public ResponseEntity<List<Pet>> findAll(@RequestParam(required = false) Integer userId) {
 		User user = userService.findCurrentUser();
 		if (userId != null) {
-			if (user.getId().equals(userId) || user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, CLINIC_OWNER_AUTH).equals(true))
+			if (user.getId().equals(userId) || user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, OWNER_AUTH,CLINIC_OWNER_AUTH).equals(true))
 				return new ResponseEntity<>(petService.findAllPetsByUserId(userId), HttpStatus.OK);
 		} else {
-			if (user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, CLINIC_OWNER_AUTH).equals(true))
+			if (user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, OWNER_AUTH,CLINIC_OWNER_AUTH).equals(true))
 				return new ResponseEntity<>((List<Pet>) this.petService.findAll(), HttpStatus.OK);
 		}
 		throw new AccessDeniedException();

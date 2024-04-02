@@ -29,7 +29,7 @@ export default function BookingListAdmin() {
                 <td>{booking.endDate}</td>
                 <td>{booking.owner.user.username}</td>
                 <td>{booking.pet.type.name}</td>
-                <td>{booking.room.name}</td>
+                <td>{booking.room.name} {booking.room.clinic.name}</td>
                 <td>
                     <ButtonGroup>
                         <Button

@@ -6,20 +6,14 @@ import getErrorModal from "../../../util/getErrorModal";
 import getIdFromUrl from "../../../util/getIdFromUrl";
 import useFetchState from "../../../util/useFetchState";
 
-const jwt = tokenService.getLocalAccessToken();
-const userId = tokenService.getUser() !== null? tokenService.getUser().id : null;
+const jwt=tokenService.getLocalAccessToken();
+const userId = tokenService.getUser()==null?null:tokenService.getUser().id;
 export default function BookingEditOwner() {
-    const emptyItem = {
-        id: "",
-        name: "",
-        address: "",
-        telephone: "",
-    };
     const id = getIdFromUrl(2);
     const [message, setMessage] = useState(null);
     const [visible, setVisible] = useState(false);
     const [booking, setBooking] = useFetchState(
-        emptyItem,
+        [],
         `/api/v1/bookings/${id}`,
         jwt,
         setMessage,
@@ -27,21 +21,20 @@ export default function BookingEditOwner() {
         id
     );
 
-    const owner = useFetchState(
+    const owners = useFetchState(
         [],
-        `api/v1/owners/user/${userId}`,
+        `/api/v1/owners/user/${userId}`,
         jwt,
         setMessage,
         setVisible
-    )[0]
-
-    const [pets, setPets] = useFetchState(
+    )[0];
+    const pets= useFetchState(
         [],
-        `/api/v1/pets`,
+        `/api/v1/pets?userId=${userId}`,
         jwt,
         setMessage,
         setVisible
-    );
+    )[0];
     const [rooms, setRooms] = useFetchState(
         [],
         `/api/v1/rooms`,
@@ -55,14 +48,22 @@ export default function BookingEditOwner() {
         const target = event.target;
         const value = target.value;
         const name = target.name;
-        setBooking({...booking, [name]: value});
 
+        if(name === 'room'){
+            const selectedRoom = rooms.find(room => room.id === parseInt(value));
+            setBooking({...booking,room:selectedRoom});
+        }else{
+            setBooking({...booking, [name]: value});
+        }
     }
 
     function handleSubmit(event) {
         event.preventDefault();
-        booking.pet = pets.filter((pet) => pet.id === parseInt(booking.pet))[0];
-        booking.room = rooms.filter((room) => room.id === parseInt(booking.room))[0];
+        booking.pet = pets.find(pet => pet.id === parseInt(booking.pet));
+        booking.owner = owners;
+        console.log(booking.owner);
+        console.log(booking.pet);
+        console.log(booking);
 
         fetch("/api/v1/bookings" + (booking.id ? "/" + booking.id : ""), {
             method: booking.id ? "PUT" : "POST",
@@ -135,7 +136,7 @@ export default function BookingEditOwner() {
                             <option value="">None</option>
                             {rooms.map((room) => {
                                 return (
-                                    <option value={room.id}>{room.name} {room.allowedPetType}{<room
+                                    <option value={room.id}>{room.name} {room.allowedPetType} {room.clinic.name}{<room
                                         className="allowedPetType"></room>}</option>
                                 );
                             })}
@@ -150,11 +151,11 @@ export default function BookingEditOwner() {
                             name="owner"
                             required
                             type="select"
-                            value={booking.owner ? booking.owner.id : ""}
+                            value={booking.owner ? booking.owner.id : owners.id}
                             onChange={handleChange}
                             className="custom-input"
                         >
-                            <option value={owner.id}>{owner}</option>
+                            <option value={owners.id}> owner{owners.id}</option>
                         </Input>
                     </div>
                     <div className="custom-form-input">
@@ -166,17 +167,19 @@ export default function BookingEditOwner() {
                             name="pet"
                             required
                             type="select"
-                            value={booking.pet ? booking.pet : ""}
+                            value={booking.pet ? booking.pet.id : ""}
                             onChange={handleChange}
                             className="custom-input"
                         >
                             <option value="">None</option>
                             {pets.map((pet) => {
-                                if (booking.owner && (pet.owner.id === booking.owner.id)) {
+                                const allowedPet= booking.room==null? null:booking.room.allowedPetType;
+                                if(allowedPet === pet.type.name.toUpperCase()){
                                     return (
                                         <option value={pet.id}>{pet.name} {pet.type.name}</option>
                                     );
                                 }
+
                             })}
 
                         </Input>
