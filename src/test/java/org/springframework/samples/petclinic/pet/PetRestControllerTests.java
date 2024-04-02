@@ -186,7 +186,7 @@ class PetRestControllerTests {
 
 	@Test
 	@WithMockUser(value = "owner", authorities = { "OWNER" })
-	void ownerShouldNotFindAll() throws Exception {
+	void ownerShouldFindAll() throws Exception {
 		Pet timon = new Pet();
 		timon.setId(2);
 		timon.setName("Timon");
@@ -197,9 +197,7 @@ class PetRestControllerTests {
 
 		when(this.petService.findAll()).thenReturn(List.of(simba, timon, pumba));
 
-		mockMvc.perform(get(BASE_URL)).andExpect(status().isForbidden())
-				.andExpect(result -> assertTrue(result.getResolvedException() instanceof RuntimeException))
-				.andExpect(result -> assertEquals("Access denied!", result.getResolvedException().getMessage()));
+		mockMvc.perform(get(BASE_URL)).andExpect(status().isOk());
 	}
 
 	@Test
@@ -246,7 +244,7 @@ class PetRestControllerTests {
 
 	@Test
 	@WithMockUser(value = "owner", authorities = { "OWNER" })
-	void ownerShouldNotFindOthersPets() throws Exception {
+	void ownerShouldFindOthersPets() throws Exception {
 		logged.setId(2);
 
 		Pet timon = new Pet();
@@ -256,9 +254,7 @@ class PetRestControllerTests {
 
 		when(this.petService.findAllPetsByUserId(TEST_USER_ID)).thenReturn(List.of(simba, timon));
 
-		mockMvc.perform(get(BASE_URL).param("userId", TEST_USER_ID.toString())).andExpect(status().isForbidden())
-				.andExpect(result -> assertTrue(result.getResolvedException() instanceof AccessDeniedException))
-				.andExpect(result -> assertEquals("Access denied!", result.getResolvedException().getMessage()));
+		mockMvc.perform(get(BASE_URL).param("userId", TEST_USER_ID.toString())).andExpect(status().isOk());
 	}
 
 	@Test
