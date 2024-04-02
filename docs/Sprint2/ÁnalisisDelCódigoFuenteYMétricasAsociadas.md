@@ -19,12 +19,6 @@
     - [4.2 Potencial Bugs](#42-potencial-bugs)
     - [4.3 Code Smell Found](#43-code-smell-found)
 5. [Conclusiones](#5-conclusiones)
-6. [Ánalisis del código fuente tras módifcaciones (EXTRA)](#6-ánalisis-del-código-fuente-tras-modificaciones)
-    - [6.1 Módificaciones del código fuente](#61-modificaciones-del-código-fuente)
-    - [6.2 SonarQube DashBoard sin errores](#62-sonarqube-dashboard-sin-errores)
-   
-
-
 
 ---
 
@@ -34,7 +28,6 @@ El propósito de este informe es realizar un análisis detallado del estado del 
 En primer lugar, se presentará una vista en SonarQube que detalla las diferentes métricas del código desarrollado durante el Sprint 1, junto con las calificaciones correspondientes. Posteriormente, se analizarán las métricas correspondientes al Sprint 2, proporcionando así una comparativa de los avances realizados en ambos periodos de desarrollo.
 
 En cada uno de los análisis de los sprints, se presentará un detallado examen de los errores y los "code smells" que han surgido. Aunque es común encontrar un número considerable de "code smells", esto se debe a que algunos pueden repetirse en diferentes secciones del código. Por lo tanto, nos enfocaremos en describir y evaluar cada uno de ellos una sola vez para evitar redundancias y proporcionar una visión más clara y concisa del estado del proyecto.
-
 
 ---
 
@@ -91,8 +84,6 @@ Se han encontrado 4 bugs del mismo tipo en diferentes clases del proyecto, se da
   - Evaluación: En muchos casos, este error puede no causar un comportamiento erróneo inmediato, especialmente si se garantiza que el Optional siempre está presente antes de acceder a su valor. Sin embargo, omitir la verificación de la presencia del Optional puede conducir a excepciones NoSuchElementException en tiempo de ejecución si el Optional está vacío en algún momento durante la ejecución del programa.
 
   - Solución: una forma de corregir este error es agregar una comprobación utilizando el método “ inPresent()” antes de intentar acceder al valor.
-
-
 
 ### **3.3 Code Smell Found**
 
@@ -457,6 +448,7 @@ Se han encontrado estos 3 code smell similares sobre parámetros diferentes por 
   - Evaluación: puede ser identificado revisando el código en busca de valores de campo que solo se utilizan en un método específico.
 
   - Solución: pasar el valor como un parámetro al método en lugar de almacenarlo como un campo de clase.
+
 ---
 
 ## **5. Conclusiones**
@@ -471,20 +463,5 @@ Además, se detectaron textos comentados y tareas pendientes (TODO) en el códig
 Finalmente, para mejorar la calidad y la mantenibilidad del software en los próximos sprints. 
 Es crucial realizar una revisión exhaustiva del código, priorizando la corrección de bugs y la eliminación de code smells, junto con la resolución de los comentarios y tareas pendientes.
 
-
 ---
-
-## **6. Ánalisis del código fuente tras módifcaciones (EXTRA)**
-
-### **6.1 Módificaciones del código fuente**
-Las modificaciones que se deben realizar en el código para abordar los problemas identificados en cada uno de los bugs o code smells están detalladas exhaustivamente en la sección de solución del análisis correspondiente en los puntos 3 y 4 del índice. 
-
-Cada descripción de error proporciona una comprensión clara del problema, sus posibles causas y evaluaciones, así como soluciones específicas para corregirlo de manera efectiva. 
-
-
-### **6.2 SonarQube DashBoard modificado**
-
-<p align="center">
-    <img src="../images/dashboardModificado.png" alt="Dashboard modificado" style="width: 75%; margin: auto;">
-</p>
 
