@@ -8,22 +8,41 @@
 
 ## Índice
 
+1. [Introducción](#1-introducción)
+2. [Tareas Extras](#2-tareas-extras)
+    - [2.1 Tarea E2.1](#21-tarea-E2.1)
+        -  [2.1.1 Parte 1](#211-parte-1)
+        -  [2.1.2 Parte 2](#212-sparte-2)
+    - [2.2 Tarea E2.2](#22-tarea-E2.2)
+    - [2.3 Tarea E2.3](#23-tarea-E2.3)
+
+
 ## **1. Introducción**
 Este documento recopila toda la información pertinente sobre las preguntas adicionales del sprint 2, así como el contenido necesario para llevarlas a cabo.
 
 ---
 
 ### **2.Tareas** 
-- #### Tarea E2.1:
-  Parte 1: Analisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4.
+### **2.1 Tarea E2.1** 
 
-  Parte 2:Analisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5.
+Esta tarea es una extensión de las tares A2.4 y A2.5, en la cual hemos dividido en dos partes, ya que cada uno englobara una comparativa de los resultados obtenidos en los analisis de diferentes partes del código.
+En ambas partes se encontrarán una valoración  y discusión sobre los métricas obtenidas durante el análisis.
 
-    Después de completar las nuevas funcionalidades del Sprint 2, llevamos a cabo otra revisión del código para realizar una evaluación exhaustiva de las diferentes métricas.
+### **2.1.1 Parte 1: Análisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4.** 
 
-    Ahora que hemos finalizado ambos análisis, procederemos a comparar los resultados obtenidos para poder evaluar la calidad y el estado de nuestro código.
 
-    Esta comparativa la haremos primero de la parte del backend y luego del frontend y la iremos comentando por métricas para que queda más claro.
+
+
+
+
+
+### **2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5.** 
+  
+Después de completar las nuevas funcionalidades del Sprint 2, llevamos a cabo otra revisión del código para realizar una evaluación exhaustiva de las diferentes métricas.
+
+Ahora que hemos finalizado ambos análisis, procederemos a comparar los resultados obtenidos para poder evaluar la calidad y el estado de nuestro código.
+
+Esta comparativa la haremos primero de la parte del backend y luego del frontend y la iremos comentando por métricas para que queda más claro.
 
 - Comparativa Backend
 
@@ -68,12 +87,13 @@ Esto es beneficioso para mantener un código limpio y fácil de mantener, ya que
 
     En conclusión, aunque hubo una ligera mejora en la cantidad de bugs y debt (deuda técnica) en el segundo análisis, también hubo un aumento significativo en la cantidad de code smells y una falta de cobertura de código. Esto destaca la importancia de continuar mejorando la calidad del código y prestando atención a áreas críticas como la seguridad y la cobertura de pruebas.
 
+---
+### **2.2 Tarea E2.2**
 
-    
-- #### Tarea E2.2
-  - **Descripción:** Contenido
 
-- #### Tarea E2.3
-  - **Descripción:** Contenido
+---
+
+
+### **2.3 Tarea E2.3**
 
 ---
