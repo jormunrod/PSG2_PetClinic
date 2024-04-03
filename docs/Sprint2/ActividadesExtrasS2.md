@@ -117,4 +117,14 @@ Esto es beneficioso para mantener un código limpio y fácil de mantener, ya que
 
 ### **2.3 Tarea E2.3**
 
----
+Para automatizar el análisis de código y cargar los resultados en SonarQube, implementamos un flujo de trabajo de GitHub Actions llamado "SonarQube Upload". Este flujo se activa después de cada push a la rama "develop" del repositorio. 
+
+El flujo de trabajo se ejecuta en un entorno de ubuntu y consta de los siguientes pasos:
+
+1. **Configuración del entorno JDK:** Utilizamos el setup de Java para instalar la versión 17 del JDK.
+   
+2. **Compilación del proyecto con Maven:** Utilizamos Maven para compilar el proyecto Java utilizando el archivo "pom.xml".
+
+3. **Análisis de código con SonarQube:** Utilizamos la acción `SonarSource/sonarqube-scan-action` para ejecutar el análisis de código. Esta acción se configura con el host de SonarQube y el token de autenticación proporcionados como secretos en el repositorio. También se especifica la clave del proyecto en SonarQube y la ruta de los archivos binarios Java a analizar.
+
+Esta configuración automatizada garantiza que cada push a la rama "develop" active el análisis de código en SonarQube, proporcionando una evaluación continua y sistemática de la calidad del código.
