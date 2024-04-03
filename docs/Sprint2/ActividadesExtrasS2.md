@@ -18,8 +18,8 @@
             - [2.1.1.4 Total De Puntos De Historia Entregados](#2114-total-de-puntos-de-historia-entregados)
             - [2.1.1.5 Porcentaje De Puntos De Historia Entregados](#2115-porcentaje-de-puntos-de-historia-entregados)
         -  [2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5](#212-parte-2:-análisis-de-las-diferentes-resultados-de-las-métricas-entre-s1-y-s2-del-punto-a2-5)
-    - [2.2 Tarea E2.2](#22-tarea-E2.2)
-    - [2.3 Tarea E2.3](#23-tarea-E2.3)
+    - [2.2 Tarea E2.2](#22-tarea-e2.2)
+    - [2.3 Tarea E2.3](#23-tarea-e2.3)
 
 
 ## **1. Introducción**
@@ -31,20 +31,30 @@ Este documento recopila toda la información pertinente sobre las preguntas adic
 ### **2.1 Tarea E2.1** 
 
 Esta tarea es una extensión de las tares A2.4 y A2.5, en la cual hemos dividido en dos partes, ya que cada uno englobara una comparativa de los resultados obtenidos en los analisis de diferentes partes del código.
-En ambas partes se encontrarán una valoración  y discusión sobre los métricas obtenidas durante el análisis.
+En ambas partes se encontrarán una valoración y discusión sobre los métricas obtenidas durante el análisis.
+
 
 #### **2.1.1 Parte 1: Análisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4** 
-
 ##### **2.1.1.1 Gráfico Burn Down**
+En ambos gráficos se puede ver que el equipo estuvo trabajando durante todo el sprint, sin embargo, en el sprint 1 se puede apreciar que el equipo apuró demasiado el último día del sprint para acabar muchas tareas, cosa que no es tan notoria en el final del sprint 2. Esta diferencia es más visual en parte a la variación de la estimación de las tareas y a la cantidad de puntos de historia entre los sprints.
+
+También se puede ver como el equipo mantuvo un ritmo de trabajo más constante en el sprint 1 ya que se ven más tareas resueltas, mientras que en el sprint 2 hay menos escalones pero estos son más grandes. Esto nos indica que:
+- En el sprint 1 hubo un mayor número de tareas que correspondían a tareas con una estimación de puntos de historia muy bajo.
+- En el sprint 2 hubo un mayor número de tareas que correspondían a tareas con una estimación de puntos de historia muy alto.
 
 ##### **2.1.1.2 Gráfico Lead Time**
+La mayor diferencia que nos proporciona este gráfico es que las tareas, durante el sprint 2, estuvieron poco menos del triple de tiempo en espera a ser resueltas, ya que en el sprint 1, de media se tardaron casi 9 días en completar la tarea desde que fue descrita, mientras que en el sprint 2, se tardó de media unos 25 días. Esto nos indica que el equipo tardó mucho en ponerse a trabajar. Esto en parte se debió a que ciertas tareas eran dependientes de otras y hasta que no estuvieran finalizadas, las otras no podían ser completadas y por ello hay mayor retraso.
 
 ##### **2.1.1.3 Gráfico Cycle Time**
+En este caso, pasa lo mismo que en el apartado anterior. Las tareas del sprint 2 fueron estimadas con un mayor número de puntos de historia por lo que se podría entender que el equipo tardase más tiempo en desarrollar y completar las distintas tareas. Por esto mismo, se puede apreciar que el tiempo medio que empleó el equipo en completar una tarea durante el sprint 1 fue de 2 días, mientras que en el sprint 2 fue de 10.
+
+Este sería un aspecto a mejorar ya que, pese a que algunas tareas realmente necesitaron este tiempo para ser completadas, es un periodo bastante largo para que sea la media de compleción de las tareas.
 
 ##### **2.1.1.4 Total De Puntos De Historia Entregados**
+Gracias al trabajo colaborativo del equipo, se pudo lograr el objetivo propuesto por este tanto para el sprint 1 como para el 2. Por ello, en ambos se completaron todos los puntos de historia, 81 y 224 respectivamente.
 
 ##### **2.1.1.5 Porcentaje De Puntos De Historia Entregados**
-
+Como ya se mencionó en el apartado anterior, todas las tareas fueron completadas y todos los puntos de historia fueron entregados, tanto de las tareas obligatorias como las extras. Por ello, se considera que el equipo entregó el 100% de puntos de historia tanto en el sprint 1 como en el 2.
 
 
 #### **2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5** 
