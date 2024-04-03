@@ -184,7 +184,41 @@ El equipo ha tomado los siguientes elementos para representar diferentes estados
 
 Este es el calendario niko-niko resultante:
 
-**INSERTA TABLA!**
+
+|     Día            |    Álvaro    |     Jorge     |     María     |     Rafa      |     Rubén     |
+| ------------------ | -------------| ------------- | ------------- | ------------- | ------------- | 
+| Día 1 - 05 Marzo   |      😊     |     😊        |       😊     |        😊       |     😊       |                
+| Día 2 - 06 Marzo   |      -       |      -        |       -       |       -        |      -        |                
+| Día 3 - 07 Marzo   |      -       |      -        |        -      |        -       |      -        |                
+| Día 4 - 08 Marzo   |      -       |      -        |        -      |         -      |      -        | 
+| Día 5 - 09 Marzo   |      -       |      -        |        -      |          -     |      -        |
+| Día 6 - 10 Marzo   |      -       |      -        |       -       |           -    |      -        |
+| Día 7 - 11 Marzo   |      -       |     😊        |       😊     |         -      |     -         |
+| Día 8 - 12 Marzo   |      -       |     😊        |       😊     |         😊      |     😐       |
+| Día 9 - 13 Marzo   |      -       |      -        |       -       |         -      |      -        |
+| Día 10 - 14 Marzo  |      -       |     😊        |       -       |         -      |     -         |
+| Día 11 - 15 Marzo  |      -       |     😊        |       -       |         -      |     -         |
+| Día 12 - 16 Marzo  |       😟     |     😊       |       -       |         -      |     -         |
+| Día 13 - 17 Marzo  |      -       |     😊        |       -       |        -       |     😊       |
+| Día 14 - 18 Marzo  |      -       |     😊        |       -       |         -      |     -         |
+| Día 15 - 19 Marzo  |      😊      |     😊        |       😊     |         😊      |     😊       |
+| Día 16 - 20 Marzo  |      😊      |     -         |       😊      |          😊     |      -        |
+| Día 17 - 21 Marzo  |      -       |     -         |       -        |           -    |      -        |
+| Día 18 - 22 Marzo  |      -       |     -         |       -       |            -   |      -        |
+| Día 19 - 23 Marzo  |      -       |     -         |       -       |           😊    |      -        |
+| Día 20 - 24 Marzo  |      -       |     -         |       -       |            😊   |      -        |
+| Día 21 - 25 Marzo  |      -       |     -         |       -        |            -   |      -        |
+| Día 22 - 26 Marzo  |      😊     |     -         |       -        |            -   |      -        |
+| Día 23 - 27 Marzo  |      -       |     -         |       -        |            -   |      -        |
+| Día 24 - 28 Marzo  |      -       |     -         |      😊       |           😊    |      😊      |
+| Día 25 - 29 Marzo  |      -       |     -         |       😟      |            😊   |      -        |
+| Día 26 - 30 Marzo  |      -       |     -         |       😟      |             😊  |        -      |
+| Día 27 - 31 Marzo  |      😊      |     -         |       😨      |              😊 |        😐      |
+| Día 28 - 01 Abril  |      😊      |     -         |       😊      |      -         |       -       |
+| Día 29 - 02 Abril  |      -       |     😊        |       😊      |       -        |        -      |
+| Día 30 - 03 Abril  |      😊      |     -         |       😊       |       😊        |        😊      |
+| Día 31 - 04 Abril  |      -       |     -         |        -       |         -      |        -      |
+
 
 Ante esto, podemos sacar las siguientes conclusiones:
 - Como se puede ver, los miembros del equipo tienen formas de trabajar distintas, ya que, en algunos casos, el miembor decide avanzar bastante el trabajo en pocos días y otros prefieren avanzar todos los días poco a poco.
