@@ -62,14 +62,13 @@ El objetivo es que la línea de "burn down" (descenso) alcance cero hacia el fin
 Al observar detenidamente el gráfico, se nota que el equipo logró finalizar todas las tareas planificadas antes de la conclusión del sprint 1. Sin embargo, es notorio que la mayoría de estas finalizaciones se concentraron en los últimos días del período. Este patrón sugiere que el equipo enfrentó ciertas dificultades para completar las tareas de manera constante a lo largo del sprint. Tal situación genera ciertas preocupaciones acerca de la calidad de la entrega, dado que casi la mitad de los puntos de historia fueron completados en el último día del sprint, lo que podría afectar la integridad y eficiencia del producto final.
 
 ### **3.2 Sprint 2**
-REVISAR
-
-
 <p align="center">
     <img src="../images/burnDownChartS2.png" alt="Burn Down Chart from Sprint 2" style="width: 75%; margin: auto;">
 </p>
 
-Al observar detenidamente el gráfico, se puede observar que el equipo estuvo trabajando progresivamente y las tareas iban siendo completadas poco a poco. Por la estructura del sprint, los miembros que tenían asiganas las tareas de documentación tuvieron que esperar a que aquellos con las tareas de desarrollo acabasen, ya que gran parte de su trabajo dependía de ellos. Junto a esto, cabe destacar que el equipo relajó el ritmo de trabajo debido a la Semana Santa y la necesidad de repartir el tiempo para estudiar para otras asignaturas. Sin embargo, el equipo retomó de manera óptima el trabajo para así poder alcanzar sus objeivos propuestos.
+Al observar detenidamente el gráfico, se puede observar que el equipo estuvo trabajando progresivamente y las tareas iban siendo completadas poco a poco. Por la estructura del sprint, los miembros que tenían asiganas las tareas de documentación tuvieron que esperar a que aquellos con las tareas de desarrollo acabasen, ya que gran parte de su trabajo dependía de ellos. Junto a esto, cabe destacar que el equipo relajó el ritmo de trabajo debido a la Semana Santa y la necesidad de repartir el tiempo para estudiar para otras asignaturas. Sin embargo, el equipo retomó de manera óptima el trabajo para así poder alcanzar sus objetivos propuestos.
+
+Como se puede observar, a la hora de hacer la captura, el sprint no había terminado aún por lo que algunas tareas parecen no haberse completado, pero el equipo finalmente logró acabarlas todas.
 
 ---
 
@@ -106,9 +105,6 @@ Con este gráfico podemos sacar las siguientes conclusiones:
 - Pese a haber varias issues que se encuentran dentro de la zona de desviación estándar, se puede afirmar que el proyecto ha estado bajo control gran parte del tiempo.
 
 ### **5.2 Sprint 2** 
-REVISAR
-
-
 <p align="center">
     <img src="../images/leadTimeChartS2.png" alt="Lead Time Chart from Sprint 2" style="width: 75%; margin: auto;">
 </p>
@@ -116,9 +112,9 @@ REVISAR
 Con este gráfico podemos sacar las siguientes conclusiones:
 - Como ya se mencionó anteriormente, el equipo se vio afectado por las tareas de desarrollo.
 - Hubo problemas a la hora de mover las tareas en las columnas, como es el caso de la presente en el día 28 de Marzo, la cual se olvidó mover a la columna de "Done" y parece que se estuvo trabajando más tiempo de la cuenta en ella. Hay que tener mayor cuidado con estos despistes ya que pueden afectar a la forma de interpretar estos gráficos.
--
-- DESVIACIÓN? (ZONA GRIS)
-- 
+- Como se puede observar, la media de tiempo de la realización de la tarea es elevada, llegando a una media de casi un mes desde que se puso en el backlog, hasta que fue completada.
+- Las issues completadas se encuentran todas dentro de la zona de desviación, por lo que en principio el equipo se ha mantenido con un ritmo de trabajo medio.
+- El ascenso de la linea de media de tiempo de trabajo puede indicar que el equipo ha ido tardando cada vez más en terminar de completar las tareas conforme ha ido avanzando el sprint.
 
 ---
 
@@ -138,17 +134,14 @@ Con este gráfico podemos sacar las siguientes conclusiones:
 - La presencia de un pico al final del desarrollo en la línea verde de promedio móvil, indica la presencia de un cuello de botella, lo que permite alertar al equipo sobre problemas en el proceso.
 
 ### **6.2 Sprint 2** 
-REVISAR
-
-
 <p align="center">
     <img src="../images/cycleTimeChartS2.png" alt="Cycle Time Chart from Sprint 2" style="width: 75%; margin: auto;">
 </p>
 
 Con este gráfico podemos sacar las siguientes conclusiones:
-- a
-- DESVIACIÓN? (ZONA GRIS)
-- 
+- El equipo ha tardado de media unos 10 días en completar las tareas, es decir, desde que se comienzan a desarrollar hasta que son 100% completadas. Este valor nos indica que el equipo ha estimado de forma correcta la carga de trabajo.
+- Algunas de las issues resuletas que se encuentran en el límite de la zona de desviación típica, se ven en este lugar debido a un descuido a la hora de dejar la tarea en al columna "In Review" en vez de a la de "Done".
+- Se puede apreciar como el ritmo de trabajo se vio disminuido en la parte media del sprint, pero finalmente el equipo retomó la constancia para poder completar todas las tareas propuestas.
 
 ---
 
@@ -160,12 +153,7 @@ Como se evidencia claramente en el gráfico de Burn Down correspondiente al Spri
 Este éxito permite al equipo aprender para poder mejorar en futuros sprints, facilitando así el camino para alcanzar las metas propuestas.
 
 ### **7.2 Sprint 2** 
-REVISAR
-
-
 El análisis del gráfico de Burn Down del Sprint 2 revela un cumplimiento exitoso de todos los objetivos establecidos a pesar de enfrentar desafíos significativos en el ritmo de trabajo en ciertos momentos. A pesar de estos obstáculos, el equipo ha demostrado su compromiso al completar todas las tareas planificadas para este período. Este logro subraya la capacidad del equipo para mantenerse enfocado en sus metas y superar las dificultades que puedan surgir durante el proceso. Al concluir todas las actividades propuestas, el equipo ha cumplido con éxito los 224 puntos de historia estimados para este sprint.
-
-La evaluación del gráfico de Burn Down del Sprint 2 revela un progreso notable, aunque el equipo enfrentó desafíos que impidieron completar totalmente las tareas propuestas. A pesar de un esfuerzo diligente, las tareas _______ y _______ presentaron obstáculos imprevistos que impidieron su finalización dentro del período designado. Estas dificultades resultaron en la finalización parcial de los puntos de historia estimados para este sprint, en este caso, _______. Sin embargo, a pesar de estas limitaciones, el equipo logró abordar una gran parte de los objetivos, demostrando su capacidad para adaptarse y perseverar ante contratiempos. Este sprint sirve como un recordatorio valioso de la importancia de la flexibilidad y la resiliencia en la gestión de proyectos. Aunque no se lograron todas las metas propuestas, el equipo ha ganado experiencia invaluable que informará y fortalecerá su desempeño en futuros sprints, allanando el camino hacia el éxito continuo.
 
 ---
 
@@ -175,16 +163,21 @@ La evaluación del gráfico de Burn Down del Sprint 2 revela un progreso notable
 Como hemos observado previamente con la finalización satisfactoria de los 81 puntos de historia en el Sprint 1, el equipo ha alcanzado un porcentaje de entrega del 100%. Este hito confirma que todas las historias planificadas para el sprint han sido completadas dentro del período previsto, reflejando la eficacia y el compromiso del equipo en la ejecución de las tareas asignadas.
 
 ### **8.2 Sprint 2** 
-REVISAR
-
-
-Como hemos constatado anteriormente con el logro satisfactorio de los 224 puntos de historia en el Sprint 2, el equipo ha alcanzado un porcentaje de entrega del 100%. Este hito confirma que todas las historias planificadas para el sprint han sido completadas dentro del período previsto, reflejando la eficacia y el compromiso del equipo en la ejecución de las tareas asignadas.
-
-Como hemos observado previamente con la finalización satisfactoria de una parte de los puntos de historia en el Sprint 2, el equipo ha alcanzado un porcentaje de entrega del ______%. Aunque se ha progresado en la ejecución de las historias planificadas para el sprint, no se han completado todos los puntos de historia dentro del período previsto. Esto resalta la necesidad de que el equipo se esfuerce un poco más para alcanzar sus objetivos en los próximos sprints.
+Como hemos observado previamente con la finalización satisfactoria de los 224 puntos de historia en el Sprint 2, el equipo ha alcanzado un porcentaje de entrega del 100%. Este hito confirma que todas las historias planificadas para el sprint han sido completadas dentro del período previsto, reflejando la eficacia y el compromiso del equipo en la ejecución de las tareas asignadas.
 
 ---
 
 ## **9. Calendario Niko-Niko**
 
 ### **9.1 Sprint 2**
+El calendario Niko Niko es una herramienta utilizada en entornos ágiles, especialmente en metodologías como Scrum, para realizar un seguimiento visual del estado emocional del equipo a lo largo del tiempo.
 
+Su funcionalidad principal es proporcionar una manera rápida y sencilla de visualizar la moral del equipo a lo largo del tiempo. Al registrar su estado de ánimo diariamente, los miembros del equipo pueden identificar patrones y tendencias en su bienestar emocional. Esto puede ayudar al equipo y al facilitador del proceso a detectar problemas o áreas de mejora en el ambiente de trabajo y tomar medidas para abordarlos.
+
+El equipo ha tomado los siguientes elementos para representar diferentes estados emocionales y situaciones relacionadas con el trabajo diario del sprint 2. Estos emojis sirven como una forma rápida y visual de comunicar cómo ha ido el día en términos de desempeño, satisfacción y necesidades de ayuda, pero también indican si hubo problemas con el código propio o de otro compañero. Aquí está la explicación:
+
+- 😊: Este emoji indica un estado positivo donde estás aprendiendo y disfrutando del trabajo. Aunque reconoces que necesitas esforzarte un poco, te sientes capaz de hacerlo sin problemas. Este emoji sugiere que todo ha ido bien y no has encontrado problemas significativos con tu código o el de otros compañeros.
+- 😐: Representa un estado neutral donde sientes que tuviste que esforzarte, pero consideras que el día fue productivo. Aunque no todo fue perfecto, el trabajo asignado fue justo y te sientes satisfecho con el progreso. Esto implica que has enfrentado algunos desafíos, pero no han sido demasiado graves como para requerir ayuda o causar problemas importantes con el código.
+- 😟: Indica un estado negativo donde sientes serias dificultades para cumplir la tarea o que la productividad de tu día fue terrible. Esto sugiere que has enfrentado problemas significativos en tu trabajo, ya sea con tu propio código o el de tus compañeros, lo que ha afectado tu desempeño y tu satisfacción.
+- 😨: Este emoji refleja un estado de urgencia donde estás desesperado y necesitas ayuda. Esto implica que has encontrado problemas críticos con el código, ya sea el tuyo o el de otros, que necesitan ser abordados de inmediato para evitar problemas mayores o retrasos en el proyecto.
+- "-": Indica que no se trabajó en el proyecto durante ese día. Este símbolo simplemente informa que no se participó en esa tarea específica en ese momento, sin indicar problemas con el código.
