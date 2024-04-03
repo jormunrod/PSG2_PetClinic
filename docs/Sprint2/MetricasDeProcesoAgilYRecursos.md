@@ -181,3 +181,16 @@ El equipo ha tomado los siguientes elementos para representar diferentes estados
 - 😟: Indica un estado negativo donde sientes serias dificultades para cumplir la tarea o que la productividad de tu día fue terrible. Esto sugiere que has enfrentado problemas significativos en tu trabajo, ya sea con tu propio código o el de tus compañeros, lo que ha afectado tu desempeño y tu satisfacción.
 - 😨: Este emoji refleja un estado de urgencia donde estás desesperado y necesitas ayuda. Esto implica que has encontrado problemas críticos con el código, ya sea el tuyo o el de otros, que necesitan ser abordados de inmediato para evitar problemas mayores o retrasos en el proyecto.
 - "-": Indica que no se trabajó en el proyecto durante ese día. Este símbolo simplemente informa que no se participó en esa tarea específica en ese momento, sin indicar problemas con el código.
+
+Este es el calendario niko-niko resultante:
+
+**INSERTA TABLA!**
+
+Ante esto, podemos sacar las siguientes conclusiones:
+- Como se puede ver, los miembros del equipo tienen formas de trabajar distintas, ya que, en algunos casos, el miembor decide avanzar bastante el trabajo en pocos días y otros prefieren avanzar todos los días poco a poco.
+- Pese a que un miembro del equipo encontrase trabas en el desarrollo de una de sus tareas, pidió ayuda a otros de sus compañeros para tratar de solucionar los inconvenientes.
+- En general se ve que el equipo a trabajado de forma fructífera y las sesiones de trabajo han facilitado que la entrega avanzase sin problemas, salvo la puntualidad antes mencionada.
+
+Para próximas entregas el grupo podría:
+- Establecer unas pautas temporales de trabajo en las que los miembros se comprometan a avanzar con las tareas diariamente y evitar sobrecargas.
+- Continuar solicitando ayuda al resto de miembros del equipo en caso de encontrar problemas durante la compleción de las tareas.
