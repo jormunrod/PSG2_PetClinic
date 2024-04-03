@@ -72,7 +72,7 @@ public class AdoptionService {
             throw new NotInAdoptionException();
         }
 
-        if(pet.getOwner().getId() == applicantId){
+        if(pet.getOwner().getId().equals(applicantId )){
             throw new IsYourPetException();
         }
         

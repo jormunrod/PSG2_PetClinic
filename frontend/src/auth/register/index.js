@@ -80,11 +80,7 @@ export default function Register() {
       if (registerFormOwnerInputs[5].values.length === 1){
         fetch("/api/v1/clinics")
         .then(function (response) {
-          if (response.status === 200) {
-            return response.json();
-          } else {
-            return response.json();
-          }
+        return response.json();
         })
         .then(function (data) {
           setClinics(data);
