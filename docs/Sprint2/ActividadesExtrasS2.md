@@ -33,15 +33,21 @@ Este documento recopila toda la información pertinente sobre las preguntas adic
 Esta tarea es una extensión de las tares A2.4 y A2.5, en la cual hemos dividido en dos partes, ya que cada uno englobara una comparativa de los resultados obtenidos en los analisis de diferentes partes del código.
 En ambas partes se encontrarán una valoración  y discusión sobre los métricas obtenidas durante el análisis.
 
-### **2.1.1 Parte 1: Análisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4** 
+#### **2.1.1 Parte 1: Análisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4** 
+
+##### **2.1.1.1 Gráfico Burn Down**
+
+##### **2.1.1.2 Gráfico Lead Time**
+
+##### **2.1.1.3 Gráfico Cycle Time**
+
+##### **2.1.1.4 Total De Puntos De Historia Entregados**
+
+##### **2.1.1.5 Porcentaje De Puntos De Historia Entregados**
 
 
 
-
-
-
-
-### **2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5** 
+#### **2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5** 
   
 Después de completar las nuevas funcionalidades del Sprint 2, llevamos a cabo otra revisión del código para realizar una evaluación exhaustiva de las diferentes métricas.
 
