@@ -11,8 +11,13 @@
 1. [Introducción](#1-introducción)
 2. [Tareas Extras](#2-tareas-extras)
     - [2.1 Tarea E2.1](#21-tarea-E2.1)
-        -  [2.1.1 Parte 1](#211-parte-1)
-        -  [2.1.2 Parte 2](#212-sparte-2)
+        -  [2.1.1 Parte 1: Análisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4](#211-parte-1:-análisis-de-las-diferentes-resultados-de-las-métricas-y-análisis-entre-s1-y-s2-del-punto-a2-4)
+            - [2.1.1.1 Gráfico Burn Down](#2111-gráfico-burn-down)
+            - [2.1.1.2 Gráfico Lead Time](#2112-gráfico-lead-time)
+            - [2.1.1.3 Gráfico Cycle Time](#2113-gráfico-cycle-time)
+            - [2.1.1.4 Total De Puntos De Historia Entregados](#2114-total-de-puntos-de-historia-entregados)
+            - [2.1.1.5 Porcentaje De Puntos De Historia Entregados](#2115-porcentaje-de-puntos-de-historia-entregados)
+        -  [2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5](#212-parte-2:-análisis-de-las-diferentes-resultados-de-las-métricas-entre-s1-y-s2-del-punto-a2-5)
     - [2.2 Tarea E2.2](#22-tarea-E2.2)
     - [2.3 Tarea E2.3](#23-tarea-E2.3)
 
@@ -22,13 +27,13 @@ Este documento recopila toda la información pertinente sobre las preguntas adic
 
 ---
 
-### **2.Tareas** 
+### **2.Tareas Extras** 
 ### **2.1 Tarea E2.1** 
 
 Esta tarea es una extensión de las tares A2.4 y A2.5, en la cual hemos dividido en dos partes, ya que cada uno englobara una comparativa de los resultados obtenidos en los analisis de diferentes partes del código.
 En ambas partes se encontrarán una valoración  y discusión sobre los métricas obtenidas durante el análisis.
 
-### **2.1.1 Parte 1: Análisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4.** 
+### **2.1.1 Parte 1: Análisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4** 
 
 
 
@@ -36,7 +41,7 @@ En ambas partes se encontrarán una valoración  y discusión sobre los métrica
 
 
 
-### **2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5.** 
+### **2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5** 
   
 Después de completar las nuevas funcionalidades del Sprint 2, llevamos a cabo otra revisión del código para realizar una evaluación exhaustiva de las diferentes métricas.
 
