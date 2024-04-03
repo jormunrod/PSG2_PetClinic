@@ -28,7 +28,6 @@ import org.springframework.http.MediaType;
 import org.springframework.samples.petclinic.clinic.Clinic;
 import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.samples.petclinic.clinicowner.ClinicOwner;
-import org.springframework.samples.petclinic.exceptions.AccessDeniedException;
 import org.springframework.samples.petclinic.exceptions.LimitReachedException;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.exceptions.ResourceNotOwnedException;

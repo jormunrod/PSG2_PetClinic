@@ -21,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.Collection;
 import java.util.List;
@@ -49,7 +50,6 @@ public class OwnerServiceTests {
 	private OwnerService ownerService;
 	private PetService petService;
 	private AuthoritiesService authService;
-	
 
 	@Autowired
 	public OwnerServiceTests(OwnerService ownerService, PetService petService, AuthoritiesService authService) {
@@ -88,21 +88,27 @@ public class OwnerServiceTests {
 		assertThrows(ResourceNotFoundException.class, () -> this.ownerService.findOwnerById(100));
 	}
 
-//	@Test
-//	void shouldFindOwnerByUser() {
-//		Owner owner = this.ownerService.findOwnerByUser(2);
-//		assertEquals("Franklin", owner.getLastName());
-//	}
-//	
-//	@Test
-//	void shouldNotFindOwnerByIncorrectUser() {
-//		assertThrows(ResourceNotFoundException.class, () -> this.ownerService.findOwnerByUser(34));
-//	}
+	// @Test
+	// void shouldFindOwnerByUser() {
+	// Owner owner = this.ownerService.findOwnerByUser(2);
+	// assertEquals("Franklin", owner.getLastName());
+	// }
+	//
+	// @Test
+	// void shouldNotFindOwnerByIncorrectUser() {
+	// assertThrows(ResourceNotFoundException.class, () ->
+	// this.ownerService.findOwnerByUser(34));
+	// }
 
 	@Test
 	void shouldFindOptOwnerByUser() {
-		Optional<Owner> owner = this.ownerService.optFindOwnerByUser(4);
-		assertEquals("Franklin", owner.get().getLastName());
+		Optional<Owner> ownerOptional = this.ownerService.optFindOwnerByUser(4);
+		if (ownerOptional.isPresent()) {
+			Owner owner = ownerOptional.get();
+			assertEquals("Franklin", owner.getLastName());
+		} else {
+			fail("No se encontró ningún propietario para el usuario 4");
+		}
 	}
 
 	@Test

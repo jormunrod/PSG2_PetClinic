@@ -20,6 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.Collection;
 import java.util.Map;
@@ -44,7 +45,7 @@ class VetServiceTests {
 
 	private VetService vetService;
 	private AuthoritiesService authService;
-	
+
 	@Autowired
 	public VetServiceTests(VetService vetService, AuthoritiesService authService) {
 		this.vetService = vetService;
@@ -88,8 +89,13 @@ class VetServiceTests {
 
 	@Test
 	void shouldFindOptVetByUser() {
-		Optional<Vet> vet = this.vetService.optFindVetByUser(14);
-		assertThat(vet.get().getLastName()).startsWith("Carter");
+		Optional<Vet> vetOptional = this.vetService.optFindVetByUser(14);
+		if (vetOptional.isPresent()) {
+			Vet vet = vetOptional.get();
+			assertThat(vet.getLastName()).startsWith("Carter");
+		} else {
+			fail("No se encontró ningún veterinario para el usuario 14");
+		}
 	}
 
 	@Test
@@ -124,7 +130,6 @@ class VetServiceTests {
 		user.setPassword("supersecretpassword");
 		user.setAuthority(authService.findByAuthority("VET"));
 		vet.setUser(user);
-		
 
 		this.vetService.saveVet(vet);
 		assertNotEquals(0, vet.getId().longValue());
