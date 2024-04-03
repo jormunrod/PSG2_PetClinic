@@ -110,6 +110,16 @@ Esto es beneficioso para mantener un código limpio y fácil de mantener, ya que
 
 ---
 ### **2.2 Tarea E2.2**
+Para realizar esta actividad ha habido un pequeño cambio. Github actions ha metido el frontend en el mismo proyecto del backend, provocando que el análisis cambie completamente. Debido a este motivo, el punto desde el que partimos es: 
+
+---
+![image](https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/119755491/a3dba42c-43a4-450d-870e-556e439963ff)
+---
+La bajada del coverage es por la gran cantidad de líneas de codigo que contiene el frontend, así como el incremento de bugs y bad smells.  
+  
+Tras un rato solucionando y trabajando para reducir los bugs y la deuda técnica, el resultado obtenido es el siguiente:
+
+
 
 
 ---
@@ -127,4 +137,8 @@ El flujo de trabajo se ejecuta en un entorno de ubuntu y consta de los siguiente
 
 3. **Análisis de código con SonarQube:** Utilizamos la acción `SonarSource/sonarqube-scan-action` para ejecutar el análisis de código. Esta acción se configura con el host de SonarQube y el token de autenticación proporcionados como secretos en el repositorio. También se especifica la clave del proyecto en SonarQube y la ruta de los archivos binarios Java a analizar.
 
-Esta configuración automatizada garantiza que cada push a la rama "develop" active el análisis de código en SonarQube, proporcionando una evaluación continua y sistemática de la calidad del código.
+Esta configuración automatizada garantiza que cada push a la rama "develop" active el análisis de código en SonarQube, proporcionando una evaluación continua y sistemática de la calidad del código.  
+Su correcto funcionamiento puede observarse: 
+![image](https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/119755491/40049cb0-635c-4828-9e1c-383a04b692f1)
+
+
