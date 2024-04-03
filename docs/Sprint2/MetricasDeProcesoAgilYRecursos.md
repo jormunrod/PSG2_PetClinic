@@ -13,24 +13,19 @@
 3. [Gráfico Burn Down](#3-gráfico-burn-down)
     - [3.1 Sprint 1](#31-sprint-1)
     - [3.2 Sprint 2](#32-sprint-2)
-    - [3.3 Comparativa](#33-comparativa)
 4. [Gráfico De Control](#4-gráfico-de-control)
 5. [Gráfico Lead Time](#5-gráfico-lead-time)
     - [5.1 Sprint 1](#51-sprint-1)
     - [5.2 Sprint 2](#52-sprint-2)
-    - [5.3 Comparativa](#53-comparativa)
 6. [Gráfico Cycle Time](#6-gráfico-cycle-time)
     - [6.1 Sprint 1](#61-sprint-1)
     - [6.2 Sprint 2](#62-sprint-2)
-    - [6.3 Comparativa](#63-comparativa)
 7. [Total De Puntos De Historia Entregados](#7-total-de-puntos-de-historia-entregados)
     - [7.1 Sprint 1](#71-sprint-1)
     - [7.2 Sprint 2](#72-sprint-2)
-    - [7.3 Comparativa](#73-comparativa)
 8. [Porcentaje De Puntos De Historia Entregados](#8-porcentaje-de-puntos-de-historia-entregados)
     - [8.1 Sprint 1](#81-sprint-1)
     - [8.2 Sprint 2](#82-sprint-2)
-    - [8.3 Comparativa](#83-comparativa)
 9. [Calendario Niko-Niko](#9-calendario-niko-niko)
     - [9.1 Sprint 2](#91-sprint-2)
 
@@ -75,9 +70,6 @@ REVISAR
 </p>
 
 Al observar detenidamente el gráfico, se puede observar que el equipo estuvo trabajando progresivamente y las tareas iban siendo completadas poco a poco. Por la estructura del sprint, los miembros que tenían asiganas las tareas de documentación tuvieron que esperar a que aquellos con las tareas de desarrollo acabasen, ya que gran parte de su trabajo dependía de ellos. Junto a esto, cabe destacar que el equipo relajó el ritmo de trabajo debido a la Semana Santa y la necesidad de repartir el tiempo para estudiar para otras asignaturas. Sin embargo, el equipo retomó de manera óptima el trabajo para así poder alcanzar sus objeivos propuestos.
-
-### **3.3 Comparativa**
-REVISAR
 
 ---
 
@@ -128,9 +120,6 @@ Con este gráfico podemos sacar las siguientes conclusiones:
 - DESVIACIÓN? (ZONA GRIS)
 - 
 
-### **5.3 Comparativa**
-REVISAR
-
 ---
 
 ## **6. Gráfico Cycle Time**
@@ -161,9 +150,6 @@ Con este gráfico podemos sacar las siguientes conclusiones:
 - DESVIACIÓN? (ZONA GRIS)
 - 
 
-### **6.3 Comparativa**
-REVISAR
-
 ---
 
 ## **7. Total De Puntos De Historia Entregados**
@@ -181,9 +167,6 @@ El análisis del gráfico de Burn Down del Sprint 2 revela un cumplimiento exito
 
 La evaluación del gráfico de Burn Down del Sprint 2 revela un progreso notable, aunque el equipo enfrentó desafíos que impidieron completar totalmente las tareas propuestas. A pesar de un esfuerzo diligente, las tareas _______ y _______ presentaron obstáculos imprevistos que impidieron su finalización dentro del período designado. Estas dificultades resultaron en la finalización parcial de los puntos de historia estimados para este sprint, en este caso, _______. Sin embargo, a pesar de estas limitaciones, el equipo logró abordar una gran parte de los objetivos, demostrando su capacidad para adaptarse y perseverar ante contratiempos. Este sprint sirve como un recordatorio valioso de la importancia de la flexibilidad y la resiliencia en la gestión de proyectos. Aunque no se lograron todas las metas propuestas, el equipo ha ganado experiencia invaluable que informará y fortalecerá su desempeño en futuros sprints, allanando el camino hacia el éxito continuo.
 
-### **7.3 Comparativa**
-REVISAR
-
 ---
 
 ## **8. Porcentaje De Puntos De Historia Entregados**
@@ -198,9 +181,6 @@ REVISAR
 Como hemos constatado anteriormente con el logro satisfactorio de los 224 puntos de historia en el Sprint 2, el equipo ha alcanzado un porcentaje de entrega del 100%. Este hito confirma que todas las historias planificadas para el sprint han sido completadas dentro del período previsto, reflejando la eficacia y el compromiso del equipo en la ejecución de las tareas asignadas.
 
 Como hemos observado previamente con la finalización satisfactoria de una parte de los puntos de historia en el Sprint 2, el equipo ha alcanzado un porcentaje de entrega del ______%. Aunque se ha progresado en la ejecución de las historias planificadas para el sprint, no se han completado todos los puntos de historia dentro del período previsto. Esto resalta la necesidad de que el equipo se esfuerce un poco más para alcanzar sus objetivos en los próximos sprints.
-
-### **8.3 Comparativa**
-REVISAR
 
 ---
 
