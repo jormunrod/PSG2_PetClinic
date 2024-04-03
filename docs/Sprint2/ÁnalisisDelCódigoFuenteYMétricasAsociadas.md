@@ -11,11 +11,11 @@
 1. [Introducción](#1-introducción)
 2. [Miembros Del Equipo De Trabajo](#2-miembros-del-equipo-de-trabajo)
 3. [Ánalisis Código fuente y Métricas Asociadas al Sprint 1](#3-ánalisis-código-fuente-y-métricas-asociadas-al-sprint-1)
-    - [3.1 SonarQube Dashboard](#31-sonarqube-dashboard)
+    - [3.1 SonarQube Dashboard Backend y Frontend(métricas y clásificación)](#31-sonarqube-dashboard)
     - [3.2 Potencial Bugs](#32-potencial-bugs)
     - [3.3 Code Smell Found](#33-code-smell-found)
 4. [Ánalisis Código fuente y Métricas Asociadas al Sprint 2](#4-ánalisis-código-fuente-y-métricas-asociadas-al-sprint-2)
-    - [4.1 SonarQube Dashboard](#41-sonarqube-dashboard)
+    - [4.1 SonarQube Dashboard Backend y Frontend(métricas y clásificación)](#41-sonarqube-dashboard)
     - [4.2 Potencial Bugs](#42-potencial-bugs)
     - [4.3 Code Smell Found](#43-code-smell-found)
 5. [Conclusiones](#5-conclusiones)
@@ -47,30 +47,78 @@ En cada uno de los análisis de los sprints, se presentará un detallado examen 
 </p>
 El dashboard proporciona una visión general del estado del código fuente del sprint 1 de nuestro proyecto desde el punto de vista de la calidad y seguridad del software. Este dashboard muestra métricas y estadísticas clave sobre el código, como el número de problemas de calidad, la cobertura del código, la duplicación de código, la complejidad ciclomática, entre otros.
 
-Como podemos observar se han encontrado:
-- 4 bugs de tipo "Call "Optional#isPresent()" before accessing the value"
-- 1 Security Hotspots: Make sure this debug feature is deactivated before delivering the code in production.
-- 203 Code Smells:
-  - Remove this unused import 'java.util.Optional'.
-  - Remove this unused import 'java.util.List'.
-  - Remove this unused import 'org.hibernate.annotations.OnDelete'.
-  - Remove this unused import 'java.util.Map'
-  - Remove this commented out code.
-  - Remove the parentheses around the "headers" parameter
-  - Remove the parentheses around the "frameOptions" parameter
-  - Remove the parentheses around the "exepciontHandling" parameter
-  - Provide the parametrized type for this generic.
-  - Declare this local variable with "var" instead.
-  - Replace this lambda with a method reference.
-  - Replace the type specification in this constructor call with the diamond operator ("<>").
-  - Replace this use of System.out or System.err by a logger.
-  - Inject this field value directly into "configure", the only method that uses it.
-  - This block of commented-out lines of code should be removed.
-  - Remove this unnecessary cast to "List".
-  - Remove this unused "p" local variable.
-  - Declare "current" on a separate line.
-  - Make this "expected" field final.
-  - Remove the declaration of thrown exception 'java.net.URISyntaxException', as it cannot be thrown from method's body.
+Análisis de las metricas del Backend
+
+- Bugs: Representa errores en el código que pueden causar un comportamiento incorrecto o inesperado en el programa. Tener 4 bugs ("Call "Optional#isPresent()" before accessing the value") indica que hay 4 partes del código que pueden provocar errores en el funcionamiento del software. Es importante solucionar estos bugs para mejorar la calidad y estabilidad del sistema. 
+
+- Vulnerabilities: Se refiere a debilidades en el código que podrían ser explotadas por un atacante para comprometer la seguridad del sistema. Tener 0 vulnerabilidades es ideal, ya que significa que el código no tiene puntos débiles conocidos que puedan ser aprovechados por atacantes.
+
+- Security Hotspots: Representa áreas del código que podrían contener vulnerabilidades o problemas de seguridad potenciales. Tener 1 security hotspot indica que hay una zona identificada como potencialmente vulnerable, pero no necesariamente significa que haya una vulnerabilidad activa.
+
+- Debt (Deuda técnica): Es una medida del esfuerzo requerido para solucionar problemas técnicos en el código. En este caso, 4h40min de deuda técnica sugiere que se necesitaría aproximadamente 4 horas y 40 minutos para abordar todos los problemas técnicos identificados en el código.
+
+- Coverage (Cobertura de código): Indica qué porcentaje del código base está cubierto por pruebas unitarias. Un 80% de cobertura de código es bastante bueno, ya que indica que la mayoría del código ha sido probado, pero siempre es posible mejorar la cobertura para garantizar una mayor confiabilidad del software.
+
+- Test Unitarios: Indica la cantidad de pruebas unitarias que se han creado para el código. Tener 242 pruebas unitarias sugiere un esfuerzo significativo en la escritura de pruebas para validar el comportamiento del código, lo cual es positivo para la calidad del software.
+
+- Duplications (Duplicaciones): Indica el porcentaje de código duplicado en el proyecto. Tener 0% duplicaciones sugiere que no se han encontrado secciones de código idénticas o muy similares, lo cual es beneficioso para mantener un código limpio y fácil de mantener.
+  
+- Code Smells (Olor a código): Son patrones de diseño o estructuras de código que pueden ser indicativos de un diseño deficiente y que pueden llevar a problemas en el futuro. Tener 203 code smells sugiere que hay muchas áreas en el código que podrían beneficiarse de una refactorización para mejorar su calidad y mantenibilidad.
+  
+Clasificación de los code smells:
+  
+- Bloaters (Los inflados o gigantes):
+    - Remove this unused import 'java.util.Optional'.
+    - Remove this unused import 'java.util.List'.
+    - Remove this unused import 'org.hibernate.annotations.OnDelete'.
+    - Remove this unused import 'java.util.Map'.
+    - Remove this commented out code.
+    - Remove the parentheses around the "headers" parameter.
+    - Remove the parentheses around the "frameOptions" parameter.
+    - Remove the parentheses around the "exepciontHandling" parameter.
+    - This block of commented-out lines of code should be removed.
+    - Remove this unnecessary cast to "List".
+    - Remove this unused "p" local variable.
+    - Remove the declaration of thrown exception 'java.net.URISyntaxException', as it cannot be thrown from method's body.
+
+- Diseño orientado a objetos:
+    - Replace this lambda with a method reference.
+    - Replace the type specification in this constructor call with the diamond operator ("<>").
+
+- Los preventores de cambios:
+    - Inject this field value directly into "configure", the only method that uses it.
+    - Make this "expected" field final.
+
+- Prescindibles o dispensables:
+    - Declare this local variable with "var" instead.
+    - Replace this use of System.out or System.err by a logger.
+
+- Los acopladores (Couplers):
+D    - Declare "current" on a separate line.
+
+ 
+<p align="center">
+    <img src="../images/dashboardFrontendS1.png" alt="Dashboard Sprint 1" style="width: 75%; margin: auto;">
+</p>
+
+Análisis de las métricas del frontend
+
+- Bugs: como hemos nombrado en el backend tener 4 bugs indica que hay 4 partes del código que pueden provocar errores en el funcionamiento del software. Es importante solucionar estos bugs para mejorar la calidad y estabilidad del sistema.
+
+- Vulnerabilities: tener 0 vulnerabilidades es ideal, ya que significa que el código no tiene puntos débiles conocidos que puedan ser aprovechados por atacantes.
+
+- Security Hotspots: tener 1 security hotspot indica que hay una zona identificada como potencialmente vulnerable, pero no necesariamente significa que haya una vulnerabilidad activa.
+
+- Debt (Deuda técnica): en este caso, 3 días y 1 hora de deuda técnica sugiere que se necesitaría aproximadamente ese tiempo para abordar todos los problemas técnicos identificados en el código.
+
+- Code Smells (Olor a código): tener 152 code smells sugiere que hay muchas áreas en el código que podrían beneficiarse de una refactorización para mejorar su calidad y mantenibilidad.
+
+- Coverage (Cobertura de código): tener un 0% de cobertura de código significa que no hay pruebas unitarias que cubran el código, lo que deja al sistema vulnerable a errores no detectados.
+
+- Duplications (Duplicaciones): tener un 16.1% de duplicaciones sugiere que una parte significativa del código se ha duplicado, lo que puede llevar a problemas de mantenimiento y dificultar la comprensión del código.
+
+- Duplicated Blocks (Bloques duplicados): indica la cantidad de bloques de código duplicados en el proyecto. Tener 57 bloques duplicados muestra que hay múltiples secciones de código que son idénticas o muy similares, lo que indica una posible necesidad de refactorización para eliminar la duplicación y mejorar la mantenibilidad del código.
+
 
 ### **3.2 Potencial Bugs**
 Se han encontrado 4 bugs del mismo tipo en diferentes clases del proyecto, se dará una descripción, causa, evaluación y solución de este error de forma general.
@@ -256,28 +304,74 @@ Se han encontrado estos 3 code smell similares sobre parámetros diferentes por 
 
 El dashboard proporciona una visión general del estado del código fuente del sprint 2 de nuestro proyecto desde el punto de vista de la calidad y seguridad del software. Este dashboard muestra métricas y estadísticas clave sobre el código, como el número de problemas de calidad, la cobertura del código, la duplicación de código, la complejidad ciclomática, entre otros.
 
-Como podemos observar se han encontrado:
-- 7 bugs de tipo
-  - 6x "Call "Optional#isPresent()" before accessing the value"
-  - 1x Use the "equals" method if value comparison was intended.
-- 1 Security Hotspots: Make sure this debug feature is deactivated before delivering the code in production.
-- 214 Code Smells:
-  - Remove this commented out code.
-  - Declare this local variable with "var" instead.
-  - Use the primitive boolean expression here.
-  - Remove the unnecessary boolean literal.
-  - Replace this lambda with a method reference.
-  - Replace the type specification in this constructor call with the diamond operator ("<>").
-  - Remove this unused import 'org.springframework.samples.petclinic.owner.Owner'.
-  - Replace this use of System.out or System.err by a logger.
-  - Inject this field value directly into "configure", the only method that uses it.
-  - Remove the parentheses around the "headers" parameter
-  - Remove the parentheses around the "frameOptions" parameter
-  - Remove the parentheses around the "exepciontHandling" parameter
-  - Use already-defined constant 'OWNER' instead of duplicating its value here.
-  - Remove this unnecessary cast to "List".
-  - Complete the task associated to this TODO comment.
-  - Declare "current" on a separate line.
+Análisis de las métricas del backend
+
+- Bugs: tener 7 bugs indica que hay 7 partes del código que pueden provocar errores en el funcionamiento del software. Es importante solucionar estos bugs para mejorar la calidad y estabilidad del sistema.
+
+- Vulnerabilities: tener 0 vulnerabilidades es ideal, ya que significa que el código no tiene puntos débiles conocidos que puedan ser aprovechados por atacantes.
+
+- Security Hotspots: tener 1 security hotspot indica que hay una zona identificada como potencialmente vulnerable, pero no necesariamente significa que haya una vulnerabilidad activa.
+
+- Debt (Deuda técnica):. En este caso, 4 horas y 31 minutos de deuda técnica sugiere que se necesitaría aproximadamente ese tiempo para abordar todos los problemas técnicos identificados en el código.
+
+- Coverage (Cobertura de código): un 73.6% de cobertura de código es bastante bueno, ya que indica que la mayoría del código ha sido probado, lo que aumenta la confiabilidad del software.
+
+- Test Unitarios: tener 256 pruebas unitarias sugiere un esfuerzo significativo en la escritura de pruebas para validar el comportamiento del código, lo cual es positivo para la calidad del software.
+
+- Code Smells (Olor a código): tener 214 code smells sugiere que hay muchas áreas en el código que podrían beneficiarse de una refactorización para mejorar su calidad y mantenibilidad.
+  
+Clasificación de los Code smells:
+  
+- Bloaters (Los inflados o gigantes):
+    - Remove this unused import 'org.springframework.samples.petclinic.owner.Owner'.
+    - Remove this commented out code.
+    - Remove the parentheses around the "headers" parameter.
+    - Remove the parentheses around the "frameOptions" parameter.
+    - Remove the parentheses around the "exepciontHandling" parameter.
+    - Remove this unnecessary cast to "List".
+
+- Diseño orientado a objetos:
+    - Replace this lambda with a method reference.
+    - Replace the type specification in this constructor call with the diamond operator ("<>").
+    - Declare "current" on a separate line.
+
+- Los preventores de cambios:
+    - Inject this field value directly into "configure", the only method that uses it.
+    - Complete the task associated to this TODO comment.
+
+- Prescindibles o dispensables:
+    - Declare this local variable with "var" instead.
+    - Replace this use of System.out or System.err by a logger.
+
+- Los acopladores (Couplers):
+    - Use already-defined constant 'OWNER' instead of duplicating its value here.
+
+- Otros:
+    - Use the primitive boolean expression here.
+    - Remove the unnecessary boolean literal.
+
+
+<p align="center">
+    <img src="../images/dashboardFrontendS2.png" alt="Dashboard Sprint 1" style="width: 75%; margin: auto;">
+</p>
+
+Análisis de las métricas del frontend
+
+- Bugs: Tener 3 bugs indica que hay 3 partes del código que pueden provocar errores en el funcionamiento del software. Es importante solucionar estos bugs para mejorar la calidad y estabilidad del sistema.
+
+- Vulnerabilities: Tener 0 vulnerabilidades es ideal, ya que significa que el código no tiene puntos débiles conocidos que puedan ser aprovechados por atacantes.
+
+- Security Hotspots:Tener 1 security hotspot indica que hay una zona identificada como potencialmente vulnerable, pero no necesariamente significa que haya una vulnerabilidad activa.
+
+- Debt (Deuda técnica): En este caso, 3 días y 5 horas de deuda técnica sugiere que se necesitaría aproximadamente ese tiempo para abordar todos los problemas técnicos identificados en el código.
+
+- Code Smells (Olor a código): Tener 190 code smells sugiere que hay muchas áreas en el código que podrían beneficiarse de una refactorización para mejorar su calidad y mantenibilidad.
+
+- Coverage (Cobertura de código): Indica qué porcentaje del código base está cubierto por pruebas unitarias. Tener un 0% de cobertura de código significa que no hay pruebas unitarias que cubran el código, lo que deja al sistema vulnerable a errores no detectados.
+
+- Duplications (Duplicaciones): Tener un 17.2% de duplicaciones sugiere que una parte significativa del código se ha duplicado, lo que puede llevar a problemas de mantenimiento y dificultar la comprensión del código.
+
+- Duplicated Blocks (Bloques duplicados): Tener 67 bloques duplicados muestra que hay múltiples secciones de código que son idénticas o muy similares, lo que indica una posible necesidad de refactorización para eliminar la duplicación y mejorar la mantenibilidad del código.
 
 
 ### **4.2 Potencial Bugs**
