@@ -12,6 +12,7 @@
 2. [Objetivos del Sprint Review](#2-objetivos-del-sprint-review)
 3. [Detalles del Sprint Review](#3-detalles-del-sprint-review)
 4. [Conclusión](#4-conclusion)
+   
 
 
 ---
@@ -60,7 +61,124 @@ De igual forma, Álvaro se encargará en la tarea E2.2 de realizar las módifica
 La última tarea E2.3 se refería ha automatizar los análisis de código en el sonar cada vez que se subiera algo nuevo a git, para ello Jorge realizó la configuración con la herramienta GitHub Actions, donde se podía ver como se hacian los análisis solos.
  
 
-Aquí un resumen de las tareas:
+Aquí un resumen de las tareas completadas :
+
+
+- Tarea A2.1
+    - Descripción: Responder individualmente a preguntas relacionadas con los objetivos de aprendizaje del sprint.
+    - Estimación: 1 P.H.
+    - Tiempo real: 1 P.H.
+    - Miembro Asignado: Todos (Individualmente).
+
+- Tarea A2.2 (15%)
+    - Tarea A2.2 A
+    - Descripción: Agregue la funcionalidad de Booking.
+    - Estimación: 48 P.H.
+    - Tiempo real: 49 P.H.
+    - Miembro Asignado: Rafa Molina.
+
+- Tarea A2.2 B
+    - Descripción: Cree una funcionalidad de Adoptions. 
+    - Estimación: 48 P.H.
+    - Tiempo real: 49 P.H.
+    - Miembro Asignado: Jorge Muñoz.
+
+- Tarea A2.2 C
+    - Descripción: Desarrolle un conjunto integral de pruebas unitarias.
+    - Estimación: 30 P.H.
+    - Tiempo real: 27 P.H
+    - Miembro Asignado: Álvaro Chico.
+
+- Tarea A2.3 (10%)
+    - Tarea A2.3 A
+    - Descripción:  preparar una versión del proyecto Petclinic en la rama release 2.0.0
+    - Estimación: 3 P.H.
+    - Tiempo real: 3 P.H
+    - Miembro Asignado: Álvaro Chico.
+
+- Tarea A2.3 B
+    - Descripción: Una vez realizado el lanzamiento para S2 a nivel de código fuente y crear un lanzamiento en el       repositorio de GitHub.
+    - Estimación: 1 P.H.
+    - Tiempo real: 1 P.H
+    - Miembro Asignado: Álvaro Chico.
+
+- Tarea A2.4 (25%)
+- Tarea A2.4 A
+    - Descripción: un informe técnico titulado “Métricas de Proceso Ágil y Recursos” de sprint 1. 
+    - Estimación: 12 P.H.
+    - Tiempo real: 14 P.H
+    - Miembro Asignado: Rubén Pérez.
+
+- Tarea A2.4 B
+    - Descripción: un informe técnico titulado “Métricas de Proceso Ágil y Recursos” de sprint 1.
+    - Estimación: 15 P.H.
+    - Tiempo real: 16 P.H
+    - Miembro Asignado: Rubén Pérez.
+
+- Tarea A2.5 (25%)
+- Tarea A2.5 A
+    - Descripción: crear  titulado “Análisis del Código Fuente y Métricas Asociadas” del sprint 1.
+    - Estimación: 12 P.H.
+    - Tiempo real: 16 P.H
+    - Miembro Asignado: María José Ruíz.
+
+- Tarea A2.5 B
+    - Descripción: crear  titulado “Análisis del Código Fuente y Métricas Asociadas” del sprint 2.
+    - Estimación: 12 P.H.
+    - Tiempo real: 14 P.H
+    - Miembro Asignado: María José Ruíz.
+
+
+- Tarea A2.6 (25%)
+- Tarea A2.6 A
+    - Descripción: Sprint Planning. 
+    - Estimación: 11 P.H.
+    - Tiempo real: 11 P.H
+    - Miembro Asignado: Todos (Grupal).
+
+- Tarea A2.6 B
+    - Descripción: Daily Standups. 
+    - Estimación: 4 P.H.
+    - Tiempo real: 4 P.H
+    - Miembro Asignado: Jorge Muñoz.
+
+- Tarea A2.6 C
+    - Descripción: Review. 
+    - Estimación: 5 P.H.
+    - Tiempo real: 5 P.H
+    - Miembro Asignado: María José Ruíz.
+
+- Tarea A2.6 D
+    - Descripción: Retrospective. 
+    - Estimación: 5 P.H.
+    - Tiempo real: 5 P.H
+    - Miembro Asignado: Rubén Pérez.
+    
+
+- Extra E2.1 (0.1 Puntos)
+- Extra E2.1 A
+    - Descripción: ampliar los informes técnicos creados como resultado de A2.4 para analizar también las             diferencias entre los resultados de las métricas y el análisis en S1 y S2.
+    - Estimación: 6 P.H.
+    - Tiempo real: 6 P.H
+    - Miembro Asignado: Rubén Pérez.
+
+- Extra E2.1 B
+     - Descripción: ampliar los informes técnicos creados como resultado de A2.5 para analizar también las             diferencias entre los resultados de las métricas y el análisis en S1 y S2. 
+    - Estimación: 6 P.H.
+    - Tiempo real: 6 P.H
+    - Miembro Asignado: María José Ruíz.
+
+- Tarea E2.2 (0.1 Puntos)
+    - Descripción: amplía el informe técnico creado como resultado de A2.5, incluyendo qué modificaciones             debesintroducir en tu código fuente para eliminar los posibles errores y malos olores y mejorar la                complejidad ciclomática en aquellas clases con un valor mayor. Implemente estas modificaciones y realice          análisis adicionales con SonarQube.
+    - Estimación: 9 P.H.
+    - Tiempo real: 9 P.H
+    - Miembro Asignado: Álvaro Chico.
+
+- Tarea E2.3 (0.1 Puntos)
+    - Descripción: configura tu proyecto para usar GitHub Actions.
+    - Estimación: 18 P.H.
+    - Tiempo real: 15 P.H
+    - Miembro Asignado: Jorge Muñoz.
 
 
 ---
