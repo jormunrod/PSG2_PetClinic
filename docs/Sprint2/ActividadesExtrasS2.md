@@ -115,12 +115,17 @@ Para realizar esta actividad ha habido un pequeño cambio. Github actions ha met
 ---
 ![image](https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/119755491/a3dba42c-43a4-450d-870e-556e439963ff)
 ---
+
 La bajada del coverage es por la gran cantidad de líneas de codigo que contiene el frontend, así como el incremento de bugs y bad smells.  
   
 Tras un rato solucionando y trabajando para reducir los bugs y la deuda técnica, el resultado obtenido es el siguiente:
 
+---
+![image](https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/119755491/90b6237d-3682-4ccb-a68d-25165b041269)
+---  
 
-
+Como se observa, se han reducido numerosos bugs, algunos bad smells y un día de deuda técnica. Esto se ha conseguido corrigiendo y siguiendo las recomendaciones de sonaqube.
+(Aunque ponga que hay una revisión en proceso, es porque hemos hecho un commit de documentación, por lo que no hay código y los parámetros no van a variar)
 
 ---
 
