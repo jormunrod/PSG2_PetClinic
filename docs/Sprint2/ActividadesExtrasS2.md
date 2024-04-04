@@ -1,4 +1,4 @@
-# **Planificación del Sprint 2.**
+# **Extras del Sprint 2.**
 
 <p align="center">
     <img src="../images/logoUs.png" alt="Logo Universidad Sevilla" style="width: 50%; margin: auto;">
@@ -10,17 +10,18 @@
 
 1. [Introducción](#1-introducción)
 2. [Tareas Extras](#2-tareas-extras)
-    - [2.1 Tarea E2.1](#21-tarea-E2.1)
-        -  [2.1.1 Parte 1: Análisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4](#211-parte-1:-análisis-de-las-diferentes-resultados-de-las-métricas-y-análisis-entre-s1-y-s2-del-punto-a2-4)
+    - [2.1 Tarea E2.1](#21-tarea-e21)
+        - [2.1.1 Parte 1: Análisis de las diferentes resultados de las métricas y análisis entre S1 y S2 del punto A2.4](#211-parte-1-análisis-de-las-diferentes-resultados-de-las-métricas-y-análisis-entre-s1-y-s2-del-punto-a24)
             - [2.1.1.1 Gráfico Burn Down](#2111-gráfico-burn-down)
             - [2.1.1.2 Gráfico Lead Time](#2112-gráfico-lead-time)
             - [2.1.1.3 Gráfico Cycle Time](#2113-gráfico-cycle-time)
             - [2.1.1.4 Total De Puntos De Historia Entregados](#2114-total-de-puntos-de-historia-entregados)
             - [2.1.1.5 Porcentaje De Puntos De Historia Entregados](#2115-porcentaje-de-puntos-de-historia-entregados)
-        -  [2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5](#212-parte-2:-análisis-de-las-diferentes-resultados-de-las-métricas-entre-s1-y-s2-del-punto-a2-5)
-    - [2.2 Tarea E2.2](#22-tarea-e2.2)
-    - [2.3 Tarea E2.3](#23-tarea-e2.3)
+        - [2.1.2 Parte 2: Análisis de las diferentes resultados de las métricas entre S1 y S2 del punto A2.5](#212-parte-2-análisis-de-las-diferentes-resultados-de-las-métricas-entre-s1-y-s2-del-punto-a25)
+    - [2.2 Tarea E2.2](#22-tarea-e22)
+    - [2.3 Tarea E2.3](#23-tarea-e23)
 
+---
 
 ## **1. Introducción**
 Este documento recopila toda la información pertinente sobre las preguntas adicionales del sprint 2, así como el contenido necesario para llevarlas a cabo.
@@ -124,7 +125,7 @@ Tras un rato solucionando y trabajando para reducir los bugs y la deuda técnica
 ![image](https://github.com/gii-is-psg2/psg2-2324-g4-44/assets/119755491/90b6237d-3682-4ccb-a68d-25165b041269)
 ---  
 
-Como se observa, se han reducido numerosos bugs, algunos bad smells y un día de deuda técnica. Esto se ha conseguido corrigiendo y siguiendo las recomendaciones de sonaqube.
+Como se observa, se han reducido numerosos bugs, algunos bad smells y un día de deuda técnica. Esto se ha conseguido corrigiendo y siguiendo las recomendaciones de sonaqube.  
 (Aunque ponga que hay una revisión en proceso, es porque hemos hecho un commit de documentación, por lo que no hay código y los parámetros no van a variar)
 
 ---
