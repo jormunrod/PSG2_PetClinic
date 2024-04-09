@@ -77,8 +77,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
 ### Tarea A3.3 (10%)
 - **Descripción:** Como grupo, integre el marco Pricing4SaaS en su aplicación Petclinic siguiendo la estrategia de ramificación definida por el grupo en S1. Las diferentes funcionalidades de la aplicación Petclinic, como el hotel y las adopciones, deben configurarse según los planes de precios definidos en el CA especificado en A3.2. Como paso final, después de fusionar los cambios de A3.2 y A3.3 en la rama de desarrollo, prepare una versión del proyecto Petclinic, siguiendo el mismo procedimiento que en versiones anteriores (consulte A2.3 para obtener referencias).
 
-- **Estimación:** X P.H.
-- **Miembro Asignado:** X
+- **Estimación:** 18 P.H.
+- **Miembro Asignado:** Jorge Muñoz.
 
 ### Tarea A3.4 (10%)
 - **Descripción**: Como grupo, creen un `Technical Report` (en español) titulado "Implementación de iTop para la Organización PSG2-2324-GX-XY" que resuma el trabajo realizado en iTop durante este Sprint. Este trabajo incluye la configuración de todos los elementos de iTop para soportar la gestión de incidentes y solicitudes de los servicios de Petclinic, como contratos de Clientes, Servicios, subcategorías de Servicios, SLA, SLT y modelos de Entrega, entre otros. El informe técnico debe almacenarse en una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el grupo trabaja con él siguiendo la estrategia definida en S1. El informe técnico deberá contener al menos los siguientes puntos, algunos de ellos para cada servicio:
@@ -88,8 +88,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
   - Faltan funciones en iTop para registrarse correctamente y brindar información para respaldar todas las tareas de este Sprint.
   - Aportes de cada autor. Incluya detalles sobre tareas concretas realizadas por cada miembro del grupo. Sugerimos utilizar una matriz o tabla para resumir esta información.
 
-- **Estimación:** X P.H.
-- **Miembro Asignado:** X
+- **Estimación:** 24 P.H.
+- **Miembro Asignado:** María José Ruíz.
 
 ### Tarea A3.5 (15%)
 - **Descripción**: Implementa como grupo en cualquier orden los siguientes cambios en tu aplicación Petclinic gestionándolos como incidencias o solicitudes de los usuarios dentro de iTop, según su naturaleza. Las solicitudes deben ser creadas por el usuario propietario de la clínica correspondiente en iTop. Los cambios en la aplicación se deben desarrollar siguiendo la estrategia de ramificación definida por el grupo en S1, eligiendo el tipo de ramificación más adecuado en función de si el cambio se gestiona como una incidencia o una petición del usuario. Tendrás que decidir cuándo y cómo publicar e implementar los cambios en App Engine, posiblemente agrupando algunos de ellos. Una vez implementados e implementados los cambios, se debe actualizar iTop para que su configuración sea consistente con la nueva versión de la aplicación PetClinic. Considere A3.6 para organizar las tareas asociadas en el Sprint Backlog.
@@ -100,14 +100,14 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
   4. Plan de actualización a la Clínica 3: El propietario de la Clínica 3 desea actualizar su plan asociado al plan inmediatamente superior. Asegúrese de que la actualización persista correctamente.
   5. Extensiones basadas en API: agregue funciones que necesiten el uso de al menos dos API externas. Envíe una solicitud diferente para cada API externa. No es necesario integrar las API dentro del código base (la integración real se propone como tareas adicionales; ver más abajo), pero al menos la GUI debe simular (por ejemplo, usando datos simulados) lo que esas API ofrecerían.
 
-- **Estimación:** X P.H.
-- **Miembro Asignado:** X
+- **Estimación:** 24 P.H.
+- **Miembro Asignado:** Álvaro Chico.
 
 ### Tarea A3.6 (10%)
 - **Descripción**: Como grupo, crear un `Technical Report` (en español) titulado “Monitorización del Acuerdo de cliente de PetClinic Services (PSG2-2324-GX-XY)” que resuma el trabajo realizado para monitorear la CA. Para cada solicitud enumerada en A3.5, este documento debe contener al menos un informe del grado de cumplimiento del SLT asociado, así como el tiempo transcurrido entre la creación del problema en GitHub y su cierre. Puede utilizar capturas de pantalla de iTop y GitHub que muestran cuándo se abrieron y cerraron los problemas. Cada miembro del grupo debe revisar al menos una solicitud y asignarla a otro miembro. El miembro asignado debe crear un problema correspondiente en GitHub e implementar la solicitud, actualizando tanto el problema en GitHub como la solicitud o incidente del usuario en iTop una vez implementado. El informe técnico debe almacenarse en una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el grupo trabaja con él siguiendo la estrategia definida en S1.
 
-- **Estimación:** X P.H.
-- **Miembro Asignado:** X
+- **Estimación:** 24 P.H.
+- **Miembro Asignado:** Rubén Pérez.
 
 ### Tarea A3.7 (15%)
 - **Descripción**: Como grupo, creen un `Technical Report` (en español) titulado “Análisis de la capacidad y el riesgo de PetClinic Services (PSG2-2324-GX-XY)”. El informe técnico debe almacenarse en una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el grupo trabaja con él siguiendo la estrategia definida en S1. Este documento debe contener al menos los siguientes elementos:
@@ -124,8 +124,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
     - Cada 6 meses, los precios de las API externas pueden variar del 2 al 10%.
     - Los precios de los servicios de habilitación y mejora pueden variar del 2 al 10%.
 
-- **Estimación:** X P.H.
-- **Miembro Asignado:** X
+- **Estimación:** 24 P.H.
+- **Miembro Asignado:** Rafael Molina.
 
 ### Tarea A3.8 (35%)
 Se envían todos los informes relacionados con las actas de las reuniones (Sprint Planning, Daily Standups, Review y Retrospective), así como los informes de Clockify, y contienen la información necesaria para comprender el trabajo del Equipo durante el Sprint S3 demostrando su cumplimiento de los Metodología del curso. Estas actas deben almacenarse en una carpeta docs dentro del mismo repositorio usando la sintaxis Markdown, actualizando las versiones almacenadas a medida que el grupo trabaja con ellas siguiendo la estrategia definida en S1.
@@ -133,30 +133,30 @@ Se envían todos los informes relacionados con las actas de las reuniones (Sprin
   - **Descripción:** Sprint Planning. Trabajo en equipo durante todo el sprint, reuniones diarias y cumplimiento de su definición de 
   "Listo", posiblemente actualizada para este Sprint (reflejada en una nueva versión del informe correspondiente).
   - **Estimación:** 11 P.H.
-  - **Miembro Asignado:** 
+  - **Miembro Asignado:** Jorge Muñoz.
  
 - #### Tarea A3.8 B
   - **Descripción:** Daily Standups. Planificación de sprints, gestión de tareas y cumplimiento de sus estimaciones iniciales y 
   metodología interna.
   - **Estimación:** 4 P.H.
-  - **Miembro Asignado:** 
+  - **Miembro Asignado:** Jorge Muñoz.
 
 - #### Tarea A3.8 C
   - **Descripción:** Review. Demostraciones de revisión de Sprint y acciones tomadas.
   - **Estimación:** 5 P.H.
-  - **Miembro Asignado:** 
+  - **Miembro Asignado:** María José Ruíz.
  
 - #### Tarea A3.8 D
   - **Descripción:** Retrospective. Retrospectiva del Sprint realizada, análisis del Sprint 3 incluyendo la aplicación del plan de 
   acción definido en la retrospectiva del Sprint 1, y un nuevo plan de acción para mejorar el trabajo en equipo para el hipoético Sprint 4.
   - **Estimación:** 5 P.H.
-  - **Miembro Asignado:** 
+  - **Miembro Asignado:** Rubén Pérez.
 
 ### Tarea E3.1 (0.2 puntos)
 - **Descripción**: Individualmente, implementar y desplegar una aplicación Petclinic integrando una API real como se define en A3.5.e. Si más de un miembro quiere cumplir este criterio, debe centrarse en diferentes API. Cada API funcional y completamente integrada otorgará 0,1 puntos hasta un máximo de 0,2 puntos por miembro del equipo.
 
-- **Estimación:** X P.H.
-- **Miembro Asignado:** X
+- **Estimación:** 24 P.H.
+- **Miembro Asignado:** Rafael Molina.
 
 ### Tarea E3.2 (0.1 puntos)
 - **Descripción**: De forma individual, configura iTop de tal forma que sea posible analizar el impacto que puede causar una caída de App Engine de forma gráfica, mostrando un diagrama de dependencia y/o impacto en iTop con todos los elementos necesarios asociados.
