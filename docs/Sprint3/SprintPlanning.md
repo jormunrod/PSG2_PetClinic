@@ -71,8 +71,8 @@ a todos. Por ejemplo, si hay 2 personas y 20 puntos asignados, significa que cad
       - Compensaciones (créditos de servicio) en caso de incumplimiento.
   5. Otros términos generales: Deben incluirse términos habituales para cubrir otros aspectos, como uso aceptable, política de privacidad, términos de pago, propiedad intelectual, política de cambios, ley aplicable, etc.
 
-- **Estimación:** X P.H.
-- **Miembro Asignado:** X
+- **Estimación:** 24 P.H.
+- **Miembros Asignados:** Álvaro Chico y Jorge Muñoz.
 
 ### Tarea A3.3 (10%)
 - **Descripción:** Como grupo, integre el marco Pricing4SaaS en su aplicación Petclinic siguiendo la estrategia de ramificación definida por el grupo en S1. Las diferentes funcionalidades de la aplicación Petclinic, como el hotel y las adopciones, deben configurarse según los planes de precios definidos en el CA especificado en A3.2. Como paso final, después de fusionar los cambios de A3.2 y A3.3 en la rama de desarrollo, prepare una versión del proyecto Petclinic, siguiendo el mismo procedimiento que en versiones anteriores (consulte A2.3 para obtener referencias).
@@ -161,5 +161,5 @@ Se envían todos los informes relacionados con las actas de las reuniones (Sprin
 ### Tarea E3.2 (0.1 puntos)
 - **Descripción**: De forma individual, configura iTop de tal forma que sea posible analizar el impacto que puede causar una caída de App Engine de forma gráfica, mostrando un diagrama de dependencia y/o impacto en iTop con todos los elementos necesarios asociados.
 
-- **Estimación:** X P.H.
-- **Miembro Asignado:** X
+- **Estimación:** 9 P.H.
+- **Miembro Asignado:** Álvaro Chico.
