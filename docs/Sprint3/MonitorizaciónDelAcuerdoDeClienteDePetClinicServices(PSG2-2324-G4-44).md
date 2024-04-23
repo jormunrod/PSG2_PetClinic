@@ -10,7 +10,7 @@
 
 1. [Introducción](#1-introducción)
 2. [Descripción De Los Planes De Precios](#2-descripción-de-los-planes-de-precios)
-    - [2.1 Informe De Cumplimiento Del SLT](#21-informe-de-cumplimineto-del-slt)
+    - [2.1 Informe De Cumplimiento Del SLT](#21-informe-de-cumplimiento-del-slt)
     - [2.2 Tiempo De Trabajo](#22-tiempo-de-trabajo)
 3. [Identificar El Plan Actual](#3-identificar-el-plan-actual)
     - [3.1 Informe De Cumplimiento Del SLT](#31-informe-de-cumplimineto-del-slt)
