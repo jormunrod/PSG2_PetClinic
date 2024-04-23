@@ -18,7 +18,7 @@
 4. [Eliminar La Página "Plan" Para Dueños De Mascotas](#4-eliminar-la-página-plan-para-dueños-de-mascotas)
     - [4.1 Informe De Cumplimiento Del SLT](#41-informe-de-cumplimiento-del-slt)
     - [4.2 Tiempo De Trabajo](#42-tiempo-de-trabajo)
-5. [Plan De Actualización A La Clínica 3](#5-plan-de-actualización-a-la-clinica-3)
+5. [Plan De Actualización A La Clínica 3](#5-plan-de-actualización-a-la-clínica-3)
     - [5.1 Informe De Cumplimiento Del SLT](#51-informe-de-cumplimiento-del-slt)
     - [5.2 Tiempo De Trabajo](#52-tiempo-de-trabajo)
 6. [Extensiones Basadas En API](#6-extensiones-basadas-en-api)
