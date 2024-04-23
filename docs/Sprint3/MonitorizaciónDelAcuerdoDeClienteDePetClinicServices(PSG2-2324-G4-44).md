@@ -38,7 +38,7 @@ Descripción solicitud: La descripción de los planes de precios que se encuentr
 
 ### **2.1 Informe De Cumplimiento Del SLT**
 
-### **2.1 Tiempo De Trabajo**
+### **2.2 Tiempo De Trabajo**
 
 ---
 
@@ -47,7 +47,7 @@ Descripción solicitud: El plan de precios actual asociado con una clínica debe
 
 ### **3.1 Informe De Cumplimiento Del SLT**
 
-### **3.1 Tiempo De Trabajo**
+### **3.2 Tiempo De Trabajo**
 
 ---
 
@@ -56,7 +56,7 @@ Descripción solicitud: La página del plan a la que el dueño de una mascota pu
 
 ### **4.1 Informe De Cumplimiento Del SLT**
 
-### **4.1 Tiempo De Trabajo**
+### **4.2 Tiempo De Trabajo**
 
 ---
 
@@ -65,7 +65,7 @@ Descripción solicitud: El propietario de la Clínica 3 desea actualizar su plan
 
 ### **5.1 Informe De Cumplimiento Del SLT**
 
-### **5.1 Tiempo De Trabajo**
+### **5.2 Tiempo De Trabajo**
 
 ---
 
@@ -74,7 +74,7 @@ Descripción solicitud: Agregue funciones que necesiten el uso de al menos dos A
 
 ### **6.1 Informe De Cumplimiento Del SLT**
 
-### **6.1 Tiempo De Trabajo**
+### **6.2 Tiempo De Trabajo**
 
 ---
 
