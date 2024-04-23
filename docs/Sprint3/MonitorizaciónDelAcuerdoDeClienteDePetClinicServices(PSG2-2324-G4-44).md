@@ -9,16 +9,16 @@
 ## Índice
 
 1. [Introducción](#1-introducción)
-2. [Descripción De Los Planes De Precios](#2-descripcion-de-los-planes-de-precios)
+2. [Descripción De Los Planes De Precios](#2-descripción-de-los-planes-de-precios)
     - [2.1 Informe De Cumplimiento Del SLT](#21-informe-de-cumplimineto-del-slt)
     - [2.2 Tiempo De Trabajo](#22-tiempo-de-trabajo)
 3. [Identificar El Plan Actual](#3-identificar-el-plan-actual)
     - [3.1 Informe De Cumplimiento Del SLT](#31-informe-de-cumplimineto-del-slt)
     - [3.2 Tiempo De Trabajo](#32-tiempo-de-trabajo)
-4. [Eliminar La Página "Plan" Para Dueños De Mascotas](#4-eliminar-la-pagina-"plan"-para-dueños-de-mascotas)
+4. [Eliminar La Página "Plan" Para Dueños De Mascotas](#4-eliminar-la-página-plan-para-dueños-de-mascotas)
     - [4.1 Informe De Cumplimiento Del SLT](#41-informe-de-cumplimineto-del-slt)
     - [4.2 Tiempo De Trabajo](#42-tiempo-de-trabajo)
-5. [Plan De Actualización A La Clínica 3](#5-plan-de-actualizacion-a-la-clinica-3)
+5. [Plan De Actualización A La Clínica 3](#5-plan-de-actualización-a-la-clinica-3)
     - [5.1 Informe De Cumplimiento Del SLT](#51-informe-de-cumplimineto-del-slt)
     - [5.2 Tiempo De Trabajo](#52-tiempo-de-trabajo)
 6. [Extensiones Basadas En API](#6-extensiones-basadas-en-api)
@@ -51,7 +51,7 @@ Descripción solicitud: El plan de precios actual asociado con una clínica debe
 
 ---
 
-## **4. Eliminar La Página "Plan" Para Dueños De Mascotas**
+## **4. Eliminar La Página Plan Para Dueños De Mascotas**
 Descripción solicitud: La página del plan a la que el dueño de una mascota puede acceder usando el enlace "Plan" más a la izquierda en la barra de encabezado (o en la ruta /plan) no tiene sentido, ya que solo los propietarios de clínicas deben administrar los planes de las clínicas.
 
 ### **4.1 Informe De Cumplimiento Del SLT**
