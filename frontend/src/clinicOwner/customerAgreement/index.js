@@ -100,16 +100,15 @@ de clínicas gestionar de manera más efectiva y eficiente las operaciones diari
 
       Precio: 12€ al mes.
 
-      |  |   |   |   |
-      | :--- | :---: | :---: | :---: |
-      | Plan | Básico | Oro | Platino |
-      | SLA | No | Sí | Sí |
-      | Funcionalidades adicionales | Ninguna | Pet Hotel, Adoptions | Consultas en línea |
-      | Máximo del mascotas | Hasta 2 mascotas | Hasta 5 mascotas | Ilimitado |
-      | Visitas mensuales máximas | Hasta 2 mascotas | Hasta 5 mascotas | Ilimitado |
-      | Disponibilidad del servicio | Horario comercial | 24/7 | 24/7 |
-      | Precio | Gratis | 5€ al mes | 12€ al mes |
-
+    |  |   |   |   |
+    | :--- | :---: | :---: | :---: |
+    | Plan | Básico | Oro | Platino |
+    | SLA | No | Sí | Sí |
+    | Funcionalidades adicionales | Ninguna | Pet Hotel, Adoptions | Consultas en línea |
+    | Máximo del mascotas | Hasta 2 mascotas | Hasta 5 mascotas | Ilimitado |
+    | Visitas mensuales máximas | Hasta 2 mascotas | Hasta 5 mascotas | Ilimitado |
+    | Disponibilidad del servicio | Horario comercial | 24/7 | 24/7 |
+    | Precio | Gratis | 5€ al mes | 12€ al mes |
   `
 
 
