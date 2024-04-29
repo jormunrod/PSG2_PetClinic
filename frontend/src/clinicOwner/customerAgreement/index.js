@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import "../../static/css/clinicOwner/customerAgreement.css";
 
 export default function CustomerAgreement() {
@@ -77,29 +78,37 @@ de clínicas gestionar de manera más efectiva y eficiente las operaciones diari
 
       Precio: Gratis.
 
+    - Plan Oro: Nuestro plan intermedio, el Plan Oro, ofrece funcionalidades adicionales que 
+      hacen que la gestión de tu clínica sea aún más eficiente. Con un costo mensual de $5, 
+      recibirás un Acuerdo de Nivel de Servicio (SLA), garantizando asistencia técnica las 
+      24 horas del día, los 7 días de la semana. Además, podrás disfrutar de características 
+      exclusivas como acceso al servicio de Pet Hotel, facilitando la gestión de alojamiento 
+      para mascotas, y la opción de realizar adopciones directamente desde la plataforma. 
+      Con un límite de hasta 5 mascotas y 5 visitas mensuales, el Plan Oro es perfecto para 
+      clínicas con un volumen de clientes moderado que buscan expandir sus servicios y mejorar 
+      la experiencia del cliente.
+  
+      Precio: 5€ al mes.
 
+    - Plan Platino: Para aquellos propietarios de clínicas que buscan lo último en servicios 
+      y funcionalidades, nuestro Plan Platino es la elección ideal. Con un precio de $12 al mes, 
+      el Plan Platino ofrece todas las ventajas del Plan Oro, además de la posibilidad de 
+      realizar consultas en línea directamente desde la plataforma. Con una capacidad ilimitada 
+      de mascotas y visitas mensuales, este plan es perfecto para clínicas que desean ofrecer 
+      un servicio excepcional y personalizado a sus clientes, sin preocuparse por límites o 
+      restricciones.
 
+      Precio: 12€ al mes.
 
-
-
-
-
-Plan Oro: Nuestro plan intermedio, el Plan Oro, ofrece funcionalidades adicionales que hacen que la gestión de tu clínica sea aún más eficiente. Con un costo mensual de $5, recibirás un Acuerdo de Nivel de Servicio (SLA), garantizando asistencia técnica las 24 horas del día, los 7 días de la semana. Además, podrás disfrutar de características exclusivas como acceso al servicio de Pet Hotel, facilitando la gestión de alojamiento para mascotas, y la opción de realizar adopciones directamente desde la plataforma. Con un límite de hasta 5 mascotas y 5 visitas mensuales, el Plan Oro es perfecto para clínicas con un volumen de clientes moderado que buscan expandir sus servicios y mejorar la experiencia del cliente.
-Precio: $5 al mes.
-
-Plan Platino: Para aquellos propietarios de clínicas que buscan lo último en servicios y funcionalidades, nuestro Plan Platino es la elección ideal. Con un precio de $12 al mes, el Plan Platino ofrece todas las ventajas del Plan Oro, además de la posibilidad de realizar consultas en línea directamente desde la plataforma. Con una capacidad ilimitada de mascotas y visitas mensuales, este plan es perfecto para clínicas que desean ofrecer un servicio excepcional y personalizado a sus clientes, sin preocuparse por límites o restricciones.
-Precio: $12 al mes.
-
-Cualquiera que sea tu elección, en [Nombre de la Empresa] nos comprometemos a ofrecerte un servicio de calidad que se adapte a tus necesidades y te ayude a hacer crecer tu clínica veterinaria.
-Plan	Básico	Oro	Platino
-SLA	No	Sí	Sí
-Funcionalidades adicionales	Ninguna	Pet Hotel, Adoptions	Consultas en línea
-Máximo del mascotas	Hasta 2 mascotas	Hasta 5 mascotas 	Ilimitado
-Visitas mensuales máximas	Hasta 2 mascotas	Hasta 5 mascotas	Ilimitado
-Disponibilidad del servicio	Horario comercial	24/7	24/7
-
-
-
+      |  |   |   |   |
+      | :--- | :---: | :---: | :---: |
+      | Plan | Básico | Oro | Platino |
+      | SLA | No | Sí | Sí |
+      | Funcionalidades adicionales | Ninguna | Pet Hotel, Adoptions | Consultas en línea |
+      | Máximo del mascotas | Hasta 2 mascotas | Hasta 5 mascotas | Ilimitado |
+      | Visitas mensuales máximas | Hasta 2 mascotas | Hasta 5 mascotas | Ilimitado |
+      | Disponibilidad del servicio | Horario comercial | 24/7 | 24/7 |
+      | Precio | Gratis | 5€ al mes | 12€ al mes |
 
   `
 
@@ -108,7 +117,11 @@ Disponibilidad del servicio	Horario comercial	24/7	24/7
     <div>
       <div className="customer-agreement-container">
         <h1 style={{ textAlign: "center" }}>Acuerdo de Cliente</h1>
-        <ReactMarkdown>{markdown}</ReactMarkdown>
+        <ReactMarkdown
+        className={"markdown-table"}
+        remarkPlugins={[remarkGfm]}>
+          {markdown}
+        </ReactMarkdown>
       </div>
     </div>
   );
