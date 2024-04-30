@@ -15,19 +15,19 @@ El objetivo de nuestra segunda reunión es continuar con las tareas asignadas en
 
 ## 2. **Planificación para Hoy:**
    - Álvaro:
-     - Tarea A3.2
+     - Tarea A3.2 (90 min)
    
    - Jorge:
-     - Tarea A3.2
+     - Tarea A3.2 (90 min)
    
    - María José:
-     - .
+     - Tarea A3.4 (90 min)
    
    - Rafael:
-     - Extra E3.1
+     - Extra E3.1 (90 min)
    
    - Rubén:
-     - Tarea A3.6
+     - Tarea A3.6 (90 min)
 
 ## 3. **Identificación de Obstáculos:**
   - Intencionalmente blanco.
