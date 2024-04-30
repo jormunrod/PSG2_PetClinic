@@ -105,6 +105,9 @@ function AppNavbar() {
                     <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/vets">Vets</NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink style={{ color: "white" }} tag={Link} to="/customerAgreement">Customer Agreement</NavLink>
+                    </NavItem>
                 </>
             )
         }

@@ -59,6 +59,7 @@ import BookingEditAdmin from "./admin/booking/BookingEditAdmin";
 import OwnerBookingList from "./owner/bookings/bookingList";
 import OwnerBookingEdit from "./owner/bookings/bookingEdit";
 import BookingEditOwner from "./owner/bookings/bookingEdit";
+import CustomerAgreement from "./clinicOwner/customerAgreement";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -156,8 +157,9 @@ function App() {
           <Route path="/rooms" exact={true} element={<PrivateRoute><RoomList /></PrivateRoute>} />
           <Route path="/rooms/new" exact={true} element={<PrivateRoute><NewRoom /></PrivateRoute>} />
           <Route path="/rooms/:id" exact={true} element={<PrivateRoute><EditRoom /></PrivateRoute>} />
-            <Route path="/bookings" exact={true} element={<PrivateRoute><OwnerBookingList /></PrivateRoute>} />
-            <Route path="/bookings/:bookingId" exact={true} element={<PrivateRoute><BookingEditOwner/></PrivateRoute>} />
+          <Route path="/bookings" exact={true} element={<PrivateRoute><OwnerBookingList /></PrivateRoute>} />
+          <Route path="/bookings/:bookingId" exact={true} element={<PrivateRoute><BookingEditOwner/></PrivateRoute>} />
+          <Route path="/customerAgreement" exact={true} element={<PrivateRoute><CustomerAgreement /></PrivateRoute>} />
         </>)
     }
   })
