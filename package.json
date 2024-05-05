@@ -1,0 +1,7 @@
+{
+    "dependencies": {
+      "i": "^0.3.7",
+      "npm": "^10.5.2",
+      "pricing4react": "^1.4.0"
+    }
+  }

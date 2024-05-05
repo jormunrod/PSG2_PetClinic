@@ -20,16 +20,22 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotEmpty;
 
+import java.util.Set;
+
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.samples.petclinic.clinic.Clinic;
 import org.springframework.samples.petclinic.model.Person;
+import org.springframework.samples.petclinic.pet.Pet;
 import org.springframework.samples.petclinic.user.User;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -69,5 +75,10 @@ public class Owner extends Person {
 	@ManyToOne
 	@JoinColumn(name = "clinic", referencedColumnName = "id")
 	private Clinic clinic;
+
+	@OneToMany(mappedBy = "owner", orphanRemoval = true)
+	@OnDelete(action = OnDeleteAction.CASCADE)
+	@JsonIgnore
+	private Set<Pet> pets;
 
 }

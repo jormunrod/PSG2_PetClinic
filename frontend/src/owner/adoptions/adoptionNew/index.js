@@ -4,6 +4,7 @@ import "../../../static/css/auth/authPage.css";
 import "../../../static/css/owner/consultations.css";
 import tokenService from "../../../services/token.service";
 import getIdFromUrl from "../../../util/getIdFromUrl";
+import { fetchWithPricingInterceptor } from "pricing4react";
 
 /**
  * Component for creating a new adoption
@@ -29,7 +30,7 @@ export default function OwnerAdoptionNew() {
       alert("Description must be less than 255 characters");
       return;
     }
-    const response = await fetch(
+    const response = await fetchWithPricingInterceptor(
       `/api/v1/adoptions`,
       {
         method: "POST",

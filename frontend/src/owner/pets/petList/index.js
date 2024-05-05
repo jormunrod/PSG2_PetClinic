@@ -6,6 +6,15 @@ import tokenService from "../../../services/token.service";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import moment from "moment";
 import { useState, useEffect } from "react";
+import {
+  Feature,
+  On,
+  Default,
+  Loading,
+  feature,
+  ErrorFallback,
+  fetchWithPricingInterceptor,
+} from "pricing4react";
 
 export default function OwnerPetList() {
   let [pets, setPets] = useState([]);
@@ -16,7 +25,7 @@ export default function OwnerPetList() {
   const jwt = tokenService.getLocalAccessToken();
 
   function removePet(id) {
-    fetch(`/api/v1/pets/${id}`, {
+    fetchWithPricingInterceptor(`/api/v1/pets/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -39,7 +48,7 @@ export default function OwnerPetList() {
 
   async function removeVisit(petId, visitId) {
     let status = "";
-    await fetch(`/api/v1/pets/${petId}/visits/${visitId}`, {
+    await fetchWithPricingInterceptor(`/api/v1/pets/${petId}/visits/${visitId}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -75,7 +84,7 @@ export default function OwnerPetList() {
 
   async function setUp() {
     let pets = await (
-      await fetch(`/api/v1/pets?userId=${user.id}`, {
+      await fetchWithPricingInterceptor(`/api/v1/pets?userId=${user.id}`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
           "Content-Type": "application/json",
@@ -87,7 +96,7 @@ export default function OwnerPetList() {
       for (let pet of pets) {
         let index = pets.findIndex((obj) => obj.id === pet.id);
         const visits = await (
-          await fetch(`/api/v1/pets/${pet.id}/visits`, {
+          await fetchWithPricingInterceptor(`/api/v1/pets/${pet.id}/visits`, {
             headers: {
               Authorization: `Bearer ${jwt}`,
               "Content-Type": "application/json",
@@ -111,13 +120,24 @@ export default function OwnerPetList() {
       <div className="pet-list-page-container">
         <div className="title-and-add">
           <h1 className="pet-list-title">Pets</h1>
-          <Link
-            to="/myPets/new"
-            className="owner-button brown1"
-            style={{ textDecoration: "none", marginBottom: "2rem" }}
-          >
-            Add Pet
-          </Link>
+          <Feature>
+            <On expression={feature("pets")}>
+              <Link
+                to="/myPets/new"
+                className="auth-button light-brown"
+                style={{ textDecoration: "none", marginBottom: "2rem" }}
+              >
+                Add Pet
+              </Link>
+            </On>
+            <Default></Default>
+            <Loading>
+              <p>Loading...</p>
+            </Loading>
+            <ErrorFallback>
+              <p>Something went wrong</p>
+            </ErrorFallback>
+          </Feature>
         </div>
         {pets.length > 0 ? (
           pets.map((pet) => {

@@ -23,13 +23,20 @@ import java.util.Map;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.samples.petclinic.adoption.Adoption;
 import org.springframework.samples.petclinic.adoption.AdoptionRepository;
+import org.springframework.samples.petclinic.booking.Booking;
+import org.springframework.samples.petclinic.booking.BookingRepository;
 import org.springframework.samples.petclinic.clinic.PricingPlan;
+import org.springframework.samples.petclinic.consultation.Consultation;
+import org.springframework.samples.petclinic.consultation.ConsultationRepository;
 import org.springframework.samples.petclinic.exceptions.ResourceNotFoundException;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import io.github.isagroup.annotations.PricingPlanAware;
 
 @Service
 public class PetService {
@@ -40,11 +47,16 @@ public class PetService {
 
 	private PetRepository petRepository;
 	private AdoptionRepository adoptionRepository;
+	private BookingRepository bookingRepository;
+	private ConsultationRepository consultationRepository;
 
 	@Autowired
-	public PetService(PetRepository petRepository, AdoptionRepository adoptionRepository) {
+	public PetService(PetRepository petRepository, AdoptionRepository adoptionRepository, BookingRepository bookingRepository,
+			ConsultationRepository consultationRepository) {
 		this.petRepository = petRepository;
 		this.adoptionRepository = adoptionRepository;
+		this.bookingRepository = bookingRepository;
+		this.consultationRepository = consultationRepository;
 	}
 
 	@Transactional(readOnly = true)
@@ -78,6 +90,7 @@ public class PetService {
 		return petRepository.findAllPetsByUserId(id);
 	}
 
+	@PricingPlanAware(featureName = "pets")
 	@Transactional(rollbackFor = DuplicatedPetNameException.class)
 	public Pet savePet(Pet pet) throws DataAccessException, DuplicatedPetNameException {
 		Pet otherPet = getPetWithNameAndIdDifferent(pet);
@@ -111,6 +124,18 @@ public class PetService {
 	public void deletePet(int id) throws DataAccessException {
 		Pet toDelete = findPetById(id);
 		petRepository.deleteVisitsByPet(toDelete.getId());
+		List<Adoption> adoptions = adoptionRepository.findAllAdoptionsByPetId(id);
+		for (Adoption adoption : adoptions) {
+			adoptionRepository.delete(adoption);
+		}
+		List<Booking> bookings = bookingRepository.findAllBookingsByPetId(id);
+		for (Booking booking : bookings) {
+			bookingRepository.delete(booking);
+		}
+		List<Consultation> consultations = consultationRepository.findAllConsultationsByPetId(id);
+		for (Consultation consultation : consultations) {
+			consultationRepository.delete(consultation);
+		}
 		petRepository.delete(toDelete);
 	}
 

@@ -28,6 +28,8 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
+import io.github.isagroup.filters.RenewTokenFilter;
+
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
@@ -98,6 +100,11 @@ public class SecurityConfiguration {
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();
+    }
+
+    @Bean
+    public RenewTokenFilter renewJwtTokenFilter() {
+        return new RenewTokenFilter();
     }
 
     @Bean

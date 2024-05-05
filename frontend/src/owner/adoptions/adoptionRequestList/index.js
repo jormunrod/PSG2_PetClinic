@@ -6,6 +6,7 @@ import {
 } from "reactstrap";
 import { useEffect, useState } from "react";
 import getIdFromUrl from "../../../util/getIdFromUrl";
+import { fetchWithPricingInterceptor } from "pricing4react";
 
 /**
  * Component for listing the adoption requests
@@ -48,7 +49,7 @@ export default function OwnerAdoptionRequestList() {
 
   async function setUp() {
     const adoptionRequests = await (
-      await fetch(`/api/v1/adoptions/pet/${petId}`, {
+      await fetchWithPricingInterceptor(`/api/v1/adoptions/pet/${petId}`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
           "Content-Type": "application/json",
@@ -64,7 +65,7 @@ export default function OwnerAdoptionRequestList() {
     if (!window.confirm("Are you sure you want to reject this request?")) {
       return;
     }
-    await fetch(`/api/v1/adoptions/${id}`, {
+    await fetchWithPricingInterceptor(`/api/v1/adoptions/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${jwt}`,
@@ -78,7 +79,7 @@ export default function OwnerAdoptionRequestList() {
     if (!window.confirm("Are you sure you want to accept this request?")) {
       return;
     }
-    await fetch(`/api/v1/adoptions/${id}/accept`, {
+    await fetchWithPricingInterceptor(`/api/v1/adoptions/${id}/accept`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${jwt}`,

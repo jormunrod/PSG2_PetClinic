@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Button, ButtonGroup, Container, Table } from "reactstrap";
 import { Link } from "react-router-dom";
 import tokenService from "../../../services/token.service";
+import { fetchWithPricingInterceptor } from "pricing4react";
+
 
 
 /**
@@ -16,7 +18,7 @@ export default function OwnerAdoptionList() {
   const userId = tokenService.getUser().id;
 
   async function fetchData() {
-    const petsInAdoptionResponse = await fetch("/api/v1/pets/adoptions/available", {
+    const petsInAdoptionResponse = await fetchWithPricingInterceptor("/api/v1/pets/adoptions/available", {
       headers: {
         Authorization: `Bearer ${jwt}`,
         "Content-Type": "application/json",
@@ -45,7 +47,7 @@ export default function OwnerAdoptionList() {
   }
 
   async function fetchAdoptionRequestsByPetId(petId) {
-    const response = await fetch(`/api/v1/adoptions/pet/${petId}`, {
+    const response = await fetchWithPricingInterceptor(`/api/v1/adoptions/pet/${petId}`, {
       headers: {
         Authorization: `Bearer ${jwt}`,
         "Content-Type": "application/json",

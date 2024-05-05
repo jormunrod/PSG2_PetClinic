@@ -5,6 +5,8 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.samples.petclinic.clinic.Clinic;
+import org.springframework.samples.petclinic.clinicowner.ClinicOwner;
 import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.vet.Vet;
 
@@ -43,5 +45,8 @@ public interface UserRepository extends  CrudRepository<User, String>{
 	@Query("DELETE FROM Vet v WHERE v.user.id = :userId")
 	@Modifying
 	void deleteVetRelation(int userId);
+
+	@Query("SELECT c FROM Clinic c WHERE c.clinicOwner.user.id = :userId")
+	Optional<ClinicOwner> findClinicOwnerByUser(int userId);
 	
 }

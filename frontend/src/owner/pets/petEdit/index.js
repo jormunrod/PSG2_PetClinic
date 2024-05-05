@@ -13,6 +13,15 @@ import { petEditFormInputs } from "./form/petEditFormInputs";
 import "../../../static/css/owner/editPet.css";
 import "../../../static/css/auth/authButton.css"
 import useFetchState from "../../../util/useFetchState";
+import {
+  Feature,
+  On,
+  Default,
+  Loading,
+  feature,
+  ErrorFallback,
+  fetchWithPricingInterceptor,
+} from "pricing4react";
 
 export default function OwnerPetEdit(){
   let pathArray = window.location.pathname.split("/");
@@ -36,7 +45,7 @@ export default function OwnerPetEdit(){
   
   function setupPet(){
       if (petId !== "new" && pet.id==null) { 
-        const pet = fetch(
+        const pet = fetchWithPricingInterceptor(
             `/api/v1/pets/${petId}`, 
             {
               headers: {
@@ -58,7 +67,7 @@ export default function OwnerPetEdit(){
           });          
     }    
     if(types.length===0){
-      fetch(`/api/v1/pets/types`, {
+      fetchWithPricingInterceptor(`/api/v1/pets/types`, {
           headers: {
             Authorization: `Bearer ${jwt}`,
           },
@@ -100,7 +109,7 @@ export default function OwnerPetEdit(){
       isAvailableForAdoption: values["isAvailableForAdoption"] === "Yes" ? true : false,
     };
 
-    const submit = await (await fetch("/api/v1/pets" + (pet.id ? "/" + petId : ""), 
+    const submit = await (await fetchWithPricingInterceptor("/api/v1/pets" + (pet.id ? "/" + petId : ""), 
       {
         method: mypet.id ? "PUT" : "POST",
         headers: {

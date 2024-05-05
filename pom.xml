@@ -148,6 +148,12 @@
 			<artifactId>maven-model</artifactId>
 			<version>3.9.4</version>
 		</dependency>
+		<!--  Pricing4Java  -->
+		<dependency>
+			<groupId>io.github.isa-group</groupId>
+			<artifactId>Pricing4Java</artifactId>
+			<version>4.0.0</version>
+		</dependency>
 
 	</dependencies>
 
