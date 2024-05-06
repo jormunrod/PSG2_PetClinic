@@ -133,7 +133,9 @@ export default function OwnerPetList() {
                 Add Pet
               </Link>
             </On>
-            <Default></Default>
+            <Default>
+              Your clinic plan does not allow you to add more pets.
+            </Default>
             <Loading>
               <p>Loading...</p>
             </Loading>
