@@ -15,7 +15,7 @@ export default function PricingPlan () {
   
   async function setUp(){
     const myowner = await (
-      await fetch(`/api/v1/plan`, {
+      await fetch(`/api/v1/planOwner`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },
@@ -69,32 +69,32 @@ export default function PricingPlan () {
               <div className="option">
                 <ul>
                   <li>
-                    <BsDot color="white" /> 2 pets
+                    <BsDot color="white" /> Up to 2 pets
                   </li>
                   <li>
-                    <BsDot color="white" /> 1 visit per month and pet
+                    <BsDot color="white" /> Up to 2 visit per month
                   </li>
                   <li>
-                    <BsDot color="white" /> Low support priority
+                    <BsDot color="white" /> Bussiness hours
                   </li>
                   <li>
-                    <FaTimes color="red" /> Vet Selection for Visits
+                    <FaTimes color="red" /> Pet Hotel
                   </li>
                   <li>
-                    <FaTimes color="red" /> Calendar with Upcoming Visits
+                    <FaTimes color="red" /> Adoptions
                   </li>
                   <li>
-                    <FaTimes color="red" /> Dashboard of your Pets
+                    <FaTimes color="red" /> Online consultations
                   </li>
                   <li>
-                    <FaTimes color="red" /> Online Consultation
+                    <FaTimes color="red" /> SLA
                   </li>
                 </ul>
               </div>
               {plan === "BASIC" ? (
                 <button disabled> ACTIVE </button>
                 ) : (
-                <button onClick={(e) => changePlan(e, "BASIC")}> CHANGE </button>
+                null
                 )}
             </div>
             {/* END Col one */}
@@ -113,33 +113,31 @@ export default function PricingPlan () {
               <div className="option">
                 <ul>
                   <li>
-                    <BsDot color="white" /> 4 pets
+                    <BsDot color="white" /> Up to 5 pets
                   </li>
                   <li>
-                    <BsDot color="white" /> 3 visit per month and pet
+                    <BsDot color="white" /> Up to 5 visit per month
                   </li>
                   <li>
-                    <BsDot color="white" /> Medium support priority
+                    <BsDot color="white" /> 24 hours 7 days
                   </li>
                   <li>
-                    <FaCheck color="green" /> Vet Selection for Visits
+                    <FaCheck color="green" /> Pet Hotel
                   </li>
                   <li>
-                    <FaCheck color="green" /> Calendar with Upcoming Visits
+                    <FaCheck color="green" /> Adoptions
                   </li>
                   <li>
-                    <FaTimes color="red" /> Dashboard of your Pets
+                    <FaTimes color="red" /> Online consultations
                   </li>
                   <li>
-                    <FaTimes color="red" /> Online Consultation
+                    <FaCheck color="green" /> SLA
                   </li>
                 </ul>
               </div>
               {plan === "GOLD" ? (
                 <button disabled> ACTIVE </button>
-                ) : (
-                <button onClick={(e) => changePlan(e, "GOLD")}> CHANGE </button>
-                )}
+                ) : (null) }
             
             </div>
             {/* END Col two */}
@@ -165,25 +163,25 @@ export default function PricingPlan () {
               <div className="option">
                 <ul>
                   <li>
-                    <BsDot color="white" /> 7 pets
+                    <BsDot color="white" /> Up to 12 pets
                   </li>
                   <li>
-                    <BsDot color="white" /> 6 visit per month and pet
+                    <BsDot color="white" /> Up to 12 visit per month
                   </li>
                   <li>
-                    <BsDot color="white" /> High support priority
+                    <BsDot color="white" /> 24 hours 7 days
                   </li>
                   <li>
-                    <FaCheck color="green" /> Vet Selection for Visits
+                    <FaCheck color="green" /> Pet Hotel
                   </li>
                   <li>
-                    <FaCheck color="green" /> Calendar with Upcoming Visits
+                    <FaCheck color="green" /> Adoptions
                   </li>
                   <li>
-                    <FaCheck color="green" /> Dashboard of your Pets
+                    <FaCheck color="green" /> Online consultations
                   </li>
                   <li>
-                    <FaCheck color="green" /> Online Consultation
+                    <FaCheck color="green" /> SLA
                   </li>
                 </ul>
               </div>
