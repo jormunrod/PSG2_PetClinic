@@ -59,6 +59,8 @@ import BookingEditAdmin from "./admin/booking/BookingEditAdmin";
 import OwnerBookingList from "./owner/bookings/bookingList";
 import OwnerBookingEdit from "./owner/bookings/bookingEdit";
 import BookingEditOwner from "./owner/bookings/bookingEdit";
+import MeteoApi from "./meteoAPI/meteoApi";
+import MeteoTest from "./meteoAPI/TestData";
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -166,6 +168,8 @@ function App() {
       <>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+          <Route path="/meteo" element={<MeteoApi/>}/>
+          <Route path="/meteoTest" element={<MeteoTest/>}/>
       </>
     )
   } else {
