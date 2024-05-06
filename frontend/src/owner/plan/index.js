@@ -15,7 +15,7 @@ export default function PricingPlan () {
   
   async function setUp(){
     const myowner = await (
-      await fetch(`/api/v1/plan`, {
+      await fetch(`/api/v1/planOwner`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },
