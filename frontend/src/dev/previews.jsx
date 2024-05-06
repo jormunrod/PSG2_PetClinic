@@ -3,6 +3,7 @@ import {ComponentPreview, Previews} from '@react-buddy/ide-toolbox'
 import {PaletteTree} from './palette'
 import FormGenerator from "../components/formGenerator/formGenerator";
 import MeteoApi from "../meteoAPI/meteoApi";
+import CovidApi from "../animalAPI/animalApi";
 
 const ComponentPreviews = () => {
     return (
@@ -12,6 +13,9 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/MeteoApi">
                 <MeteoApi/>
+            </ComponentPreview>
+            <ComponentPreview path="/CovidApi">
+                <CovidApi/>
             </ComponentPreview>
         </Previews>
     )

@@ -117,6 +117,9 @@ function AppNavbar() {
                     <NavLink style={{ color: "white" }} id="meteoTest" tag={Link} to="/meteoTest">WeatherTest</NavLink>
                 </NavItem>
                 <NavItem>
+                    <NavLink style={{ color: "white" }} id="covid" tag={Link} to="/animalApi">AnimalInfo</NavLink>
+                </NavItem>
+                <NavItem>
                     <NavLink style={{ color: "white" }} id="meteo" tag={Link} to="/meteo">Weather</NavLink>
                 </NavItem>
                 <NavItem>
