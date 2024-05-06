@@ -44,7 +44,7 @@ export default function PlanList() {
                     <FaTimes color="red" /> Online consultations
                   </li>
                   <li>
-                    <FaTimes color="red" /> SLA
+                    <FaTimes color="red" /> Dashboard
                   </li>
                 </ul>
               </div>
@@ -83,7 +83,7 @@ export default function PlanList() {
                     <FaTimes color="red" /> Online consultations
                   </li>
                   <li>
-                    <FaCheck color="green" /> SLA
+                    <FaTimes color="red" /> Dashboard
                   </li>
                 </ul>
               </div>
@@ -122,7 +122,7 @@ export default function PlanList() {
                     <FaCheck color="green" /> Online consultations
                   </li>
                   <li>
-                    <FaCheck color="green" /> SLA
+                    <FaCheck color="green" /> Dashboard
                   </li>
                 </ul>
               </div>
