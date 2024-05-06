@@ -123,26 +123,14 @@ export default function OwnerPetList() {
       <div className="pet-list-page-container">
         <div className="title-and-add">
           <h1 className="pet-list-title">Pets</h1>
-          <Feature>
-            <On expression={feature("pets")}>
-              <Link
-                to="/myPets/new"
-                className="auth-button light-brown"
-                style={{ textDecoration: "none", marginBottom: "2rem" }}
-              >
-                Add Pet
-              </Link>
-            </On>
-            <Default>
-              Your clinic plan does not allow you to add more pets.
-            </Default>
-            <Loading>
-              <p>Loading...</p>
-            </Loading>
-            <ErrorFallback>
-              <p>Something went wrong</p>
-            </ErrorFallback>
-          </Feature>
+
+          <Link
+            to="/myPets/new"
+            className="auth-button light-brown"
+            style={{ textDecoration: "none", marginBottom: "2rem" }}
+          >
+            Add Pet
+          </Link>
         </div>
         {pets.length > 0 ? (
           pets.map((pet) => {
@@ -244,13 +232,20 @@ export default function OwnerPetList() {
                   ) : (
                     <></>
                   )}
-                  <Link
-                    to={`/myPets/${pet.id}/visits/new`}
-                    className="owner-button brown4"
-                    style={{ textDecoration: "none", marginTop: "20px" }}
-                  >
-                    Add Visit
-                  </Link>
+                  <Feature>
+                    <On expression={feature("visits")}>
+                      <Link
+                        to={`/myPets/${pet.id}/visits/new`}
+                        className="owner-button brown4"
+                        style={{ textDecoration: "none", marginTop: "20px" }}
+                      >
+                        Add Visit
+                      </Link>
+                    </On>
+                    <Default>
+                      Your clinic plan does not allow you to add more visits.
+                    </Default>
+                  </Feature>
                 </div>
               </div>
             );

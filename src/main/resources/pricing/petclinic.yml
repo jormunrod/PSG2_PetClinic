@@ -103,7 +103,7 @@ plans:
       maxPets:
         value: 2
       maxVisitsPerMonthAndPet:
-        value: 2
+        value: 3
   GOLD:
     description: Advanced plan
     monthlyPrice: 5.0
