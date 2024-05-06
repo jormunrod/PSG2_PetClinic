@@ -6,6 +6,8 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import io.github.isagroup.annotations.PricingPlanAware;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -61,12 +63,14 @@ public class BookingService {
     }
 
     @Transactional
+	@PricingPlanAware(featureName = "haveBooking")
     public Booking saveBooking(Booking booking) throws DataAccessException {
         bookingRepository.save(booking);
         return booking;
     }
 
     @Transactional
+    @PricingPlanAware(featureName = "haveBooking")
     public Booking updateBooking(Booking booking, int id) throws DataAccessException {
         Booking toUpdate = bookingRepository.findBookingById(id);
         BeanUtils.copyProperties(booking, toUpdate, "id");

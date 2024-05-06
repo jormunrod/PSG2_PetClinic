@@ -6,13 +6,13 @@ import getErrorModal from "../../../util/getErrorModal";
 import getIdFromUrl from "../../../util/getIdFromUrl";
 import useFetchState from "../../../util/useFetchState";
 import {
-    Feature,
-    On,
-    Default,
-    Loading,
-    feature,
-    fetchWithPricingInterceptor,
-  } from "pricing4react";
+  Feature,
+  On,
+  Default,
+  Loading,
+  feature,
+  fetchWithPricingInterceptor,
+} from "pricing4react";
 
 const jwt = tokenService.getLocalAccessToken();
 const userId =
@@ -53,12 +53,11 @@ export default function BookingEditOwner() {
   );
 
   function handleChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
+    const { name, value } = event.target;
     if (name === "room") {
-      const selectedRoom = rooms.find((room) => room.id === parseInt(value));
+      const selectedRoom = rooms.find(
+        (room) => room.id === parseInt(value, 10)
+      );
       setBooking({ ...booking, room: selectedRoom });
     } else {
       setBooking({ ...booking, [name]: value });
@@ -67,29 +66,37 @@ export default function BookingEditOwner() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    booking.pet = pets.find((pet) => pet.id === parseInt(booking.pet));
-    booking.owner = owners;
-    console.log(booking.owner);
-    console.log(booking.pet);
-    console.log(booking);
+    const updatedBooking = {
+      ...booking,
+      owner: owners,
+      pet: pets.find((pet) => pet.id === parseInt(booking.pet)),
+    };
 
-    fetchWithPricingInterceptor("/api/v1/bookings" + (booking.id ? "/" + booking.id : ""), {
-      method: booking.id ? "PUT" : "POST",
-      headers: {
-        Authorization: `Bearer ${jwt}`,
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(booking),
-    })
+    fetchWithPricingInterceptor(
+      `/api/v1/bookings${updatedBooking.id ? "/" + updatedBooking.id : ""}`,
+      {
+        method: updatedBooking.id ? "PUT" : "POST",
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(updatedBooking),
+      }
+    )
       .then((response) => response.json())
       .then((json) => {
         if (json.message) {
           setMessage(json.message);
           setVisible(true);
-        } else window.location.href = "/bookings";
+          window.location.href = "/bookings";
+        } else {
+          window.location.href = "/bookings";
+        }
       })
-      .catch((message) => alert(message));
+      .catch((error) => {
+        alert(`An error occurred: ${error}`);
+      });
   }
 
   const modal = getErrorModal(setVisible, visible, message);
@@ -179,24 +186,29 @@ export default function BookingEditOwner() {
                   name="pet"
                   required
                   type="select"
-                  value={booking.pet ? booking.pet.id : ""}
+                  value={booking.pet || ""}
                   onChange={handleChange}
                   className="custom-input"
                 >
-                  <option value="">None</option>
-                  {pets.map((pet) => {
-                    const allowedPet =
-                      booking.room == null ? null : booking.room.allowedPetType;
-                    if (allowedPet === pet.type.name.toUpperCase()) {
-                      return (
-                        <option value={pet.id}>
-                          {pet.name} {pet.type.name}
-                        </option>
-                      );
-                    }
-                  })}
+                  <option value="">Select Pet</option>
+                  {pets &&
+                    booking.room &&
+                    pets.map((pet) => {
+                      if (
+                        booking.room.allowedPetType ===
+                        pet.type.name.toUpperCase()
+                      ) {
+                        return (
+                          <option key={pet.id} value={pet.id}>
+                            {pet.name} {pet.type.name}
+                          </option>
+                        );
+                      }
+                      return null;
+                    })}
                 </Input>
               </div>
+
               <div className="custom-button-row">
                 <button className="auth-button">Save</button>
                 <Link

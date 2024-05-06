@@ -90,7 +90,7 @@ public class PetService {
 		return petRepository.findAllPetsByUserId(id);
 	}
 
-	@PricingPlanAware(featureName = "pets")
+	//@PricingPlanAware(featureName = "pets")
 	@Transactional(rollbackFor = DuplicatedPetNameException.class)
 	public Pet savePet(Pet pet) throws DataAccessException, DuplicatedPetNameException {
 		Pet otherPet = getPetWithNameAndIdDifferent(pet);

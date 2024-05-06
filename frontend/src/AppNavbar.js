@@ -15,10 +15,7 @@ import jwt_decode from "jwt-decode";
 import {
   Feature,
   On,
-  Default,
-  Loading,
   feature,
-  ErrorFallback,
 } from "pricing4react";
 
 function AppNavbar() {
@@ -98,54 +95,40 @@ function AppNavbar() {
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink style={{ color: "white" }} tag={Link} to="/consultations">
-              Consultations
-            </NavLink>
-          </NavItem>
-          <NavItem>
             <NavLink style={{ color: "white" }} tag={Link} to="/plan">
               Plan
             </NavLink>
           </NavItem>
           <Feature>
-            <On expression={feature("haveAdoption")}>
+            <On expression={feature("haveOnlineConsultation")}>
               <NavItem>
                 <NavLink
                   style={{ color: "white" }}
                   tag={Link}
-                  to="/adoptions"
+                  to="/consultations"
                 >
+                  Consultations
+                </NavLink>
+              </NavItem>
+            </On>
+          </Feature>
+          <Feature>
+            <On expression={feature("haveAdoption")}>
+              <NavItem>
+                <NavLink style={{ color: "white" }} tag={Link} to="/adoptions">
                   Adoptions
                 </NavLink>
               </NavItem>
             </On>
-            <Default></Default>
-            <Loading>
-              <p>Loading...</p>
-            </Loading>
-            <ErrorFallback>
-              <p>Something went wrong</p>
-            </ErrorFallback>
           </Feature>
           <Feature>
             <On expression={feature("haveBooking")}>
               <NavItem>
-                <NavLink
-                  style={{ color: "white" }}
-                  tag={Link}
-                  to="/bookings"
-                >
+                <NavLink style={{ color: "white" }} tag={Link} to="/bookings">
                   Bookings
                 </NavLink>
               </NavItem>
             </On>
-            <Default></Default>
-            <Loading>
-              <p>Loading...</p>
-            </Loading>
-            <ErrorFallback>
-              <p>Something went wrong</p>
-            </ErrorFallback>
           </Feature>
         </>
       );
