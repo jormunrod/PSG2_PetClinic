@@ -103,7 +103,7 @@ plans:
       maxPets:
         value: 2
       maxVisitsPerMonthAndPet:
-        value: 1
+        value: 2
   GOLD:
     description: Advanced plan
     monthlyPrice: 5.0
@@ -111,11 +111,11 @@ plans:
     unit: user/month
     features:
       supportPriority: 
-        value: MEDIUM
+        value: HIGH
       haveCalendar:
         value: true
       havePetsDashboard:
-        value: false
+        value: true
       haveVetSelection:
         value: true
       haveOnlineConsultation:
@@ -126,9 +126,9 @@ plans:
         value: true
     usageLimits:
       maxPets:
-        value: 4
+        value: 5
       maxVisitsPerMonthAndPet:
-        value: 3
+        value: 5
   PLATINUM:
     description: Pro plan
     monthlyPrice: 12.0
@@ -151,8 +151,8 @@ plans:
         value: true
     usageLimits:
       maxPets:
-        value: 7
+        value: 12
       maxVisitsPerMonthAndPet:
-        value: 6
+        value: 12
 addOns: null
         
