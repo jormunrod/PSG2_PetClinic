@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.springframework.samples.petclinic.owner;
+package org.springframework.samples.petclinic.vet;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,23 +28,23 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@RequestMapping("/api/v1/planOwner")
+@RequestMapping("/api/v1/planVet")
 @Tag(name = "Plans", description = "API for the  management of  Princing Plans of the applications")
 @SecurityRequirement(name = "bearerAuth")
-public class OwnerPlanController {
+public class VetPlanController {
 
 	private final UserService userService;
 
 	@Autowired
-	public OwnerPlanController(UserService userService) {
+	public VetPlanController(UserService userService) {
 		this.userService = userService;
 	}
 
 	
 	@GetMapping
-    public ResponseEntity<Owner> getPlan() {
+    public ResponseEntity<Vet> getPlan() {
 		User user = userService.findCurrentUser();
-		return new ResponseEntity<>(userService.findOwnerByUser(user.getId()),HttpStatus.OK);
+		return new ResponseEntity<>(userService.findVetByUser(user.getId()),HttpStatus.OK);
     }
 
 	// @PutMapping

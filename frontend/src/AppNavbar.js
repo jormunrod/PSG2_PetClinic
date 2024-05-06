@@ -6,6 +6,10 @@ import jwt_decode from "jwt-decode";
 
 function AppNavbar() {
     const [roles, setRoles] = useState([]);
+    const [plan, setPlan] = useState(null);
+    const [owner, setOwner] = useState({});
+    const [vet, setVet] = useState({});
+    const [message, setMessage] = useState(null);
     const [username, setUsername] = useState("");
     const jwt = tokenService.getLocalAccessToken();
     const [collapsed, setCollapsed] = useState(true);
@@ -16,8 +20,48 @@ function AppNavbar() {
         if (jwt) {
             setRoles(jwt_decode(jwt).authorities);
             setUsername(jwt_decode(jwt).sub);
+            getPlan()
         }
     }, [jwt])
+
+    async function getPlan() {
+        if (jwt_decode(jwt).authorities[0] === "OWNER") {
+            const myowner = await (
+                await fetch(`/api/v1/planOwner`, {
+                    headers: {
+                        Authorization: `Bearer ${jwt}`,
+                    },
+                })
+            ).json();
+            if (myowner.message) setMessage(myowner.message);
+            else {
+                setPlan(myowner.clinic.plan);
+                setOwner(myowner);
+            }
+        } else if (jwt_decode(jwt).authorities[0] === "VET") {
+            const myVet = await (
+                await fetch(`/api/v1/planVet`, {
+                    headers: {
+                        Authorization: `Bearer ${jwt}`,
+                    },
+                })
+            ).json();
+            if (myVet.message) setMessage(myVet.message);
+            else {
+                setPlan(myVet.clinic.plan);
+                setVet(myVet);
+            }
+        }
+    }
+
+    function formatPlan(plan) {
+
+        return plan !== null ? plan.charAt(0).toUpperCase() + plan.slice(1).toLowerCase() : null;
+    }
+
+
+
+
 
     let adminLinks = <></>;
     let ownerLinks = <></>;
@@ -64,9 +108,6 @@ function AppNavbar() {
                     </NavItem>
                     <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/consultations">Consultations</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink style={{ color: "white" }} tag={Link} to="/plan">Plan</NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink style={{ color: "white" }} tag={Link} to="/adoptions">Adoptions</NavLink>
@@ -146,7 +187,12 @@ function AppNavbar() {
                 <NavItem>
                     <NavLink style={{ color: "white" }} id="plans" tag={Link} to="/plans">Pricing Plans</NavLink>
                 </NavItem>
-                <NavbarText style={{ color: "white" }} className="justify-content-end">{username}</NavbarText>
+                <NavItem className="d-flex">
+                    <NavbarText style={{ color: "white" }} className="justify-content-end">{username}</NavbarText>
+                </NavItem>
+                <NavItem className="d-flex">
+                    <NavbarText style={{ color: formatPlan(plan) === "Platinum" ? "blue" : formatPlan(plan) === "Gold" ? "yellow" : "grey" }} className="justify-content-end">{formatPlan(plan)}</NavbarText>
+                </NavItem>
                 <NavItem className="d-flex">
                     <NavLink style={{ color: "white" }} id="logout" tag={Link} to="/logout">Logout</NavLink>
                 </NavItem>
