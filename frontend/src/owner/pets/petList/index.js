@@ -48,14 +48,17 @@ export default function OwnerPetList() {
 
   async function removeVisit(petId, visitId) {
     let status = "";
-    await fetchWithPricingInterceptor(`/api/v1/pets/${petId}/visits/${visitId}`, {
-      method: "DELETE",
-      headers: {
-        Authorization: `Bearer ${jwt}`,
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    })
+    await fetchWithPricingInterceptor(
+      `/api/v1/pets/${petId}/visits/${visitId}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+      }
+    )
       .then((response) => {
         if (response.status === 200) status = "200";
         return response.json();
@@ -151,21 +154,37 @@ export default function OwnerPetList() {
                   <span>
                     <strong>Type:</strong> {pet.type.name}
                   </span>
-                  <span>
-                    <strong>Available for adoption:</strong>{" "}
-                    {pet.isAvailableForAdoption ? "Yes" : "No"}
-                  </span>
+                  <Feature>
+                    <On expression={feature("haveAdoption")}>
+                      <span>
+                        <strong>Available for adoption:</strong>{" "}
+                        {pet.isAvailableForAdoption ? "Yes" : "No"}
+                      </span>
+                    </On>
+                    <Default>
+                      <span>
+                        <strong>
+                          Available for adoption: Your clinic plan does not
+                          include this feature
+                        </strong>
+                      </span>
+                    </Default>
+                  </Feature>
                 </div>
                 <div className="pet-options">
-                  {pet.isAvailableForAdoption && (
-                    <Link
-                      to={"/adoptions/" + pet.id + "/requests"}
-                      className="owner-button brown5"
-                      style={{ textDecoration: "none" }}
-                    >
-                      Adoption Requests
-                    </Link>
-                  )}
+                  <Feature>
+                    <On expression={feature("haveAdoption")}>
+                      {pet.isAvailableForAdoption && (
+                        <Link
+                          to={"/adoptions/" + pet.id + "/requests"}
+                          className="owner-button brown5"
+                          style={{ textDecoration: "none" }}
+                        >
+                          Adoption Requests
+                        </Link>
+                      )}
+                    </On>
+                  </Feature>
                   <Link
                     to={"/myPets/" + pet.id}
                     className="owner-button brown2"

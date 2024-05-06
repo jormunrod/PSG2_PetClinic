@@ -1,18 +1,20 @@
-import {
-  Button,
-  ButtonGroup,
-  Container,
-  Table,
-} from "reactstrap";
+import { Button, ButtonGroup, Container, Table } from "reactstrap";
 import { useEffect, useState } from "react";
 import getIdFromUrl from "../../../util/getIdFromUrl";
-import { fetchWithPricingInterceptor } from "pricing4react";
-
+import {
+  Feature,
+  On,
+  Default,
+  Loading,
+  feature,
+  ErrorFallback,
+  fetchWithPricingInterceptor,
+} from "pricing4react";
 /**
  * Component for listing the adoption requests
- * 
+ *
  * @author jormunrod
-*/
+ */
 export default function OwnerAdoptionRequestList() {
   let [adoptionRequests, setadoptionRequests] = useState([]);
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
@@ -96,22 +98,33 @@ export default function OwnerAdoptionRequestList() {
   useEffect(() => {}, [adoptionRequests]);
 
   return (
-    <div style={{marginLeft: "20%", marginRight: "20%", marginTop: "5%"}}>
-      <Container style={{ marginTop: "15px" }} fluid>
-        <h1 className="text-center">Adoption Requests</h1>
-        <Table className="mt-4">
-          <thead>
-            <tr>
-              <th className= "tables whiteFont">Applicant name</th>
-              <th className= "tables whiteFont">Description</th>
-              <th className= "tables whiteFont">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {getAdoptionRequestsList(adoptionRequests)}
-          </tbody>
-        </Table>
-      </Container>
-    </div>
+    <Feature>
+      <On expression={feature("haveAdoption")}>
+        <div style={{ marginLeft: "20%", marginRight: "20%", marginTop: "5%" }}>
+          <Container style={{ marginTop: "15px" }} fluid>
+            <h1 className="text-center">Adoption Requests</h1>
+            <Table className="mt-4">
+              <thead>
+                <tr>
+                  <th className="tables whiteFont">Applicant name</th>
+                  <th className="tables whiteFont">Description</th>
+                  <th className="tables whiteFont">Actions</th>
+                </tr>
+              </thead>
+              <tbody>{getAdoptionRequestsList(adoptionRequests)}</tbody>
+            </Table>
+          </Container>
+        </div>
+      </On>
+      <Default>
+        <p>Adoptions feature is not available for your clinic plan.</p>
+      </Default>
+      <Loading>
+        <p>Loading...</p>
+      </Loading>
+      <ErrorFallback>
+        <p>Something went wrong</p>
+      </ErrorFallback>
+    </Feature>
   );
 }

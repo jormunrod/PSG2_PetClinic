@@ -12,14 +12,7 @@ import FormGenerator from "../../../components/formGenerator/formGenerator";
 import { petEditFormInputs } from "./form/petEditFormInputs";
 import "../../../static/css/owner/editPet.css";
 import "../../../static/css/auth/authButton.css"
-import useFetchState from "../../../util/useFetchState";
 import {
-  Feature,
-  On,
-  Default,
-  Loading,
-  feature,
-  ErrorFallback,
   fetchWithPricingInterceptor,
 } from "pricing4react";
 

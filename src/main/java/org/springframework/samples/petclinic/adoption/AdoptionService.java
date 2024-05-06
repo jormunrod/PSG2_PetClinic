@@ -14,6 +14,8 @@ import org.springframework.samples.petclinic.pet.PetRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import io.github.isagroup.annotations.PricingPlanAware;
+
 /**
  * Service for Adoptions.
  * @author jormunrod
@@ -33,6 +35,7 @@ public class AdoptionService {
     }
 
     @Transactional
+    @PricingPlanAware(featureName = "haveAdoption")
     public void saveAdoption(Adoption adoption) {
         adoptionRepository.save(adoption);
     }
@@ -59,6 +62,7 @@ public class AdoptionService {
     }
 
     @Transactional
+    @PricingPlanAware(featureName = "haveAdoption")
     public Adoption createAdoption(NewAdoptionRequest newAdoptionRequest) {
         Integer petId = newAdoptionRequest.getPetId();
         Integer applicantId = newAdoptionRequest.getApplicantId();
@@ -85,6 +89,7 @@ public class AdoptionService {
     }
 
     @Transactional
+    @PricingPlanAware(featureName = "haveAdoption")
     public void adoptPet(int adoptionId, int userId) {
         Adoption adoption = findAdoptionById(adoptionId);
         Pet pet = adoption.getPet();
@@ -118,6 +123,7 @@ public class AdoptionService {
     }
 
     @Transactional
+    @PricingPlanAware(featureName = "haveAdoption")
     public Adoption updateAdoption(int id, EditAdoptionRequest editAdoptionRequest, int userId){
         Adoption adoption = findAdoptionById(id);
         if(adoption.getApplicant().getUser().getId() != userId){
