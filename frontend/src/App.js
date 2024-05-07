@@ -1,7 +1,7 @@
 import React from "react";
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import jwt_decode from "jwt-decode";
-import {ErrorBoundary} from "react-error-boundary";
+import { ErrorBoundary } from "react-error-boundary";
 import AppNavbar from "./AppNavbar";
 import Home from "./home";
 import PrivateRoute from "./privateRoute";
@@ -59,37 +59,38 @@ import BookingEditAdmin from "./admin/booking/BookingEditAdmin";
 import OwnerBookingList from "./owner/bookings/bookingList";
 import OwnerBookingEdit from "./owner/bookings/bookingEdit";
 import BookingEditOwner from "./owner/bookings/bookingEdit";
+import CustomerAgreement from "./clinicOwner/customerAgreement";
 import MeteoApi from "./meteoAPI/meteoApi";
 import MeteoTest from "./meteoAPI/TestData";
 import CovidApi from "./animalAPI/animalApi";
 import AnimalApi from "./animalAPI/animalApi";
 
-function ErrorFallback({error, resetErrorBoundary}) {
-    return (
-        <div role="alert">
-            <p>Something went wrong:</p>
-            <pre>{error.message}</pre>
-            <button onClick={resetErrorBoundary}>Try again</button>
-        </div>
-    )
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre>{error.message}</pre>
+      <button onClick={resetErrorBoundary}>Try again</button>
+    </div>
+  )
 }
 
 function App() {
-    const jwt = tokenService.getLocalAccessToken();
-    let roles = []
-    if (jwt) {
-        roles = getRolesFromJWT(jwt);
-    }
+  const jwt = tokenService.getLocalAccessToken();
+  let roles = []
+  if (jwt) {
+    roles = getRolesFromJWT(jwt);
+  }
 
-    function getRolesFromJWT(jwt) {
-        return jwt_decode(jwt).authorities;
-    }
+  function getRolesFromJWT(jwt) {
+    return jwt_decode(jwt).authorities;
+  }
 
-    let adminRoutes = <></>;
-    let ownerRoutes = <></>;
-    let userRoutes = <></>;
-    let vetRoutes = <></>;
-    let publicRoutes = <></>;
+  let adminRoutes = <></>;
+  let ownerRoutes = <></>;
+  let userRoutes = <></>;
+  let vetRoutes = <></>;
+  let publicRoutes = <></>;
 
     roles.forEach((role) => {
         if (role === "ADMIN") {
@@ -187,6 +188,7 @@ function App() {
                     <Route path="/bookings" exact={true} element={<PrivateRoute><OwnerBookingList/></PrivateRoute>}/>
                     <Route path="/bookings/:bookingId" exact={true}
                            element={<PrivateRoute><BookingEditOwner/></PrivateRoute>}/>
+                    <Route path="/customerAgreement" exact={true} element={<PrivateRoute><CustomerAgreement /></PrivateRoute>} />
                 </>)
         }
     })
@@ -210,23 +212,23 @@ function App() {
         )
     }
 
-    return (
-        <div>
-            <ErrorBoundary FallbackComponent={ErrorFallback}>
-                <AppNavbar/>
-                <Routes>
-                    <Route path="/" exact={true} element={<Home/>}/>
-                    <Route path="/plans" element={<PlanList/>}/>
-                    <Route path="/docs" element={<SwaggerDocs/>}/>
-                    {publicRoutes}
-                    {userRoutes}
-                    {adminRoutes}
-                    {ownerRoutes}
-                    {vetRoutes}
-                </Routes>
-            </ErrorBoundary>
-        </div>
-    );
+  return (
+    <div>
+      <ErrorBoundary FallbackComponent={ErrorFallback} >
+        <AppNavbar />
+        <Routes>
+          <Route path="/" exact={true} element={<Home />} />
+          <Route path="/plans" element={<PlanList />} />
+          <Route path="/docs" element={<SwaggerDocs />} />
+          {publicRoutes}
+          {userRoutes}
+          {adminRoutes}
+          {ownerRoutes}
+          {vetRoutes}
+        </Routes>
+      </ErrorBoundary>
+    </div>
+  );
 }
 
 export default App;
