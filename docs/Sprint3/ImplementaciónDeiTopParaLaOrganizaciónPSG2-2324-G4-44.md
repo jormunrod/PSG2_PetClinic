@@ -41,7 +41,7 @@ Finalmente, este documento va acompañado de imágenes donde se muestran el proc
 Nuestro grupo tenia creado previamente una organización PSG2-2324-G4-44 dentro de iTop. Este se compone de cinco contactos, uno por cada miembro. Se ha incorporado un nuevo contacto como equipo denominado PSG2-2324-G4-44 Team al que se le han añadido todos los miembros del grupo.
 
 <p align="center">
-    <img src="../images/.png" alt="Creacion del equipo" style="width: 50%; margin: auto;">
+    <img src="../images/listaContactos.png" alt="Creacion del equipo" style="width: 50%; margin: auto;">
 </p>
 
 
@@ -57,7 +57,12 @@ Nuestra organización ha creado dentro de iTop todos los servicios referidos en 
 Esta a su vez también sigue un esquema similar al de los servicios “PSG2-2324-G4-44 – Nombre-de-subcategoría”. Además también irá asociada al menos un contrato por cada cliente.
 
 <p align="center">
-    <img src="../images/.png" alt="Creacion de los servicios" style="width: 50%; margin: auto;">
+    <img src="../images/listaServicios.png" alt="Creacion de los servicios" style="width: 50%; margin: auto;">
+</p>
+
+
+<p align="center">
+    <img src="../images/servicioCategoria.png" alt="Creacion de los subcategorias" style="width: 50%; margin: auto;">
 </p>
 
 ### **3.2 SLA de los servicios ofrecidos**
@@ -66,7 +71,12 @@ En primer lugar se han creado las definiciones (SLTs) de los valores de las mét
 Una vez hecho esto, se ha creado el SLA para cada servicio ofrecido por nuestra organización y el esquema que hemos usado es “PSG2-2324-G4-44-nombreservicio-ZZZ”, ZZZ es el plan de precios concreto en el que se utilizará. Los SLTs creados anteriormente se han asociado a este SLA.
 
 <p align="center">
-    <img src="../images/.png" alt="Creacion del SLA y asociacion con SLTs" style="width: 50%; margin: auto;">
+    <img src="../images/listaSla.png" alt="Creacion del SLA y asociacion con SLTs" style="width: 50%; margin: auto;">
+</p>
+
+
+<p align="center">
+    <img src="../images/listaSlt.png" alt="Creacion del SLTs y asociacion con SLA" style="width: 50%; margin: auto;">
 </p>
 
 ### **3.3 Contrato de los servicios ofrecidos**
@@ -77,7 +87,7 @@ El contrato consta de una organización que corresponde al cliente y un proveedo
 Finalmente, hemos definido un Delivery Model, con el nombre de la organización, vinculados a todos los contactos de la organización además del equipo creado nuevamente y asociado con la organización del cliente correspondiente.
 
 <p align="center">
-    <img src="../images/.png" alt="Creacion de contrato " style="width: 50%; margin: auto;">
+    <img src="../images/servicioContract.png" alt="Creacion de contrato " style="width: 50%; margin: auto;">
 </p>
 
 ---
@@ -93,16 +103,18 @@ Una vez realizado las configuraciones necesarias, la siguiente imagen muestra el
 Como se puede observar el cliente cuando va a realizar una  petición puede elegir entre el listado de servicios proporcionado por nuestra organización.
 
 <p align="center">
-    <img src="../images/peticionListaservicios.png" alt="Creacion de peticion" style="width: 50%; margin: auto;">
+    <img src="../images/portalCliente.png" alt="Listado de todos los servicios disponibles" style="width: 50%; margin: auto;">
 </p>
 
 Este debe de rellenar el formulario detalladamente con los datos de la petición.
 
 <p align="center">
-    <img src="../images/formularioPeticion.png" alt="Formulario de peticion" style="width: 50%; margin: auto;">
+    <img src="../images/formularioCliente.png" alt="Formulario de peticion" style="width: 50%; margin: auto;">
 </p>
 ---
 
 ## **5. Conclusiones**
+
 El trabajo realizado durante este Sprint ha sido crucial para fortalecer la capacidad de iTop para soportar la gestión de incidentes y solicitudes de los servicios de Petclinic. Desde la configuración de contratos y servicios hasta la definición de SLAs, SLTs y modelos de entrega, cada aspecto ha sido cuidadosamente abordado para garantizar una gestión de servicios efectiva y eficiente, que cumpla con las expectativas y necesidades tanto de la empresa como de sus clientes. Finalmente, mencionar que no se ha encontrado ninguna dificultad a la hora de realizar la configuración en iTop y se ha podido crear el portal de peticiones del cliente de manera satisfactoria.
+
 ---
