@@ -72,7 +72,7 @@ de clínicas gestionar de manera más efectiva y eficiente las operaciones diari
 
   - Plan Básico: Este plan es ideal para aquellos propietarios de clínicas que buscan 
     una solución simple y económica. Con el Plan Básico, obtienes acceso a la plataforma 
-    _PetClinic_ sin un Acuerdo de Nivel de Servicio (SLA), lo que significa que recibirás 
+    _PetClinic_, recibirás 
     soporte durante el horario comercial. Además, podrás gestionar hasta 2 mascotas y 
     recibir hasta 2 visitas mensuales. Este plan es perfecto para clínicas con una clientela 
     más reducida que no requieren funcionalidades adicionales.
@@ -80,8 +80,8 @@ de clínicas gestionar de manera más efectiva y eficiente las operaciones diari
     Precio: Gratis.
 
   - Plan Oro: Nuestro plan intermedio, el Plan Oro, ofrece funcionalidades adicionales que 
-    hacen que la gestión de tu clínica sea aún más eficiente. Con un costo mensual de $5, 
-    recibirás un Acuerdo de Nivel de Servicio (SLA), garantizando asistencia técnica las 
+    hacen que la gestión de tu clínica sea aún más eficiente. Con un costo mensual de 5€,
+    garantizando asistencia técnica las 
     24 horas del día, los 7 días de la semana. Además, podrás disfrutar de características 
     exclusivas como acceso al servicio de Pet Hotel, facilitando la gestión de alojamiento 
     para mascotas, y la opción de realizar adopciones directamente desde la plataforma. 
@@ -92,22 +92,21 @@ de clínicas gestionar de manera más efectiva y eficiente las operaciones diari
     Precio: 5€ al mes.
 
   - Plan Platino: Para aquellos propietarios de clínicas que buscan lo último en servicios 
-    y funcionalidades, nuestro Plan Platino es la elección ideal. Con un precio de $12 al mes, 
+    y funcionalidades, nuestro Plan Platino es la elección ideal. Con un precio de 12€ al mes, 
     el Plan Platino ofrece todas las ventajas del Plan Oro, además de la posibilidad de 
-    realizar consultas en línea directamente desde la plataforma. Con una capacidad ilimitada 
+    realizar consultas en línea directamente desde la plataforma. Con una capacidad para 12 
     de mascotas y visitas mensuales, este plan es perfecto para clínicas que desean ofrecer 
-    un servicio excepcional y personalizado a sus clientes, sin preocuparse por límites o 
-    restricciones.
+    un servicio excepcional y personalizado a sus clientes.
 
     Precio: 12€ al mes.
 
       |  |   |   |   |
       | :--- | :---: | :---: | :---: |
       | Plan | Básico | Oro | Platino |
-      | SLA | No | Sí | Sí |
-      | Funcionalidades adicionales | Ninguna | Pet Hotel, Adoptions | Consultas en línea |
-      | Máximo del mascotas | Hasta 2 mascotas | Hasta 5 mascotas | Ilimitado |
-      | Visitas mensuales máximas | Hasta 2 mascotas | Hasta 5 mascotas | Ilimitado |
+      | Dashboard | No | No | Sí |
+      | Funcionalidades adicionales | Ninguna | Pet Hotel, Adoptions | Pet Hotel, Adoptions, Consultas en línea |
+      | Máximo del mascotas | Hasta 2 mascotas | Hasta 5 mascotas | Hasta 12 mascotas |
+      | Visitas mensuales máximas | Hasta 2 visitas | Hasta 5 visitas | Hasta 12 visitas |
       | Disponibilidad del servicio | Horario comercial | 24/7 | 24/7 |
       | Precio | Gratis | 5€ al mes | 12€ al mes |
       
