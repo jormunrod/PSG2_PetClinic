@@ -39,7 +39,10 @@ import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.samples.petclinic.user.AuthoritiesService;
 import org.springframework.samples.petclinic.user.User;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.transaction.annotation.Transactional;
+
+import lombok.With;
 
 //@RunWith(SpringRunner.class)
 //@DataJpaTest(includeFilters = {@ComponentScan.Filter(Service.class),@ComponentScan.Filter(PasswordEncoder.class)})
@@ -141,6 +144,7 @@ public class OwnerServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldDeleteOwner() throws DataAccessException, DuplicatedPetNameException {
 		Integer firstCount = ((Collection<Owner>) ownerService.findAll()).size();

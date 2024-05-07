@@ -22,5 +22,8 @@ public interface BookingRepository extends CrudRepository<Booking, Integer> {
 
     @Query("SELECT b FROM Booking b WHERE b.startDate >= :startOfDay AND b.startDate < :endOfDay")
     List<Booking> findBookingByStartDate(LocalDateTime startOfDay,  LocalDateTime endOfDay);
+
+    @Query("SELECT b FROM Booking b WHERE b.pet.id = :petId")
+    List<Booking> findAllBookingsByPetId(Integer petId);
     
 }

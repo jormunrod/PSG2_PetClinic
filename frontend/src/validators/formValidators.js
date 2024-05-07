@@ -1,3 +1,13 @@
+import {
+    Feature,
+    On,
+    Default,
+    Loading,
+    feature,
+    ErrorFallback,
+    fetchWithPricingInterceptor,
+  } from "pricing4react";
+
 export const formValidators = {
     notEmptyValidator: {
         validate: (value) => {
@@ -22,5 +32,5 @@ export const formValidators = {
             return value.trim().length === 9 && /^\d+$/.test(value);
         },
         message: "The phone number must be 9 digits long and contain only numbers"
-    }
+    },
 }

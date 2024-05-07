@@ -19,9 +19,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class VisitService {
 
-	private static final Integer BASIC_LIMIT = 1;
-	private static final Integer GOLD_LIMIT = 3;
-	private static final Integer PLATINUM_LIMIT = 6;
+	private static final Integer BASIC_LIMIT = 2;
+	private static final Integer GOLD_LIMIT = 5;
+	private static final Integer PLATINUM_LIMIT = 12;
 
 	private final VisitRepository visitRepository;
 

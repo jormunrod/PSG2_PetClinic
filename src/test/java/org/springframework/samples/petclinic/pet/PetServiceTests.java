@@ -42,6 +42,7 @@ import org.springframework.samples.petclinic.util.EntityUtils;
 import org.springframework.samples.petclinic.vet.VetService;
 import org.springframework.samples.petclinic.visit.Visit;
 import org.springframework.samples.petclinic.visit.VisitService;
+import org.springframework.security.test.context.support.WithMockUser;
 
 //@DataJpaTest(includeFilters = @ComponentScan.Filter(Service.class))
 @SpringBootTest
@@ -119,6 +120,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldInsertPetIntoDatabaseAndGenerateId() {
 		Owner owner6 = this.ownerService.findOwnerById(6);
@@ -140,6 +142,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldThrowExceptionInsertingPetsWithTheSameName() {
 		Owner owner6 = this.ownerService.findOwnerById(6);
@@ -175,6 +178,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldDeletePetWithVisits() throws DataAccessException, DuplicatedPetNameException {
 		Integer firstCount = petService.findAll().size();
@@ -202,6 +206,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldCheckLimitForBasic() {
 		Owner owner = this.ownerService.findOwnerById(8);
@@ -211,6 +216,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldCheckLimitForGold() {
 		Owner owner = this.ownerService.findOwnerById(4);
@@ -222,6 +228,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldCheckLimitForPlatinum() {
 		Owner owner = this.ownerService.findOwnerById(1);
