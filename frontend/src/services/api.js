@@ -52,4 +52,19 @@ instance.interceptors.response.use(
     }
 );
 
+export function fetchWithPricingInterceptor(url, options) {
+    return fetch("http://localhost:8080" + url, options).then((response) => {
+      // Check if the response contains the 'newToken' header and update the token in localStorage
+      const newToken = response.headers.get("New-Token");
+  
+      if (newToken !== null && newToken !== TokenService.getLocalAccessToken()) {
+        TokenService.updateLocalAccessToken(newToken);
+        alert("Clinic plan changed!");
+        window.location.reload();
+      }
+  
+      return response;
+    });
+  }
+
 export default instance;

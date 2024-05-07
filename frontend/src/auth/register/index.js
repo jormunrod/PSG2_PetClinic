@@ -6,6 +6,7 @@ import { registerFormOwnerInputs } from "./form/registerFormOwnerInputs";
 import { registerFormVetInputs } from "./form/registerFormVetInputs";
 import { registerFormClinicOwnerInputs } from "./form/registerFormClinicOwnerInputs";
 import { useEffect, useRef, useState } from "react";
+import { Default, Feature, feature, On } from "pricing4react";
 
 export default function Register() {
   let [type, setType] = useState(null);
@@ -62,7 +63,7 @@ export default function Register() {
               else {
                 tokenService.setUser(data);
                 tokenService.updateLocalAccessToken(data.token);
-                window.location.href = "/dashboard";
+                window.location.href = "/myPets";
               }
             })
             .catch((message) => {
@@ -80,7 +81,7 @@ export default function Register() {
       if (registerFormOwnerInputs[5].values.length === 1){
         fetch("/api/v1/clinics")
         .then(function (response) {
-        return response.json();
+            return response.json();
         })
         .then(function (data) {
           setClinics(data);

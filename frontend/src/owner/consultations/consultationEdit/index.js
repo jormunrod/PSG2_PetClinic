@@ -7,6 +7,7 @@ import tokenService from "../../../services/token.service";
 import FormGenerator from "../../../components/formGenerator/formGenerator";
 import "../../../static/css/owner/consultations.css";
 import getIdFromUrl from "../../../util/getIdFromUrl";
+import { Feature, On, Default, feature } from "pricing4react";
 
 export default function OwnerConsultationEdit() {
   let [consultation, setConsultation] = useState({
@@ -97,74 +98,79 @@ export default function OwnerConsultationEdit() {
   }
 
   useEffect(() => {
-    setUp(); 
+    setUp();
   }, []);
 
   useEffect(() => {
-    if (id !== "new"){
-        consultationEditFormInputs[0].defaultValue = consultation.title;
-        consultationEditFormRef.current.updateForm();
-    } else{
-        consultationEditFormInputs[0].defaultValue = "";
+    if (id !== "new") {
+      consultationEditFormInputs[0].defaultValue = consultation.title;
+      consultationEditFormRef.current.updateForm();
+    } else {
+      consultationEditFormInputs[0].defaultValue = "";
     }
   }, [consultation]);
 
   if (message) return <h2 className="text-center">{message}</h2>;
 
   return (
-    <div className="auth-page-container">
-      <h2 className="text-center">
-        {consultation.id ? "Edit Consultation" : "Add Consultation"}
-      </h2>
-      <div className="auth-form-container">
-        <FormGenerator
-          ref={consultationEditFormRef}
-          inputs={consultationEditFormInputs}
-          onSubmit={handleSubmit}
-          childrenPosition={-1}
-          buttonText="Save"
-          buttonClassName="auth-button"
-        >
-          <Input
-            type="select"
-            disabled={consultation.id !== null}
-            required={consultation.id === null}
-            name="pet"
-            id="pet"
-            value={consultation.pet?.id || ""}
-            onChange={handleChange}
-          >
-            <option value="">None</option>
-            {pets &&
-              pets.map((pet) => (
-                <option key={pet.id} value={pet.id}>
-                  {pet.name}
-                </option>
-              ))}
-          </Input>
-          <div className="consultation-checkbox-container">
-            <label htmlFor="isClinicComment">
-              ¿Is the consultation a comment for the clinic?
-            </label>
-            <div className="checkbox-wrapper-10">
+    <Feature>
+      <On expression={feature("haveOnlineConsultation")}>
+        <div className="auth-page-container">
+          <h2 className="text-center">
+            {consultation.id ? "Edit Consultation" : "Add Consultation"}
+          </h2>
+          <div className="auth-form-container">
+            <FormGenerator
+              ref={consultationEditFormRef}
+              inputs={consultationEditFormInputs}
+              onSubmit={handleSubmit}
+              childrenPosition={-1}
+              buttonText="Save"
+              buttonClassName="auth-button"
+            >
               <Input
-                type="checkbox"
-                id="isClinicComment"
-                className="tgl tgl-flip"
+                type="select"
+                disabled={consultation.id !== null}
+                required={consultation.id === null}
+                name="pet"
+                id="pet"
+                value={consultation.pet?.id || ""}
                 onChange={handleChange}
-                name="isClinicComment"
-                checked={consultation.isClinicComment}
-              />
-              <label
-                htmlFor="isClinicComment"
-                data-tg-on="Yes"
-                data-tg-off="No"
-                className="tgl-btn"
-              ></label>
-            </div>
+              >
+                <option value="">None</option>
+                {pets &&
+                  pets.map((pet) => (
+                    <option key={pet.id} value={pet.id}>
+                      {pet.name}
+                    </option>
+                  ))}
+              </Input>
+              <div className="consultation-checkbox-container">
+                <label htmlFor="isClinicComment">
+                  ¿Is the consultation a comment for the clinic?
+                </label>
+                <div className="checkbox-wrapper-10">
+                  <Input
+                    type="checkbox"
+                    id="isClinicComment"
+                    className="tgl tgl-flip"
+                    onChange={handleChange}
+                    name="isClinicComment"
+                    checked={consultation.isClinicComment}
+                  />
+                  <label
+                    htmlFor="isClinicComment"
+                    data-tg-on="Yes"
+                    data-tg-off="No"
+                    className="tgl-btn"
+                  ></label>
+                </div>
+              </div>
+            </FormGenerator>
           </div>
-        </FormGenerator>
-      </div>
-    </div>
+        </div>
+      </On>
+      <Default>Your clinc plan does not include this feature.</Default>
+    </Feature>
   );
 }

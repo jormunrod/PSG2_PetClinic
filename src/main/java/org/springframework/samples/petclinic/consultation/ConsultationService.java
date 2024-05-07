@@ -19,6 +19,8 @@ import org.springframework.samples.petclinic.clinic.PricingPlan;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import io.github.isagroup.annotations.PricingPlanAware;
+
 @Service
 public class ConsultationService {
 
@@ -89,12 +91,14 @@ public class ConsultationService {
 	}
 
 	@Transactional
+	@PricingPlanAware(featureName = "haveOnlineConsultation")
 	public Ticket saveTicket(Ticket ticket) throws DataAccessException {
 		this.ticketRepository.save(ticket);
 		return ticket;
 	}
 
 	@Transactional
+	@PricingPlanAware(featureName = "haveOnlineConsultation")
 	public Ticket updateTicket(Ticket ticket, int id) throws DataAccessException {
 		Ticket toUpdate = findTicketById(id);
 		BeanUtils.copyProperties(ticket, toUpdate, "id", "creationDate", "consultation", "user");

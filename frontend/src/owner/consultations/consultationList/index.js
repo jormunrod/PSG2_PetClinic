@@ -9,6 +9,13 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import {
+  Feature,
+  On,
+  Default,
+  Loading,
+  feature,
+} from "pricing4react";
 
 export default function OwnerConsultationList() {
   let [consultations, setConsultations] = useState([]);
@@ -144,63 +151,70 @@ export default function OwnerConsultationList() {
   useEffect(() => {}, [filtered]);
 
   return (
-    <div>
-      <Container style={{ marginTop: "15px" }} fluid>
-        <h1 className="text-center">Consultations</h1>
-        <Row className="row-cols-auto g-3 align-items-center">
-          <Col>
-            {plan === "PLATINUM" ? (
-              <Button color="success" tag={Link} to="/consultations/new">
-                Add Consultation
-              </Button>
-            ) : (
-              <></>
-            )}
-            <Button color="link" onClick={handleFilter} value="PENDING">
-              Pending
-            </Button>
-            <Button color="link" onClick={handleFilter} value="ANSWERED">
-              Answered
-            </Button>
-            <Button color="link" onClick={handleFilter} value="CLOSED">
-              Closed
-            </Button>
-            <Button color="link" onClick={handleFilter} value="">
-              All
-            </Button>
-          </Col>
-          <Col className="col-sm-3">
-            <Input
-              type="search"
-              placeholder="Introduce a pet name to search by it"
-              value={search || ""}
-              onChange={handleChange}
-            />
-          </Col>
-          <Col className="col-sm-3">
-            <Button color="link" onClick={handleClear}>
-              Clear All
-            </Button>
-          </Col>
-        </Row>
-        <Table className="mt-4">
-          <thead>
-            <tr>
-              <th className= "tables">Title</th>
-              <th className= "tables">Status</th>
-              <th className= "tables">Pet</th>
-              <th className= "tables">Sent To</th>
-              <th className= "tables">Creation Date</th>
-              <th className= "tables">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filtered
-              ? getConsultationList(filtered, plan)
-              : getConsultationList(consultations, plan)}
-          </tbody>
-        </Table>
-      </Container>
-    </div>
+    <Feature>
+      <On expression={feature("haveOnlineConsultation")}>
+        <div>
+          <Container style={{ marginTop: "15px" }} fluid>
+            <h1 className="text-center">Consultations</h1>
+            <Row className="row-cols-auto g-3 align-items-center">
+              <Col>
+                {plan === "PLATINUM" ? (
+                  <Button color="success" tag={Link} to="/consultations/new">
+                    Add Consultation
+                  </Button>
+                ) : (
+                  <></>
+                )}
+                <Button color="link" onClick={handleFilter} value="PENDING">
+                  Pending
+                </Button>
+                <Button color="link" onClick={handleFilter} value="ANSWERED">
+                  Answered
+                </Button>
+                <Button color="link" onClick={handleFilter} value="CLOSED">
+                  Closed
+                </Button>
+                <Button color="link" onClick={handleFilter} value="">
+                  All
+                </Button>
+              </Col>
+              <Col className="col-sm-3">
+                <Input
+                  type="search"
+                  placeholder="Introduce a pet name to search by it"
+                  value={search || ""}
+                  onChange={handleChange}
+                />
+              </Col>
+              <Col className="col-sm-3">
+                <Button color="link" onClick={handleClear}>
+                  Clear All
+                </Button>
+              </Col>
+            </Row>
+            <Table className="mt-4">
+              <thead>
+                <tr>
+                  <th className="tables">Title</th>
+                  <th className="tables">Status</th>
+                  <th className="tables">Pet</th>
+                  <th className="tables">Sent To</th>
+                  <th className="tables">Creation Date</th>
+                  <th className="tables">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {filtered
+                  ? getConsultationList(filtered, plan)
+                  : getConsultationList(consultations, plan)}
+              </tbody>
+            </Table>
+          </Container>
+        </div>
+      </On>
+      <Default>
+        Your clinc plan does not include this feature.
+      </Default>
+    </Feature>
   );
 }
