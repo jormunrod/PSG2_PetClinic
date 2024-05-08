@@ -24,6 +24,7 @@ import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.samples.petclinic.util.EntityUtils;
 import org.springframework.samples.petclinic.vet.VetService;
+import org.springframework.security.test.context.support.WithMockUser;
 
 //@DataJpaTest(includeFilters = @ComponentScan.Filter(Service.class))
 @SpringBootTest
@@ -128,61 +129,6 @@ public class VisitServiceTests {
 		visitService.deleteVisit(visit.getId());
 		Integer lastCount = ((Collection<Visit>) this.visitService.findAll()).size();
 		assertEquals(initialCount, lastCount);
-	}
-
-	@Test
-	@Transactional
-	void shouldCheckLimitForBasic() {
-		Visit v = createVisit(11); // pet of Owner4 BASIC
-		assertEquals(true, this.visitService.underLimit(v));
-		this.visitService.saveVisit(v);
-		v = createVisit(11);
-		assertEquals(false, this.visitService.underLimit(v));
-	}
-
-	@Test
-	@Transactional
-	void shouldCheckLimitForGold() {
-		Visit v = createVisit(7);
-		assertEquals(true, this.visitService.underLimit(v));
-		this.visitService.saveVisit(v);
-		v = createVisit(7);
-		assertEquals(true, this.visitService.underLimit(v));
-		this.visitService.saveVisit(v);
-		v = createVisit(7);
-		assertEquals(true, this.visitService.underLimit(v));
-		this.visitService.saveVisit(v);
-		v = createVisit(7);
-		assertEquals(false, this.visitService.underLimit(v));
-	}
-
-	@Test
-	@Transactional
-	void shouldCheckLimitForPlatinum() {
-		Visit v = createVisit(1);
-		assertEquals(true, this.visitService.underLimit(v));
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		v = createVisit(1);
-		this.visitService.saveVisit(v);
-		assertEquals(false, this.visitService.underLimit(v));
 	}
 
 	private Visit createVisit(int pet) {

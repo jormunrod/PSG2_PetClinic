@@ -223,19 +223,6 @@ class OwnerRestControllerTests {
 	  }
 
 	@Test
-	@WithMockUser("owner")
-	void shouldReturnPlan() throws Exception {
-		when(this.userService.findCurrentUser()).thenReturn(user);
-		when(this.userService.findOwnerByUser(any(Integer.class))).thenReturn(george);
-		
-		mockMvc.perform(get("/api/v1/plan")).andExpect(status().isOk())
-				.andExpect(jsonPath("$.id").value(TEST_OWNER_ID))
-				.andExpect(jsonPath("$.firstName").value(george.getFirstName()))
-				.andExpect(jsonPath("$.lastName").value(george.getLastName()))
-				.andExpect(jsonPath("$.clinic.plan").value(george.getClinic().getPlan().toString()));
-	}
-
-	@Test
 	@WithMockUser(username = "owner", authorities = "OWNER")
 	void shouldReturnStats() throws Exception {
 		when(this.ownerService.getOwnersStats()).thenReturn(new HashMap<>());

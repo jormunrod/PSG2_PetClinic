@@ -24,6 +24,7 @@ import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.samples.petclinic.util.EntityUtils;
 import org.springframework.samples.petclinic.vet.VetService;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.transaction.annotation.Transactional;
 
 //@DataJpaTest(includeFilters = @ComponentScan.Filter(Service.class))
@@ -106,6 +107,7 @@ class ConsultationServiceTests {
 	}
 
 	@Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldDeleteConsultationWithTickets() throws DataAccessException {
 		int initialCount = ((Collection<Consultation>) this.consultationService.findAll()).size();
@@ -152,6 +154,7 @@ class ConsultationServiceTests {
 	}
 
 	@Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldInsertTicket() {
 		int initialCount = ((Collection<Ticket>) this.consultationService.findAllTicketsByConsultation(1)).size();
@@ -169,6 +172,7 @@ class ConsultationServiceTests {
 	}
 
 	@Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldUpdateTicket() {
 		Ticket t = this.consultationService.findTicketById(1);
@@ -179,6 +183,7 @@ class ConsultationServiceTests {
 	}
 
 	@Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldDeleteTicket() throws DataAccessException {
 		int initialCount = ((Collection<Ticket>) this.consultationService.findAllTicketsByConsultation(1)).size();
@@ -245,6 +250,7 @@ class ConsultationServiceTests {
 	}
 
 	@Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldDeleteAdminTicket() {
 		final int CONSULTATION_ID = 2;
@@ -275,6 +281,7 @@ class ConsultationServiceTests {
 	}
 
 	@Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldDeleteOwnerTicket() {
 		final int CONSULTATION_ID = 2;
@@ -299,6 +306,7 @@ class ConsultationServiceTests {
 	}
 
 	@Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldNotDeleteOwnerTicketNotPlatinum() {
 		Consultation c = this.consultationService.findConsultationById(1);

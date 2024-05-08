@@ -22,6 +22,7 @@ import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.samples.petclinic.room.RoomService;
+import org.springframework.security.test.context.support.WithMockUser;
 
 @SpringBootTest
 @AutoConfigureTestDatabase
@@ -111,6 +112,7 @@ public class BookingServiceTest {
 
 
     @Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldSaveBooking() {
 		int initialCount = ((List<Booking>) this.bookingService.findAll()).size();
@@ -130,6 +132,7 @@ public class BookingServiceTest {
 	}
 
     @Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldUpdateBooking() {
 		Booking booking = this.bookingService.findBookingById(1);
@@ -140,6 +143,7 @@ public class BookingServiceTest {
 	}
 
     @Test
+	@WithMockUser(value = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldDeleteBooking() throws DataAccessException, DuplicatedPetNameException {
 		int initialCount = ((List<Booking>) this.bookingService.findAll()).size();
