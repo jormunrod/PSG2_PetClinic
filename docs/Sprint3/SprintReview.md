@@ -67,122 +67,77 @@ De igual forma la tarea E3.2
 
 Aquí un resumen de las tareas completadas :
 
+- Tarea A3.2 (10%)
+    - Descripción: cree un documento de Customer Agreement, debe estar disponible como un nuevo elemento de menú        en la aplicación PetClinic.
+    - Estimación: 24 P.H.
+    - Tiempo real: 24 P.H.
+    - Miembros Asignados: Álvaro Chico y Jorge Muñoz.
 
-- Tarea A2.1
-    - Descripción: Responder individualmente a preguntas relacionadas con los objetivos de aprendizaje del sprint.
-    - Estimación: 1 P.H.
-    - Tiempo real: 1 P.H.
-    - Miembro Asignado: Todos (Individualmente).
-
-- Tarea A2.2 (15%)
-    - Tarea A2.2 A
-    - Descripción: Agregue la funcionalidad de Booking.
-    - Estimación: 48 P.H.
-    - Tiempo real: 49 P.H.
-    - Miembro Asignado: Rafa Molina.
-
-- Tarea A2.2 B
-    - Descripción: Cree una funcionalidad de Adoptions. 
-    - Estimación: 48 P.H.
-    - Tiempo real: 49 P.H.
+- Tarea A3.3 (10%)
+    - Descripción: integre el marco Pricing4SaaS en su aplicación Petclinic.
+    - Estimación: 18 P.H.
+    - Tiempo real: 19 P.H.
     - Miembro Asignado: Jorge Muñoz.
 
-- Tarea A2.2 C
-    - Descripción: Desarrolle un conjunto integral de pruebas unitarias.
-    - Estimación: 30 P.H.
-    - Tiempo real: 27 P.H
-    - Miembro Asignado: Álvaro Chico.
-
-- Tarea A2.3 (10%)
-    - Tarea A2.3 A
-    - Descripción:  preparar una versión del proyecto Petclinic en la rama release 2.0.0
-    - Estimación: 3 P.H.
-    - Tiempo real: 3 P.H
-    - Miembro Asignado: Álvaro Chico.
-
-- Tarea A2.3 B
-    - Descripción: Una vez realizado el lanzamiento para S2 a nivel de código fuente y crear un lanzamiento en el       repositorio de GitHub.
-    - Estimación: 1 P.H.
-    - Tiempo real: 1 P.H
-    - Miembro Asignado: Álvaro Chico.
-
-- Tarea A2.4 (25%)
-- Tarea A2.4 A
-    - Descripción: un informe técnico titulado “Métricas de Proceso Ágil y Recursos” de sprint 1. 
-    - Estimación: 12 P.H.
-    - Tiempo real: 14 P.H
-    - Miembro Asignado: Rubén Pérez.
-
-- Tarea A2.4 B
-    - Descripción: un informe técnico titulado “Métricas de Proceso Ágil y Recursos” de sprint 1.
-    - Estimación: 15 P.H.
-    - Tiempo real: 16 P.H
-    - Miembro Asignado: Rubén Pérez.
-
-- Tarea A2.5 (25%)
-- Tarea A2.5 A
-    - Descripción: crear  titulado “Análisis del Código Fuente y Métricas Asociadas” del sprint 1.
-    - Estimación: 12 P.H.
-    - Tiempo real: 16 P.H
+- Tarea A3.4 (10%)
+    - Descripción: creen un Technical Report titulado "Implementación de iTop para la Organización PSG2-2324-GX-        XY" 
+    - Estimación: 24 P.H.
+    - Tiempo real: 24 P.H.
     - Miembro Asignado: María José Ruíz.
 
-- Tarea A2.5 B
-    - Descripción: crear  titulado “Análisis del Código Fuente y Métricas Asociadas” del sprint 2.
-    - Estimación: 12 P.H.
-    - Tiempo real: 14 P.H
-    - Miembro Asignado: María José Ruíz.
+- Tarea A3.5 (15%)
+    - Descripción: Implementa los siguientes cambios en tu aplicación Petclinic gestionándolos como incidencias o     solicitudes de los usuarios dentro de iTop.
+    - Estimación: 24 P.H.
+    - Tiempo real: 24 P.H.
+    - Miembro Asignado: Álvaro Chico.
 
+- Tarea A3.6 (10%)
+    - Descripción: crear un Technical Report  titulado “Monitorización del Acuerdo de cliente de PetClinic             Services (PSG2-2324-GX-XY)” 
+    - Estimación: 24 P.H.
+    - Tiempo real: 24 P.H.
+    - Miembro Asignado: Rubén Pérez.
 
-- Tarea A2.6 (25%)
-- Tarea A2.6 A
+- Tarea A3.7 (15%)
+    - Descripción: creen un Technical Report titulado “Análisis de la capacidad y el riesgo de PetClinic Services     (PSG2-2324-GX-XY)”. 
+    - Estimación: 24 P.H.
+    - Tiempo real: 24 P.H.
+    - Miembro Asignado: Rafael Molina.
+
+- Tarea A3.8 (35%)
+- Tarea A3.8 A
     - Descripción: Sprint Planning. 
     - Estimación: 11 P.H.
-    - Tiempo real: 11 P.H
-    - Miembro Asignado: Todos (Grupal).
-
-- Tarea A2.6 B
+    - Tiempo real: 11 P.H.
+    - Miembro Asignado: Jorge Muñoz.
+      
+- Tarea A3.8 B
     - Descripción: Daily Standups. 
     - Estimación: 4 P.H.
-    - Tiempo real: 4 P.H
+    - Tiempo real: 4 P.H.
     - Miembro Asignado: Jorge Muñoz.
-
-- Tarea A2.6 C
-    - Descripción: Review. 
+      
+- Tarea A3.8 C
+    - Descripción: Review.
     - Estimación: 5 P.H.
-    - Tiempo real: 5 P.H
+    - Tiempo real: 5 P.H.
     - Miembro Asignado: María José Ruíz.
-
-- Tarea A2.6 D
+- Tarea A3.8 D
     - Descripción: Retrospective. 
     - Estimación: 5 P.H.
-    - Tiempo real: 5 P.H
-    - Miembro Asignado: Rubén Pérez.
-    
-
-- Extra E2.1 (0.1 Puntos)
-- Extra E2.1 A
-    - Descripción: ampliar los informes técnicos creados como resultado de A2.4 para analizar también las             diferencias entre los resultados de las métricas y el análisis en S1 y S2.
-    - Estimación: 6 P.H.
-    - Tiempo real: 6 P.H
+    - Tiempo real: 5 P.H.
     - Miembro Asignado: Rubén Pérez.
 
-- Extra E2.1 B
-     - Descripción: ampliar los informes técnicos creados como resultado de A2.5 para analizar también las             diferencias entre los resultados de las métricas y el análisis en S1 y S2. 
-    - Estimación: 6 P.H.
-    - Tiempo real: 6 P.H
-    - Miembro Asignado: María José Ruíz.
+- Tarea E3.1 (0.2 puntos)
+    - Descripción: implementar y desplegar una aplicación Petclinic integrando una API real.
+    - Estimación: 24 P.H.
+    - Tiempo real: 26 P.H.
+    - Miembro Asignado: Rafael Molina.
 
-- Tarea E2.2 (0.1 Puntos)
-    - Descripción: amplía el informe técnico creado como resultado de A2.5, incluyendo qué modificaciones             debesintroducir en tu código fuente para eliminar los posibles errores y malos olores y mejorar la                complejidad ciclomática en aquellas clases con un valor mayor. Implemente estas modificaciones y realice          análisis adicionales con SonarQube.
+- Tarea E3.2 (0.1 puntos)
+    - Descripción: configura iTop de tal forma que sea posible analizar el impacto que puede causar una caída de        App Engine de forma gráfica, mostrando un diagrama de dependencia y/o impacto en iTop con todos los               elementos necesarios asociados.
     - Estimación: 9 P.H.
-    - Tiempo real: 9 P.H
+    - Tiempo real: 11 P.H.
     - Miembro Asignado: Álvaro Chico.
-
-- Tarea E2.3 (0.1 Puntos)
-    - Descripción: configura tu proyecto para usar GitHub Actions.
-    - Estimación: 18 P.H.
-    - Tiempo real: 15 P.H
-    - Miembro Asignado: Jorge Muñoz.
 
 
 ---
