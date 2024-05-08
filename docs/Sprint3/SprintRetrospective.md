@@ -10,7 +10,7 @@
 
 1. [Introducción](#1-introducción)
 2. [Miembros Del Equipo De Trabajo](#2-miembros-del-equipo-de-trabajo)
-3. [Evaluación De Los Métodos Del Equipo Y Posibles Mejoras](#3-evaluación-de-los-metodos-del-equipo-y-posibles-mejoras)
+3. [Evaluación De Los Métodos Del Equipo Y Posibles Mejoras](#3-evaluación-de-los-métodos-del-equipo-y-posibles-mejoras)
 4. [Evaluación De Las Capacidades Y Posibles Mejoras De Los Miembos](#4-evaluación-de-las-capacidades-y-posibles-mejoras-de-los-miembros)
 5. [Plan De Acción](#5-plan-de-acción)
 6. [Tabla De Rendimiento](#6-tabla-de-rendimiento)
