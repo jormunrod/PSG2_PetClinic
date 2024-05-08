@@ -60,9 +60,8 @@ El apartado A3.7 no estaba completo para enseñarlo en la review, pero Rafa ha t
 
 Por otro lado, la tarea A3.8 ha sido dividida en cuatro partes. Primero se realizó el spring planning donde todos los miembros del grupo se encargaron de estudiar, dividir, estimar, introducir en zenhub y dejar documentada todas las tareas. Además todos los martes Jorge se encargaba de realizar la daily stand-ups y dejaba documentada todos los progresos y dificultades que habiamos tenido durante la semana. Estos documentos estan realizados al completo, ya que se ha ido realizando los dias de las reuniones. El sprint review será documentado por María josé quien se encargó de tomar notas mientras teníamos esta reunion y finalmente, Rubén se encargará de redactar el sprint rretrospective donde dejará en detalle como ha ido el Sprint 3.
 
-
 Finalmente, el equipo ha decidido que también hariamos las tareas extras por un lado en la E3.1 se ha implementado y desplegado una aplicación Petclinic integrando una API real como se define en A3.5.e, está te permite ver en el framenwork una preview de como se vería el código en react. Las tareas extras las tratamos como una tarea más, se reparte en cada sprint a un miembro del equipo y este se encarga de hacerlo.
-De igual forma la tarea E3.2 
+De igual forma la tarea E3.2 no estaba completada para la review, pero se esta trabajando para la entrega.
  
 
 Aquí un resumen de las tareas completadas :
@@ -70,44 +69,44 @@ Aquí un resumen de las tareas completadas :
 - Tarea A3.2 (10%)
     - Descripción: cree un documento de Customer Agreement, debe estar disponible como un nuevo elemento de menú        en la aplicación PetClinic.
     - Estimación: 24 P.H.
-    - Tiempo real: 24 P.H.
+    - Tiempo real: 32 P.H.
     - Miembros Asignados: Álvaro Chico y Jorge Muñoz.
 
 - Tarea A3.3 (10%)
     - Descripción: integre el marco Pricing4SaaS en su aplicación Petclinic.
     - Estimación: 18 P.H.
-    - Tiempo real: 19 P.H.
+    - Tiempo real: 66 P.H.
     - Miembro Asignado: Jorge Muñoz.
 
 - Tarea A3.4 (10%)
     - Descripción: creen un Technical Report titulado "Implementación de iTop para la Organización PSG2-2324-GX-        XY" 
     - Estimación: 24 P.H.
-    - Tiempo real: 24 P.H.
+    - Tiempo real: 47 P.H.
     - Miembro Asignado: María José Ruíz.
 
 - Tarea A3.5 (15%)
     - Descripción: Implementa los siguientes cambios en tu aplicación Petclinic gestionándolos como incidencias o     solicitudes de los usuarios dentro de iTop.
     - Estimación: 24 P.H.
-    - Tiempo real: 24 P.H.
+    - Tiempo real: 15 P.H.
     - Miembro Asignado: Álvaro Chico.
 
 - Tarea A3.6 (10%)
     - Descripción: crear un Technical Report  titulado “Monitorización del Acuerdo de cliente de PetClinic             Services (PSG2-2324-GX-XY)” 
     - Estimación: 24 P.H.
-    - Tiempo real: 24 P.H.
+    - Tiempo real: 26 P.H.
     - Miembro Asignado: Rubén Pérez.
 
 - Tarea A3.7 (15%)
     - Descripción: creen un Technical Report titulado “Análisis de la capacidad y el riesgo de PetClinic Services     (PSG2-2324-GX-XY)”. 
     - Estimación: 24 P.H.
-    - Tiempo real: 24 P.H.
+    - Tiempo real: 32 P.H.
     - Miembro Asignado: Rafael Molina.
 
 - Tarea A3.8 (35%)
 - Tarea A3.8 A
     - Descripción: Sprint Planning. 
     - Estimación: 11 P.H.
-    - Tiempo real: 11 P.H.
+    - Tiempo real: 9 P.H.
     - Miembro Asignado: Jorge Muñoz.
       
 - Tarea A3.8 B
@@ -119,24 +118,24 @@ Aquí un resumen de las tareas completadas :
 - Tarea A3.8 C
     - Descripción: Review.
     - Estimación: 5 P.H.
-    - Tiempo real: 5 P.H.
+    - Tiempo real: 6 P.H.
     - Miembro Asignado: María José Ruíz.
 - Tarea A3.8 D
     - Descripción: Retrospective. 
     - Estimación: 5 P.H.
-    - Tiempo real: 5 P.H.
+    - Tiempo real: 6 P.H.
     - Miembro Asignado: Rubén Pérez.
 
 - Tarea E3.1 (0.2 puntos)
     - Descripción: implementar y desplegar una aplicación Petclinic integrando una API real.
     - Estimación: 24 P.H.
-    - Tiempo real: 26 P.H.
+    - Tiempo real: 54 P.H.
     - Miembro Asignado: Rafael Molina.
 
 - Tarea E3.2 (0.1 puntos)
     - Descripción: configura iTop de tal forma que sea posible analizar el impacto que puede causar una caída de        App Engine de forma gráfica, mostrando un diagrama de dependencia y/o impacto en iTop con todos los               elementos necesarios asociados.
     - Estimación: 9 P.H.
-    - Tiempo real: 11 P.H.
+    - Tiempo real: 9 P.H.
     - Miembro Asignado: Álvaro Chico.
 
 
