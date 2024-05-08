@@ -31,6 +31,32 @@
 ## **1. Introducción**
 En el presente informe técnico se expondrá el trabajo efectuado para supervisar los compromisos con el cliente durante el proceso de resolución de las solicitudes que han sido presentadas por los mismos.
 
+El proceso que sigue una petición desde que es realizada hasta que es completada por el equipo es el siguiente:
+1. **Creación**: En este punto se puede observar, como información más relevante, el nombre del usuario que ha creado la petición/incidencia, un título identificativo y una descripción más precisa que facilita al equipo comprender y solventar la petición que se presenta.
+<p align="center">
+    <img src="../images/3.5process1.jpeg" alt="Proceso petición 1" style="width: 50%; margin: auto;">
+</p>
+
+2. **Asignación**: Posteriormente, un miembro del equipo asigna dicha petición a otro miembro del equipo para que este la resuelva. En este caso podemos ver que se ha asignado a "Álvaro Chico Castellano", perteneciente al equipo de de "PSG2-2324-G4-44". Aparecen datos útiles para las estadísticas como son las fechas de comienzo, actualización, asignación y TTR.
+<p align="center">
+    <img src="../images/3.5process2.jpeg" alt="Proceso petición 2" style="width: 50%; margin: auto;">
+</p>
+
+3. **Pendiente**: Tras la asignación, la petición pasa a estar en un estado "Pendiente", en el que el miembro del equipo al que se le ha asignado la resolución de esta incidencia está trabajando para solventarla.
+<p align="center">
+    <img src="../images/3.5process3.jpeg" alt="Proceso petición 3" style="width: 50%; margin: auto;">
+</p>
+
+4. **Resuelto**: Una vez el miembro ha completado la petición satisfactoriamente, esta se marca como resuelta. En este punto, el miembro añadirá comentarios a su resolución. Junto a esto, aparecerá un valor temporal que señala el tiempo que ha tomado completar el proceso hasta este punto.
+<p align="center">
+    <img src="../images/3.5process4.jpeg" alt="Proceso petición 4" style="width: 50%; margin: auto;">
+</p>
+
+5. **Cerrado**: Finalmente, el usuario que creó la petición/incidencia, hará una valoración al respecto, valorando el trabajo y pudiendo dejar un comentario al respecto, y así, se dará por completado satisfactoriamente el proceso de solución de una petición. 
+<p align="center">
+    <img src="../images/3.5process5.jpeg" alt="Proceso petición 5" style="width: 50%; margin: auto;">
+</p>
+
 ---
 
 ## **2. Descripción De Los Planes De Precios**
@@ -39,6 +65,9 @@ Descripción solicitud: La descripción de los planes de precios que se encuentr
 ### **2.1 Informe De Cumplimiento Del SLT**
 
 ### **2.2 Tiempo De Trabajo**
+<p align="center">
+    <img src="../images/3.5i.png" alt="Descripción de los planes de precio" style="width: 85%; margin: auto;">
+</p>
 
 ---
 
@@ -48,6 +77,9 @@ Descripción solicitud: El plan de precios actual asociado con una clínica debe
 ### **3.1 Informe De Cumplimiento Del SLT**
 
 ### **3.2 Tiempo De Trabajo**
+<p align="center">
+    <img src="../images/3.5ii.png" alt="Identificación del plan actual" style="width: 85%; margin: auto;">
+</p>
 
 ---
 
@@ -57,6 +89,9 @@ Descripción solicitud: La página del plan a la que el dueño de una mascota pu
 ### **4.1 Informe De Cumplimiento Del SLT**
 
 ### **4.2 Tiempo De Trabajo**
+<p align="center">
+    <img src="../images/3.5iii.png" alt="Eliminación de la página de plan para pet owners" style="width: 85%; margin: auto;">
+</p>
 
 ---
 
@@ -66,6 +101,9 @@ Descripción solicitud: El propietario de la Clínica 3 desea actualizar su plan
 ### **5.1 Informe De Cumplimiento Del SLT**
 
 ### **5.2 Tiempo De Trabajo**
+<p align="center">
+    <img src="../images/3.5iv.png" alt="Actualización plan clínica 3" style="width: 85%; margin: auto;">
+</p>
 
 ---
 
@@ -75,20 +113,10 @@ Descripción solicitud: Agregue funciones que necesiten el uso de al menos dos A
 ### **6.1 Informe De Cumplimiento Del SLT**
 
 ### **6.2 Tiempo De Trabajo**
+<p align="center">
+    <img src="../images/3.5v.png" alt="Extensiones en API" style="width: 85%; margin: auto;">
+</p>
 
 ---
 
 ## **7. Conclusiones**
-
----
-
-RESUMEN DEL TRABAJO A REALIZAR PARA LOS DISTINTOS APARTADOS
-- Cada apartado debe contener al menos un informe del grado de cumplimiento del SLT asociado
-- También debe contener el tiempo transcurrido entre la creación del problema en GitHub y su cierre
-    - Con los control charts de zenhub puedo corroborar el tiempo que se ha tardado en completar cada problema
-    - Mirar qué capturas de pantalla de iTop me pueden ser útiles para este apartado
-- Cada miembro del grupo debe revisar al menos una solicitud y asignarla a otro miembro
-    - Para cada apartado, el cliente envía la solicitud.
-    - Para cada una de estas solicitudes, un miembro distinto del equipo debe leerla y asignarla a otro miembro distinto del equipo que no tenga otra solicitud asignada
-    - El miembro al que se le haya asignado la solicitud, debe crear una issue correspondiente en github e implementar el código necesario
-    - Se deberá ir actualizando el estado de desarrollo de la issue en github en las distintas columnas (Todo, In Progress, In Review y Done) además de actualizar la solicitud en iTop
