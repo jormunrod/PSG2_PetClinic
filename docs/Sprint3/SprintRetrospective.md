@@ -51,22 +51,21 @@ En este apartado se analizarán las mejoras que fueron propuestas por el equipo 
   
 ---
 
-## **4. Evaluación De Las Capacidades Y Posibles Mejoras De Los Miembos** REPASAR
-En este apartado se analizarán las mejoras que fueron propuestas por algunos miembros del equipo tras la finalización del tercer sprint, con el objetivo de que otros integrantes puedan mejorar su rendimiento. Se verificará que se esté avanzando y se hayan tenido en cuenta las ideas que se quisieron imponer. Estos son los resultados:
-- asd
-- asd
+## **4. Evaluación De Las Capacidades Y Posibles Mejoras De Los Miembos**
+En este apartado se analizarán las mejoras que fueron propuestas por algunos miembros del equipo tras la finalización del tercer sprint, con el objetivo de que otros integrantes puedan mejorar su rendimiento. Estos son los resultados:
+- **Mejorar la gestión del tiempo para cumplir con los plazos establecidos**: Nuevamente, el equipo trabajó de forma conjunta para poder alcanzar satisfactoriamente el objetivo común propuesto, finalizar todas las tareas propuestas dentro del margen de tiempo delimitado.
+- **Mejorar la capacidad para recibir y aplicar la retroalimentación de manera constructiva**: El equipo supo trabajar de forma conjunta para poder ayudar a otros miembros a encontrar una solución a las trabas que se fueron encontrando durante el desarrollo de las tareas.
 
 ---
 
 ## **5. Plan de Acción**
 El siguiente plan de acción tiene como objetivo identificar acciones concretas para mejorar el desempeño y la eficiencia del equipo. Se estructura en tres columnas: Start, Stop y Continue Doing. En cada columna, se detallarán las actividades que el equipo debe iniciar, dejar de realizar y mantener, respectivamente. Este plan permitirá al equipo enfocarse en las áreas clave para maximizar su rendimiento y lograr los objetivos establecidos. Todo ello se basará en las propuestas del equipo tras la conclusión del sprint 2, teniendo en cuenta además los resultados de los análisis de los puntos anteriores.
 ### Start:
-- asd
-- asd
+- Comenzar a utilizar herramientas de automatización para tareas repetitivas y administrativas, liberando así tiempo para actividades más productivas. También se podrían generar plnatillas base reutilizables para la compleción de tareas que se repiten en los sprints como los sprints review, retrospective, etc.
+- Implementar un sistema de mentoría donde miembros más experimentados del equipo en algún ámbito relacionado con las tareas, guíen a aquellos con menos experiencia, promoviendo el crecimiento profesional.
 
 ### Stop:
-- asd
-- asd
+- Detener la práctica de trabajo individual aislado, promoviendo en su lugar la colaboración activa y el intercambio de ideas entre los miembros del equipo en todo momento.
 
 ### Continue Doing:
 - Mantener los daily meetings para evaluar el progreso del equipo y hacer ajustes según sea necesario.
@@ -82,7 +81,7 @@ El siguiente plan de acción tiene como objetivo identificar acciones concretas 
 ---
 
 ## **6. Tabla De Rendimiento**
-En este punto se aborda la evaluación del desempeño individual en tres pasos: calificación individual, recopilación de puntuaciones y discusión para consensuar las calificaciones finales. Tras una revisión justa del desempeño durante este sprint, se ha decidido asignar a todos los miembros del equipo la misma puntuación final debido a su contribución equitativa al proyecto. Esta es la tabla de rendimiento final para este tercer sprint.
+En este punto se aborda la evaluación del desempeño individual en tres pasos: calificación individual, recopilación de puntuaciones y discusión para consensuar las calificaciones finales. Tras una revisión justa del desempeño durante este sprint, se ha decidido asignar a todos los miembros del equipo la misma puntuación final debido a su contribución equitativa al proyecto, puesto que todos han completado satisfactoriamente todas las tareas asignadas. Esta es la tabla de rendimiento final para este tercer sprint.
 
 <p align="center">
     <img src="../images/retroTableS3.png" alt="Tabla de rendimiento" style="width: 75%; margin: auto;">
