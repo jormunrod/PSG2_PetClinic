@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic.owner;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import jakarta.validation.Valid;
 
@@ -63,6 +64,16 @@ public class OwnerRestController {
 	@GetMapping(value = "{ownerId}")
 	public ResponseEntity<Owner> findById(@PathVariable("ownerId") int id) {
 		return new ResponseEntity<>(ownerService.findOwnerById(id), HttpStatus.OK);
+	}
+
+	@GetMapping(value = "user/{userId}")
+	public ResponseEntity<Owner> findByUserId(@PathVariable("userId") int userId) {
+		Optional<Owner> optionalOwner = ownerService.optFindOwnerByUser(userId);
+		if (optionalOwner.isPresent()) {
+			return new ResponseEntity<>(optionalOwner.get(), HttpStatus.OK);
+		} else {
+			return ResponseEntity.notFound().build();
+		}
 	}
 
 	@PostMapping()

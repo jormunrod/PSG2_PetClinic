@@ -12,7 +12,9 @@ import FormGenerator from "../../../components/formGenerator/formGenerator";
 import { petEditFormInputs } from "./form/petEditFormInputs";
 import "../../../static/css/owner/editPet.css";
 import "../../../static/css/auth/authButton.css"
-import useFetchState from "../../../util/useFetchState";
+import {
+  fetchWithPricingInterceptor,
+} from "pricing4react";
 
 export default function OwnerPetEdit(){
   let pathArray = window.location.pathname.split("/");
@@ -22,6 +24,7 @@ export default function OwnerPetEdit(){
     birthDate: "",
     type: {},
     owner: {},
+    isAvailableForAdoption: null,
   };  
   const jwt = JSON.parse(window.localStorage.getItem("jwt"));
   const [message,setMessage] = useState(null);
@@ -35,7 +38,7 @@ export default function OwnerPetEdit(){
   
   function setupPet(){
       if (petId !== "new" && pet.id==null) { 
-        const pet = fetch(
+        const pet = fetchWithPricingInterceptor(
             `/api/v1/pets/${petId}`, 
             {
               headers: {
@@ -57,7 +60,7 @@ export default function OwnerPetEdit(){
           });          
     }    
     if(types.length===0){
-      fetch(`/api/v1/pets/types`, {
+      fetchWithPricingInterceptor(`/api/v1/pets/types`, {
           headers: {
             Authorization: `Bearer ${jwt}`,
           },
@@ -96,9 +99,10 @@ export default function OwnerPetEdit(){
       birthDate: values["birthDate"],
       type: types.filter((type) => type.name === values["type"])[0],
       owner: pet.owner,
+      isAvailableForAdoption: values["isAvailableForAdoption"] === "Yes" ? true : false,
     };
 
-    const submit = await (await fetch("/api/v1/pets" + (pet.id ? "/" + petId : ""), 
+    const submit = await (await fetchWithPricingInterceptor("/api/v1/pets" + (pet.id ? "/" + petId : ""), 
       {
         method: mypet.id ? "PUT" : "POST",
         headers: {
@@ -109,6 +113,7 @@ export default function OwnerPetEdit(){
         body: JSON.stringify(mypet),
       }
     )).json();
+    console.log(JSON.stringify(mypet));
 
     if (submit.message){
       setMessage(submit.message);
@@ -135,6 +140,7 @@ export default function OwnerPetEdit(){
       petEditFormInputs[0].defaultValue = pet.name || "";
       petEditFormInputs[1].defaultValue = pet.birthDate || "";
       petEditFormInputs[2].defaultValue = pet.type.name || "None";
+      petEditFormInputs[3].defaultValue = pet.isAvailableForAdoption===true ? "Yes" : "No";
     }
 
     function handleShow() {

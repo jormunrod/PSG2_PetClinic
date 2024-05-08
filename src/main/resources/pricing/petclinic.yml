@@ -1,0 +1,158 @@
+saasName: Petclinic
+day: 10
+month: 03
+year: 2024
+currency: EUR
+hasAnnualPayment: false
+features:
+  pets:
+    description: Pets description
+    valueType: BOOLEAN
+    defaultValue: true
+    expression: userContext['pets'] < planContext['usageLimits']['maxPets']
+    serverExpression: userContext['pets'] <= planContext['usageLimits']['maxPets']
+    type: DOMAIN
+  visits:
+    description: visits description
+    valueType: BOOLEAN
+    defaultValue: true
+    expression: userContext['visits'] < planContext['usageLimits']['maxVisitsPerMonthAndPet']
+    serverExpression: userContext['visits'] <= planContext['usageLimits']['maxVisitsPerMonthAndPet']
+    type: DOMAIN
+  supportPriority:
+    description: supportPriority description
+    valueType: TEXT
+    defaultValue: LOW
+    expression: ''
+    type: SUPPORT
+  haveCalendar:
+    description: haveCalendar description
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['haveCalendar']
+    type: DOMAIN
+  havePetsDashboard:
+    description: havePetsDashboard description
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['havePetsDashboard']
+    type: DOMAIN
+  haveVetSelection:
+    description: haveVetSelection description
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['haveVetSelection']
+    type: DOMAIN
+  haveOnlineConsultation:
+    description: haveOnlineConsultation description
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['haveOnlineConsultation']
+    type: DOMAIN
+  haveBooking:
+    description: haveBooking description
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['haveBooking']
+    type: DOMAIN
+  haveAdoption:
+    description: haveAdoption description
+    valueType: BOOLEAN
+    defaultValue: false
+    expression: planContext['features']['haveAdoption']
+    type: DOMAIN
+usageLimits:
+  maxPets:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 2
+    unit: pet
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - pets
+  maxVisitsPerMonthAndPet:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 1
+    unit: visit
+    type: RENEWABLE
+    linkedFeatures:
+      - visits
+plans:
+  BASIC:
+    description: Basic plan
+    monthlyPrice: 0.0
+    annualPrice: 0.0
+    unit: user/month
+    features:
+      supportPriority: 
+        value: LOW
+      haveCalendar:
+        value: false
+      havePetsDashboard:
+        value: false
+      haveVetSelection:
+        value: true
+      haveOnlineConsultation:
+        value: false
+      haveBooking:
+        value: false
+      haveAdoption:
+        value: false
+    usageLimits:
+      maxPets:
+        value: 2
+      maxVisitsPerMonthAndPet:
+        value: 3
+  GOLD:
+    description: Advanced plan
+    monthlyPrice: 5.0
+    annualPrice: 50.0
+    unit: user/month
+    features:
+      supportPriority: 
+        value: HIGH
+      haveCalendar:
+        value: true
+      havePetsDashboard:
+        value: true
+      haveVetSelection:
+        value: true
+      haveOnlineConsultation:
+        value: false
+      haveBooking:
+        value: true
+      haveAdoption:
+        value: true
+    usageLimits:
+      maxPets:
+        value: 5
+      maxVisitsPerMonthAndPet:
+        value: 5
+  PLATINUM:
+    description: Pro plan
+    monthlyPrice: 12.0
+    annualPrice: 120.0
+    unit: user/month
+    features:
+      supportPriority: 
+        value: HIGH
+      haveCalendar:
+        value: true
+      havePetsDashboard:
+        value: true
+      haveVetSelection:
+        value: true
+      haveOnlineConsultation:
+        value: true
+      haveBooking:
+        value: true
+      haveAdoption:
+        value: true
+    usageLimits:
+      maxPets:
+        value: 12
+      maxVisitsPerMonthAndPet:
+        value: 12
+addOns: null
+        

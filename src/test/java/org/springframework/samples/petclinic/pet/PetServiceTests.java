@@ -39,11 +39,10 @@ import org.springframework.samples.petclinic.owner.Owner;
 import org.springframework.samples.petclinic.owner.OwnerService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.samples.petclinic.util.EntityUtils;
-import org.springframework.samples.petclinic.vet.VetRestController;
-import org.springframework.samples.petclinic.vet.Vet;
 import org.springframework.samples.petclinic.vet.VetService;
 import org.springframework.samples.petclinic.visit.Visit;
 import org.springframework.samples.petclinic.visit.VisitService;
+import org.springframework.security.test.context.support.WithMockUser;
 
 //@DataJpaTest(includeFilters = @ComponentScan.Filter(Service.class))
 @SpringBootTest
@@ -121,6 +120,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldInsertPetIntoDatabaseAndGenerateId() {
 		Owner owner6 = this.ownerService.findOwnerById(6);
@@ -132,6 +132,7 @@ class PetServiceTests {
 		pet.setType(EntityUtils.getById(types, PetType.class, 2));
 		pet.setBirthDate(LocalDate.now());
 		pet.setOwner(owner6);
+		pet.setIsAvailableForAdoption(true);
 		this.petService.savePet(pet);
 
 		int finalCount = petService.findAllPetsByOwnerId(owner6.getId()).size();
@@ -141,6 +142,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldThrowExceptionInsertingPetsWithTheSameName() {
 		Owner owner6 = this.ownerService.findOwnerById(6);
@@ -150,6 +152,7 @@ class PetServiceTests {
 		pet.setType(EntityUtils.getById(types, PetType.class, 2));
 		pet.setBirthDate(LocalDate.now());
 		pet.setOwner(owner6);
+		pet.setIsAvailableForAdoption(true);
 		petService.savePet(pet);
 
 		Pet anotherPetWithTheSameName = new Pet();
@@ -175,6 +178,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldDeletePetWithVisits() throws DataAccessException, DuplicatedPetNameException {
 		Integer firstCount = petService.findAll().size();
@@ -186,6 +190,7 @@ class PetServiceTests {
 		pet.setType(EntityUtils.getById(types, PetType.class, 2));
 		pet.setBirthDate(LocalDate.now());
 		pet.setOwner(owner6);
+		pet.setIsAvailableForAdoption(true);
 		petService.savePet(pet);
 		Visit visit = new Visit();
 		visit.setDatetime(LocalDateTime.now());
@@ -201,6 +206,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldCheckLimitForBasic() {
 		Owner owner = this.ownerService.findOwnerById(8);
@@ -210,6 +216,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldCheckLimitForGold() {
 		Owner owner = this.ownerService.findOwnerById(4);
@@ -221,6 +228,7 @@ class PetServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldCheckLimitForPlatinum() {
 		Owner owner = this.ownerService.findOwnerById(1);
@@ -244,6 +252,7 @@ class PetServiceTests {
 		pet.setName(name);
 		pet.setType(type);
 		pet.setBirthDate(LocalDate.now());
+		pet.setIsAvailableForAdoption(true);
 		pet.setOwner(owner);
 		petService.savePet(pet);
 	}

@@ -21,6 +21,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.Collection;
 import java.util.List;
@@ -28,7 +29,6 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -39,10 +39,12 @@ import org.springframework.samples.petclinic.pet.PetService;
 import org.springframework.samples.petclinic.pet.exceptions.DuplicatedPetNameException;
 import org.springframework.samples.petclinic.user.AuthoritiesService;
 import org.springframework.samples.petclinic.user.User;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.transaction.annotation.Transactional;
 
-@RunWith(SpringRunner.class)
+import lombok.With;
+
+//@RunWith(SpringRunner.class)
 //@DataJpaTest(includeFilters = {@ComponentScan.Filter(Service.class),@ComponentScan.Filter(PasswordEncoder.class)})
 @SpringBootTest
 @AutoConfigureTestDatabase
@@ -51,7 +53,6 @@ public class OwnerServiceTests {
 	private OwnerService ownerService;
 	private PetService petService;
 	private AuthoritiesService authService;
-	
 
 	@Autowired
 	public OwnerServiceTests(OwnerService ownerService, PetService petService, AuthoritiesService authService) {
@@ -90,21 +91,27 @@ public class OwnerServiceTests {
 		assertThrows(ResourceNotFoundException.class, () -> this.ownerService.findOwnerById(100));
 	}
 
-//	@Test
-//	void shouldFindOwnerByUser() {
-//		Owner owner = this.ownerService.findOwnerByUser(2);
-//		assertEquals("Franklin", owner.getLastName());
-//	}
-//	
-//	@Test
-//	void shouldNotFindOwnerByIncorrectUser() {
-//		assertThrows(ResourceNotFoundException.class, () -> this.ownerService.findOwnerByUser(34));
-//	}
+	// @Test
+	// void shouldFindOwnerByUser() {
+	// Owner owner = this.ownerService.findOwnerByUser(2);
+	// assertEquals("Franklin", owner.getLastName());
+	// }
+	//
+	// @Test
+	// void shouldNotFindOwnerByIncorrectUser() {
+	// assertThrows(ResourceNotFoundException.class, () ->
+	// this.ownerService.findOwnerByUser(34));
+	// }
 
 	@Test
 	void shouldFindOptOwnerByUser() {
-		Optional<Owner> owner = this.ownerService.optFindOwnerByUser(4);
-		assertEquals("Franklin", owner.get().getLastName());
+		Optional<Owner> ownerOptional = this.ownerService.optFindOwnerByUser(4);
+		if (ownerOptional.isPresent()) {
+			Owner owner = ownerOptional.get();
+			assertEquals("Franklin", owner.getLastName());
+		} else {
+			fail("No se encontró ningún propietario para el usuario 4");
+		}
 	}
 
 	@Test
@@ -137,6 +144,7 @@ public class OwnerServiceTests {
 	}
 
 	@Test
+	@WithMockUser(username = "owner1", authorities = { "OWNER" })
 	@Transactional
 	void shouldDeleteOwner() throws DataAccessException, DuplicatedPetNameException {
 		Integer firstCount = ((Collection<Owner>) ownerService.findAll()).size();
@@ -146,6 +154,7 @@ public class OwnerServiceTests {
 		pet.setName("Sisi");
 		pet.setType(petService.findPetTypeByName("dog"));
 		pet.setOwner(owner);
+		pet.setIsAvailableForAdoption(true);
 		petService.savePet(pet);
 
 		Integer secondCount = ((Collection<Owner>) ownerService.findAll()).size();

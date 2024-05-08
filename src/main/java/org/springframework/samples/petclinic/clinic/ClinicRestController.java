@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
@@ -67,6 +68,12 @@ public class ClinicRestController {
 	@GetMapping(value = "vets")
 	public ResponseEntity<List<Vet>> findVetsOfUserClinics(@RequestParam int userId) {
 		return new ResponseEntity<>(clinicService.findVetsOfUserClinics(userId), HttpStatus.OK);
+	}
+
+	@GetMapping("/user/{userId}")
+	@ResponseStatus(HttpStatus.OK)
+	public List<Clinic> findClinicsByUserId(@PathVariable Integer userId) {
+		return clinicService.findClinicsByUserId(userId);
 	}
 
 	@PostMapping

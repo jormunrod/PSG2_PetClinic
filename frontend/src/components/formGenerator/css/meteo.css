@@ -1,0 +1,29 @@
+.meteo-container{
+    display: flex;
+    height: 100vh;
+
+}
+.meteo-block{
+    background-color: lightsteelblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    object-fit: contain;
+    padding: 1em;
+    border-radius: 1em;
+
+}
+
+.meteo-h1{
+    font-size: 3.2em;
+    color: #1a1a1a;
+}
+.meteo-h2{
+    font-size: 2em;
+    color: -webkit-text;
+}
+
+.meteo-text{
+    font-size: 1em;
+}

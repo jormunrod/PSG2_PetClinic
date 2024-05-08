@@ -87,7 +87,7 @@ public class AuthServiceTests {
 		request.setTelephone("123123123");
 		request.setUsername(username);
 
-		if(auth == "OWNER" || auth == "VET") {
+		if(auth.equals("OWNER") || auth.equals("VET")) {
 			User clinicOwnerUser = new User();
 			clinicOwnerUser.setUsername("clinicOwnerTest");
 			clinicOwnerUser.setPassword("clinicOwnerTest");

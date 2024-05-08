@@ -28,17 +28,15 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
-@RequestMapping("/api/v1/plan")
+@RequestMapping("/api/v1/planOwner")
 @Tag(name = "Plans", description = "API for the  management of  Princing Plans of the applications")
 @SecurityRequirement(name = "bearerAuth")
 public class OwnerPlanController {
 
-	private final OwnerService ownerService;
 	private final UserService userService;
 
 	@Autowired
-	public OwnerPlanController(OwnerService ownerService, UserService userService) {
-		this.ownerService = ownerService;
+	public OwnerPlanController(UserService userService) {
 		this.userService = userService;
 	}
 

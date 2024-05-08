@@ -78,10 +78,10 @@ public class PetRestController {
 	public ResponseEntity<List<Pet>> findAll(@RequestParam(required = false) Integer userId) {
 		User user = userService.findCurrentUser();
 		if (userId != null) {
-			if (user.getId().equals(userId) || user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, CLINIC_OWNER_AUTH).equals(true))
+			if (user.getId().equals(userId) || user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, OWNER_AUTH,CLINIC_OWNER_AUTH).equals(true))
 				return new ResponseEntity<>(petService.findAllPetsByUserId(userId), HttpStatus.OK);
 		} else {
-			if (user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, CLINIC_OWNER_AUTH).equals(true))
+			if (user.hasAnyAuthority(VET_AUTH, ADMIN_AUTH, OWNER_AUTH,CLINIC_OWNER_AUTH).equals(true))
 				return new ResponseEntity<>((List<Pet>) this.petService.findAll(), HttpStatus.OK);
 		}
 		throw new AccessDeniedException();
@@ -173,6 +173,32 @@ public class PetRestController {
 	@GetMapping(value = "stats")
 	public ResponseEntity<Map<String, Object>> getStats() {
 		return new ResponseEntity<>(this.petService.getPetsStats(), HttpStatus.OK);
+	}
+
+	@GetMapping("/adoptions/available")
+	public ResponseEntity<List<Pet>> getAvailablePetsForAdoption() {
+		Integer ownerId = userService.findCurrentUser().getId();
+		return new ResponseEntity<>(this.petService.findAllPetsAvailableForAdoption(ownerId), HttpStatus.OK);
+	}
+
+	@PutMapping("{petId}/adoption")
+	@ResponseStatus(HttpStatus.OK)
+	public ResponseEntity<MessageResponse> setAvailableForAdoption(@PathVariable("petId") int petId,
+			@RequestParam("available") boolean available) {
+		Pet pet = RestPreconditions.checkNotNull(petService.findPetById(petId), "Pet", "ID", petId);
+		User user = userService.findCurrentUser();
+		if (user.hasAuthority(OWNER_AUTH).equals(true)) {
+			Owner loggedOwner = userService.findOwnerByUser(user.getId());
+			Owner petOwner = pet.getOwner();
+			if (loggedOwner.getId().equals(petOwner.getId())) {
+				petService.setPetAvailableForAdoption(petId, available);
+				return new ResponseEntity<>(new MessageResponse("Pet updated!"), HttpStatus.OK);
+			} else
+				throw new ResourceNotOwnedException(pet);
+		} else {
+			petService.setPetAvailableForAdoption(petId, available);
+			return new ResponseEntity<>(new MessageResponse("Pet updated!"), HttpStatus.OK);
+		}
 	}
 
 }
