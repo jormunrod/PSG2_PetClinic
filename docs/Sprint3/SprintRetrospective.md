@@ -51,7 +51,7 @@ En este apartado se analizarán las mejoras que fueron propuestas por el equipo 
   
 ---
 
-## **4. Evaluación De Las Capacidades Y Posibles Mejoras De Los Miembos**
+## **4. Evaluación De Las Capacidades Y Posibles Mejoras De Los Miembros**
 En este apartado se analizarán las mejoras que fueron propuestas por algunos miembros del equipo tras la finalización del tercer sprint, con el objetivo de que otros integrantes puedan mejorar su rendimiento. Estos son los resultados:
 - **Mejorar la gestión del tiempo para cumplir con los plazos establecidos**: Nuevamente, el equipo trabajó de forma conjunta para poder alcanzar satisfactoriamente el objetivo común propuesto, finalizar todas las tareas propuestas dentro del margen de tiempo delimitado.
 - **Mejorar la capacidad para recibir y aplicar la retroalimentación de manera constructiva**: El equipo supo trabajar de forma conjunta para poder ayudar a otros miembros a encontrar una solución a las trabas que se fueron encontrando durante el desarrollo de las tareas.
